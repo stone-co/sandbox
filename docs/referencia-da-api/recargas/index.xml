@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Recargas</title>
-    <link>https://stone-co.github.io/docs/referencia-da-api/recargas/</link>
+    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/</link>
     <description>Recent content in Recargas on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 30 Mar 2021 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/recargas/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Overview</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/overview/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/overview/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/overview/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/overview/</guid>
       <description>
         
         
@@ -44,19 +44,19 @@
 &lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/&#34;&gt;&lt;strong&gt;Recarga para Celular;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-celular/&#34;&gt;&lt;strong&gt;Recarga para Celular;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/&#34;&gt;&lt;strong&gt;Recarga para Jogos;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-jogos/&#34;&gt;&lt;strong&gt;Recarga para Jogos;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/&#34;&gt;&lt;strong&gt;Recarga para Conteúdo Digital;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/&#34;&gt;&lt;strong&gt;Recarga para Conteúdo Digital;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/&#34;&gt;&lt;strong&gt;Recarga para TV por Assinatura;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/&#34;&gt;&lt;strong&gt;Recarga para TV por Assinatura;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/&#34;&gt;&lt;strong&gt;Recarga para Meios de Transporte.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/&#34;&gt;&lt;strong&gt;Recarga para Meios de Transporte.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
@@ -110,10 +110,10 @@
     
     <item>
       <title>Docs: Recarga para Celular</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-celular/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-celular/</guid>
       <description>
         
         
@@ -338,7 +338,7 @@
 &lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
 
 &lt;/div&gt;
 
@@ -348,10 +348,10 @@
     
     <item>
       <title>Docs: Recarga para Jogos</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-jogos/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-jogos/</guid>
       <description>
         
         
@@ -537,7 +537,7 @@
 &lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
 
 &lt;/div&gt;
 
@@ -548,10 +548,10 @@
     
     <item>
       <title>Docs: Recarga para Conteúdo Digital</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</guid>
       <description>
         
         
@@ -711,7 +711,7 @@
 &lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
 
 &lt;/div&gt;
 
@@ -721,10 +721,10 @@
     
     <item>
       <title>Docs: Recarga para TV por Assinatura</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</guid>
       <description>
         
         
@@ -897,7 +897,7 @@
 &lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
 
 &lt;/div&gt;
 
@@ -907,10 +907,10 @@
     
     <item>
       <title>Docs: Recarga para Meios de Transporte</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/</guid>
       <description>
         
         
@@ -1105,7 +1105,7 @@
 &lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
 
 &lt;/div&gt;
 
@@ -1115,10 +1115,10 @@
     
     <item>
       <title>Docs: Fluxo de Autorização de Challenge</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/fluxo-challenge/</guid>
       <description>
         
         

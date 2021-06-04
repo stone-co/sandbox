@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Pix (Alpha)</title>
-    <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
+    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/</link>
     <description>Recent content in Pix (Alpha) on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 31 Mar 2021 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Buscar dados do QRCode</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/buscar-dados-qrcode/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/buscar-dados-qrcode/</link>
       <pubDate>Thu, 01 Apr 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/buscar-dados-qrcode/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/buscar-dados-qrcode/</guid>
       <description>
         
         
@@ -125,10 +125,10 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
     
     <item>
       <title>Docs: Criar um pagamento pendente</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/criar-pagamento-pendente/</link>
       <pubDate>Thu, 01 Apr 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/criar-pagamento-pendente/</guid>
       <description>
         
         
@@ -148,7 +148,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;li&gt;O campo &lt;code&gt;key&lt;/code&gt; se torna obrigatório na presença do campo &lt;code&gt;transaction_id&lt;/code&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;A ausência do campo &lt;code&gt;key&lt;/code&gt;, que seria o envio de um Pix pela Chave Pix torna o campo &lt;code&gt;target&lt;/code&gt;, que é o campo com os dados bancários do destino, &lt;strong&gt;obrigatório&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;É possivel criar um Pix somente informando o campo &lt;code&gt;account_id&lt;/code&gt; sem precisar informar o campo &lt;code&gt;source&lt;/code&gt;.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; &lt;code&gt;/api/v1/pix/outbound_pix_payments/{id}/actions/confirm&lt;/code&gt;. Caso o Pix não seja confirmado, ele permanece no status de &lt;code&gt;CREATED&lt;/code&gt; até ser confirmado.&lt;/li&gt;
+&lt;li&gt;Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; &lt;code&gt;/api/v1/pix/outbound_pix_payments/{id}/actions/confirm&lt;/code&gt;. Caso o Pix não seja confirmado, ele permanece no status de &lt;code&gt;CREATED&lt;/code&gt; até ser confirmado.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
@@ -296,10 +296,10 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
     
     <item>
       <title>Docs: Confirmar um pagamento pendente</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/confirmar-pagamento-pendente/</link>
       <pubDate>Thu, 01 Apr 2021 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/confirmar-pagamento-pendente/</guid>
       <description>
         
         

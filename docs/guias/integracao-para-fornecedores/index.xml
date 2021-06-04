@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – INTEGRAÇÃO PARA FORNECEDORES</title>
-    <link>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/</link>
+    <link>https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/</link>
     <description>Recent content in INTEGRAÇÃO PARA FORNECEDORES on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 19 May 2021 09:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/guias/integracao-para-fornecedores/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Autorizar</title>
-      <link>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/authorization/</link>
+      <link>https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/authorization/</link>
       <pubDate>Thu, 18 Mar 2021 14:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/authorization/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/authorization/</guid>
       <description>
         
         
@@ -36,7 +36,7 @@
 &lt;br&gt;
 &lt;h4 id=&#34;como-gero-o-token-para-acessar-esse-endpoint&#34;&gt;&lt;strong&gt;Como gero o token para acessar esse endpoint?&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;p&gt;Você pode seguir o guia descrito &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;clicando aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Você pode seguir o guia descrito &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/guias/integracao/autenticacao&#34;&gt;clicando aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;glossário&#34;&gt;&lt;strong&gt;Glossário&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
