@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Link de Pagamento</title>
-    <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
+    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/</link>
     <description>Recent content in Link de Pagamento on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: O que é um Link de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/</link>
       <pubDate>Wed, 10 Mar 2021 15:30:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/</guid>
       <description>
         
         
@@ -51,10 +51,10 @@
     
     <item>
       <title>Docs: Configurações da Conta para um Link de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/</link>
       <pubDate>Wed, 10 Mar 2021 15:30:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/</guid>
       <description>
         
         
@@ -106,10 +106,10 @@
     
     <item>
       <title>Docs: Listar Links de Pagamentos da Conta</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</link>
       <pubDate>Thu, 11 Mar 2021 15:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</guid>
       <description>
         
         
@@ -207,10 +207,10 @@
     
     <item>
       <title>Docs: Detalhes de um Link de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</link>
       <pubDate>Mon, 15 Mar 2021 15:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</guid>
       <description>
         
         
@@ -451,10 +451,10 @@
     
     <item>
       <title>Docs: Criar Link de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</link>
       <pubDate>Mon, 15 Mar 2021 11:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</guid>
       <description>
         
         
@@ -606,10 +606,10 @@
     
     <item>
       <title>Docs: Cancelar um Link de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/</link>
       <pubDate>Mon, 15 Mar 2021 11:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/</guid>
       <description>
         
         
