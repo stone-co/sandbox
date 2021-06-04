@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Transferências Internas</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/</link>
     <description>Recent content in Transferências Internas on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Apr 2019 19:23:33 +0000</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Transferir para Contas Stone</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/</link>
       <pubDate>Mon, 01 Apr 2019 19:18:21 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/</guid>
       <description>
         
         
@@ -131,10 +131,10 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
     
     <item>
       <title>Docs: Listar Transferências Internas</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/</link>
       <pubDate>Mon, 01 Apr 2019 19:21:13 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/</guid>
       <description>
         
         
@@ -244,10 +244,10 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
     
     <item>
       <title>Docs: Retornando uma Transferência Interna</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</link>
       <pubDate>Mon, 01 Apr 2019 19:23:33 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</guid>
       <description>
         
         
@@ -302,10 +302,10 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
     
     <item>
       <title>Docs: Cancelamento de Uma Transferência Interna Agendada</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</link>
       <pubDate>Mon, 29 Apr 2019 18:16:45 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</guid>
       <description>
         
         

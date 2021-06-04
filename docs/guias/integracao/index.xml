@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – INTEGRAÇÃO</title>
-    <link>https://stone-co.github.io/sandbox/docs/guias/integracao/</link>
+    <link>https://stone-co.github.io/docs/guias/integracao/</link>
     <description>Recent content in INTEGRAÇÃO on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/guias/integracao/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/guias/integracao/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Cadastro da Aplicação</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/cadastro-da-aplicacao/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</link>
       <pubDate>Mon, 27 Jan 2020 00:38:05 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/cadastro-da-aplicacao/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</guid>
       <description>
         
         
@@ -61,10 +61,10 @@
     
     <item>
       <title>Docs: Boas Práticas</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/boas-praticas/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/boas-praticas/</link>
       <pubDate>Tue, 21 May 2019 20:10:39 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/boas-praticas/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/boas-praticas/</guid>
       <description>
         
         
@@ -109,10 +109,10 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
     
     <item>
       <title>Docs: Autenticação</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/autenticacao/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/autenticacao/</link>
       <pubDate>Tue, 28 May 2019 18:04:38 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/autenticacao/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/autenticacao/</guid>
       <description>
         
         
@@ -369,10 +369,10 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
     
     <item>
       <title>Docs: Testando a API</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/testando-a-api/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/testando-a-api/</link>
       <pubDate>Tue, 28 May 2019 18:05:07 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/testando-a-api/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/testando-a-api/</guid>
       <description>
         
         
@@ -445,10 +445,10 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
     
     <item>
       <title>Docs: Consentimento</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/consentimento/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/consentimento/</link>
       <pubDate>Tue, 28 May 2019 18:05:24 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/consentimento/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/consentimento/</guid>
       <description>
         
         
@@ -633,10 +633,10 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
     
     <item>
       <title>Docs: Aprovação</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/aprovacao/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/aprovacao/</link>
       <pubDate>Wed, 05 Jun 2019 19:57:11 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/aprovacao/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/aprovacao/</guid>
       <description>
         
         
@@ -653,10 +653,10 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
     
     <item>
       <title>Docs: Webhooks</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/webhooks/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/webhooks/</link>
       <pubDate>Mon, 29 Jul 2019 21:31:30 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/webhooks/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/webhooks/</guid>
       <description>
         
         
@@ -1183,10 +1183,10 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
     
     <item>
       <title>Docs: Reembolso de transferências</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/reembolso-de-transferencias/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/reembolso-de-transferencias/</link>
       <pubDate>Wed, 07 Oct 2020 19:43:06 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/reembolso-de-transferencias/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/reembolso-de-transferencias/</guid>
       <description>
         
         

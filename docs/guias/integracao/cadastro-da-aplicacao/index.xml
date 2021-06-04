@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Cadastro da Aplicação</title>
-    <link>https://stone-co.github.io/sandbox/docs/guias/integracao/cadastro-da-aplicacao/</link>
+    <link>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</link>
     <description>Recent content in Cadastro da Aplicação on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 27 Jan 2020 00:38:05 +0000</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/guias/integracao/cadastro-da-aplicacao/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Gerando o par de chaves</title>
-      <link>https://stone-co.github.io/sandbox/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/</link>
       <pubDate>Mon, 27 Jan 2020 15:29:06 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/</guid>
       <description>
         
         

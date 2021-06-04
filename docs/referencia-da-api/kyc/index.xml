@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – KYC (Alpha)</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/kyc/</link>
     <description>Recent content in KYC (Alpha) on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/kyc/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Buscar informações pendentes</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/</guid>
       <description>
         
         
@@ -171,10 +171,10 @@
     
     <item>
       <title>Docs: Consultar URL para envio da foto</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/consultar-url-para-foto/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/consultar-url-para-foto/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/</guid>
       <description>
         
         
@@ -222,10 +222,10 @@
     
     <item>
       <title>Docs: Enviar fotos do usuário</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-fotos/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-fotos/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/</guid>
       <description>
         
         
@@ -281,10 +281,10 @@
     
     <item>
       <title>Docs: Enviar dados do usuário</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</guid>
       <description>
         
         

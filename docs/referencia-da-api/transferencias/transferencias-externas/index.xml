@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Transferências Externas</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/</link>
     <description>Recent content in Transferências Externas on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Apr 2019 19:23:33 +0000</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Transferir para Outros Bancos</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/</guid>
       <description>
         
         
@@ -199,10 +199,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     
     <item>
       <title>Docs: Listar Transferências Externas</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/</link>
       <pubDate>Mon, 01 Apr 2019 19:31:32 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/</guid>
       <description>
         
         
@@ -329,10 +329,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     
     <item>
       <title>Docs: Retornar Uma Transferência Externa</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</link>
       <pubDate>Mon, 01 Apr 2019 19:33:33 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</guid>
       <description>
         
         
@@ -397,10 +397,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     
     <item>
       <title>Docs: Cancelamento de Uma Transferência Externa Agendada</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</link>
       <pubDate>Mon, 29 Apr 2019 20:19:22 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</guid>
       <description>
         
         

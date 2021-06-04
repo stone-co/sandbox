@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Padrões da API</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</link>
     <description>Recent content in Padrões da API on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Overview</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/overview/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/</link>
       <pubDate>Thu, 07 May 2020 18:06:16 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/overview/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/</guid>
       <description>
         
         
@@ -105,10 +105,10 @@ A &lt;a href=&#34;../../../docs/guias/a-conta-stone/&#34;&gt;Conta Stone&lt;/a&g
     
     <item>
       <title>Docs: Autenticação</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/autenticacao/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/autenticacao/</link>
       <pubDate>Thu, 07 May 2020 18:06:16 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/autenticacao/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/autenticacao/</guid>
       <description>
         
         
@@ -142,10 +142,10 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
     
     <item>
       <title>Docs: Data e Hora</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/data-e-hora/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/data-e-hora/</link>
       <pubDate>Tue, 05 May 2020 18:32:12 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/data-e-hora/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/data-e-hora/</guid>
       <description>
         
         
@@ -172,10 +172,10 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
     
     <item>
       <title>Docs: Paginação</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/paginacao/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/paginacao/</link>
       <pubDate>Mon, 04 May 2020 18:32:40 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/paginacao/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/paginacao/</guid>
       <description>
         
         
@@ -210,10 +210,10 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
     
     <item>
       <title>Docs: Valores Financeiros</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/valores-financeiros/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-financeiros/</link>
       <pubDate>Sun, 03 May 2020 18:32:57 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/valores-financeiros/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-financeiros/</guid>
       <description>
         
         
@@ -227,10 +227,10 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
     
     <item>
       <title>Docs: Códigos De Resposta</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</link>
       <pubDate>Sat, 02 May 2020 18:33:23 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</guid>
       <description>
         
         
@@ -308,10 +308,10 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
     
     <item>
       <title>Docs: Mensagens De Erro</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</link>
       <pubDate>Fri, 01 May 2020 18:34:12 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</guid>
       <description>
         
         

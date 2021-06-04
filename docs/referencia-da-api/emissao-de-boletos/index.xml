@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Boletos</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</link>
     <description>Recent content in Boletos on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Overview Emissão de Boletos</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</link>
       <pubDate>Mon, 30 Mar 2020 07:01:34 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</guid>
       <description>
         
         
@@ -67,10 +67,10 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     
     <item>
       <title>Docs: Status</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/status/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/</link>
       <pubDate>Mon, 27 Apr 2020 12:00:07 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/status/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/</guid>
       <description>
         
         
@@ -122,10 +122,10 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     
     <item>
       <title>Docs: Regras de negócio</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</link>
       <pubDate>Sun, 26 Apr 2020 22:22:46 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</guid>
       <description>
         
         
@@ -260,10 +260,10 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     
     <item>
       <title>Docs: Campos</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/campos/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</link>
       <pubDate>Sun, 26 Apr 2020 21:06:22 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/campos/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</guid>
       <description>
         
         
@@ -678,10 +678,10 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     
     <item>
       <title>Docs: Emitir Boleto</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</link>
       <pubDate>Thu, 16 Jan 2020 19:14:55 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</guid>
       <description>
         
         
@@ -871,10 +871,10 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     
     <item>
       <title>Docs: Listar Boletos</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</link>
       <pubDate>Mon, 09 Mar 2020 17:11:01 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</guid>
       <description>
         
         
@@ -1108,10 +1108,10 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
     
     <item>
       <title>Docs: Retornar Um Boleto</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</link>
       <pubDate>Fri, 06 Mar 2020 17:19:19 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</guid>
       <description>
         
         
@@ -1189,10 +1189,10 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
     
     <item>
       <title>Docs: Gerar PDF Boleto</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</link>
       <pubDate>Tue, 22 Sep 2020 15:54:16 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</guid>
       <description>
         
         
@@ -1218,10 +1218,10 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
     
     <item>
       <title>Docs: Cancelar um boleto</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</guid>
       <description>
         
         
