@@ -1,0 +1,290 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Referência da API</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/</link>
+    <description>Recent content in Referência da API on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Padrões da API</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Dados da conta</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Simulações (DRY-RUN)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Transferências</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Pagamentos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Agendamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/agendamento/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/agendamento/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Comprovantes</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Instituições</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Contatos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Boletos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: KYC (Alpha)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/kyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/kyc/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Os endpoints utilizados serão:&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Link de Pagamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Pix (Alpha)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
+      <pubDate>Wed, 31 Mar 2021 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;A integração com o Pix ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h4 id=&#34;o-que-é-o-pix&#34;&gt;&lt;strong&gt;O que é o Pix?&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020.&lt;/p&gt;
+&lt;p&gt;Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pix busca simplificar a experiência do usuário que consegue passar o dinheiro para outro participante informando apenas seu telefone, documento (CPF/CNPJ), seu email ou lendo um QR Code. Lembrando que também é possível fazer um Pix informando os dados bancários, como é feito em uma TED.&lt;/p&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;A API de Pix fica disponível todos os dias da semana e 24 horas por dia, pois é uma modalidade de pagamento instantânea.
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h4 id=&#34;participantes-do-pix&#34;&gt;&lt;strong&gt;Participantes do Pix&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;O Pix tem quatro tipos de participantes principais:&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Participante Direto (PSP direto)&lt;/strong&gt;: Instituição homologada junto ao Banco Central (BC) que fará o processamento do Pix junto aos sistemas do BC tanto do ponto de vista informacional, quanto do ponto de vista financeiro. Ou seja, além de ser responsável por toda a troca de informação com os sistemas do Pix, quando agindo como instituição do pagador será a instituição que enviará o dinheiro para o BC e quando agindo como instituição do recebedor receberá o dinheiro do BC. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a adquirência e o emissor dependendo se estamos agindo ao lado do recebedor ou do pagador respectivamente. &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Participante Indireto (PSP indireto)&lt;/strong&gt;: Instituição homologada junto ao Banco Central que fará parte do arranjo do Pix tanto do ponto de vista informacional, quanto do ponto de vista financeiro, mas que usará um participante direto para fazer a intermediação da integração com os sistemas do Pix. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a uma subadquirente. &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usuário Recebedor&lt;/strong&gt;: é quem vai receber o dinheiro da transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões, seria mais ou menos o equivalente ao lojista. &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usuário Pagador&lt;/strong&gt;: é quem vai pagar a transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao comprador / dono do cartão.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;status-de-um-pix&#34;&gt;&lt;strong&gt;Status de um Pix&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Os status possiveis são: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;CONFIRMED&lt;/code&gt;, &lt;code&gt;FAILED&lt;/code&gt;, &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, &lt;code&gt;REFUNDED&lt;/code&gt; e &lt;code&gt;SETTLED&lt;/code&gt;. A partir do momento que um Pix é criado, ele &lt;strong&gt;nunca expira&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CREATED&lt;/code&gt; -  Significa que o Pix foi criado e está aguardando confirmação.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CONFIRMED&lt;/code&gt; - Significa que o Pix que foi criado e estava com o status &lt;code&gt;CREATED&lt;/code&gt;, foi confirmado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;MONEY_RESERVED&lt;/code&gt; - Significa que o Pix que foi confirmado e estava com o status &lt;code&gt;CONFIRMED&lt;/code&gt;, teve o dinheiro retirado da conta do cliente e reservado em uma conta gráfica a parte para a operação.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SETTLED&lt;/code&gt; - Significa que o Pix que estava com o estado de &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, foi finalizado e liquidamos o dinheiro reservado na conta gráfica da operação.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;REFUNDED&lt;/code&gt; - Significa que o Pix que estava com o estado de &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, foi rejeitado ou devolvido.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;FAILED&lt;/code&gt; - Significa que o Pix que estava com o estado de &lt;code&gt;CONFIRMED&lt;/code&gt;, falhou no momento de reservar o dinheiro, podendo ser devido a falta de saldo do cliente, e portanto ele vai para o estado de &lt;code&gt;FAILED&lt;/code&gt; e o fluxo da operação se encerra.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;fluxo-para-criação-de-um-pix&#34;&gt;&lt;strong&gt;Fluxo para criação de um Pix&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
+&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta do passo 1.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;fluxo-de-criação-de-pix-através-da-leitura-do-qrcode&#34;&gt;&lt;strong&gt;Fluxo de criação de Pix através da leitura do QRCode&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/buscar-dados-qrcode/&#34;&gt;endpoint&lt;/a&gt; /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo &lt;code&gt;brcode&lt;/code&gt;. Este irá retornar uma reposta com os dados do QRCode.&lt;/li&gt;
+&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
+&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta do passo 2.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Recargas</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/recargas/</link>
+      <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Conta Stone SDK (Beta)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
