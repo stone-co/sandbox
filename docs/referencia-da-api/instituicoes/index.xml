@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Instituições</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</link>
     <description>Recent content in Instituições on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/instituicoes/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Overview Instituições</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/overview-instituicao/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/overview-instituicao/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/overview-instituicao/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/instituicoes/overview-instituicao/</guid>
       <description>
         
         
@@ -54,10 +54,10 @@
     
     <item>
       <title>Docs: Listar Instituições</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/listar-instituicoes/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/listar-instituicoes/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/listar-instituicoes/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/instituicoes/listar-instituicoes/</guid>
       <description>
         
         
@@ -127,10 +127,10 @@
     
     <item>
       <title>Docs: Retornar Uma Instituição</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/</guid>
       <description>
         
         

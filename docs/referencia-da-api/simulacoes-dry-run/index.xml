@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Simulações (DRY-RUN)</title>
-    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/</link>
+    <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</link>
     <description>Recent content in Simulações (DRY-RUN) on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Simular uma Transferência Interna</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/</link>
       <pubDate>Fri, 19 Oct 2018 20:57:05 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/</guid>
       <description>
         
         
@@ -99,10 +99,10 @@ Número da conta. Padrão: &lt;code&gt;^\d+$&lt;/code&gt;&lt;/li&gt;
     
     <item>
       <title>Docs: Simular uma Transferência Externa</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/</link>
       <pubDate>Fri, 19 Oct 2018 20:57:05 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/</guid>
       <description>
         
         
@@ -216,16 +216,16 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
     
     <item>
       <title>Docs: Objetos da Simulação de Pagamento</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</link>
       <pubDate>Tue, 14 Apr 2020 14:26:24 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</guid>
       <description>
         
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;O Dry Run de pagamentos retorna, além do &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/o-objeto-pagamento/&#34;&gt;Objeto Pagamento&lt;/a&gt; em si, os Objetos &lt;a href=&#34;#objeto-barcode-details&#34;&gt;Barcode Details&lt;/a&gt; e &lt;a href=&#34;#objeto-details&#34;&gt;Details&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O Dry Run de pagamentos retorna, além do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/&#34;&gt;Objeto Pagamento&lt;/a&gt; em si, os Objetos &lt;a href=&#34;#objeto-barcode-details&#34;&gt;Barcode Details&lt;/a&gt; e &lt;a href=&#34;#objeto-details&#34;&gt;Details&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Como complemento, descrevemos os possíveis resultados para o campo &lt;a href=&#34;#document_payment_type&#34;&gt;document_payment_type&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;objeto-barcode-details&#34;&gt;Objeto Barcode Details&lt;/h3&gt;
@@ -588,10 +588,10 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
     
     <item>
       <title>Docs: Simular o Pagamento de Um Documento</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</link>
       <pubDate>Mon, 01 Apr 2019 20:21:16 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</guid>
       <description>
         
         
