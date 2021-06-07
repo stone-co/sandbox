@@ -3454,27 +3454,27 @@
 	<hr>
 <br>
 <p>Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
- <span style="color:#a40000">cursor:</span> <span style="color:#a40000">{</span>
-    <span style="color:#a40000">after:</span> <span style="color:#204a87;font-weight:bold">&#34;string | null&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#a40000">before:</span> <span style="color:#204a87;font-weight:bold">&#34;string | null&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#a40000">limit:</span> <span style="color:#204a87;font-weight:bold">&#34;number&#34;</span>
- <span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">,</span>
- <span style="color:#a40000">data:</span> <span style="color:#a40000">array</span><span style="color:#000;font-weight:bold">[</span><span style="color:#a40000">object</span><span style="color:#000;font-weight:bold">]</span><span style="color:#a40000">,</span>
-<span style="color:#a40000">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+ cursor: {
+    after: <span style="color:#ff79c6">&#34;string | null&#34;</span>,
+    before: <span style="color:#ff79c6">&#34;string | null&#34;</span>,
+    limit: <span style="color:#ff79c6">&#34;number&#34;</span>
+ },
+ data: array[object],
+}
 </code></pre></div><br>
 <h4 id="como-funciona">Como funciona:</h4>
 <hr>
 <br>
 <p>Deve-se informar o limite de items para a paginação, passando o parâmetro <strong>?limit=10</strong>. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
- <span style="color:#a40000">cursor:</span> <span style="color:#a40000">{</span>
- <span style="color:#a40000">after:</span> <span style="color:#204a87;font-weight:bold">&#34;ASsa987fqw&#34;</span><span style="color:#000;font-weight:bold">,</span>
- <span style="color:#a40000">before:</span> <span style="color:#204a87;font-weight:bold">&#34;null&#34;</span><span style="color:#000;font-weight:bold">,</span>
- <span style="color:#a40000">limit:</span> <span style="color:#204a87;font-weight:bold">&#34;10&#34;</span>
- <span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">,</span>
- <span style="color:#a40000">data:</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#a40000">;</span>
-<span style="color:#a40000">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+ cursor: {
+ after: <span style="color:#ff79c6">&#34;ASsa987fqw&#34;</span>,
+ before: <span style="color:#ff79c6">&#34;null&#34;</span>,
+ limit: <span style="color:#ff79c6">&#34;10&#34;</span>
+ },
+ data: [];
+}
 </code></pre></div><p>Assim, caso queira consultar o próximo cursor, acrescentar o parâmetro after na chamada: <strong>?limit=10&amp;after=ASsa987fqw</strong>, será retornado a próxima paginação.</p>
 
         <div class="section-index">

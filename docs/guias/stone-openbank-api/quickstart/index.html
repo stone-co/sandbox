@@ -3528,12 +3528,12 @@ content-type x-www-form-urlencoded
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">cURL</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">curl</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">POST</span> <span style="color:#a40000">\</span> 
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">curl --request POST \ 
   
-  <span style="color:#a40000">--url</span> <span style="color:#a40000">https://sandbox-api.openbank.stone.com.br/api/v</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">/external_transfers</span> <span style="color:#a40000">\</span>
-  <span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
-  <span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;authorization:</span> <span style="color:#a40000">Bearer</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">token</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span> <span style="color:#a40000">\</span>
-  <span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">3000</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;654321&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;260&#34;</span><span style="color:#000;font-weight:bold">},</span><span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#204a87;font-weight:bold">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;05971627007&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Nome do destinatário&#34;</span><span style="color:#000;font-weight:bold">}},</span><span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;f49a9d13-18dc-4811-b286-edd168a428b2&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+  --url https://sandbox-api.openbank.stone.com.br/api/v<span style="color:#bd93f9">1</span>/external_transfers \
+  --header &#39;Content-Type: application/json&#39; \
+  --header &#39;authorization: Bearer {token}&#39; \
+  --data &#39;{<span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">3000</span>,<span style="color:#ff79c6">&#34;target&#34;</span>:{<span style="color:#ff79c6">&#34;account&#34;</span>:{<span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;654321&#34;</span>,<span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1234&#34;</span>,<span style="color:#ff79c6">&#34;institution_code&#34;</span>:<span style="color:#f1fa8c">&#34;260&#34;</span>},<span style="color:#ff79c6">&#34;entity&#34;</span>:{<span style="color:#ff79c6">&#34;cpf&#34;</span>:<span style="color:#f1fa8c">&#34;05971627007&#34;</span>,<span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Nome do destinatário&#34;</span>}},<span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;f49a9d13-18dc-4811-b286-edd168a428b2&#34;</span>}&#39;
 </code></pre></div>
 
 </div>
@@ -3543,20 +3543,20 @@ content-type x-www-form-urlencoded
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Ruby</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">require</span> <span style="color:#a40000">&#39;uri&#39;</span>
-<span style="color:#a40000">require</span> <span style="color:#a40000">&#39;net/http&#39;</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">require &#39;uri&#39;
+require &#39;net/http&#39;
 
-<span style="color:#a40000">url</span> <span style="color:#a40000">=</span> <span style="color:#a40000">URI(</span><span style="color:#4e9a06">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span><span style="color:#a40000">)</span>
+url = URI(<span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span>)
 
-<span style="color:#a40000">http</span> <span style="color:#a40000">=</span> <span style="color:#a40000">Net::HTTP.new(url.host,</span> <span style="color:#a40000">url.port)</span>
-<span style="color:#a40000">http.use_ssl</span> <span style="color:#a40000">=</span> <span style="color:#204a87;font-weight:bold">true</span>
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = <span style="color:#ff79c6">true</span>
 
-<span style="color:#a40000">request</span> <span style="color:#a40000">=</span> <span style="color:#a40000">Net::HTTP::Post.new(url)</span>
-<span style="color:#a40000">request</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;authorization&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#a40000">=</span> <span style="color:#a40000">&#39;Bearer</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">token</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
-<span style="color:#a40000">request.body</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;{\&#34;amount\&#34;:10050,\&#34;target\&#34;:{\&#34;account\&#34;:{\&#34;account_code\&#34;:\&#34;1456879\&#34;,\&#34;branch_code\&#34;:\&#34;0633\&#34;,\&#34;institution_code\&#34;:\&#34;379\&#34;},\&#34;entity\&#34;:{\&#34;cpf\&#34;:\&#34;67385417752\&#34;,\&#34;name\&#34;:\&#34;Vitoria Silva Correia\&#34;}},\&#34;account_id\&#34;:\&#34;200568\&#34;}&#34;</span>
+request = Net::HTTP::Post.new(url)
+request[<span style="color:#f1fa8c">&#34;authorization&#34;</span>] = &#39;Bearer {token}&#39;
+request.body = <span style="color:#f1fa8c">&#34;{\&#34;amount\&#34;:10050,\&#34;target\&#34;:{\&#34;account\&#34;:{\&#34;account_code\&#34;:\&#34;1456879\&#34;,\&#34;branch_code\&#34;:\&#34;0633\&#34;,\&#34;institution_code\&#34;:\&#34;379\&#34;},\&#34;entity\&#34;:{\&#34;cpf\&#34;:\&#34;67385417752\&#34;,\&#34;name\&#34;:\&#34;Vitoria Silva Correia\&#34;}},\&#34;account_id\&#34;:\&#34;200568\&#34;}&#34;</span>
 
-<span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">http.request(request)</span>
-<span style="color:#a40000">puts</span> <span style="color:#a40000">response.read_body</span>
+response = http.request(request)
+puts response.read_body
 </code></pre></div>
 
 </div>
@@ -3566,35 +3566,35 @@ content-type x-www-form-urlencoded
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">JavaScript</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">var</span> <span style="color:#a40000">data</span> <span style="color:#a40000">=</span> <span style="color:#a40000">JSON.stringify(</span><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10050</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1456879&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0633&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;379&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67385417752&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Vitoria Silva Correia&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;200568&#34;</span>
-<span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">);</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">var data = JSON.stringify({
+  <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">10050</span>,
+  <span style="color:#ff79c6">&#34;target&#34;</span>: {
+    <span style="color:#ff79c6">&#34;account&#34;</span>: {
+      <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;1456879&#34;</span>,
+      <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0633&#34;</span>,
+      <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;379&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+      <span style="color:#ff79c6">&#34;cpf&#34;</span>: <span style="color:#f1fa8c">&#34;67385417752&#34;</span>,
+      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Vitoria Silva Correia&#34;</span>
+    }
+  },
+  <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;200568&#34;</span>
+});
 
-<span style="color:#a40000">var</span> <span style="color:#a40000">xhr</span> <span style="color:#a40000">=</span> <span style="color:#a40000">new</span> <span style="color:#a40000">XMLHttpRequest();</span>
-<span style="color:#a40000">xhr.withCredentials</span> <span style="color:#a40000">=</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#a40000">;</span>
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = <span style="color:#ff79c6">true</span>;
 
-<span style="color:#a40000">xhr.addEventListener(</span><span style="color:#4e9a06">&#34;readystatechange&#34;</span><span style="color:#a40000">,</span> <span style="color:#a40000">function</span> <span style="color:#a40000">()</span> <span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#a40000">if</span> <span style="color:#a40000">(this.readyState</span> <span style="color:#a40000">===</span> <span style="color:#a40000">this.DONE)</span> <span style="color:#a40000">{</span>
-    <span style="color:#a40000">console.log(this.responseText);</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#a40000">});</span>
+xhr.addEventListener(<span style="color:#f1fa8c">&#34;readystatechange&#34;</span>, function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
 
-<span style="color:#a40000">xhr.open(</span><span style="color:#4e9a06">&#34;POST&#34;</span><span style="color:#a40000">,</span> <span style="color:#4e9a06">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span><span style="color:#a40000">);</span>
-<span style="color:#a40000">xhr.setRequestHeader(</span><span style="color:#4e9a06">&#34;authorization&#34;</span><span style="color:#a40000">,</span> <span style="color:#4e9a06">&#34;Bearer {token}&#34;</span><span style="color:#a40000">);</span>
+xhr.open(<span style="color:#f1fa8c">&#34;POST&#34;</span>, <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span>);
+xhr.setRequestHeader(<span style="color:#f1fa8c">&#34;authorization&#34;</span>, <span style="color:#f1fa8c">&#34;Bearer {token}&#34;</span>);
 
-<span style="color:#a40000">xhr.send(data);</span>
+xhr.send(data);
 </code></pre></div>
 
 </div>
@@ -3604,16 +3604,16 @@ content-type x-www-form-urlencoded
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Python</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">import</span> <span style="color:#a40000">requests</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">import requests
 
-<span style="color:#a40000">url</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span>
+url = <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span>
 
-<span style="color:#a40000">payload</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;{\&#34;amount\&#34;:10050,\&#34;target\&#34;:{\&#34;account\&#34;:{\&#34;account_code\&#34;:\&#34;1456879\&#34;,\&#34;branch_code\&#34;:\&#34;0633\&#34;,\&#34;institution_code\&#34;:\&#34;379\&#34;},\&#34;entity\&#34;:{\&#34;cpf\&#34;:\&#34;67385417752\&#34;,\&#34;name\&#34;:\&#34;Vitoria Silva Correia\&#34;}},\&#34;account_id\&#34;:\&#34;200568\&#34;}&#34;</span>
-<span style="color:#a40000">headers</span> <span style="color:#a40000">=</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">&#39;authorization&#39;:</span> <span style="color:#a40000">&#39;Bearer</span> <span style="color:#a40000">{token</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;}</span>
+payload = <span style="color:#f1fa8c">&#34;{\&#34;amount\&#34;:10050,\&#34;target\&#34;:{\&#34;account\&#34;:{\&#34;account_code\&#34;:\&#34;1456879\&#34;,\&#34;branch_code\&#34;:\&#34;0633\&#34;,\&#34;institution_code\&#34;:\&#34;379\&#34;},\&#34;entity\&#34;:{\&#34;cpf\&#34;:\&#34;67385417752\&#34;,\&#34;name\&#34;:\&#34;Vitoria Silva Correia\&#34;}},\&#34;account_id\&#34;:\&#34;200568\&#34;}&#34;</span>
+headers = {&#39;authorization&#39;: &#39;Bearer {token}&#39;}
 
-<span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">requests.request(</span><span style="color:#4e9a06">&#34;POST&#34;</span><span style="color:#a40000">,</span> <span style="color:#a40000">url,</span> <span style="color:#a40000">data=payload,</span> <span style="color:#a40000">headers=headers)</span>
+response = requests.request(<span style="color:#f1fa8c">&#34;POST&#34;</span>, url, data=payload, headers=headers)
 
-<span style="color:#a40000">print(response.text)</span>
+print(response.text)
 </code></pre></div>
 
 </div>
@@ -3623,11 +3623,11 @@ content-type x-www-form-urlencoded
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">C#</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">var</span> <span style="color:#a40000">client</span> <span style="color:#a40000">=</span> <span style="color:#a40000">new</span> <span style="color:#a40000">RestClient(</span><span style="color:#4e9a06">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span><span style="color:#a40000">);</span>
-<span style="color:#a40000">var</span> <span style="color:#a40000">request</span> <span style="color:#a40000">=</span> <span style="color:#a40000">new</span> <span style="color:#a40000">RestRequest(Method.POST);</span>
-<span style="color:#a40000">request.AddHeader(</span><span style="color:#4e9a06">&#34;authorization&#34;</span><span style="color:#a40000">,</span> <span style="color:#4e9a06">&#34;Bearer {token}&#34;</span><span style="color:#a40000">);</span>
-<span style="color:#a40000">request.AddParameter(</span><span style="color:#4e9a06">&#34;undefined&#34;</span><span style="color:#a40000">,</span> <span style="color:#4e9a06">&#34;{\&#34;amount\&#34;:10050,\&#34;target\&#34;:{\&#34;account\&#34;:{\&#34;account_code\&#34;:\&#34;1456879\&#34;,\&#34;branch_code\&#34;:\&#34;0633\&#34;,\&#34;institution_code\&#34;:\&#34;379\&#34;},\&#34;entity\&#34;:{\&#34;cpf\&#34;:\&#34;67385417752\&#34;,\&#34;name\&#34;:\&#34;Vitoria Silva Correia\&#34;}},\&#34;account_id\&#34;:\&#34;200568\&#34;}&#34;</span><span style="color:#a40000">,</span> <span style="color:#a40000">ParameterType.RequestBody);</span>
-<span style="color:#a40000">IRestResponse</span> <span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">client.Execute(request);</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">var client = new RestClient(<span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&#34;</span>);
+var request = new RestRequest(Method.POST);
+request.AddHeader(<span style="color:#f1fa8c">&#34;authorization&#34;</span>, <span style="color:#f1fa8c">&#34;Bearer {token}&#34;</span>);
+request.AddParameter(<span style="color:#f1fa8c">&#34;undefined&#34;</span>, <span style="color:#f1fa8c">&#34;{\&#34;amount\&#34;:10050,\&#34;target\&#34;:{\&#34;account\&#34;:{\&#34;account_code\&#34;:\&#34;1456879\&#34;,\&#34;branch_code\&#34;:\&#34;0633\&#34;,\&#34;institution_code\&#34;:\&#34;379\&#34;},\&#34;entity\&#34;:{\&#34;cpf\&#34;:\&#34;67385417752\&#34;,\&#34;name\&#34;:\&#34;Vitoria Silva Correia\&#34;}},\&#34;account_id\&#34;:\&#34;200568\&#34;}&#34;</span>, ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);
 </code></pre></div>
 
 </div>
@@ -3638,31 +3638,31 @@ content-type x-www-form-urlencoded
 <p>Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:</p>
 <p><img src="../../../../docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png" alt="imagem_tela_de_transferencia"></p>
 <p>É utilizada a requisição citada 3º passo, tendo como resposta o seguinte JSON:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10050</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2018-10-08T22:13:51Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2018-10-08T22:13:51Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;79573d4a-613a-4ac7-8970-39c39fc18e5a&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;refunded_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1456879&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0633&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;379&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67385417752&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Vitoria Silva Correia&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">10050</span>,
+  <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2018-10-08T22:13:51Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2018-10-08T22:13:51Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span>,
+  <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;79573d4a-613a-4ac7-8970-39c39fc18e5a&#34;</span>,
+  <span style="color:#ff79c6">&#34;refunded_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;target&#34;</span>: {
+    <span style="color:#ff79c6">&#34;account&#34;</span>: {
+      <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;1456879&#34;</span>,
+      <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0633&#34;</span>,
+      <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;379&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+      <span style="color:#ff79c6">&#34;cpf&#34;</span>: <span style="color:#f1fa8c">&#34;67385417752&#34;</span>,
+      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Vitoria Silva Correia&#34;</span>
+    }
+  }
+}
 </code></pre></div>
 
 <div class="pageinfo pageinfo-primary">

@@ -3464,135 +3464,135 @@
 </div>
 
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders
+</code></pre></div><br>
 <h5 id="body-request">Body Request</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;436df6e1-1d38-4637-892d-106a5e0b3154&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;items&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span><span style="color:#000;font-weight:bold">,</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;436df6e1-1d38-4637-892d-106a5e0b3154&#34;</span>,
+	<span style="color:#ff79c6">&#34;items&#34;</span>: [{
+		<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">13000</span>,
 
-		<span style="color:#204a87;font-weight:bold">&#34;description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Máquina para cortar cabelos sem fio&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;quantity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
-	<span style="color:#000;font-weight:bold">}],</span>
-	<span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Antonio Brasil de Castro&#34;</span>
-	<span style="color:#000;font-weight:bold">},</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;payments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;payment_method&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;checkout&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;checkout&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;expires_in&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10080</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;skip_checkout_success_page&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;billing_address_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;customer_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;accepted_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-				<span style="color:#4e9a06">&#34;credit_card&#34;</span>
-			<span style="color:#000;font-weight:bold">],</span>
-			<span style="color:#204a87;font-weight:bold">&#34;accepted_multi_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
-			<span style="color:#204a87;font-weight:bold">&#34;success_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://sandbox-link.openbank.stone.com.br/sucesso&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;credit_card&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-				<span style="color:#204a87;font-weight:bold">&#34;capture&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-				<span style="color:#204a87;font-weight:bold">&#34;installments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-						<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-						<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span>
-					<span style="color:#000;font-weight:bold">},</span>
-					<span style="color:#000;font-weight:bold">{</span>
-						<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-						<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span>
-					<span style="color:#000;font-weight:bold">},</span>
-					<span style="color:#000;font-weight:bold">{</span>
-						<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-						<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span>
-					<span style="color:#000;font-weight:bold">}</span>
-				<span style="color:#000;font-weight:bold">]</span>
-			<span style="color:#000;font-weight:bold">}</span>
-		<span style="color:#000;font-weight:bold">}</span>
-	<span style="color:#000;font-weight:bold">}]</span>
-<span style="color:#000;font-weight:bold">}</span>
+		<span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Máquina para cortar cabelos sem fio&#34;</span>,
+		<span style="color:#ff79c6">&#34;quantity&#34;</span>: <span style="color:#bd93f9">1</span>
+	}],
+	<span style="color:#ff79c6">&#34;customer&#34;</span>: {
+		<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Antonio Brasil de Castro&#34;</span>
+	},
+	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#ff79c6">true</span>,
+	<span style="color:#ff79c6">&#34;payments&#34;</span>: [{
+		<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">13000</span>,
+		<span style="color:#ff79c6">&#34;payment_method&#34;</span>: <span style="color:#f1fa8c">&#34;checkout&#34;</span>,
+		<span style="color:#ff79c6">&#34;checkout&#34;</span>: {
+			<span style="color:#ff79c6">&#34;expires_in&#34;</span>: <span style="color:#bd93f9">10080</span>,
+			<span style="color:#ff79c6">&#34;skip_checkout_success_page&#34;</span>: <span style="color:#ff79c6">true</span>,
+			<span style="color:#ff79c6">&#34;billing_address_editable&#34;</span>: <span style="color:#ff79c6">false</span>,
+			<span style="color:#ff79c6">&#34;customer_editable&#34;</span>: <span style="color:#ff79c6">true</span>,
+			<span style="color:#ff79c6">&#34;accepted_payment_methods&#34;</span>: [
+				<span style="color:#f1fa8c">&#34;credit_card&#34;</span>
+			],
+			<span style="color:#ff79c6">&#34;accepted_multi_payment_methods&#34;</span>: [],
+			<span style="color:#ff79c6">&#34;success_url&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-link.openbank.stone.com.br/sucesso&#34;</span>,
+			<span style="color:#ff79c6">&#34;credit_card&#34;</span>: {
+				<span style="color:#ff79c6">&#34;capture&#34;</span>: <span style="color:#ff79c6">true</span>,
+				<span style="color:#ff79c6">&#34;installments&#34;</span>: [{
+						<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">1</span>,
+						<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">13000</span>
+					},
+					{
+						<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">2</span>,
+						<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">13000</span>
+					},
+					{
+						<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">3</span>,
+						<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">13000</span>
+					}
+				]
+			}
+		}
+	}]
+}
 </code></pre></div><h5 id="response">Response</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;checkouts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;accepted_multi_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
-		<span style="color:#204a87;font-weight:bold">&#34;accepted_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-			<span style="color:#4e9a06">&#34;credit_card&#34;</span>
-		<span style="color:#000;font-weight:bold">],</span>
-		<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;billing_address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;billing_address_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:36Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;credit_card&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;authentication&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-				<span style="color:#204a87;font-weight:bold">&#34;threed_secure&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-				<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;none&#34;</span>
-			<span style="color:#000;font-weight:bold">},</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">13000</span>,
+	<span style="color:#ff79c6">&#34;checkouts&#34;</span>: [{
+		<span style="color:#ff79c6">&#34;accepted_multi_payment_methods&#34;</span>: [],
+		<span style="color:#ff79c6">&#34;accepted_payment_methods&#34;</span>: [
+			<span style="color:#f1fa8c">&#34;credit_card&#34;</span>
+		],
+		<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">13000</span>,
+		<span style="color:#ff79c6">&#34;billing_address&#34;</span>: {},
+		<span style="color:#ff79c6">&#34;billing_address_editable&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:36Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;credit_card&#34;</span>: {
+			<span style="color:#ff79c6">&#34;authentication&#34;</span>: {
+				<span style="color:#ff79c6">&#34;threed_secure&#34;</span>: {},
+				<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;none&#34;</span>
+			},
 
-			<span style="color:#204a87;font-weight:bold">&#34;capture&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;installments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span>
-				<span style="color:#000;font-weight:bold">}</span>
-			<span style="color:#000;font-weight:bold">]</span>
-		<span style="color:#000;font-weight:bold">},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;currency&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;BRL&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;delinquent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cus_bvYkAxFVxTLyo8ex&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Antonio Brasil de Castro&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;phones&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-			<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span>
-		<span style="color:#000;font-weight:bold">},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;customer_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;expires_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-22T20:27:36Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;chk_WpMBK50cx8hZlnPA&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;payment_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://api.mundipagg.com/checkout/v1/orders/chk_WpMBK50cx8hZlnPA&#34;</span><span style="color:#000;font-weight:bold">,</span>
+			<span style="color:#ff79c6">&#34;capture&#34;</span>: <span style="color:#ff79c6">true</span>,
+			<span style="color:#ff79c6">&#34;installments&#34;</span>: [{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">1</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">13000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">2</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">13000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">3</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">13000</span>
+				}
+			]
+		},
+		<span style="color:#ff79c6">&#34;currency&#34;</span>: <span style="color:#f1fa8c">&#34;BRL&#34;</span>,
+		<span style="color:#ff79c6">&#34;customer&#34;</span>: {
+			<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>,
+			<span style="color:#ff79c6">&#34;delinquent&#34;</span>: <span style="color:#ff79c6">false</span>,
+			<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;cus_bvYkAxFVxTLyo8ex&#34;</span>,
+			<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Antonio Brasil de Castro&#34;</span>,
+			<span style="color:#ff79c6">&#34;phones&#34;</span>: {},
+			<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>
+		},
+		<span style="color:#ff79c6">&#34;customer_editable&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;expires_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-22T20:27:36Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;chk_WpMBK50cx8hZlnPA&#34;</span>,
+		<span style="color:#ff79c6">&#34;metadata&#34;</span>: {},
+		<span style="color:#ff79c6">&#34;payment_url&#34;</span>: <span style="color:#f1fa8c">&#34;https://api.mundipagg.com/checkout/v1/orders/chk_WpMBK50cx8hZlnPA&#34;</span>,
 
-		<span style="color:#204a87;font-weight:bold">&#34;shippable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;skip_checkout_success_page&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;open&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;success_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://sandbox-link.openbank.stone.com.br/sucesso&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:36Z&#34;</span>
-	<span style="color:#000;font-weight:bold">}],</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;R03FYWF3OR&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;currency&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;BRL&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;delinquent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cus_bvYkAxFVxTLyo8ex&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Antonio Brasil de Castro&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;phones&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span>
-	<span style="color:#000;font-weight:bold">},</span>
-	<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;or_WzqJoA5HnUaLo1YL&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;items&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13000</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Máquina para cortar cabelos sem fio&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;oi_534KzWos4xcyNE0v&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;quantity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;active&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;product&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:35Z&#34;</span>
-		<span style="color:#000;font-weight:bold">}</span>
+		<span style="color:#ff79c6">&#34;shippable&#34;</span>: <span style="color:#ff79c6">false</span>,
+		<span style="color:#ff79c6">&#34;skip_checkout_success_page&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;open&#34;</span>,
+		<span style="color:#ff79c6">&#34;success_url&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-link.openbank.stone.com.br/sucesso&#34;</span>,
+		<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:36Z&#34;</span>
+	}],
+	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#ff79c6">false</span>,
+	<span style="color:#ff79c6">&#34;code&#34;</span>: <span style="color:#f1fa8c">&#34;R03FYWF3OR&#34;</span>,
+	<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>,
+	<span style="color:#ff79c6">&#34;currency&#34;</span>: <span style="color:#f1fa8c">&#34;BRL&#34;</span>,
+	<span style="color:#ff79c6">&#34;customer&#34;</span>: {
+		<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;delinquent&#34;</span>: <span style="color:#ff79c6">false</span>,
+		<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;cus_bvYkAxFVxTLyo8ex&#34;</span>,
+		<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Antonio Brasil de Castro&#34;</span>,
+		<span style="color:#ff79c6">&#34;phones&#34;</span>: {},
+		<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>
+	},
+	<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;or_WzqJoA5HnUaLo1YL&#34;</span>,
+	<span style="color:#ff79c6">&#34;items&#34;</span>: [{
+			<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">13000</span>,
+			<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>,
+			<span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Máquina para cortar cabelos sem fio&#34;</span>,
+			<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;oi_534KzWos4xcyNE0v&#34;</span>,
+			<span style="color:#ff79c6">&#34;quantity&#34;</span>: <span style="color:#bd93f9">1</span>,
+			<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>,
+			<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;product&#34;</span>,
+			<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:35Z&#34;</span>
+		}
 
-	<span style="color:#000;font-weight:bold">],</span>
-	<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pending&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T20:27:36Z&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+	],
+	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;pending&#34;</span>,
+	<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T20:27:36Z&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     

@@ -3479,8 +3479,8 @@
 </div>
 
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
+</code></pre></div><br>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3567,180 +3567,180 @@
 
 <br>
 <h4 id="responses"><strong>Responses</strong></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">200</span> OK
+content-type: application/json
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
-<span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2100</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;barcode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19797845600000021000000063139072468215929006&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;beneficiary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1085737&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;39809096038&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-07-27T18:25:38Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11121744590&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;discounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-      <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0.1&#34;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#204a87;font-weight:bold">&#34;expiration_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-12-01&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;fee_metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;billing_exemption_participant&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;max_free&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;original_fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;remaining_free&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;fine&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;172caf21-13de-4baa-9823-a21ac17ba8fa&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;interest&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;invoice_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;bill_of_exchange&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;issuance_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-07-27&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;limit_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-02-01&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;our_number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;63139072468215929006&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11121740790&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-    <span style="color:#000;font-weight:bold">},</span>
-   <span style="color:#204a87;font-weight:bold">&#34;receiver&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;registered_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;CREATED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19790000056313907246482159290061784560000002100&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
+{
+	<span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3&#34;</span>,
+    <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">2100</span>,
+    <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19797845600000021000000063139072468215929006&#34;</span>,
+    <span style="color:#ff79c6">&#34;beneficiary&#34;</span>: {
+      <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;1085737&#34;</span>,
+      <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+      <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;39809096038&#34;</span>,
+      <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+      <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+      <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+    },
+    <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-07-27T18:25:38Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65&#34;</span>,
+    <span style="color:#ff79c6">&#34;customer&#34;</span>: {
+      <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;11121744590&#34;</span>,
+      <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+      <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+      <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+    },
+    <span style="color:#ff79c6">&#34;discounts&#34;</span>: [
+      {
+        <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-11-20&#34;</span>,
+        <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;0.1&#34;</span>
+      }
+    ],
+    <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-12-01&#34;</span>,
+    <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+    <span style="color:#ff79c6">&#34;fee_metadata&#34;</span>: {
+      <span style="color:#ff79c6">&#34;billing_exemption_participant&#34;</span>: <span style="color:#ff79c6">true</span>,
+      <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+      <span style="color:#ff79c6">&#34;max_free&#34;</span>: <span style="color:#bd93f9">5</span>,
+      <span style="color:#ff79c6">&#34;original_fee&#34;</span>: <span style="color:#bd93f9">200</span>,
+      <span style="color:#ff79c6">&#34;remaining_free&#34;</span>: <span style="color:#bd93f9">5</span>
+    },
+    <span style="color:#ff79c6">&#34;fine&#34;</span>: {
+      <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+      <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;172caf21-13de-4baa-9823-a21ac17ba8fa&#34;</span>,
+    <span style="color:#ff79c6">&#34;interest&#34;</span>: {
+      <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+      <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;invoice_type&#34;</span>: <span style="color:#f1fa8c">&#34;bill_of_exchange&#34;</span>,
+    <span style="color:#ff79c6">&#34;issuance_date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-07-27&#34;</span>,
+    <span style="color:#ff79c6">&#34;limit_date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-02-01&#34;</span>,
+    <span style="color:#ff79c6">&#34;our_number&#34;</span>: <span style="color:#f1fa8c">&#34;63139072468215929006&#34;</span>,
+    <span style="color:#ff79c6">&#34;customer&#34;</span>: {
+      <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;11121740790&#34;</span>,
+      <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+      <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+      <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+    },
+   <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;registered_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;CREATED&#34;</span>,
+    <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000056313907246482159290061784560000002100&#34;</span>
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">201</span> <span style="color:#a40000">Created</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">201</span> Created
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2100</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;barcode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19797845600000021000000063139072468215929006&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;beneficiary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1085737&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;39809096038&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-07-27T18:25:38Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11121744590&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;discounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0.1&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">],</span>
-  <span style="color:#204a87;font-weight:bold">&#34;expiration_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-12-01&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;fee_metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;billing_exemption_participant&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;max_free&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;original_fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;remaining_free&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;fine&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;172caf21-13de-4baa-9823-a21ac17ba8fa&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;interest&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;invoice_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;bill_of_exchange&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;issuance_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-07-27&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;limit_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-02-01&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;our_number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;63139072468215929006&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;payer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11121740790&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;receiver&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;registered_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;CREATED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19790000056313907246482159290061784560000002100&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3&#34;</span>,
+  <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">2100</span>,
+  <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19797845600000021000000063139072468215929006&#34;</span>,
+  <span style="color:#ff79c6">&#34;beneficiary&#34;</span>: {
+    <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;1085737&#34;</span>,
+    <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+    <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;39809096038&#34;</span>,
+    <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+    <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+    <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+  },
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-07-27T18:25:38Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65&#34;</span>,
+  <span style="color:#ff79c6">&#34;customer&#34;</span>: {
+    <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;11121744590&#34;</span>,
+    <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+    <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+    <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+  },
+  <span style="color:#ff79c6">&#34;discounts&#34;</span>: [
+    {
+      <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-11-20&#34;</span>,
+      <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;0.1&#34;</span>
+    }
+  ],
+  <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-12-01&#34;</span>,
+  <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+  <span style="color:#ff79c6">&#34;fee_metadata&#34;</span>: {
+    <span style="color:#ff79c6">&#34;billing_exemption_participant&#34;</span>: <span style="color:#ff79c6">true</span>,
+    <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+    <span style="color:#ff79c6">&#34;max_free&#34;</span>: <span style="color:#bd93f9">5</span>,
+    <span style="color:#ff79c6">&#34;original_fee&#34;</span>: <span style="color:#bd93f9">200</span>,
+    <span style="color:#ff79c6">&#34;remaining_free&#34;</span>: <span style="color:#bd93f9">5</span>
+  },
+  <span style="color:#ff79c6">&#34;fine&#34;</span>: {
+    <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+    <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+  },
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;172caf21-13de-4baa-9823-a21ac17ba8fa&#34;</span>,
+  <span style="color:#ff79c6">&#34;interest&#34;</span>: {
+    <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+    <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+  },
+  <span style="color:#ff79c6">&#34;invoice_type&#34;</span>: <span style="color:#f1fa8c">&#34;bill_of_exchange&#34;</span>,
+  <span style="color:#ff79c6">&#34;issuance_date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-07-27&#34;</span>,
+  <span style="color:#ff79c6">&#34;limit_date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-02-01&#34;</span>,
+  <span style="color:#ff79c6">&#34;our_number&#34;</span>: <span style="color:#f1fa8c">&#34;63139072468215929006&#34;</span>,
+  <span style="color:#ff79c6">&#34;payer&#34;</span>: {
+    <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;11121740790&#34;</span>,
+    <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+    <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+    <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+  },
+  <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;registered_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;CREATED&#34;</span>,
+  <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000056313907246482159290061784560000002100&#34;</span>
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">400</span> <span style="color:#a40000">Bad</span> <span style="color:#a40000">Request</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">400</span> Bad Request
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;error&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;is invalid&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;path&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#4e9a06">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#34;trade_name&#34;</span>
-      <span style="color:#000;font-weight:bold">]</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;error&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;is invalid&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;path&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#4e9a06">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#34;legal_name&#34;</span>
-      <span style="color:#000;font-weight:bold">]</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">],</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:validation&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;reason&#34;</span>: [
+    {
+      <span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>,
+      <span style="color:#ff79c6">&#34;path&#34;</span>: [
+        <span style="color:#f1fa8c">&#34;customer&#34;</span>,
+        <span style="color:#f1fa8c">&#34;trade_name&#34;</span>
+      ]
+    },
+    {
+      <span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>,
+      <span style="color:#ff79c6">&#34;path&#34;</span>: [
+        <span style="color:#f1fa8c">&#34;customer&#34;</span>,
+        <span style="color:#f1fa8c">&#34;legal_name&#34;</span>
+      ]
+    }
+  ],
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:validation&#34;</span>
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">401</span> <span style="color:#a40000">Unauthorized</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">401</span> Unauthorized
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:unauthenticated&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthenticated&#34;</span>
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">403</span> <span style="color:#a40000">Forbidden</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">403</span> Forbidden
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:unauthorized&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthorized&#34;</span>
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">409</span> <span style="color:#a40000">Conflict</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">409</span> Conflict
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:conflict&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:conflict&#34;</span>
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">422</span> <span style="color:#a40000">Unprocessable</span> <span style="color:#a40000">Entity</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">422</span> Unprocessable Entity
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;barcode_payment_invoice_bill_of_exchange is not ena bled on this account&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:product_not_enabled&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;barcode_payment_invoice_bill_of_exchange is not ena bled on this account&#34;</span>,
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:product_not_enabled&#34;</span>
+}
 </code></pre></div><br>
         <div class="section-index">
     

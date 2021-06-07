@@ -3452,8 +3452,8 @@
         </div>
 	
 	<hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
+</code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3516,45 +3516,45 @@ Tipo do documento da dona da conta alvo. Pode ser <code>cpf</code> ou <code>cnpj
 <br>
 <hr>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">202 Accepted
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>  
-   <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">16600</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-06-07T18:57:57Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;cancelled_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-06-07T18:57:57Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;delayed_to_next_business_day&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;finished_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;05e2950b-ff0c-4b8f-aa5f-7055bb8bc6f1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;refund_reason_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;refund_reason_description&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;refunded_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;scheduled_to_effective&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;scheduled_to_requested&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;APPROVED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:{</span>  
-      <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:{</span>  
-         <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1241441&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1241&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;institution_ispb&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;60701190&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;institution_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Itaú Unibanco  S.A.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;institution_number_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;341&#34;</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:{</span>  
-         <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;133835162745&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>           
-         <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;fulano novo&#34;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-   <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">202 Accepted
+content-type: application/json
+</code></pre></div><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{  
+   <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">16600</span>,
+   <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;approved_at&#34;</span>:<span style="color:#f1fa8c">&#34;2019-06-07T18:57:57Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;approved_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span>,
+   <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2019-06-07T18:57:57Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;created_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span>,
+   <span style="color:#ff79c6">&#34;delayed_to_next_business_day&#34;</span>:<span style="color:#ff79c6">false</span>,
+   <span style="color:#ff79c6">&#34;failed_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;fee&#34;</span>:<span style="color:#bd93f9">0</span>,
+   <span style="color:#ff79c6">&#34;finished_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;id&#34;</span>:<span style="color:#f1fa8c">&#34;05e2950b-ff0c-4b8f-aa5f-7055bb8bc6f1&#34;</span>,
+   <span style="color:#ff79c6">&#34;refund_reason_code&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;refund_reason_description&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;refunded_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;rejected_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;rejected_by&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;scheduled_to_effective&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;scheduled_to_requested&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;status&#34;</span>:<span style="color:#f1fa8c">&#34;APPROVED&#34;</span>,
+   <span style="color:#ff79c6">&#34;target&#34;</span>:{  
+      <span style="color:#ff79c6">&#34;account&#34;</span>:{  
+         <span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;1241441&#34;</span>,
+         <span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1241&#34;</span>,
+         <span style="color:#ff79c6">&#34;institution_ispb&#34;</span>:<span style="color:#f1fa8c">&#34;60701190&#34;</span>,
+         <span style="color:#ff79c6">&#34;institution_name&#34;</span>:<span style="color:#f1fa8c">&#34;Itaú Unibanco  S.A.&#34;</span>,
+         <span style="color:#ff79c6">&#34;institution_number_code&#34;</span>:<span style="color:#f1fa8c">&#34;341&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;entity&#34;</span>:{  
+         <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;133835162745&#34;</span>,
+         <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cpf&#34;</span>,           
+         <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;fulano novo&#34;</span>
+      }
+   }
+}
 </code></pre></div>
         <div class="section-index">
     

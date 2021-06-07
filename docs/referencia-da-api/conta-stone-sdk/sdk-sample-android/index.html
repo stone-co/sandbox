@@ -3477,42 +3477,42 @@
 <hr>
 <p>Antes de começar a integração é necessário obter uma chave de acesso ao repositório, pois trata-se de um repositório privado. Para obter esta chave entre em contato com a gente.</p>
 <p>No arquivo <code>build.gradle</code> do projeto adicione a URL do repositório e substitua o <code>{access-key}</code> pela chave fornecida.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">maven</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">url</span> <span style="color:#4e9a06">&#34;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&#34;</span><span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">maven { url <span style="color:#f1fa8c">&#34;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&#34;</span>}
 </code></pre></div><p>Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis neste repositório.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">maven</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">url</span> <span style="color:#4e9a06">&#39;https://jitpack.io&#39;</span> <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">maven { url <span style="color:#f1fa8c">&#39;https://jitpack.io&#39;</span> }
 </code></pre></div><p>Importe a dependência da Conta Stone SDK.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">implementation</span> <span style="color:#4e9a06">&#39;co.stone:conta:${latest_version}&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">implementation <span style="color:#f1fa8c">&#39;co.stone:conta:${latest_version}&#39;</span>
 </code></pre></div><p>A Conta Stone SDK utiliza o Firebase para implementar alguns de seus serviços, logo é necessário ter um projeto no firebase e integrá-lo no seu app. Para mais informações sobre como adicionar o Firebase ao seu projeto acesse este <a href="https://firebase.google.com/docs/android/setup">link</a>.</p>
 <p>Sincronize o projeto e pronto, já é possível utilizar a Conta Stone SDK!</p>
 <br>
 <h4 id="inicializando-a-sdk"><strong>Inicializando a SDK</strong></h4>
 <hr>
 <p>Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">private</span> <span style="color:#000">val</span> <span style="color:#000">environment</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Environment</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Sandbox</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">private val environment <span style="color:#ff79c6">=</span> Environment<span style="color:#ff79c6">.</span>Sandbox
 
- <span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">initialize</span><span style="color:#000;font-weight:bold">(</span>
-            <span style="color:#000">application</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">application</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#000">environment</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">environment</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#000">appInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">AppInfo</span><span style="color:#000;font-weight:bold">(</span>
-                <span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Conta Stone Sample App&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">applicationId</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">BuildConfig</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">APPLICATION_ID</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">buildId</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">BuildConfig</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">BUILD_TYPE</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">version</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">BuildConfig</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VERSION_NAME</span>
-            <span style="color:#000;font-weight:bold">),</span>
-            <span style="color:#000">authFlowUIConfig</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">AuthFlowUIConfig</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">themeId</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">R</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">style</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Theme_ContaStoneSdkSample</span><span style="color:#000;font-weight:bold">),</span>
-            <span style="color:#000">clientId</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;myapp@example.com.br&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#000">deepLinkUris</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">DeepLinkUris</span><span style="color:#000;font-weight:bold">(</span>
-                <span style="color:#000">uriLogout</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;sample://uri.logout&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">uriChat</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;sample://uri.chat&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">uriDashboard</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;sample//uri.dashboard&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">uriHelp</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;sample://uri.help&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">uriKyc</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;sample://uri.kyc&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">uriUpdateApp</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;sample://uri.update.app&#34;</span>
-            <span style="color:#000;font-weight:bold">),</span>
-            <span style="color:#000">httpClientConfig</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">HttpClientConfig</span><span style="color:#000;font-weight:bold">(),</span>
-            <span style="color:#000">logger</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">InternalLogger</span><span style="color:#000;font-weight:bold">(),</span>
-            <span style="color:#000">tokenKeyMasterUri</span> <span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">URI</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;android-keystore://stone-mobile&#34;</span><span style="color:#000;font-weight:bold">)</span>
-        <span style="color:#000;font-weight:bold">)</span>
+ ContaStone<span style="color:#ff79c6">.</span>initialize(
+            application <span style="color:#ff79c6">=</span> application,
+            environment <span style="color:#ff79c6">=</span> environment,
+            appInfo <span style="color:#ff79c6">=</span> AppInfo(
+                name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Conta Stone Sample App&#34;</span>,
+                applicationId <span style="color:#ff79c6">=</span> BuildConfig<span style="color:#ff79c6">.</span>APPLICATION_ID,
+                buildId <span style="color:#ff79c6">=</span> BuildConfig<span style="color:#ff79c6">.</span>BUILD_TYPE,
+                version <span style="color:#ff79c6">=</span> BuildConfig<span style="color:#ff79c6">.</span>VERSION_NAME
+            ),
+            authFlowUIConfig <span style="color:#ff79c6">=</span> AuthFlowUIConfig(themeId <span style="color:#ff79c6">=</span> R<span style="color:#ff79c6">.</span>style<span style="color:#ff79c6">.</span>Theme_ContaStoneSdkSample),
+            clientId <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;myapp@example.com.br&#34;</span>,
+            deepLinkUris <span style="color:#ff79c6">=</span> DeepLinkUris(
+                uriLogout <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sample://uri.logout&#34;</span>,
+                uriChat <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sample://uri.chat&#34;</span>,
+                uriDashboard <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sample//uri.dashboard&#34;</span>,
+                uriHelp <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sample://uri.help&#34;</span>,
+                uriKyc <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sample://uri.kyc&#34;</span>,
+                uriUpdateApp <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sample://uri.update.app&#34;</span>
+            ),
+            httpClientConfig <span style="color:#ff79c6">=</span> HttpClientConfig(),
+            logger <span style="color:#ff79c6">=</span> InternalLogger(),
+            tokenKeyMasterUri <span style="color:#ff79c6">=</span>  URI(<span style="color:#f1fa8c">&#34;android-keystore://stone-mobile&#34;</span>)
+        )
 </code></pre></div><ul>
 <li>
 <p><code>application</code>: Trata-se da instância do Application do seu app.</p>
@@ -3543,14 +3543,14 @@
 <h4 id="iniciando-fluxo-de-autenticação-e-verificação-de-kyc"><strong>Iniciando fluxo de Autenticação e verificação de KYC</strong></h4>
 <hr>
 <p>Para iniciar o fluxo de autenticação e verificação de KYC é necessário chamar o método abaixo.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">contaStoneSdk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">startAuthAndVerificationFlowForResult</span><span style="color:#000;font-weight:bold">(</span>
-            <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">this</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">VerificationParams</span><span style="color:#000;font-weight:bold">(</span>
-                <span style="color:#000">launchMode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">VerificationLaunchMode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">StartingApp</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#000">authMode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">AuthFlowMode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">RegisteredUser</span>
-            <span style="color:#000;font-weight:bold">),</span>
-            <span style="color:#000">requestCode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">LOGIN_RC</span>
-        <span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">contaStoneSdk<span style="color:#ff79c6">.</span>startAuthAndVerificationFlowForResult(
+            context <span style="color:#ff79c6">=</span> this,
+            params <span style="color:#ff79c6">=</span> VerificationParams(
+                launchMode <span style="color:#ff79c6">=</span> VerificationLaunchMode<span style="color:#ff79c6">.</span>StartingApp,
+                authMode <span style="color:#ff79c6">=</span> AuthFlowMode<span style="color:#ff79c6">.</span>RegisteredUser
+            ),
+            requestCode <span style="color:#ff79c6">=</span> LOGIN_RC
+        )
 </code></pre></div><p>O atributo <code>params</code> recebe dois argumentos: O modo de inicialização, o qual define como que o fluxo deve ser iniciado e o <code>authMode</code> que neste caso sempre vai ser <code>AuthFlowMode.RegisteredUser</code>. O modo de inicialização pode ser:</p>
 <ul>
 <li>
@@ -3571,95 +3571,95 @@
 <h4 id="lidando-com-o-resultado-da-sdk"><strong>Lidando com o resultado da SDK</strong></h4>
 <hr>
 <p>Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#000">override</span> <span style="color:#000">fun</span> <span style="color:#000">onActivityResult</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">requestCode</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">resultCode</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Intent</span><span style="color:#a40000">?</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-         <span style="color:#204a87">super</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">onActivityResult</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">requestCode</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">resultCode</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span>
-         <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">requestCode</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#000">LOGIN_RC</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#000">val</span> <span style="color:#000">result</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">contaStoneSdk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">parseAuthAndVerificationResult</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+         <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span>onActivityResult(requestCode, resultCode, data)
+         <span style="color:#ff79c6">if</span> (requestCode <span style="color:#ff79c6">==</span> LOGIN_RC) {
+             val result <span style="color:#ff79c6">=</span> contaStoneSdk<span style="color:#ff79c6">.</span>parseAuthAndVerificationResult(data)
  
-             <span style="color:#000">when</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-                 <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">AuthAndVerificationResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Ok</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;User is authenticated&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                 <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">AuthAndVerificationResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MissingData</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;some information is missing&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                 <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">AuthAndVerificationResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">UserCancelled</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;User cancelled flow&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                 <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">AuthAndVerificationResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Error</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Error during login ${result.error}&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                 <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">AuthAndVerificationResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">UserLoggedOut</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;User requests logout&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                 <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">AuthAndVerificationResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">BlockedUser</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;User is blocked&#34;</span><span style="color:#000;font-weight:bold">)</span>
-             <span style="color:#000;font-weight:bold">}</span>
-         <span style="color:#000;font-weight:bold">}</span>
-     <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
+             when (result) {
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult<span style="color:#ff79c6">.</span>Ok <span style="color:#ff79c6">-&gt;</span> toast(<span style="color:#f1fa8c">&#34;User is authenticated&#34;</span>)
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult<span style="color:#ff79c6">.</span>MissingData <span style="color:#ff79c6">-&gt;</span> toast(<span style="color:#f1fa8c">&#34;some information is missing&#34;</span>)
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult<span style="color:#ff79c6">.</span>UserCancelled <span style="color:#ff79c6">-&gt;</span> toast(<span style="color:#f1fa8c">&#34;User cancelled flow&#34;</span>)
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult<span style="color:#ff79c6">.</span>Error <span style="color:#ff79c6">-&gt;</span> toast(<span style="color:#f1fa8c">&#34;Error during login ${result.error}&#34;</span>)
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult<span style="color:#ff79c6">.</span>UserLoggedOut <span style="color:#ff79c6">-&gt;</span> toast(<span style="color:#f1fa8c">&#34;User requests logout&#34;</span>)
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult<span style="color:#ff79c6">.</span>BlockedUser <span style="color:#ff79c6">-&gt;</span> toast(<span style="color:#f1fa8c">&#34;User is blocked&#34;</span>)
+             }
+         }
+     }
+    }
 </code></pre></div><br>
 <h4 id="como-fazer-logout"><strong>Como fazer logout</strong></h4>
 <hr>
 <p>Para deslogar o usuário podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">contaStoneSdk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">logout</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#000">null</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Error on logout. Try again!&#34;</span><span style="color:#000;font-weight:bold">)</span>
-            <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;user successfully logged out&#34;</span><span style="color:#000;font-weight:bold">)</span>
-        <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">contaStoneSdk<span style="color:#ff79c6">.</span>logout {
+            <span style="color:#ff79c6">if</span> (it <span style="color:#ff79c6">!=</span> null) {
+                toast(<span style="color:#f1fa8c">&#34;Error on logout. Try again!&#34;</span>)
+            } <span style="color:#ff79c6">else</span> toast(<span style="color:#f1fa8c">&#34;user successfully logged out&#34;</span>)
+        }
 </code></pre></div><p>Quando a exception é nula o logout ocorreu com sucesso, quando não, algum erro ocorreu durante o fluxo.</p>
 <br>
 <h4 id="obtendo-o-client-autenticado"><strong>Obtendo o Client autenticado</strong></h4>
 <hr>
 <p>A authSDK é responsável por todo o processo de autenticação incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um <code>OkHttpClient</code> configurado que pode ser utilizado nas chamadas HTTP do seu app. Este client possui <a href="https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning">certificate pinning</a> com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método <code>contaStone.auth().client()</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">private</span> <span style="color:#000">fun</span> <span style="color:#000">performAuthenticatedRequest</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#000">val</span> <span style="color:#000">httpService</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">HttpService</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">BankingGatewaySandbox</span>
-        <span style="color:#000">val</span> <span style="color:#000">client</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">contaStoneSdk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">auth</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getOkHttpClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">httpService</span><span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">private fun performAuthenticatedRequest() {
+        val httpService <span style="color:#ff79c6">=</span> HttpService<span style="color:#ff79c6">.</span>BankingGatewaySandbox
+        val client <span style="color:#ff79c6">=</span> contaStoneSdk<span style="color:#ff79c6">.</span>auth()<span style="color:#ff79c6">.</span>getOkHttpClient(httpService)
 
-        <span style="color:#000">val</span> <span style="color:#000">request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Builder</span><span style="color:#000;font-weight:bold">()</span>
-            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">url</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;${httpService.url}/api/v1/institutions&#34;</span><span style="color:#000;font-weight:bold">)</span>
-            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">()</span>
-            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">build</span><span style="color:#000;font-weight:bold">()</span>
+        val request <span style="color:#ff79c6">=</span> Request<span style="color:#ff79c6">.</span>Builder()
+            <span style="color:#ff79c6">.</span>url(<span style="color:#f1fa8c">&#34;${httpService.url}/api/v1/institutions&#34;</span>)
+            <span style="color:#ff79c6">.</span>get()
+            <span style="color:#ff79c6">.</span>build()
 
-        <span style="color:#000">val</span> <span style="color:#000">callback</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">object</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Callback</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#000">override</span> <span style="color:#000">fun</span> <span style="color:#000">onFailure</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">call</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Call</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">IOException</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#000">runOnMainThread</span> <span style="color:#000;font-weight:bold">{</span>
-                    <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Error fetching institutions $e&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                <span style="color:#000;font-weight:bold">}</span>
-            <span style="color:#000;font-weight:bold">}</span>
+        val callback <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">object</span> : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                runOnMainThread {
+                    toast(<span style="color:#f1fa8c">&#34;Error fetching institutions $e&#34;</span>)
+                }
+            }
 
-            <span style="color:#000">override</span> <span style="color:#000">fun</span> <span style="color:#000">onResponse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">call</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Call</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">response</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#000">runOnMainThread</span> <span style="color:#000;font-weight:bold">{</span>
-                    <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Request executed successfully&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                <span style="color:#000;font-weight:bold">}</span>
-            <span style="color:#000;font-weight:bold">}</span>
-        <span style="color:#000;font-weight:bold">}</span>
+            override fun onResponse(call: Call, response: Response) {
+                runOnMainThread {
+                    toast(<span style="color:#f1fa8c">&#34;Request executed successfully&#34;</span>)
+                }
+            }
+        }
 
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">newCall</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">enqueue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">callback</span><span style="color:#000;font-weight:bold">)</span>
-    <span style="color:#000;font-weight:bold">}</span>
+        client<span style="color:#ff79c6">.</span>newCall(request)<span style="color:#ff79c6">.</span>enqueue(callback)
+    }
 </code></pre></div><br>
 <h4 id="como-inicializar-o-aprovador"><strong>Como inicializar o Aprovador</strong></h4>
 <hr>
 <p>Para conseguir iniciar o aprovador é necessário fazer a chamada conforme o exemplo abaixo:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">contaStoneSdk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">startApproverForResult</span><span style="color:#000;font-weight:bold">(</span>
-                        <span style="color:#000">source</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">this</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#000">requestCode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">APPROVER_RQ</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ApproverParams</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">loggedAccount</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ApproverLaunchMode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">SDKLaunchMode</span><span style="color:#000;font-weight:bold">)</span>
-                    <span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">contaStoneSdk<span style="color:#ff79c6">.</span>startApproverForResult(
+                        source <span style="color:#ff79c6">=</span> this,
+                        requestCode <span style="color:#ff79c6">=</span> APPROVER_RQ,
+                        params <span style="color:#ff79c6">=</span> ApproverParams(loggedAccount, ApproverLaunchMode<span style="color:#ff79c6">.</span>SDKLaunchMode)
+                    )
 </code></pre></div><p>Para recuperar o <code>loggedAccount</code> a Conta Stone SDK disponibiliza a sessão do usuário logado com todas as informações que o <code>LoggedAccount</code> precisa:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">contaStoneSdk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getSession</span><span style="color:#000;font-weight:bold">(</span>
-                <span style="color:#000">onComplete</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">result</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span>
-                    <span style="color:#000">when</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">SessionResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Success</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#000">currentAccount</span><span style="color:#a40000">?</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">paymentAccount</span><span style="color:#a40000">?</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">let</span> <span style="color:#000;font-weight:bold">{</span>
-                                        <span style="color:#000">LoggedAccountInfo</span><span style="color:#000;font-weight:bold">(</span>
-                                            <span style="color:#204a87">id</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">id</span><span style="color:#000;font-weight:bold">,</span>
-                                            <span style="color:#000">accountNumber</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">accountCode</span><span style="color:#000;font-weight:bold">,</span>
-                                            <span style="color:#000">accountOwner</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">currentAccount</span><span style="color:#a40000">?</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">owner</span><span style="color:#a40000">?</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">orEmpty</span><span style="color:#000;font-weight:bold">(),</span>
-                                            <span style="color:#000">accountOwnerDocument</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">currentAccount</span><span style="color:#a40000">?</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">owner</span><span style="color:#a40000">?</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">orEmpty</span><span style="color:#000;font-weight:bold">(),</span>
-                                            <span style="color:#000">bankName</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Stone Pagamentos S.A&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                            <span style="color:#000">bankNumber</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;197&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                            <span style="color:#000">branchNumber</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;0001&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                            <span style="color:#000">userLoggedName</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">profile</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">fullName</span>
-                                        <span style="color:#000;font-weight:bold">)</span>
-                                    <span style="color:#000;font-weight:bold">}</span>
-                                <span style="color:#000;font-weight:bold">}</span>
-                        <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">SessionResult</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">HasNoActiveSession</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">redirectToLogin</span><span style="color:#000;font-weight:bold">()</span>
-                    <span style="color:#000;font-weight:bold">}</span>
-                <span style="color:#000;font-weight:bold">},</span>
-                <span style="color:#000">onError</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
-                    <span style="color:#000">toast</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Error trying to get session&#34;</span><span style="color:#000;font-weight:bold">)</span>
-                <span style="color:#000;font-weight:bold">}</span>
-            <span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">contaStoneSdk<span style="color:#ff79c6">.</span>getSession(
+                onComplete <span style="color:#ff79c6">=</span> { result <span style="color:#ff79c6">-&gt;</span>
+                    when (result) {
+                        <span style="color:#ff79c6">is</span> SessionResult<span style="color:#ff79c6">.</span>Success <span style="color:#ff79c6">-&gt;</span> {
+                                currentAccount?<span style="color:#ff79c6">.</span>paymentAccount?<span style="color:#ff79c6">.</span>let {
+                                        LoggedAccountInfo(
+                                            <span style="color:#8be9fd;font-style:italic">id</span> <span style="color:#ff79c6">=</span> it<span style="color:#ff79c6">.</span>id,
+                                            accountNumber <span style="color:#ff79c6">=</span> it<span style="color:#ff79c6">.</span>accountCode,
+                                            accountOwner <span style="color:#ff79c6">=</span> currentAccount?<span style="color:#ff79c6">.</span>owner?<span style="color:#ff79c6">.</span>name<span style="color:#ff79c6">.</span>orEmpty(),
+                                            accountOwnerDocument <span style="color:#ff79c6">=</span> currentAccount?<span style="color:#ff79c6">.</span>owner?<span style="color:#ff79c6">.</span>document<span style="color:#ff79c6">.</span>orEmpty(),
+                                            bankName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Stone Pagamentos S.A&#34;</span>,
+                                            bankNumber <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;197&#34;</span>,
+                                            branchNumber <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+                                            userLoggedName <span style="color:#ff79c6">=</span> profile<span style="color:#ff79c6">.</span>fullName
+                                        )
+                                    }
+                                }
+                        <span style="color:#ff79c6">is</span> SessionResult<span style="color:#ff79c6">.</span>HasNoActiveSession <span style="color:#ff79c6">-&gt;</span> redirectToLogin()
+                    }
+                },
+                onError <span style="color:#ff79c6">=</span> {
+                    toast(<span style="color:#f1fa8c">&#34;Error trying to get session&#34;</span>)
+                }
+            )
 </code></pre></div>
         <div class="section-index">
     

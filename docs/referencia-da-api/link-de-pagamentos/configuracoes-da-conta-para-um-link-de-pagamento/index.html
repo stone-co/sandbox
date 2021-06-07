@@ -3465,34 +3465,34 @@
 
 <br>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/config
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/config
+</code></pre></div><hr>
 <br>
 <h5 id="response">Response</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;accepted_multi_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
-	<span style="color:#204a87;font-weight:bold">&#34;bank_slip&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;bank&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">197</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;enabled&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;expires_in&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;instructions&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pagar até o vencimento&#34;</span>
-	<span style="color:#000;font-weight:bold">},</span>
-	<span style="color:#204a87;font-weight:bold">&#34;billing_address_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;credit_card&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;capture&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;enabled&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;max_installments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12</span>
-	<span style="color:#000;font-weight:bold">},</span>
-	<span style="color:#204a87;font-weight:bold">&#34;customer_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;max_amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5000000</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;min_amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;payment_method&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;checkout&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;payment_url_host&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http: //link.homolog.stone.credit&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;accepted_multi_payment_methods&#34;</span>: [],
+	<span style="color:#ff79c6">&#34;bank_slip&#34;</span>: {
+		<span style="color:#ff79c6">&#34;bank&#34;</span>: <span style="color:#bd93f9">197</span>,
+		<span style="color:#ff79c6">&#34;enabled&#34;</span>: <span style="color:#ff79c6">false</span>,
+		<span style="color:#ff79c6">&#34;expires_in&#34;</span>: <span style="color:#bd93f9">2</span>,
+		<span style="color:#ff79c6">&#34;instructions&#34;</span>: <span style="color:#f1fa8c">&#34;Pagar até o vencimento&#34;</span>
+	},
+	<span style="color:#ff79c6">&#34;billing_address_editable&#34;</span>: <span style="color:#ff79c6">false</span>,
+	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#ff79c6">false</span>,
+	<span style="color:#ff79c6">&#34;credit_card&#34;</span>: {
+		<span style="color:#ff79c6">&#34;capture&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;enabled&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;max_installments&#34;</span>: <span style="color:#bd93f9">12</span>
+	},
+	<span style="color:#ff79c6">&#34;customer_editable&#34;</span>: <span style="color:#ff79c6">true</span>,
+	<span style="color:#ff79c6">&#34;max_amount&#34;</span>: <span style="color:#bd93f9">5000000</span>,
+	<span style="color:#ff79c6">&#34;min_amount&#34;</span>: <span style="color:#bd93f9">100</span>,
+	<span style="color:#ff79c6">&#34;payment_method&#34;</span>: <span style="color:#f1fa8c">&#34;checkout&#34;</span>,
+	<span style="color:#ff79c6">&#34;payment_url_host&#34;</span>: <span style="color:#f1fa8c">&#34;http: //link.homolog.stone.credit&#34;</span>,
 
-	<span style="color:#204a87;font-weight:bold">&#34;skip_checkout_success_page&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;success_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/sucesso&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+	<span style="color:#ff79c6">&#34;skip_checkout_success_page&#34;</span>: <span style="color:#ff79c6">true</span>,
+	<span style="color:#ff79c6">&#34;success_url&#34;</span>: <span style="color:#f1fa8c">&#34;/sucesso&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     

@@ -3464,23 +3464,23 @@
 <ul>
 <li><code>status: 403</code></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;challenge&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">id</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;required_types&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;pin&#34;</span><span style="color:#000;font-weight:bold">],</span>
-		<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:challenge_required&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;details&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;error&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;challenge_required&#34;</span><span style="color:#000;font-weight:bold">}</span>
-	<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;challenge&#34;</span>: {
+		<span style="color:#ff79c6">&#34;id&#34;</span>: id,
+		<span style="color:#ff79c6">&#34;required_types&#34;</span>: [<span style="color:#f1fa8c">&#34;pin&#34;</span>],
+		<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:challenge_required&#34;</span>,
+		<span style="color:#ff79c6">&#34;details&#34;</span>: {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;challenge_required&#34;</span>}
+	}
+}
 </code></pre></div><p>Note que <code>required_types</code> indicará quais tipos de <em>credencial</em> o <em>subject</em> deverá preencher pra conseguir uma autorização. Alguns valores possíveis são: <code>login_password</code>, <code>pin</code> e <code>totp</code>.</p>
 <br>
 <ol start="2">
 <li>O próximo <em>request</em> deverá conter o <code>challenge_solution</code>.</li>
 </ol>
 <p>Pra montar o <code>challenge_solution</code> você deverá gerar um JWE, onde o valor descriptografado seja um json no seguinte formato:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;challenge_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">challenge_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">&#34;pin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">pin</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;challenge_id&#34;</span>: challenge_id, <span style="color:#ff79c6">&#34;pin&#34;</span>: pin
+}
 </code></pre></div><p>O <code>challenge id</code> é o valor devolvido no request anterior e segunda chave do json deverá ser o tipo de <em>credencial</em> e seu valor correspondente.</p>
 <p>Para gerar o JWE você usará a chave com <code>&quot;use&quot;: &quot;enc&quot;</code> exposta em <code>api/v1/discovery/keys</code>. O <code>protected_header</code> desse JWE deverá ser algo como <code>{&quot;alg&quot;:&quot;RSA-OAEP&quot;,&quot;enc&quot;:&quot;A256GCM&quot;}</code>.</p>
 <p>Após a solução do <em>challenge</em>, você receberá a resposta indicando o status da autorização ou uma resposta com status 403 o problema na solução do <em>challenge</em> ou na falta de permissão do <em>subject</em>.</p>
@@ -3501,36 +3501,36 @@
 </ol>
 <br>
 <p>Segue um exemplo de como gerar um JWE em Python:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">requests</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">json</span>
-<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">jwcrypto</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">jwe</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">jwk</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">sys</span>
-<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">build_challenge_solution</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">challenge_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">typ</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">solution_value</span><span style="color:#000;font-weight:bold">):</span>
-  <span style="color:#000">dic</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;challenge_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">challenge_id</span><span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000">dic</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">update</span><span style="color:#000;font-weight:bold">({</span><span style="color:#000">typ</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">solution_value</span><span style="color:#000;font-weight:bold">})</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> requests
+<span style="color:#ff79c6">import</span> json
+<span style="color:#ff79c6">from</span> jwcrypto <span style="color:#ff79c6">import</span> jwe, jwk
+<span style="color:#ff79c6">import</span> sys
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">build_challenge_solution</span>(challenge_id, typ, solution_value):
+  dic <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;challenge_id&#34;</span>: challenge_id}
+  dic<span style="color:#ff79c6">.</span>update({typ: solution_value})
   
-  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">generate_jwe</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">json</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dumps</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dic</span><span style="color:#000;font-weight:bold">))</span>
+  <span style="color:#ff79c6">return</span> generate_jwe(json<span style="color:#ff79c6">.</span>dumps(dic))
   
-<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">generate_jwe</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">payload</span><span style="color:#000;font-weight:bold">):</span>
-  <span style="color:#000">key</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">get_public_key</span><span style="color:#000;font-weight:bold">()</span>
-  <span style="color:#000">public_key</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">jwk</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">JWK</span><span style="color:#000;font-weight:bold">()</span>
-  <span style="color:#000">public_key</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">public_key</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">from_json</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">json</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dumps</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">key</span><span style="color:#000;font-weight:bold">))</span>
-  <span style="color:#000">encrypted</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">jwe</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">JWE</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">payload</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;utf-8&#34;</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">recipient</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">public_key</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">protected</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#4e9a06">&#34;alg&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RSA-OAEP-256&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#34;enc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;A256GCM&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#34;kid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">key</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;kid&#34;</span><span style="color:#000;font-weight:bold">],</span>
-  <span style="color:#000;font-weight:bold">})</span>
-  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">encrypted</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">serialize</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">compact</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#3465a4">True</span><span style="color:#000;font-weight:bold">)</span>
-<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">get_public_key</span><span style="color:#000;font-weight:bold">():</span>
-  <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">requests</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span>
-      <span style="color:#4e9a06">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys&#34;</span><span style="color:#000;font-weight:bold">)</span>
-  <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">key</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">json</span><span style="color:#000;font-weight:bold">()[</span><span style="color:#4e9a06">&#34;keys&#34;</span><span style="color:#000;font-weight:bold">]:</span>
-      <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">key</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;use&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#34;enc&#34;</span><span style="color:#000;font-weight:bold">:</span>
-          <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">key</span>
-<span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">__name__</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#34;__main__&#34;</span><span style="color:#000;font-weight:bold">:</span>
-  <span style="color:#000;font-weight:bold">[</span><span style="color:#000">challenge_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">typ</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">value</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">sys</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">argv</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">:]</span>
-  <span style="color:#000">solution</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">build_challenge_solution</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">challenge_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">typ</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">value</span><span style="color:#000;font-weight:bold">)</span>
-  <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">solution</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">generate_jwe</span>(payload):
+  key <span style="color:#ff79c6">=</span> get_public_key()
+  public_key <span style="color:#ff79c6">=</span> jwk<span style="color:#ff79c6">.</span>JWK()
+  public_key <span style="color:#ff79c6">=</span> public_key<span style="color:#ff79c6">.</span>from_json(json<span style="color:#ff79c6">.</span>dumps(key))
+  encrypted <span style="color:#ff79c6">=</span> jwe<span style="color:#ff79c6">.</span>JWE(payload<span style="color:#ff79c6">.</span>encode(<span style="color:#f1fa8c">&#34;utf-8&#34;</span>), recipient<span style="color:#ff79c6">=</span>public_key, protected<span style="color:#ff79c6">=</span>{
+      <span style="color:#f1fa8c">&#34;alg&#34;</span>: <span style="color:#f1fa8c">&#34;RSA-OAEP-256&#34;</span>,
+      <span style="color:#f1fa8c">&#34;enc&#34;</span>: <span style="color:#f1fa8c">&#34;A256GCM&#34;</span>,
+      <span style="color:#f1fa8c">&#34;kid&#34;</span>: key[<span style="color:#f1fa8c">&#34;kid&#34;</span>],
+  })
+  <span style="color:#ff79c6">return</span> encrypted<span style="color:#ff79c6">.</span>serialize(compact<span style="color:#ff79c6">=</span>True)
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_public_key</span>():
+  response <span style="color:#ff79c6">=</span> requests<span style="color:#ff79c6">.</span>get(
+      <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys&#34;</span>)
+  <span style="color:#ff79c6">for</span> key <span style="color:#ff79c6">in</span> response<span style="color:#ff79c6">.</span>json()[<span style="color:#f1fa8c">&#34;keys&#34;</span>]:
+      <span style="color:#ff79c6">if</span> key[<span style="color:#f1fa8c">&#34;use&#34;</span>] <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;enc&#34;</span>:
+          <span style="color:#ff79c6">return</span> key
+<span style="color:#ff79c6">if</span> __name__ <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;__main__&#34;</span>:
+  [challenge_id, typ, value] <span style="color:#ff79c6">=</span> sys<span style="color:#ff79c6">.</span>argv[<span style="color:#bd93f9">1</span>:]
+  solution <span style="color:#ff79c6">=</span> build_challenge_solution(challenge_id, typ, value)
+  <span style="color:#ff79c6">print</span>(solution)
 </code></pre></div><br>
 <h5 id="response"><strong>Response</strong></h5>
 <p>A resposta será um token que será utilizado no challenge.</p>

@@ -3464,154 +3464,154 @@
 </div>
 
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{order_id}/closed
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{order_id}/closed
+</code></pre></div><br>
 <h5 id="body-request">Body Request</h5>
 <hr>
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;canceled&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;account_id&#34;</span>,
+	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;canceled&#34;</span>
+}
 </code></pre></div><br>
 <h5 id="response">Response</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;checkouts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;accepted_multi_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
-		<span style="color:#204a87;font-weight:bold">&#34;accepted_payment_methods&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-			<span style="color:#4e9a06">&#34;credit_card&#34;</span>
-		<span style="color:#000;font-weight:bold">],</span>
-		<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;billing_address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;billing_address_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+	<span style="color:#ff79c6">&#34;checkouts&#34;</span>: [{
+		<span style="color:#ff79c6">&#34;accepted_multi_payment_methods&#34;</span>: [],
+		<span style="color:#ff79c6">&#34;accepted_payment_methods&#34;</span>: [
+			<span style="color:#f1fa8c">&#34;credit_card&#34;</span>
+		],
+		<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+		<span style="color:#ff79c6">&#34;billing_address&#34;</span>: {},
+		<span style="color:#ff79c6">&#34;billing_address_editable&#34;</span>: <span style="color:#ff79c6">true</span>,
 
-		<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:06:14Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;credit_card&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;authentication&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-				<span style="color:#204a87;font-weight:bold">&#34;threed_secure&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-				<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;none&#34;</span>
-			<span style="color:#000;font-weight:bold">},</span>
-			<span style="color:#204a87;font-weight:bold">&#34;capture&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;installments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
+		<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:06:14Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;credit_card&#34;</span>: {
+			<span style="color:#ff79c6">&#34;authentication&#34;</span>: {
+				<span style="color:#ff79c6">&#34;threed_secure&#34;</span>: {},
+				<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;none&#34;</span>
+			},
+			<span style="color:#ff79c6">&#34;capture&#34;</span>: <span style="color:#ff79c6">true</span>,
+			<span style="color:#ff79c6">&#34;installments&#34;</span>: [{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">1</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">2</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">3</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">4</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">5</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">6</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
 
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">8</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">9</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">11</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">},</span>
-				<span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span>
-				<span style="color:#000;font-weight:bold">}</span>
-			<span style="color:#000;font-weight:bold">]</span>
-		<span style="color:#000;font-weight:bold">},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;currency&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;BRL&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-07T23:33:15Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;delinquent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">7</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">8</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">9</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">10</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">11</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				},
+				{
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">12</span>,
+					<span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">1000</span>
+				}
+			]
+		},
+		<span style="color:#ff79c6">&#34;currency&#34;</span>: <span style="color:#f1fa8c">&#34;BRL&#34;</span>,
+		<span style="color:#ff79c6">&#34;customer&#34;</span>: {
+			<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-07T23:33:15Z&#34;</span>,
+			<span style="color:#ff79c6">&#34;delinquent&#34;</span>: <span style="color:#ff79c6">false</span>,
 
-			<span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12345678912</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;gabriel@email.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cus_WVbg8Qkc0WIelO4k&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Gabriel Tavares&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;phones&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-				<span style="color:#204a87;font-weight:bold">&#34;mobile_phone&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-					<span style="color:#204a87;font-weight:bold">&#34;area_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">21</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;country_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">55</span><span style="color:#000;font-weight:bold">,</span>
-					<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">987654321</span>
-				<span style="color:#000;font-weight:bold">}</span>
-			<span style="color:#000;font-weight:bold">},</span>
-			<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;individual&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:02:24Z&#34;</span>
-		<span style="color:#000;font-weight:bold">},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;customer_editable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;expires_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-16T02:06:14Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;chk_YMG51zkcyuWz9pXN&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;payment_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://api.mundipagg.com/checkout/v1/orders/chk_YMG51zkcyuWz9pXN&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;shippable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;skip_checkout_success_page&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;open&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;success_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://sandbox-link.openbank.stone.com.br/t/sucesso&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:06:14Z&#34;</span>
-	<span style="color:#000;font-weight:bold">}],</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T18:54:35Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Y0PNSR8FOK&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:06:14Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
+			<span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#bd93f9">12345678912</span>,
+			<span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;gabriel@email.com&#34;</span>,
+			<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;cus_WVbg8Qkc0WIelO4k&#34;</span>,
+			<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Gabriel Tavares&#34;</span>,
+			<span style="color:#ff79c6">&#34;phones&#34;</span>: {
+				<span style="color:#ff79c6">&#34;mobile_phone&#34;</span>: {
+					<span style="color:#ff79c6">&#34;area_code&#34;</span>: <span style="color:#bd93f9">21</span>,
+					<span style="color:#ff79c6">&#34;country_code&#34;</span>: <span style="color:#bd93f9">55</span>,
+					<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">987654321</span>
+				}
+			},
+			<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;individual&#34;</span>,
+			<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:02:24Z&#34;</span>
+		},
+		<span style="color:#ff79c6">&#34;customer_editable&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;expires_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-16T02:06:14Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;chk_YMG51zkcyuWz9pXN&#34;</span>,
+		<span style="color:#ff79c6">&#34;metadata&#34;</span>: {},
+		<span style="color:#ff79c6">&#34;payment_url&#34;</span>: <span style="color:#f1fa8c">&#34;https://api.mundipagg.com/checkout/v1/orders/chk_YMG51zkcyuWz9pXN&#34;</span>,
+		<span style="color:#ff79c6">&#34;shippable&#34;</span>: <span style="color:#ff79c6">false</span>,
+		<span style="color:#ff79c6">&#34;skip_checkout_success_page&#34;</span>: <span style="color:#ff79c6">true</span>,
+		<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;open&#34;</span>,
+		<span style="color:#ff79c6">&#34;success_url&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-link.openbank.stone.com.br/t/sucesso&#34;</span>,
+		<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:06:14Z&#34;</span>
+	}],
+	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#ff79c6">true</span>,
+	<span style="color:#ff79c6">&#34;closed_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T18:54:35Z&#34;</span>,
+	<span style="color:#ff79c6">&#34;code&#34;</span>: <span style="color:#f1fa8c">&#34;Y0PNSR8FOK&#34;</span>,
+	<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:06:14Z&#34;</span>,
 
-	<span style="color:#204a87;font-weight:bold">&#34;currency&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;BRL&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-07T23:33:15Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;delinquent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12345678912</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;gabriel@email.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cus_WVbg8Qkc0WIelO4k&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Gabriel Tavares&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;phones&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#204a87;font-weight:bold">&#34;mobile_phone&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-				<span style="color:#204a87;font-weight:bold">&#34;area_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">21</span><span style="color:#000;font-weight:bold">,</span>
-				<span style="color:#204a87;font-weight:bold">&#34;country_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">55</span><span style="color:#000;font-weight:bold">,</span>
-				<span style="color:#204a87;font-weight:bold">&#34;number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">987654321</span>
-			<span style="color:#000;font-weight:bold">}</span>
-		<span style="color:#000;font-weight:bold">},</span>
-		<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;individual&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:02:24Z&#34;</span>
-	<span style="color:#000;font-weight:bold">},</span>
-	<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;or_djKAl9dacPfB7gBR&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;items&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:06:14Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Camisa de malha 100% algodão - Tamanho G - Branca&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;oi_BQWg5P2FLTlGn97z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;quantity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;active&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;product&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T02:06:14Z&#34;</span>
-	<span style="color:#000;font-weight:bold">}],</span>
+	<span style="color:#ff79c6">&#34;currency&#34;</span>: <span style="color:#f1fa8c">&#34;BRL&#34;</span>,
+	<span style="color:#ff79c6">&#34;customer&#34;</span>: {
+		<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-07T23:33:15Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;delinquent&#34;</span>: <span style="color:#ff79c6">false</span>,
+		<span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#bd93f9">12345678912</span>,
+		<span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;gabriel@email.com&#34;</span>,
+		<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;cus_WVbg8Qkc0WIelO4k&#34;</span>,
+		<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Gabriel Tavares&#34;</span>,
+		<span style="color:#ff79c6">&#34;phones&#34;</span>: {
+			<span style="color:#ff79c6">&#34;mobile_phone&#34;</span>: {
+				<span style="color:#ff79c6">&#34;area_code&#34;</span>: <span style="color:#bd93f9">21</span>,
+				<span style="color:#ff79c6">&#34;country_code&#34;</span>: <span style="color:#bd93f9">55</span>,
+				<span style="color:#ff79c6">&#34;number&#34;</span>: <span style="color:#bd93f9">987654321</span>
+			}
+		},
+		<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;individual&#34;</span>,
+		<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:02:24Z&#34;</span>
+	},
+	<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;or_djKAl9dacPfB7gBR&#34;</span>,
+	<span style="color:#ff79c6">&#34;items&#34;</span>: [{
+		<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+		<span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:06:14Z&#34;</span>,
+		<span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Camisa de malha 100% algodão - Tamanho G - Branca&#34;</span>,
+		<span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;oi_BQWg5P2FLTlGn97z&#34;</span>,
+		<span style="color:#ff79c6">&#34;quantity&#34;</span>: <span style="color:#bd93f9">1</span>,
+		<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>,
+		<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;product&#34;</span>,
+		<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T02:06:14Z&#34;</span>
+	}],
 
-	<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;canceled&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-05-15T18:54:35Z&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;canceled&#34;</span>,
+	<span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-05-15T18:54:35Z&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     

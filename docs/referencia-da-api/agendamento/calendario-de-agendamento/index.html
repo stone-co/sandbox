@@ -3456,8 +3456,8 @@
 <p>Cada operação na API (payment, external_transfer e internal_transfer) tem um calendário específico. Por isso, os recursos da API de calendário podem ser acessados indicando sobre qual operação se deseja ter informações do calendário. Isso é feito pelo query string param <code>operation_type</code>, que pode assumir os valores: <code>external_transfer</code>, <code>internal_transfer</code> ou <code>payment.</code></p>
 <p>O campo <code>execution_limit_date</code> representa o limite para o qual um agendamento pode ser efetuado. O default é dia atual + 1 ano.</p>
 <p>O campo <code>next_available_execution_date</code> representa o próximo dia disponível para agendamento.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
+</code></pre></div><hr>
 <h4 id="query-params"><strong>QUERY PARAMS</strong></h4>
 <hr>
 <p><strong>start</strong> <code>string</code>
@@ -3481,27 +3481,27 @@
 <hr>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">201</span> <span style="color:#a40000">Created</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">201</span> Created
+content-type: application/json
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;execution_limit_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-03-30&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;next_available_execution_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-04-01&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;non_business_days&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-03-30&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;is_weekend&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;is_holiday&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;holiday_description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Feriado&#34;</span>
-                <span style="color:#000;font-weight:bold">},</span>
-                <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-03-31&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;is_weekend&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;is_holiday&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;holiday_description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-                <span style="color:#000;font-weight:bold">}</span>
-            <span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">        {
+            <span style="color:#ff79c6">&#34;execution_limit_date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-03-30&#34;</span>,
+            <span style="color:#ff79c6">&#34;next_available_execution_date&#34;</span>: <span style="color:#f1fa8c">&#34;2019-04-01&#34;</span>,
+            <span style="color:#ff79c6">&#34;non_business_days&#34;</span>: [
+                {
+                <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2019-03-30&#34;</span>,
+                <span style="color:#ff79c6">&#34;is_weekend&#34;</span>: <span style="color:#ff79c6">true</span>,
+                <span style="color:#ff79c6">&#34;is_holiday&#34;</span>: <span style="color:#ff79c6">true</span>,
+                <span style="color:#ff79c6">&#34;holiday_description&#34;</span>: <span style="color:#f1fa8c">&#34;Feriado&#34;</span>
+                },
+                {
+                <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2019-03-31&#34;</span>,
+                <span style="color:#ff79c6">&#34;is_weekend&#34;</span>: <span style="color:#ff79c6">true</span>,
+                <span style="color:#ff79c6">&#34;is_holiday&#34;</span>: <span style="color:#ff79c6">false</span>,
+                <span style="color:#ff79c6">&#34;holiday_description&#34;</span>: <span style="color:#ff79c6">null</span>
+                }
+            ]
+        }
 </code></pre></div>
         <div class="section-index">
     

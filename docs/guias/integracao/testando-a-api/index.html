@@ -3456,59 +3456,59 @@
 <p>Nossa API é baseada em <a href="https://pt.wikipedia.org/wiki/REST">REST</a> e a comunicação é feita utilizando métodos de <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods">requisição HTTP</a> (<strong>GET</strong>, <strong>POST</strong>, <strong>PUT</strong>, <strong>DELETE</strong>, etc)</p>
 <p>Para todos os endpoints, o formato esperado para o <code>content_type</code> é sempre <code>application/json</code>. A URL base para a API em Sandbox é <code>https://sandbox-api.openbank.stone.com.br/api/v1</code></p>
 <p>Abaixo temos um exemplo de uma requisição válida para a API em Sandbox, utilizando a ferramenta <code>curl</code>:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">curl</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">GET</span> <span style="color:#a40000">\</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">curl --request GET \ 
   
-  <span style="color:#a40000">--url</span> <span style="color:#a40000">https://sandbox-api.openbank.stone.com.br/api/v</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">/institutions/</span><span style="color:#0000cf;font-weight:bold">197</span>
+  --url https://sandbox-api.openbank.stone.com.br/api/v<span style="color:#bd93f9">1</span>/institutions/<span style="color:#bd93f9">197</span>
 </code></pre></div><p>O retorno das chamadas na API será, por padrão, um objeto do tipo JSON. A chamada anterior tem a seguinte resposta:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;ispb_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;16501555&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Stone Pagamentos S.A.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;number_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;197&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;short_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;STONE PAGAMENTOS S.A.&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;ispb_code&#34;</span>:<span style="color:#f1fa8c">&#34;16501555&#34;</span>,
+  <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Stone Pagamentos S.A.&#34;</span>,
+  <span style="color:#ff79c6">&#34;number_code&#34;</span>:<span style="color:#f1fa8c">&#34;197&#34;</span>,
+  <span style="color:#ff79c6">&#34;short_name&#34;</span>:<span style="color:#f1fa8c">&#34;STONE PAGAMENTOS S.A.&#34;</span>
+}
 </code></pre></div><p>A chamada abaixo é usada para enviar uma TED. Nesse caso, adicionamos como <em>headers</em> o tipo de conteúdo como sendo <code>application/json</code> e a autenticação via <code>Bearer token</code>, como discutida na sessão de autenticação.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">curl</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">POST</span> <span style="color:#a40000">\</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">curl --request POST \
   
-  <span style="color:#a40000">--url</span> <span style="color:#a40000">https://sandbox-api.openbank.stone.com.br/api/v</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">/external_transfers</span> <span style="color:#a40000">\</span>
-  <span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
-  <span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;authorization:</span> <span style="color:#a40000">Bearer</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">token</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span> <span style="color:#a40000">\</span>
-  <span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">3000</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;654321&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;260&#34;</span><span style="color:#000;font-weight:bold">},</span><span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#204a87;font-weight:bold">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;05971627007&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Nome do destinatário&#34;</span><span style="color:#000;font-weight:bold">}},</span><span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;f49a9d13-18dc-4811-b286-edd168a428b2&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+  --url https://sandbox-api.openbank.stone.com.br/api/v<span style="color:#bd93f9">1</span>/external_transfers \
+  --header &#39;Content-Type: application/json&#39; \
+  --header &#39;authorization: Bearer {token}&#39; \
+  --data &#39;{<span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">3000</span>,<span style="color:#ff79c6">&#34;target&#34;</span>:{<span style="color:#ff79c6">&#34;account&#34;</span>:{<span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;654321&#34;</span>,<span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1234&#34;</span>,<span style="color:#ff79c6">&#34;institution_code&#34;</span>:<span style="color:#f1fa8c">&#34;260&#34;</span>},<span style="color:#ff79c6">&#34;entity&#34;</span>:{<span style="color:#ff79c6">&#34;cpf&#34;</span>:<span style="color:#f1fa8c">&#34;05971627007&#34;</span>,<span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Nome do destinatário&#34;</span>}},<span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;f49a9d13-18dc-4811-b286-edd168a428b2&#34;</span>}&#39;
 </code></pre></div><p>Essas requisições geram respostas, conforme podemos ver abaixo:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>  
-   <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">16600</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-06-07T18:57:57Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;cancelled_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-06-07T18:57:57Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;delayed_to_next_business_day&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;finished_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;05e2950b-ff0c-4b8f-aa5f-7055bb8bc6f1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;refund_reason_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;refund_reason_description&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;refunded_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;scheduled_to_effective&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;scheduled_to_requested&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;APPROVED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-   <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:{</span>  
-      <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:{</span>  
-         <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1241441&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1241&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;00000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;institution_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Banco do Brasil S.A.&#34;</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:{</span>  
-         <span style="color:#204a87;font-weight:bold">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;37818425098&#34;</span><span style="color:#000;font-weight:bold">,</span>
-         <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;fulano novo&#34;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-   <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{  
+   <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">16600</span>,
+   <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;approved_at&#34;</span>:<span style="color:#f1fa8c">&#34;2019-06-07T18:57:57Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;approved_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span>,
+   <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2019-06-07T18:57:57Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;created_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&#34;</span>,
+   <span style="color:#ff79c6">&#34;delayed_to_next_business_day&#34;</span>:<span style="color:#ff79c6">false</span>,
+   <span style="color:#ff79c6">&#34;failed_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;fee&#34;</span>:<span style="color:#bd93f9">0</span>,
+   <span style="color:#ff79c6">&#34;finished_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;id&#34;</span>:<span style="color:#f1fa8c">&#34;05e2950b-ff0c-4b8f-aa5f-7055bb8bc6f1&#34;</span>,
+   <span style="color:#ff79c6">&#34;refund_reason_code&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;refund_reason_description&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;refunded_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;rejected_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;rejected_by&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;scheduled_to_effective&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;scheduled_to_requested&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;settled_at&#34;</span>:<span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;status&#34;</span>:<span style="color:#f1fa8c">&#34;APPROVED&#34;</span>,
+   <span style="color:#ff79c6">&#34;target&#34;</span>:{  
+      <span style="color:#ff79c6">&#34;account&#34;</span>:{  
+         <span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;1241441&#34;</span>,
+         <span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1241&#34;</span>,
+         <span style="color:#ff79c6">&#34;institution_code&#34;</span>:<span style="color:#f1fa8c">&#34;00000000&#34;</span>,
+         <span style="color:#ff79c6">&#34;institution_name&#34;</span>:<span style="color:#f1fa8c">&#34;Banco do Brasil S.A.&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;entity&#34;</span>:{  
+         <span style="color:#ff79c6">&#34;cpf&#34;</span>:<span style="color:#f1fa8c">&#34;37818425098&#34;</span>,
+         <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;fulano novo&#34;</span>
+      }
+   }
+}
 </code></pre></div><br>
 <h4 id="homologando-sua-integração"><strong>Homologando sua Integração</strong></h4>
 <p>Uma vez que o seu sistema que integra na API do Stone OpenBank está pronto e testado em Sandbox, você vai passar pelo processo de Homologação antes de ir para Produção.

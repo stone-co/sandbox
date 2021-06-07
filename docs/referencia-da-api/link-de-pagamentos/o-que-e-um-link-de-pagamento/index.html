@@ -3464,15 +3464,15 @@
 <p>Um link de pagamento que não tiver sido pago ou que não tenha sido expirado pode ser cancelado a qualquer momento, assumindo status de &ldquo;<em><strong>Cancelado</strong></em>&rdquo;. Tanto a cobrança expirada quanto a cancelada terão o status da order como &ldquo;<em><strong>Canceled</strong></em>&rdquo;. A forma inicial de identificar que
 é um caso ou outro é pelo campo closed.</p>
 <h5 id="toda-transação-cancelada-é-fechada-e-depois-cancelada"><strong>Toda transação cancelada é fechada e depois cancelada</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Canceled&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;true&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;Canceled&#34;</span>,
+	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#f1fa8c">&#34;true&#34;</span>
+}
 </code></pre></div><h5 id="toda-transação-expirada-se-mantém-aberta-closed-false-mas-com-status-alterado-para-cancelado"><strong>Toda transação expirada se mantém aberta (closed: false), mas com status alterado para cancelado</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;canceled&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#204a87;font-weight:bold">&#34;closed&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;false&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;canceled&#34;</span>,
+	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#f1fa8c">&#34;false&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     

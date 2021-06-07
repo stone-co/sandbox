@@ -3463,8 +3463,8 @@
 	
 	<hr>
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id
+</code></pre></div><hr>
 <h4 id="path-params"><strong>PATH PARAMS</strong></h4>
 <hr>
 <br>
@@ -3472,50 +3472,50 @@
 <br>Identificador da transferência externa.</p>
 <br>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">200</span> OK
+content-type: application/json
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-08-02T18:14:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;cancelled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-08-02T18:14:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;delayed_to_next_business_day&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;failure_reason_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;failure_reason_description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">400</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;finished_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-08-02T18:14:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;7458c329-c5e9-4cc8-8174-3aa6210a8867&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;refund_reason_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;refund_reason_description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;refunded_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;scheduled_to_effective&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;scheduled_to_requested&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-08-02T18:14:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FINISHED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;58859&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;90400888&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;institution_ispb&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;90400888&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;institution_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Banco Santander (Brasil) S. A.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;institution_number_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;033&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;62752545053&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;62752545053&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Octacilio Impoluto&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">100</span>,
+    <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:14:34Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span>,
+    <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:14:34Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span>,
+    <span style="color:#ff79c6">&#34;delayed_to_next_business_day&#34;</span>: <span style="color:#ff79c6">false</span>,
+    <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">400</span>,
+    <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:14:34Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7458c329-c5e9-4cc8-8174-3aa6210a8867&#34;</span>,
+    <span style="color:#ff79c6">&#34;refund_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;refund_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;refunded_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;scheduled_to_effective&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;scheduled_to_requested&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:14:34Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+    <span style="color:#ff79c6">&#34;target&#34;</span>: {
+        <span style="color:#ff79c6">&#34;account&#34;</span>: {
+            <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;58859&#34;</span>,
+            <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+            <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;90400888&#34;</span>,
+            <span style="color:#ff79c6">&#34;institution_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;90400888&#34;</span>,
+            <span style="color:#ff79c6">&#34;institution_name&#34;</span>: <span style="color:#f1fa8c">&#34;Banco Santander (Brasil) S. A.&#34;</span>,
+            <span style="color:#ff79c6">&#34;institution_number_code&#34;</span>: <span style="color:#f1fa8c">&#34;033&#34;</span>
+        },
+        <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+            <span style="color:#ff79c6">&#34;cpf&#34;</span>: <span style="color:#f1fa8c">&#34;62752545053&#34;</span>,
+            <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;62752545053&#34;</span>,
+            <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+            <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Octacilio Impoluto&#34;</span>
+        }
+    }
+}
 </code></pre></div>
         <div class="section-index">
     

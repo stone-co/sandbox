@@ -3453,8 +3453,8 @@
 	
 	<hr>
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
+</code></pre></div><br>
 <h4 id="query-params"><strong>QUERY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3542,139 +3542,139 @@ Formato &ldquo;YYYY-MM-DD&rdquo;.</p>
 <br> Código de barras traduzidos em números.</p>
 <br>
 <h4 id="response"><strong>Response</strong></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">200</span> OK
+content-type: application/json
 </code></pre></div><h5 id="body">Body</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
-<span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;cursor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;before&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;limit&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">25</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;data&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-       <span style="color:#000;font-weight:bold">{</span>
-          <span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">2000</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;barcode&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;19795819100000020000000020200310150334476155&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;beneficiary&#34;</span><span style="color:#000;font-weight:bold">:{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;498910&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;98146856000174&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Sr. Mirella&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">NULL</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-10T15:03:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11121740755&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;discounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-             <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0.1&#34;</span>
-              <span style="color:#000;font-weight:bold">}</span>
-          <span style="color:#000;font-weight:bold">],</span>
-          <span style="color:#204a87;font-weight:bold">&#34;expiration_date&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-11&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;fine&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;interest&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;invoice_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;proposal&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;issuance_date&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-10&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;limit_date&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-11&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;our_number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200427112605941833&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;98146856000174&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Sr. Mirella&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">NULL</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;receiver&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;registered_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-10T15:03:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">NULL</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;REGISTERED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;19790000052020031015703344761550581910000002000&#34;</span>
-       <span style="color:#000;font-weight:bold">},</span>
-       <span style="color:#000;font-weight:bold">{</span>
-          <span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">2000</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;barcode&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;19795819100000020000000020200310150334476155&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;beneficiary&#34;</span><span style="color:#000;font-weight:bold">:{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;498910&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;98146856000174&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Sr. Mirella&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">NULL</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-10T15:03:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11121740755&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pereira da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;discounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-             <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0.1&#34;</span>
-              <span style="color:#000;font-weight:bold">}</span>
-          <span style="color:#000;font-weight:bold">],</span>
-          <span style="color:#204a87;font-weight:bold">&#34;expiration_date&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-11&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;fine&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;interest&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-01-02&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;invoice_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;proposal&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;issuance_date&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-10&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;limit_date&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-11&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;our_number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200427112605941833&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;customer&#34;</span><span style="color:#000;font-weight:bold">:{</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;98146856000174&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;legal_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Sr. Mirella&#34;</span><span style="color:#000;font-weight:bold">,</span>
-             <span style="color:#204a87;font-weight:bold">&#34;trade_name&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">NULL</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;receiver&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;registered_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2020-03-10T15:03:34Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">NULL</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;REGISTERED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;19790000052020031015703344761550581910000002000&#34;</span>
-       <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
+{
+    <span style="color:#ff79c6">&#34;cursor&#34;</span>: {
+        <span style="color:#ff79c6">&#34;after&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;before&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;limit&#34;</span>: <span style="color:#bd93f9">25</span>
+    },
+    <span style="color:#ff79c6">&#34;data&#34;</span>: [
+       {
+          <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&#34;</span>,
+          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">2000</span>,
+          <span style="color:#ff79c6">&#34;barcode&#34;</span>:<span style="color:#f1fa8c">&#34;19795819100000020000000020200310150334476155&#34;</span>,
+          <span style="color:#ff79c6">&#34;beneficiary&#34;</span>:{
+             <span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;498910&#34;</span>,
+             <span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1&#34;</span>,
+             <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
+             <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
+             <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+          },
+          <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
+          <span style="color:#ff79c6">&#34;created_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&#34;</span>,
+          <span style="color:#ff79c6">&#34;customer&#34;</span>: {
+             <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;11121740755&#34;</span>,
+             <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+             <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+          },
+          <span style="color:#ff79c6">&#34;discounts&#34;</span>: [
+             {
+                <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-11-20&#34;</span>,
+                <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;0.1&#34;</span>
+              }
+          ],
+          <span style="color:#ff79c6">&#34;expiration_date&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-11&#34;</span>,
+          <span style="color:#ff79c6">&#34;fee&#34;</span>:<span style="color:#bd93f9">0</span>,
+          <span style="color:#ff79c6">&#34;fine&#34;</span>: {
+             <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+             <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+          },
+          <span style="color:#ff79c6">&#34;id&#34;</span>:<span style="color:#f1fa8c">&#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&#34;</span>,
+          <span style="color:#ff79c6">&#34;interest&#34;</span>: {
+             <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+             <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+          },
+          <span style="color:#ff79c6">&#34;invoice_type&#34;</span>:<span style="color:#f1fa8c">&#34;proposal&#34;</span>,
+          <span style="color:#ff79c6">&#34;issuance_date&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10&#34;</span>,
+          <span style="color:#ff79c6">&#34;limit_date&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-11&#34;</span>,
+          <span style="color:#ff79c6">&#34;our_number&#34;</span>: <span style="color:#f1fa8c">&#34;20200427112605941833&#34;</span>,
+          <span style="color:#ff79c6">&#34;customer&#34;</span>:{
+             <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
+             <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
+             <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+          },
+          <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
+          <span style="color:#ff79c6">&#34;registered_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
+          <span style="color:#ff79c6">&#34;settled_at&#34;</span>:NULL,
+          <span style="color:#ff79c6">&#34;status&#34;</span>:<span style="color:#f1fa8c">&#34;REGISTERED&#34;</span>,
+          <span style="color:#ff79c6">&#34;writable_line&#34;</span>:<span style="color:#f1fa8c">&#34;19790000052020031015703344761550581910000002000&#34;</span>
+       },
+       {
+          <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&#34;</span>,
+          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">2000</span>,
+          <span style="color:#ff79c6">&#34;barcode&#34;</span>:<span style="color:#f1fa8c">&#34;19795819100000020000000020200310150334476155&#34;</span>,
+          <span style="color:#ff79c6">&#34;beneficiary&#34;</span>:{
+             <span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;498910&#34;</span>,
+             <span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1&#34;</span>,
+             <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
+             <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
+             <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+          },
+          <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
+          <span style="color:#ff79c6">&#34;created_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&#34;</span>,
+          <span style="color:#ff79c6">&#34;customer&#34;</span>: {
+             <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;11121740755&#34;</span>,
+             <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+             <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Pereira da Silva&#34;</span>,
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>: <span style="color:#ff79c6">null</span>
+          },
+          <span style="color:#ff79c6">&#34;discounts&#34;</span>: [
+             {
+                <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2020-11-20&#34;</span>,
+                <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;0.1&#34;</span>
+              }
+          ],
+          <span style="color:#ff79c6">&#34;expiration_date&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-11&#34;</span>,
+          <span style="color:#ff79c6">&#34;fee&#34;</span>:<span style="color:#bd93f9">0</span>,
+          <span style="color:#ff79c6">&#34;fine&#34;</span>: {
+             <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+             <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+          },
+          <span style="color:#ff79c6">&#34;id&#34;</span>:<span style="color:#f1fa8c">&#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&#34;</span>,
+          <span style="color:#ff79c6">&#34;interest&#34;</span>: {
+             <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-01-02&#34;</span>,
+             <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+          },
+          <span style="color:#ff79c6">&#34;invoice_type&#34;</span>:<span style="color:#f1fa8c">&#34;proposal&#34;</span>,
+          <span style="color:#ff79c6">&#34;issuance_date&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10&#34;</span>,
+          <span style="color:#ff79c6">&#34;limit_date&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-11&#34;</span>,
+          <span style="color:#ff79c6">&#34;our_number&#34;</span>: <span style="color:#f1fa8c">&#34;20200427112605941833&#34;</span>,
+          <span style="color:#ff79c6">&#34;customer&#34;</span>:{
+             <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
+             <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
+             <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+          },
+          <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
+          <span style="color:#ff79c6">&#34;registered_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
+          <span style="color:#ff79c6">&#34;settled_at&#34;</span>:NULL,
+          <span style="color:#ff79c6">&#34;status&#34;</span>:<span style="color:#f1fa8c">&#34;REGISTERED&#34;</span>,
+          <span style="color:#ff79c6">&#34;writable_line&#34;</span>:<span style="color:#f1fa8c">&#34;19790000052020031015703344761550581910000002000&#34;</span>
+       }
+    ]
+}
 </code></pre></div><br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">403</span> <span style="color:#a40000">Forbidden</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">403</span> Forbidden
 </code></pre></div><h5 id="body-1">Body</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;object&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;properties&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#204a87;font-weight:bold">&#34;enum&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#4e9a06">&#34;srn:error:unauthorized&#34;</span>
-      <span style="color:#000;font-weight:bold">]</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;object&#34;</span>,
+  <span style="color:#ff79c6">&#34;properties&#34;</span>: {
+    <span style="color:#ff79c6">&#34;type&#34;</span>: {
+      <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;string&#34;</span>,
+      <span style="color:#ff79c6">&#34;enum&#34;</span>: [
+        <span style="color:#f1fa8c">&#34;srn:error:unauthorized&#34;</span>
+      ]
+    }
+  }
+}
 </code></pre></div>
         <div class="section-index">
     

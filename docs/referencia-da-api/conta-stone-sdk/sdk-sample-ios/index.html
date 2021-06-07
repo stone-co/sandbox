@@ -3497,110 +3497,110 @@
 <p>Em <code>Build Phases</code> adicione um novo script chamado &ldquo;Sign&rdquo; (Em Build Phases, clique sinal de &ldquo;mais&rdquo; e selecione New Run Script Phase).</p>
 </li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">pushd</span> <span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">TARGET_BUILD_DIR</span><span style="color:#000;font-weight:bold">}</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">PRODUCT_NAME</span><span style="color:#000;font-weight:bold">}</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">app</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">Frameworks</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">ContaStoneSDK</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">framework</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">Frameworks</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pushd ${TARGET_BUILD_DIR}<span style="color:#ff79c6">/</span>${PRODUCT_NAME}<span style="color:#ff79c6">.</span>app<span style="color:#ff79c6">/</span>Frameworks<span style="color:#ff79c6">/</span>ContaStoneSDK<span style="color:#ff79c6">.</span>framework<span style="color:#ff79c6">/</span>Frameworks
 
-<span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">EACH</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#ce5c00;font-weight:bold">*.</span><span style="color:#000">framework</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">do</span>
-	<span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;-- signing ${EACH}&#34;</span>
-	<span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">usr</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#204a87">bin</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">codesign</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">force</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">deep</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">sign</span> <span style="color:#4e9a06">&#34;${EXPANDED_CODE_SIGN_IDENTITY}&#34;</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">entitlements</span> <span style="color:#4e9a06">&#34;${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent&#34;</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">timestamp</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">none</span>
-	<span style="color:#a40000">$</span><span style="color:#000">EACH</span>
-<span style="color:#000">done</span>
+<span style="color:#ff79c6">for</span> EACH <span style="color:#ff79c6">in</span> <span style="color:#ff79c6">*.</span>framework; do
+	echo <span style="color:#f1fa8c">&#34;-- signing ${EACH}&#34;</span>
+	<span style="color:#ff79c6">/</span>usr<span style="color:#ff79c6">/</span><span style="color:#8be9fd;font-style:italic">bin</span><span style="color:#ff79c6">/</span>codesign <span style="color:#ff79c6">--</span>force <span style="color:#ff79c6">--</span>deep <span style="color:#ff79c6">--</span>sign <span style="color:#f1fa8c">&#34;${EXPANDED_CODE_SIGN_IDENTITY}&#34;</span> <span style="color:#ff79c6">--</span>entitlements <span style="color:#f1fa8c">&#34;${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent&#34;</span> <span style="color:#ff79c6">--</span>timestamp<span style="color:#ff79c6">=</span>none
+	$EACH
+done
 
-<span style="color:#000">popd</span>
+popd
 </code></pre></div><ol start="8">
 <li>Adicione dependências:</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#000">Cocoapods</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">//</span> Cocoapods
 
-<span style="color:#000">pod</span> <span style="color:#4e9a06">&#39;Alamofire&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;4.8.2&#39;</span>
-<span style="color:#000">pod</span> <span style="color:#4e9a06">&#39;RxSwift&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;~&gt; 5&#39;</span>
-<span style="color:#000">pod</span> <span style="color:#4e9a06">&#39;RxCocoa&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;~&gt; 5&#39;</span>
-<span style="color:#000">pod</span> <span style="color:#4e9a06">&#39;lottie-ios&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;3.1.6&#39;</span>
-<span style="color:#000">pod</span> <span style="color:#4e9a06">&#39;AloeStackView&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;1.2.0&#39;</span>
+pod <span style="color:#f1fa8c">&#39;Alamofire&#39;</span>, <span style="color:#f1fa8c">&#39;4.8.2&#39;</span>
+pod <span style="color:#f1fa8c">&#39;RxSwift&#39;</span>, <span style="color:#f1fa8c">&#39;~&gt; 5&#39;</span>
+pod <span style="color:#f1fa8c">&#39;RxCocoa&#39;</span>, <span style="color:#f1fa8c">&#39;~&gt; 5&#39;</span>
+pod <span style="color:#f1fa8c">&#39;lottie-ios&#39;</span>, <span style="color:#f1fa8c">&#39;3.1.6&#39;</span>
+pod <span style="color:#f1fa8c">&#39;AloeStackView&#39;</span>, <span style="color:#f1fa8c">&#39;1.2.0&#39;</span>
 
-<span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#000">Carthage</span>
+<span style="color:#ff79c6">//</span> Carthage
 
-<span style="color:#000">github</span> <span style="color:#4e9a06">&#34;Alamofire/Alamofire&#34;</span> <span style="color:#4e9a06">&#34;4.8.2&#34;</span>
-<span style="color:#000">github</span> <span style="color:#4e9a06">&#34;ReactiveX/RxSwift&#34;</span> <span style="color:#4e9a06">&#34;5.1.1&#34;</span>
-<span style="color:#000">github</span> <span style="color:#4e9a06">&#34;airbnb/lottie-ios&#34;</span> <span style="color:#4e9a06">&#34;3.1.6&#34;</span>
-<span style="color:#000">github</span> <span style="color:#4e9a06">&#34;airbnb/AloeStackView&#34;</span> <span style="color:#4e9a06">&#34;v1.2.0&#34;</span>
+github <span style="color:#f1fa8c">&#34;Alamofire/Alamofire&#34;</span> <span style="color:#f1fa8c">&#34;4.8.2&#34;</span>
+github <span style="color:#f1fa8c">&#34;ReactiveX/RxSwift&#34;</span> <span style="color:#f1fa8c">&#34;5.1.1&#34;</span>
+github <span style="color:#f1fa8c">&#34;airbnb/lottie-ios&#34;</span> <span style="color:#f1fa8c">&#34;3.1.6&#34;</span>
+github <span style="color:#f1fa8c">&#34;airbnb/AloeStackView&#34;</span> <span style="color:#f1fa8c">&#34;v1.2.0&#34;</span>
 </code></pre></div><h4 id="uso"><strong>USO</strong></h4>
 <hr>
 <h5 id="configurando-o-appdelegate"><strong>Configurando o AppDelegate</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UIKit</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ContaStoneSDK</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> UIKit
+<span style="color:#ff79c6">import</span> ContaStoneSDK
 
-<span style="color:#5c35cc;font-weight:bold">@UIApplicationMain</span>
-<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">AppDelegate</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">UIResponder</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">UIApplicationDelegate</span> <span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#000">func</span> <span style="color:#000">application</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">_</span> <span style="color:#000">application</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">UIApplication</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">didFinishLaunchingWithOptions</span> <span style="color:#000">launchOptions</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">UIApplication</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">LaunchOptionsKey</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Any</span><span style="color:#000;font-weight:bold">]</span><span style="color:#a40000">?</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">Bool</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">configure</span><span style="color:#000;font-weight:bold">(</span>
-			<span style="color:#204a87">id</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;john.doe@openbank.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-			<span style="color:#000">scopes</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;offline_access&#34;</span><span style="color:#000;font-weight:bold">],</span>
-			<span style="color:#000">environmentType</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">sandbox</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">homol</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">sandbox</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">production</span>
-			<span style="color:#000">delegate</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">self</span>
-		<span style="color:#000;font-weight:bold">)</span>
+@UIApplicationMain
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">AppDelegate</span>: UIResponder, UIApplicationDelegate {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication<span style="color:#ff79c6">.</span>LaunchOptionsKey: Any]?) <span style="color:#ff79c6">-&gt;</span> Bool {
+		ContaStone<span style="color:#ff79c6">.</span>configure(
+			<span style="color:#8be9fd;font-style:italic">id</span>: <span style="color:#f1fa8c">&#34;john.doe@openbank.com&#34;</span>,
+			scopes: [<span style="color:#f1fa8c">&#34;offline_access&#34;</span>],
+			environmentType: <span style="color:#ff79c6">.</span>sandbox, <span style="color:#ff79c6">//</span> <span style="color:#ff79c6">.</span>homol, <span style="color:#ff79c6">.</span>sandbox, <span style="color:#ff79c6">.</span>production
+			delegate: self
+		)
 
-		<span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">true</span>
-	<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+		<span style="color:#ff79c6">return</span> true
+	}
+}
 
-<span style="color:#000">extension</span> <span style="color:#000">AppDelegate</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ContaStoneDelegate</span> <span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#000">func</span> <span style="color:#000">refreshApp</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{}</span>
-	<span style="color:#000">func</span> <span style="color:#000">sessionRevoked</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{}</span>
-	<span style="color:#000">func</span> <span style="color:#000">loggedOut</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{}</span>
-	<span style="color:#000">func</span> <span style="color:#000">showHelpCenter</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{}</span>
-	<span style="color:#000">func</span> <span style="color:#000">showChat</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{}</span>
-	<span style="color:#000">func</span> <span style="color:#000">showFrequentlyAskedQuestions</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{}</span>
-<span style="color:#000;font-weight:bold">}</span>
+extension AppDelegate: ContaStoneDelegate {
+	func refreshApp() {}
+	func sessionRevoked() {}
+	func loggedOut() {}
+	func showHelpCenter() {}
+	func showChat() {}
+	func showFrequentlyAskedQuestions() {}
+}
 </code></pre></div><h5 id="autenticação"><strong>Autenticação</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UIKit</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ContaStoneSDK</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> UIKit
+<span style="color:#ff79c6">import</span> ContaStoneSDK
 
-<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ViewController</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">UIViewController</span> <span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#000">func</span> <span style="color:#000">checkAuthenticationState</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">isAuthenticated</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">currentAcount</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#000">John</span> <span style="color:#000">Doe</span> <span style="color:#000">Inc</span>
-		<span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">login</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">checkKYC</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">true</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#ce5c00;font-weight:bold">/*</span> <span style="color:#000">callback</span> <span style="color:#ce5c00;font-weight:bold">*/</span> <span style="color:#000;font-weight:bold">}</span>
-		<span style="color:#000;font-weight:bold">}</span>
-	<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ViewController</span>: UIViewController {
+	func checkAuthenticationState() {
+		<span style="color:#ff79c6">if</span> ContaStone<span style="color:#ff79c6">.</span>isAuthenticated {
+			ContaStone<span style="color:#ff79c6">.</span>currentAcount<span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">//</span> John Doe Inc
+		} <span style="color:#ff79c6">else</span> {
+			ContaStone<span style="color:#ff79c6">.</span>login(checkKYC: true) { <span style="color:#ff79c6">/*</span> callback <span style="color:#ff79c6">*/</span> }
+		}
+	}
+}
 </code></pre></div><h5 id="logout"><strong>Logout</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UIKit</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ContaStoneSDK</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> UIKit
+<span style="color:#ff79c6">import</span> ContaStoneSDK
 
-<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ViewController</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">UIViewController</span> <span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#000">func</span> <span style="color:#000">logout</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">logout</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#ce5c00;font-weight:bold">/*</span> <span style="color:#000">callback</span> <span style="color:#ce5c00;font-weight:bold">*/</span> <span style="color:#000;font-weight:bold">}</span>
-	<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ViewController</span>: UIViewController {
+	func logout() {
+		ContaStone<span style="color:#ff79c6">.</span>logout { <span style="color:#ff79c6">/*</span> callback <span style="color:#ff79c6">*/</span> }
+	}
+}
 </code></pre></div><h5 id="aprovador"><strong>Aprovador</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">	<span style="color:#000">var</span> <span style="color:#000">approverCoordinator</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ApproverCoordinator</span><span style="color:#a40000">?</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">	var approverCoordinator: ApproverCoordinator?
 
-	<span style="color:#000">func</span> <span style="color:#000">showApprover</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#000">let</span> <span style="color:#000">coordiantor</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ApproverCoordinator</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">_</span> <span style="color:#204a87;font-weight:bold">in</span>
-            <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">approverCoordinator</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">nil</span>
-        <span style="color:#000;font-weight:bold">}</span>
-        <span style="color:#000">present</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">coordiantor</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">rootViewController</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">animated</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">true</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">completion</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">nil</span><span style="color:#000;font-weight:bold">)</span>
+	func showApprover() {
+        let coordiantor <span style="color:#ff79c6">=</span> ApproverCoordinator() { _ <span style="color:#ff79c6">in</span>
+            self<span style="color:#ff79c6">.</span>approverCoordinator <span style="color:#ff79c6">=</span> nil
+        }
+        present(coordiantor<span style="color:#ff79c6">.</span>rootViewController, animated: true, completion: nil)
 
-        <span style="color:#000">approverCoordinator</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">coordiantor</span> <span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#000">Holds</span> <span style="color:#000">the</span> <span style="color:#000">instance</span>
-	<span style="color:#000;font-weight:bold">}</span>
+        approverCoordinator <span style="color:#ff79c6">=</span> coordiantor <span style="color:#ff79c6">//</span> Holds the instance
+	}
 </code></pre></div><h5 id="requisições"><strong>Requisições</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ViewController</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">UIViewController</span> <span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#000">func</span> <span style="color:#000">fetchBalance</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-	   <span style="color:#000">let</span> <span style="color:#204a87">id</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">currentAcount</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">id</span>
-	   <span style="color:#000">let</span> <span style="color:#000">endpoint</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Endpoint</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">BalanceResponse</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">method</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">path</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/api/v1/accounts/\(id)/balance&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ViewController</span>: UIViewController {
+	func fetchBalance() {
+	   let <span style="color:#8be9fd;font-style:italic">id</span> <span style="color:#ff79c6">=</span> ContaStone<span style="color:#ff79c6">.</span>currentAcount<span style="color:#ff79c6">.</span>id
+	   let endpoint <span style="color:#ff79c6">=</span> Endpoint<span style="color:#ff79c6">&lt;</span>BalanceResponse<span style="color:#ff79c6">&gt;</span>(method: <span style="color:#ff79c6">.</span>get, path: <span style="color:#f1fa8c">&#34;/api/v1/accounts/\(id)/balance&#34;</span>)
 
-	   <span style="color:#000">ContaStone</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">performRequest</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">endpoint</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">result</span> <span style="color:#204a87;font-weight:bold">in</span>
-			<span style="color:#000">switch</span> <span style="color:#000">result</span> <span style="color:#000;font-weight:bold">{</span>
-			<span style="color:#000">case</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">success</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">let</span> <span style="color:#000">response</span><span style="color:#000;font-weight:bold">):</span>
-				<span style="color:#ce5c00;font-weight:bold">/*</span> <span style="color:#000">callback</span> <span style="color:#ce5c00;font-weight:bold">*/</span>
+	   ContaStone<span style="color:#ff79c6">.</span>performRequest(endpoint) { result <span style="color:#ff79c6">in</span>
+			switch result {
+			case <span style="color:#ff79c6">.</span>success(let response):
+				<span style="color:#ff79c6">/*</span> callback <span style="color:#ff79c6">*/</span>
 
-			<span style="color:#000">case</span> <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">failure</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">let</span> <span style="color:#000">error</span><span style="color:#000;font-weight:bold">):</span>
-				<span style="color:#ce5c00;font-weight:bold">/*</span> <span style="color:#000">callback</span> <span style="color:#ce5c00;font-weight:bold">*/</span>
-		   <span style="color:#000;font-weight:bold">}</span>
-	   <span style="color:#000;font-weight:bold">}</span>
-	<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+			case <span style="color:#ff79c6">.</span>failure(let error):
+				<span style="color:#ff79c6">/*</span> callback <span style="color:#ff79c6">*/</span>
+		   }
+	   }
+	}
+}
 </code></pre></div><br>
 <h4 id="exemplo"><strong>Exemplo</strong></h4>
 <hr>

@@ -3469,8 +3469,8 @@
 
 <br>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/payments
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/payments
+</code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3492,32 +3492,32 @@
 <p>Chave de idempotencia.</p>
 <br>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">202</span> <span style="color:#a40000">Accepted</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">202</span> Accepted 
 </code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-08-02T18:22:19Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;barcode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;89670000000010003137498189637166095077491613&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;cancelled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-08-02T18:22:19Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;details&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;failure_reason_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;failure_reason_description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;finished_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1879158c-03c6-48ff-b7c3-c34a992cfa9c&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;refunded_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;scheduled_to&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;APPROVED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;896700000004010003137493818963716605950774916130&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&#34;</span>,
+    <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">100</span>,
+    <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:22:19Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span>,
+    <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;89670000000010003137498189637166095077491613&#34;</span>,
+    <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:22:19Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:08807157-f8e1-439e-a2ec-154ecb4bee13&#34;</span>,
+    <span style="color:#ff79c6">&#34;details&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+    <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;1879158c-03c6-48ff-b7c3-c34a992cfa9c&#34;</span>,
+    <span style="color:#ff79c6">&#34;refunded_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;APPROVED&#34;</span>,
+    <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;896700000004010003137493818963716605950774916130&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     

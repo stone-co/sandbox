@@ -3455,8 +3455,8 @@
 <p>As operações que podem ter seu comprovante gerado são apenas as operações: Pagamento com código de barras, envio de TEDs, envio de transferências internas e extrato.</p>
 <p>Comprovantes podem ser gerados apenas para transferências em estados de sucesso, como aprovada e agendada.</p>
 <p>Comprovantes para extrato aceitam os parâmetros adicionais <code>start_datetime</code> e <code>end_datetime</code> para especificar o intervalo de tempo cujas entradas serão levadas em consideração ao gerar o comprovante.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
+</code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
 <p><strong>resource_type</strong>* <code>string</code>
@@ -3477,8 +3477,8 @@
 <p><br><br></p>
 <hr>
 <h4 id="response"><strong>Response</strong></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">200</span> OK
+content-type: application/json
 </code></pre></div><p>Retorna o PDF do comprovante</p>
 
         <div class="section-index">

@@ -3455,8 +3455,8 @@
 <br>
 <p>Nesse endpoint serão solicitados os dados do usuário necessários para realização do envio dos mesmos para início da análise do KYC.</p>
 <br>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/users/{{user_id}}/kyc/answer
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/users/{{user_id}}/kyc/answer
+</code></pre></div><br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
 <br>
@@ -3472,185 +3472,185 @@ Ex: ef49c647-1dc9-58e8-a559-108cdf7e65a4</p>
 <br>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;answers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;check_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;{{birthdate_id}}&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2000-10-10&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;check_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;{{phone_number_id}}&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;21971697123&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;check_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;{{address_id}}&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;street&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Rua Buarque de Macedo&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;city&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Rio de Janeiro&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;country&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Brasil&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;extra&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;postal_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;22220030&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;street_number&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;38383838&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;neighborhood&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Flamengo&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;state&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RJ&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;reference_point&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
-            <span style="color:#000;font-weight:bold">}</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;check_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;{{document_photo_id}}&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;CNH&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;front&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;back&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&#34;</span>
-            <span style="color:#000;font-weight:bold">}</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;check_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;{{document_selfies_id}}&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                <span style="color:#4e9a06">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/79767818-0254-4f85-9cdb-f560013036d0\/CBED44AF-900B-4EC7-B8BF-DB7373BF4070.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#4e9a06">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/b2ea2032-c7f2-4c4d-b377-90920afec4cd\/43964A19-69C4-451B-8CF9-B66F8C8CC0A8.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#4e9a06">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/6aacb6d4-91f2-416e-8b04-72cca5313984\/591B208A-0374-4642-A38E-DAC0A9AFCF53.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#4e9a06">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/43e42571-4d6e-4fda-9b45-c99276b18024\/B6076B95-B67F-4DAE-85F1-CAB1FA013B30.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#4e9a06">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/89f45dbc-5797-4f4c-b067-8d04e7dc1c6d\/7BFB3285-BE78-4F73-B36E-087DDD82CA6A.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#4e9a06">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/acddcea6-94ce-4d70-bf8a-95f8b1cfa145\/8673814D-7B81-4DEB-A15A-CD431A91DAD2.jpg&#34;</span>
-            <span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;check_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;{{total_income_range_id}}&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">500000</span>
-            <span style="color:#000;font-weight:bold">}</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#ff79c6">&#34;answers&#34;</span>: [
+        {
+            <span style="color:#ff79c6">&#34;check_id&#34;</span>: <span style="color:#f1fa8c">&#34;{{birthdate_id}}&#34;</span>,
+            <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;2000-10-10&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;check_id&#34;</span>: <span style="color:#f1fa8c">&#34;{{phone_number_id}}&#34;</span>,
+            <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;21971697123&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;check_id&#34;</span>: <span style="color:#f1fa8c">&#34;{{address_id}}&#34;</span>,
+            <span style="color:#ff79c6">&#34;value&#34;</span>: {
+                <span style="color:#ff79c6">&#34;street&#34;</span>: <span style="color:#f1fa8c">&#34;Rua Buarque de Macedo&#34;</span>,
+                <span style="color:#ff79c6">&#34;city&#34;</span>: <span style="color:#f1fa8c">&#34;Rio de Janeiro&#34;</span>,
+                <span style="color:#ff79c6">&#34;country&#34;</span>: <span style="color:#f1fa8c">&#34;Brasil&#34;</span>,
+                <span style="color:#ff79c6">&#34;extra&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+                <span style="color:#ff79c6">&#34;postal_code&#34;</span>: <span style="color:#f1fa8c">&#34;22220030&#34;</span>,
+                <span style="color:#ff79c6">&#34;street_number&#34;</span>: <span style="color:#f1fa8c">&#34;38383838&#34;</span>,
+                <span style="color:#ff79c6">&#34;neighborhood&#34;</span>: <span style="color:#f1fa8c">&#34;Flamengo&#34;</span>,
+                <span style="color:#ff79c6">&#34;state&#34;</span>: <span style="color:#f1fa8c">&#34;RJ&#34;</span>,
+                <span style="color:#ff79c6">&#34;reference_point&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
+            }
+        },
+        {
+            <span style="color:#ff79c6">&#34;check_id&#34;</span>: <span style="color:#f1fa8c">&#34;{{document_photo_id}}&#34;</span>,
+            <span style="color:#ff79c6">&#34;value&#34;</span>: {
+                <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;CNH&#34;</span>,
+                <span style="color:#ff79c6">&#34;front&#34;</span>: <span style="color:#f1fa8c">&#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&#34;</span>,
+                <span style="color:#ff79c6">&#34;back&#34;</span>: <span style="color:#f1fa8c">&#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&#34;</span>
+            }
+        },
+        {
+            <span style="color:#ff79c6">&#34;check_id&#34;</span>: <span style="color:#f1fa8c">&#34;{{document_selfies_id}}&#34;</span>,
+            <span style="color:#ff79c6">&#34;value&#34;</span>: [
+                <span style="color:#f1fa8c">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/79767818-0254-4f85-9cdb-f560013036d0\/CBED44AF-900B-4EC7-B8BF-DB7373BF4070.jpg&#34;</span>,
+                <span style="color:#f1fa8c">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/b2ea2032-c7f2-4c4d-b377-90920afec4cd\/43964A19-69C4-451B-8CF9-B66F8C8CC0A8.jpg&#34;</span>,
+                <span style="color:#f1fa8c">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/6aacb6d4-91f2-416e-8b04-72cca5313984\/591B208A-0374-4642-A38E-DAC0A9AFCF53.jpg&#34;</span>,
+                <span style="color:#f1fa8c">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/43e42571-4d6e-4fda-9b45-c99276b18024\/B6076B95-B67F-4DAE-85F1-CAB1FA013B30.jpg&#34;</span>,
+                <span style="color:#f1fa8c">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/89f45dbc-5797-4f4c-b067-8d04e7dc1c6d\/7BFB3285-BE78-4F73-B36E-087DDD82CA6A.jpg&#34;</span>,
+                <span style="color:#f1fa8c">&#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/acddcea6-94ce-4d70-bf8a-95f8b1cfa145\/8673814D-7B81-4DEB-A15A-CD431A91DAD2.jpg&#34;</span>
+            ]
+        },
+        {
+            <span style="color:#ff79c6">&#34;check_id&#34;</span>: <span style="color:#f1fa8c">&#34;{{total_income_range_id}}&#34;</span>,
+            <span style="color:#ff79c6">&#34;value&#34;</span>: {
+                <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#bd93f9">500000</span>
+            }
+        }
+    ]
+}
 </code></pre></div><br>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">200 OK
-</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;checks&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;detailed_reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Precisamos de algumas informações&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;field_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;birthdate&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;400bf541-788f-4d5f-86b1-6519f318ca65&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;detailed_reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Precisamos de algumas informações&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;field_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;phone_number&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6747569e-ea50-4b71-9230-7e0fd8b92d6d&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;detailed_reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Precisamos de algumas informações&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;field_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;address&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4f485886-1546-4726-b4e1-baa21bb0f4a1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;detailed_reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Precisamos de algumas informações&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;field_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;document_photo&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cbe5a713-2d02-49b3-85e4-97bf39c27354&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;detailed_reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Precisamos de algumas informações&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;field_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;document_selfies&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5b6d185d-e080-4534-b346-389fffae7294&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;income_ranges&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                    <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;formatted&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Até R$ 5.000,00&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;range&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;lower_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">500000</span>
-                        <span style="color:#000;font-weight:bold">}</span>
-                    <span style="color:#000;font-weight:bold">},</span>
-                    <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;formatted&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Entre R$ 5.000,01 e R$ 10.000,00&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;range&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;lower_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">500001</span><span style="color:#000;font-weight:bold">,</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000000</span>
-                        <span style="color:#000;font-weight:bold">}</span>
-                    <span style="color:#000;font-weight:bold">},</span>
-                    <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;formatted&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Entre R$ 10.000,01 e R$ 20.000,00&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;range&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;lower_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000001</span><span style="color:#000;font-weight:bold">,</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2000000</span>
-                        <span style="color:#000;font-weight:bold">}</span>
-                    <span style="color:#000;font-weight:bold">},</span>
-                    <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;formatted&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Entre R$ 20.000,01 e R$ 100.000,00&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;range&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;lower_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2000001</span><span style="color:#000;font-weight:bold">,</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10000000</span>
-                        <span style="color:#000;font-weight:bold">}</span>
-                    <span style="color:#000;font-weight:bold">},</span>
-                    <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;formatted&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Entre R$ 100.000,01 e R$ 1.000.000,00&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;range&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;lower_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10000001</span><span style="color:#000;font-weight:bold">,</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100000000</span>
-                        <span style="color:#000;font-weight:bold">}</span>
-                    <span style="color:#000;font-weight:bold">},</span>
-                    <span style="color:#000;font-weight:bold">{</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;formatted&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Mais de R$ 1.000.000,00&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                        <span style="color:#204a87;font-weight:bold">&#34;range&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;lower_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100000001</span><span style="color:#000;font-weight:bold">,</span>
-                            <span style="color:#204a87;font-weight:bold">&#34;upper_bounds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
-                        <span style="color:#000;font-weight:bold">}</span>
-                    <span style="color:#000;font-weight:bold">}</span>
-                <span style="color:#000;font-weight:bold">]</span>
-            <span style="color:#000;font-weight:bold">},</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;detailed_reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Precisamos de algumas informações&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;field_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;total_income_range&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;a24ad007-2d63-4108-8340-16b843873be2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;50a22e82-1fe6-407b-b76c-986f46db60e8&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user_input&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;is_mandatory&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;reason&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;account_request&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;answered&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T20:10:18Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;user_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">200 OK
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#ff79c6">&#34;checks&#34;</span>: [
+        {
+            <span style="color:#ff79c6">&#34;context&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;detailed_reason&#34;</span>: <span style="color:#f1fa8c">&#34;Precisamos de algumas informações&#34;</span>,
+            <span style="color:#ff79c6">&#34;field_type&#34;</span>: <span style="color:#f1fa8c">&#34;birthdate&#34;</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;400bf541-788f-4d5f-86b1-6519f318ca65&#34;</span>,
+            <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+            <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+            <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;context&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;detailed_reason&#34;</span>: <span style="color:#f1fa8c">&#34;Precisamos de algumas informações&#34;</span>,
+            <span style="color:#ff79c6">&#34;field_type&#34;</span>: <span style="color:#f1fa8c">&#34;phone_number&#34;</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;6747569e-ea50-4b71-9230-7e0fd8b92d6d&#34;</span>,
+            <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+            <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+            <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;context&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;detailed_reason&#34;</span>: <span style="color:#f1fa8c">&#34;Precisamos de algumas informações&#34;</span>,
+            <span style="color:#ff79c6">&#34;field_type&#34;</span>: <span style="color:#f1fa8c">&#34;address&#34;</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;4f485886-1546-4726-b4e1-baa21bb0f4a1&#34;</span>,
+            <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+            <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+            <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;context&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;detailed_reason&#34;</span>: <span style="color:#f1fa8c">&#34;Precisamos de algumas informações&#34;</span>,
+            <span style="color:#ff79c6">&#34;field_type&#34;</span>: <span style="color:#f1fa8c">&#34;document_photo&#34;</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;cbe5a713-2d02-49b3-85e4-97bf39c27354&#34;</span>,
+            <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+            <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+            <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;context&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;detailed_reason&#34;</span>: <span style="color:#f1fa8c">&#34;Precisamos de algumas informações&#34;</span>,
+            <span style="color:#ff79c6">&#34;field_type&#34;</span>: <span style="color:#f1fa8c">&#34;document_selfies&#34;</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;5b6d185d-e080-4534-b346-389fffae7294&#34;</span>,
+            <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+            <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+            <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;context&#34;</span>: {
+                <span style="color:#ff79c6">&#34;income_ranges&#34;</span>: [
+                    {
+                        <span style="color:#ff79c6">&#34;formatted&#34;</span>: <span style="color:#f1fa8c">&#34;Até R$ 5.000,00&#34;</span>,
+                        <span style="color:#ff79c6">&#34;range&#34;</span>: {
+                            <span style="color:#ff79c6">&#34;lower_bounds&#34;</span>: <span style="color:#ff79c6">null</span>,
+                            <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#bd93f9">500000</span>
+                        }
+                    },
+                    {
+                        <span style="color:#ff79c6">&#34;formatted&#34;</span>: <span style="color:#f1fa8c">&#34;Entre R$ 5.000,01 e R$ 10.000,00&#34;</span>,
+                        <span style="color:#ff79c6">&#34;range&#34;</span>: {
+                            <span style="color:#ff79c6">&#34;lower_bounds&#34;</span>: <span style="color:#bd93f9">500001</span>,
+                            <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#bd93f9">1000000</span>
+                        }
+                    },
+                    {
+                        <span style="color:#ff79c6">&#34;formatted&#34;</span>: <span style="color:#f1fa8c">&#34;Entre R$ 10.000,01 e R$ 20.000,00&#34;</span>,
+                        <span style="color:#ff79c6">&#34;range&#34;</span>: {
+                            <span style="color:#ff79c6">&#34;lower_bounds&#34;</span>: <span style="color:#bd93f9">1000001</span>,
+                            <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#bd93f9">2000000</span>
+                        }
+                    },
+                    {
+                        <span style="color:#ff79c6">&#34;formatted&#34;</span>: <span style="color:#f1fa8c">&#34;Entre R$ 20.000,01 e R$ 100.000,00&#34;</span>,
+                        <span style="color:#ff79c6">&#34;range&#34;</span>: {
+                            <span style="color:#ff79c6">&#34;lower_bounds&#34;</span>: <span style="color:#bd93f9">2000001</span>,
+                            <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#bd93f9">10000000</span>
+                        }
+                    },
+                    {
+                        <span style="color:#ff79c6">&#34;formatted&#34;</span>: <span style="color:#f1fa8c">&#34;Entre R$ 100.000,01 e R$ 1.000.000,00&#34;</span>,
+                        <span style="color:#ff79c6">&#34;range&#34;</span>: {
+                            <span style="color:#ff79c6">&#34;lower_bounds&#34;</span>: <span style="color:#bd93f9">10000001</span>,
+                            <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#bd93f9">100000000</span>
+                        }
+                    },
+                    {
+                        <span style="color:#ff79c6">&#34;formatted&#34;</span>: <span style="color:#f1fa8c">&#34;Mais de R$ 1.000.000,00&#34;</span>,
+                        <span style="color:#ff79c6">&#34;range&#34;</span>: {
+                            <span style="color:#ff79c6">&#34;lower_bounds&#34;</span>: <span style="color:#bd93f9">100000001</span>,
+                            <span style="color:#ff79c6">&#34;upper_bounds&#34;</span>: <span style="color:#ff79c6">null</span>
+                        }
+                    }
+                ]
+            },
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;detailed_reason&#34;</span>: <span style="color:#f1fa8c">&#34;Precisamos de algumas informações&#34;</span>,
+            <span style="color:#ff79c6">&#34;field_type&#34;</span>: <span style="color:#f1fa8c">&#34;total_income_range&#34;</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;a24ad007-2d63-4108-8340-16b843873be2&#34;</span>,
+            <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+            <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+            <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>
+        }
+    ],
+    <span style="color:#ff79c6">&#34;context&#34;</span>: {},
+    <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T15:04:48Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;50a22e82-1fe6-407b-b76c-986f46db60e8&#34;</span>,
+    <span style="color:#ff79c6">&#34;input_type&#34;</span>: <span style="color:#f1fa8c">&#34;user_input&#34;</span>,
+    <span style="color:#ff79c6">&#34;is_mandatory&#34;</span>: <span style="color:#ff79c6">true</span>,
+    <span style="color:#ff79c6">&#34;reason&#34;</span>: <span style="color:#f1fa8c">&#34;account_request&#34;</span>,
+    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;answered&#34;</span>,
+    <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-31T20:10:18Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;user_id&#34;</span>: <span style="color:#f1fa8c">&#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     

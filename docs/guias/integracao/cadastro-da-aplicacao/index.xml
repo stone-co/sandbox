@@ -36,7 +36,7 @@
 &lt;br&gt;
 &lt;p&gt;Você está pronto para gerar as chaves!&lt;/p&gt;
 &lt;p&gt;Em &lt;strong&gt;todas&lt;/strong&gt; as plataformas - Linux, MacOS e Windows - os comandos do OpenSSL são iguais:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;openssl genrsa -out mykey.pem &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4096&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;openssl genrsa -out mykey.pem &lt;span style=&#34;color:#bd93f9&#34;&gt;4096&lt;/span&gt;
 openssl rsa -in mykey.pem -pubout &amp;gt; mykey.pub
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Com seu par de chaves em mãos você está pronto para solicitar a criação da sua Chave de Sandbox. Envie um e-mail para &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt; e solicite a sua.&lt;/p&gt;
 

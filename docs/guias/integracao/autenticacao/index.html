@@ -3484,10 +3484,10 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 <ul>
 <li><strong>header</strong>: possui informações sobre o algoritmo de criptografia utilizado, entre outros metadados deste processo, como um id da chave utilizada. Na nossa API utilizaremos sempre o algoritmo &ldquo;RS256&rdquo;. Falaremos mais sobre ele. Um exemplo de <em>header</em> seria:</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;alg&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RS256&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;typ&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;JWT&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;alg&#34;</span>: <span style="color:#f1fa8c">&#34;RS256&#34;</span>,
+  <span style="color:#ff79c6">&#34;typ&#34;</span>: <span style="color:#f1fa8c">&#34;JWT&#34;</span>
+}
 </code></pre></div><p>Este deve ser encondado na <em>base 64</em> para ser incluído no token. Para o exemplo, fica: <code>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9</code>.</p>
 <ul>
 <li><strong>payload</strong>: um conjunto de alegações (<em>claims</em>, do inglês) que possuem a estrutura chave/valor. É aqui que colocamos informações como tempo de expiração do token, qual o id da Aplicação e etc.</li>
@@ -3553,10 +3553,10 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 </ul>
 <p>A chamada é com o método <code>POST</code> com o header  <code>Content-Type</code>  e <code>User-Agent</code>.  O <code>Content-Type</code> informado deve ser <code>x-www-form-urlencoded</code> (o mesmo usado por submissão de formulários HTML) e o header <code>User-Agent</code> deve estar habilitado.</p>
 <p>Ex.:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;user-agent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Nome da aplicação&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;content-type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/x-www-form-urlencoded&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;user-agent&#34;</span>: <span style="color:#f1fa8c">&#34;Nome da aplicação&#34;</span>,
+  <span style="color:#ff79c6">&#34;content-type&#34;</span>: <span style="color:#f1fa8c">&#34;application/x-www-form-urlencoded&#34;</span>
+}
 </code></pre></div><h5 id="glossário"><strong>Glossário</strong></h5>
 <table>
 <thead>
@@ -3590,9 +3590,9 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Curl</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">POST</span> <span style="color:#a40000">https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token</span> <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;content-type:</span> <span style="color:#a40000">application/x-www-form-urlencoded&#39;</span> <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;client_id=ID_EXEMPLO&amp;grant_type=client_credentials&amp;client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  curl -X POST https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token -H &#39;content-type: application/x-www-form-urlencoded&#39; -d &#39;client_id=ID_EXEMPLO&amp;grant_type=client_credentials&amp;client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&#39;
+}
 </code></pre></div>
 
 </div>
@@ -3602,82 +3602,82 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Python</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">jwt</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">time</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">requests</span>
-<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">subprocess</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> jwt
+<span style="color:#ff79c6">import</span> time
+<span style="color:#ff79c6">import</span> requests
+<span style="color:#ff79c6">import</span> subprocess
 
-<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">AppData</span><span style="color:#000;font-weight:bold">:</span>
-  <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">__init__</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">client_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">base_url</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">base_auth_url</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">private_key</span><span style="color:#000;font-weight:bold">):</span>
-    <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client_id</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client_id</span>
-    <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">base_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">base_url</span>
-    <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">base_auth_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">base_auth_url</span>
-    <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">private_key</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">private_key</span>
-
-
-<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">getApplicationData</span><span style="color:#000;font-weight:bold">():</span>
-    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">AppData</span><span style="color:#000;font-weight:bold">(</span>
-        <span style="color:#4e9a06">&#39;insira aqui seu client_id&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;https://sandbox-api.openbank.stone.com.br/api/v1&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;https://sandbox-accounts.openbank.stone.com.br&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#000">private_key</span>
-    <span style="color:#000;font-weight:bold">)</span>
-
-<span style="color:#000">private_key</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;&#34;&#34;-----BEGIN RSA PRIVATE KEY-----
-</span><span style="color:#4e9a06">
-</span><span style="color:#4e9a06">                Insira aqui sua private_key
-</span><span style="color:#4e9a06">
-</span><span style="color:#4e9a06">-----END RSA PRIVATE KEY-----&#34;&#34;&#34;</span>
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">AppData</span>:
+  <span style="color:#ff79c6">def</span> __init__(self, client_id, base_url, base_auth_url, private_key):
+    self<span style="color:#ff79c6">.</span>client_id <span style="color:#ff79c6">=</span> client_id
+    self<span style="color:#ff79c6">.</span>base_url <span style="color:#ff79c6">=</span> base_url
+    self<span style="color:#ff79c6">.</span>base_auth_url <span style="color:#ff79c6">=</span> base_auth_url
+    self<span style="color:#ff79c6">.</span>private_key <span style="color:#ff79c6">=</span> private_key
 
 
-<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">getToken</span><span style="color:#000;font-weight:bold">():</span>
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">getApplicationData</span>():
+    <span style="color:#ff79c6">return</span> AppData(
+        <span style="color:#f1fa8c">&#39;insira aqui seu client_id&#39;</span>,
+        <span style="color:#f1fa8c">&#39;https://sandbox-api.openbank.stone.com.br/api/v1&#39;</span>,
+        <span style="color:#f1fa8c">&#39;https://sandbox-accounts.openbank.stone.com.br&#39;</span>,
+        private_key
+    )
 
-    <span style="color:#000">app_data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getApplicationData</span><span style="color:#000;font-weight:bold">()</span>
-
-    <span style="color:#000">base_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">f</span><span style="color:#4e9a06">&#39;{app_data.base_auth_url}/auth/realms/stone_bank&#39;</span>
-    <span style="color:#000">auth_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">f</span><span style="color:#4e9a06">&#39;{base_url}/protocol/openid-connect/token&#39;</span>
-
-    <span style="color:#000">payload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#4e9a06">&#39;exp&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87">int</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">time</span><span style="color:#000;font-weight:bold">())</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">3600</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;nbf&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87">int</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">time</span><span style="color:#000;font-weight:bold">()),</span>
-        <span style="color:#4e9a06">&#39;aud&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">base_url</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;realm&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;stone_bank&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;sub&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">app_data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client_id</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;clientId&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">app_data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client_id</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;jti&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">time</span><span style="color:#000;font-weight:bold">()),</span>
-        <span style="color:#4e9a06">&#39;iat&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87">int</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">time</span><span style="color:#000;font-weight:bold">())</span>
-    <span style="color:#000;font-weight:bold">}</span>
-
-    <span style="color:#000">token</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">jwt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">payload</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">app_data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">private_key</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">algorithm</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;RS256&#39;</span><span style="color:#000;font-weight:bold">)</span>
-
-    <span style="color:#000">headers</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#4e9a06">&#39;Content-Type&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;application/x-www-form-urlencoded&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;User-Agent&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;Insira aqui o Nome da Aplicação&#39;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-
-    <span style="color:#000">token_payload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#4e9a06">&#39;client_id&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">app_data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client_id</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;grant_type&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;client_credentials&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;client_assertion&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">token</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">decode</span><span style="color:#000;font-weight:bold">(),</span>
-        <span style="color:#4e9a06">&#39;client_assertion_type&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&#39;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-
-    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">requests</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">post</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">auth_url</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">token_payload</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">headers</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">headers</span><span style="color:#000;font-weight:bold">)</span>
+private_key <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;&#34;-----BEGIN RSA PRIVATE KEY-----
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">                Insira aqui sua private_key
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">-----END RSA PRIVATE KEY-----&#34;&#34;&#34;</span>
 
 
-<span style="color:#8f5902;font-style:italic"># COMENTAR PRA NÃO COPIAR O TOKEN</span>
-<span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getToken</span><span style="color:#000;font-weight:bold">()</span>
-<span style="color:#000">access_token</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">json</span><span style="color:#000;font-weight:bold">()[</span><span style="color:#4e9a06">&#39;access_token&#39;</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">getToken</span>():
 
-<span style="color:#204a87;font-weight:bold">print</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">access_token</span><span style="color:#000;font-weight:bold">)</span>
+    app_data <span style="color:#ff79c6">=</span> getApplicationData()
+
+    base_url <span style="color:#ff79c6">=</span> f<span style="color:#f1fa8c">&#39;{app_data.base_auth_url}/auth/realms/stone_bank&#39;</span>
+    auth_url <span style="color:#ff79c6">=</span> f<span style="color:#f1fa8c">&#39;{base_url}/protocol/openid-connect/token&#39;</span>
+
+    payload <span style="color:#ff79c6">=</span> {
+        <span style="color:#f1fa8c">&#39;exp&#39;</span>: <span style="color:#8be9fd;font-style:italic">int</span>(time<span style="color:#ff79c6">.</span>time()) <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">3600</span>,
+        <span style="color:#f1fa8c">&#39;nbf&#39;</span>: <span style="color:#8be9fd;font-style:italic">int</span>(time<span style="color:#ff79c6">.</span>time()),
+        <span style="color:#f1fa8c">&#39;aud&#39;</span>: base_url,
+        <span style="color:#f1fa8c">&#39;realm&#39;</span>: <span style="color:#f1fa8c">&#39;stone_bank&#39;</span>,
+        <span style="color:#f1fa8c">&#39;sub&#39;</span>: app_data<span style="color:#ff79c6">.</span>client_id,
+        <span style="color:#f1fa8c">&#39;clientId&#39;</span>: app_data<span style="color:#ff79c6">.</span>client_id,
+        <span style="color:#f1fa8c">&#39;jti&#39;</span>: <span style="color:#8be9fd;font-style:italic">str</span>(time<span style="color:#ff79c6">.</span>time()),
+        <span style="color:#f1fa8c">&#39;iat&#39;</span>: <span style="color:#8be9fd;font-style:italic">int</span>(time<span style="color:#ff79c6">.</span>time())
+    }
+
+    token <span style="color:#ff79c6">=</span> jwt<span style="color:#ff79c6">.</span>encode(payload, app_data<span style="color:#ff79c6">.</span>private_key, algorithm<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;RS256&#39;</span>)
+
+    headers <span style="color:#ff79c6">=</span> {
+        <span style="color:#f1fa8c">&#39;Content-Type&#39;</span>: <span style="color:#f1fa8c">&#39;application/x-www-form-urlencoded&#39;</span>,
+        <span style="color:#f1fa8c">&#39;User-Agent&#39;</span>: <span style="color:#f1fa8c">&#39;Insira aqui o Nome da Aplicação&#39;</span>
+    }
+
+    token_payload <span style="color:#ff79c6">=</span> {
+        <span style="color:#f1fa8c">&#39;client_id&#39;</span>: app_data<span style="color:#ff79c6">.</span>client_id,
+        <span style="color:#f1fa8c">&#39;grant_type&#39;</span>: <span style="color:#f1fa8c">&#39;client_credentials&#39;</span>,
+        <span style="color:#f1fa8c">&#39;client_assertion&#39;</span>: token<span style="color:#ff79c6">.</span>decode(),
+        <span style="color:#f1fa8c">&#39;client_assertion_type&#39;</span>: <span style="color:#f1fa8c">&#39;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&#39;</span>
+    }
+
+    <span style="color:#ff79c6">return</span> requests<span style="color:#ff79c6">.</span>post(auth_url, data<span style="color:#ff79c6">=</span>token_payload, headers<span style="color:#ff79c6">=</span>headers)
+
+
+<span style="color:#6272a4"># COMENTAR PRA NÃO COPIAR O TOKEN</span>
+response <span style="color:#ff79c6">=</span> getToken()
+access_token <span style="color:#ff79c6">=</span> response<span style="color:#ff79c6">.</span>json()[<span style="color:#f1fa8c">&#39;access_token&#39;</span>]
+
+<span style="color:#ff79c6">print</span> (access_token)
 </code></pre></div>
 
 </div>
 
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;access_token&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijh3eWRUZGpzTEdYVSJ9.eyJqdGkiOiIzM2RlNjg2Mi1iYmVkLTQ3ZWYtYTY5Yi0wNDAzNTI0YTRhNGEiLCJleHAiOjE1NTkyNDg3OTUsIm5iZiI6MCwiaWF0IjoxNTU5MjQ3ODk1LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJjMWExZmE5NC0zOTc4LTRhNjgtODBlNy1mZWU2ZTkwNmNiMmUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJhN2YxN2QxMC1jMGY1LTQzMzItOWE5MC1lNDQxMTVmMWNlMGEiLCJhY3IiOiIxIiwic2NvcGUiOiJleHBlbmQ6dHJhbnNmZXJzOmludGVybmFsIGVudGl0eTpsZWdhbF93cml0ZSBlbnRpdHk6d3JpdGUgcHJpbmNpcGFsOmNvbnNlbnQgZW1haWwgZXhwZW5kOnRyYW5zZmVyczpleHRlcm5hbCBzdG9uZV9zdWJqZWN0X2lkIGV4cGVuZDpyZWFkIGV4cGVuZDpib2xldG9pc3N1YW5jZSBlbnRpdHk6cmVhZCBwcm9maWxlIHBheW1lbnRhY2NvdW50OiogZXhwZW5kOnBheW1lbnRzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInN0b25lX3N1YmplY3RfaWQiOiJ1c2VyOjNmMDcwN2NiLWEyYzgtNDlhMS04NDc4LWFjMDg1MGY5Njc4MCIsIm5hbWUiOiJKb2FvIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiam9hby5leGVtcGxvQGVtYWlsLmNvbS5iciIsImdpdmVuX25hbWUiOiJKb2FvIiwiZW1haWwiOiJqb2FvLmV4ZW1wbG9AZW1haWwuY29tLmJyIn0.baf0-ZMg_IPtoReTpQBnMIYPjrLWFklPT7T1CGE2ecxfxt-a3h1CSdveK0Xd0f9FWna6obcSIonHn7HD0mJnxwBoIK8w6_cg_ODTS-l2jgGWVTl-jN41rdyTg5kgtTT6M3v02QJxTOfklo9mpW4tX8cZorx5vP_ykb5Kk186PGxYTJ9mGwQEuyrHl7-mc8aN7x10Ue7P_fk2Br43T2uR7LoFFIVM9I45p1hntZx-e59alleIuUqnZzk5Vo8knk67ZEJEAWOiigS0yyyy9gT3wqPypBYnoP3SMVws7e6lfKuZasCS58z8arJiYVQVgF6xSoQQdDBTY4I1_5kL-phmAA&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#ff79c6">&#34;access_token&#34;</span>: <span style="color:#f1fa8c">&#34;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijh3eWRUZGpzTEdYVSJ9.eyJqdGkiOiIzM2RlNjg2Mi1iYmVkLTQ3ZWYtYTY5Yi0wNDAzNTI0YTRhNGEiLCJleHAiOjE1NTkyNDg3OTUsIm5iZiI6MCwiaWF0IjoxNTU5MjQ3ODk1LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJjMWExZmE5NC0zOTc4LTRhNjgtODBlNy1mZWU2ZTkwNmNiMmUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJhN2YxN2QxMC1jMGY1LTQzMzItOWE5MC1lNDQxMTVmMWNlMGEiLCJhY3IiOiIxIiwic2NvcGUiOiJleHBlbmQ6dHJhbnNmZXJzOmludGVybmFsIGVudGl0eTpsZWdhbF93cml0ZSBlbnRpdHk6d3JpdGUgcHJpbmNpcGFsOmNvbnNlbnQgZW1haWwgZXhwZW5kOnRyYW5zZmVyczpleHRlcm5hbCBzdG9uZV9zdWJqZWN0X2lkIGV4cGVuZDpyZWFkIGV4cGVuZDpib2xldG9pc3N1YW5jZSBlbnRpdHk6cmVhZCBwcm9maWxlIHBheW1lbnRhY2NvdW50OiogZXhwZW5kOnBheW1lbnRzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInN0b25lX3N1YmplY3RfaWQiOiJ1c2VyOjNmMDcwN2NiLWEyYzgtNDlhMS04NDc4LWFjMDg1MGY5Njc4MCIsIm5hbWUiOiJKb2FvIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiam9hby5leGVtcGxvQGVtYWlsLmNvbS5iciIsImdpdmVuX25hbWUiOiJKb2FvIiwiZW1haWwiOiJqb2FvLmV4ZW1wbG9AZW1haWwuY29tLmJyIn0.baf0-ZMg_IPtoReTpQBnMIYPjrLWFklPT7T1CGE2ecxfxt-a3h1CSdveK0Xd0f9FWna6obcSIonHn7HD0mJnxwBoIK8w6_cg_ODTS-l2jgGWVTl-jN41rdyTg5kgtTT6M3v02QJxTOfklo9mpW4tX8cZorx5vP_ykb5Kk186PGxYTJ9mGwQEuyrHl7-mc8aN7x10Ue7P_fk2Br43T2uR7LoFFIVM9I45p1hntZx-e59alleIuUqnZzk5Vo8knk67ZEJEAWOiigS0yyyy9gT3wqPypBYnoP3SMVws7e6lfKuZasCS58z8arJiYVQVgF6xSoQQdDBTY4I1_5kL-phmAA&#34;</span>,
+}
 </code></pre></div><br>
 <h4 id="3-usando-o-access_token-da-resposta"><strong>3. Usando o access_token da resposta</strong></h4>
 <p>Se tudo deu certo no passo anterior, a resposta do servidor será um JSON com uma chave <code>access_token</code>, onde terá o valor de um token de sessão.</p>

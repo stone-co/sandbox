@@ -3452,8 +3452,8 @@
         </div>
 	
 	<hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
-</span></code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
+</code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3492,35 +3492,35 @@ Número da conta. Padrão: <code>^\d+$</code></li>
 <p>Chave de idempotência.</p>
 <br>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">200 ok
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-04-26T16:06:43Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;cancelled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-04-26T16:06:43Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;finished_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8d427b2b-7a8e-4570-9c90-224339a10517&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;scheduled_to&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;APPROVED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-     <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-       <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;123&#34;</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Fulano da Silva&#34;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">200 ok
+content-type: application/json
+</code></pre></div><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">12</span>,
+  <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-04-26T16:06:43Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span>,
+  <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-04-26T16:06:43Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span>,
+  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+  <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">100</span>,
+  <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;8d427b2b-7a8e-4570-9c90-224339a10517&#34;</span>,
+  <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;APPROVED&#34;</span>,
+  <span style="color:#ff79c6">&#34;target&#34;</span>: {
+     <span style="color:#ff79c6">&#34;account&#34;</span>: {
+       <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;123&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Fulano da Silva&#34;</span>
+      }
+  }
+}
 </code></pre></div>
         <div class="section-index">
     

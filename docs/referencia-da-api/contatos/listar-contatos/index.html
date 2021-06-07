@@ -3451,8 +3451,8 @@
 		<h1>Listar Contatos</h1>
         </div>
 	
-	<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
-</span></code></pre></div><hr>
+	<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
+</code></pre></div><hr>
 <h4 id="path-params"><strong>PATH PARAMS</strong></h4>
 <hr>
 <p><strong>account_id</strong>  <code>string</code></p>
@@ -3469,49 +3469,49 @@
 <p>Filtra contatos pelo código da instituição fornecido.</p>
 <hr>
 <h4 id="response"><strong>Response</strong></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">200 ok
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;bank_accounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-      <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;35746698&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00001&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1ede2f26-28cd-462b-a7ea-429960c8480b&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;197&#34;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;contactemail@empresaxyz.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;f0c83515-c7ea-40b8-b9c4-c85d9489c40c&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;mobile&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;21 999999999&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Contact name&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;tax_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;47647430351&#34;</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;bank_accounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-      <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;883841975&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;0001&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5b332a1b-57ef-4398-bb9c-79011cc6c58e&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;institution_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;197&#34;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;tyson@huber.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;a0ee3a1a-a1d6-48ad-8ea3-7fdf5ea5c250&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;mobile&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Tyson Huber&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;tax_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11111111111&#34;</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;bank_accounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
-    <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;johndoe@hotmail.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;a862d499-26cc-48df-9583-585ba604e9c8&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;mobile&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2124759861&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;John Doe&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;tax_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;42373740761&#34;</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">200 ok
+content-type: application/json
+</code></pre></div><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">[
+  {
+    <span style="color:#ff79c6">&#34;bank_accounts&#34;</span>: [
+      {
+        <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;35746698&#34;</span>,
+        <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;00001&#34;</span>,
+        <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;1ede2f26-28cd-462b-a7ea-429960c8480b&#34;</span>,
+        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>
+      }
+    ],
+    <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;contactemail@empresaxyz.com&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;f0c83515-c7ea-40b8-b9c4-c85d9489c40c&#34;</span>,
+    <span style="color:#ff79c6">&#34;mobile&#34;</span>: <span style="color:#f1fa8c">&#34;21 999999999&#34;</span>,
+    <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Contact name&#34;</span>,
+    <span style="color:#ff79c6">&#34;tax_id&#34;</span>: <span style="color:#f1fa8c">&#34;47647430351&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;bank_accounts&#34;</span>: [
+      {
+        <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;883841975&#34;</span>,
+        <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+        <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;5b332a1b-57ef-4398-bb9c-79011cc6c58e&#34;</span>,
+        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>
+      }
+    ],
+    <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;tyson@huber.com&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;a0ee3a1a-a1d6-48ad-8ea3-7fdf5ea5c250&#34;</span>,
+    <span style="color:#ff79c6">&#34;mobile&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Tyson Huber&#34;</span>,
+    <span style="color:#ff79c6">&#34;tax_id&#34;</span>: <span style="color:#f1fa8c">&#34;11111111111&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;bank_accounts&#34;</span>: [],
+    <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;johndoe@hotmail.com&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;a862d499-26cc-48df-9583-585ba604e9c8&#34;</span>,
+    <span style="color:#ff79c6">&#34;mobile&#34;</span>: <span style="color:#f1fa8c">&#34;2124759861&#34;</span>,
+    <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;John Doe&#34;</span>,
+    <span style="color:#ff79c6">&#34;tax_id&#34;</span>: <span style="color:#f1fa8c">&#34;42373740761&#34;</span>
+  }
+]
 </code></pre></div>
         <div class="section-index">
     

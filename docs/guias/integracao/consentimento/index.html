@@ -3550,10 +3550,10 @@
 </table>
 <br>
 <p>Observe que é preciso <strong>assinar o token JWT com a chave privada da aplicação e o algoritmo RS256</strong>, assim como é feito para o token de <a href="../../../../docs/guias/integracao/autenticacao">autenticação</a>. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;alg&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RS256&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;typ&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;JWT&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;alg&#34;</span>: <span style="color:#f1fa8c">&#34;RS256&#34;</span>,
+  <span style="color:#ff79c6">&#34;typ&#34;</span>: <span style="color:#f1fa8c">&#34;JWT&#34;</span>
+}
 </code></pre></div>
 
 <div class="pageinfo pageinfo-primary">
@@ -3563,20 +3563,20 @@
 </div>
 
 <p>Assim, um exemplo de claims para este token seria:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;consent&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;client_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;MY CLIENT ID&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-  <span style="color:#204a87;font-weight:bold">&#34;iss&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;MY CLIENT ID&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;redirect_uri&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://mypreviouslyregistereduri.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;session_metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;user_session&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;xxxxxxxxxxxxxxxxxxxxx&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;iat&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1542235633</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;nbf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1542235633</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;exp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1549069563</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;jti&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;41e8aa9f-bb9c-4fd2-9953-2595dbbd5a83&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;aud&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;accounts-hubid@openbank.stone.com.br&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;consent&#34;</span>,
+  <span style="color:#ff79c6">&#34;client_id&#34;</span>: <span style="color:#f1fa8c">&#34;MY CLIENT ID&#34;</span>, 
+  <span style="color:#ff79c6">&#34;iss&#34;</span>: <span style="color:#f1fa8c">&#34;MY CLIENT ID&#34;</span>,
+  <span style="color:#ff79c6">&#34;redirect_uri&#34;</span>: <span style="color:#f1fa8c">&#34;https://mypreviouslyregistereduri.com&#34;</span>,
+  <span style="color:#ff79c6">&#34;session_metadata&#34;</span>: {
+    <span style="color:#ff79c6">&#34;user_session&#34;</span>: <span style="color:#f1fa8c">&#34;xxxxxxxxxxxxxxxxxxxxx&#34;</span>,
+  },
+  <span style="color:#ff79c6">&#34;iat&#34;</span>: <span style="color:#bd93f9">1542235633</span>,
+  <span style="color:#ff79c6">&#34;nbf&#34;</span>: <span style="color:#bd93f9">1542235633</span>,
+  <span style="color:#ff79c6">&#34;exp&#34;</span>: <span style="color:#bd93f9">1549069563</span>,
+    <span style="color:#ff79c6">&#34;jti&#34;</span>: <span style="color:#f1fa8c">&#34;41e8aa9f-bb9c-4fd2-9953-2595dbbd5a83&#34;</span>,
+  <span style="color:#ff79c6">&#34;aud&#34;</span>: <span style="color:#f1fa8c">&#34;accounts-hubid@openbank.stone.com.br&#34;</span>
+}
 </code></pre></div><br>
 <h4 id="redirect-callback"><strong>Redirect callback</strong></h4>
 <p>O usuário irá visualizar as permissões às quais a Aplicação Parceira está pedindo acesso e poderá optar por ignorar ou consentir o acesso.</p>

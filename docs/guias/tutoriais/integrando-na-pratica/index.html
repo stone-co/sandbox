@@ -3473,28 +3473,28 @@
 <p>Para montar os tokens, tenha em mãos o seu <code>redirect_uri</code> cadastrado, o seu ClientID e sua chave privada.</p>
 <h4 id="2-se-preparando-para-gerar-tokens"><strong>2. Se preparando para gerar tokens</strong></h4>
 <p>Aqui vamos importar as bibliotecas que vamos utilizar e definir algumas constantes.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">import</span> <span style="color:#a40000">jwt</span>
-<span style="color:#a40000">import</span> <span style="color:#a40000">time</span>
-<span style="color:#a40000">import</span> <span style="color:#a40000">requests</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">import jwt
+import time
+import requests
 
-<span style="color:#a40000">MINUTE</span> <span style="color:#a40000">=</span> <span style="color:#0000cf;font-weight:bold">60</span>
-<span style="color:#a40000">HOUR</span> <span style="color:#a40000">=</span> <span style="color:#0000cf;font-weight:bold">3600</span>
+MINUTE = <span style="color:#bd93f9">60</span>
+HOUR = <span style="color:#bd93f9">3600</span>
 
-<span style="color:#a40000">CLIENT_ID</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;92b5f9aa-9552-45f4-86cb-c0331c9178a2&#34;</span>
-<span style="color:#a40000">REDIRECT_URI</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;https://myapplication.com/consent_callback&#34;</span>
+CLIENT_ID = <span style="color:#f1fa8c">&#34;92b5f9aa-9552-45f4-86cb-c0331c9178a2&#34;</span>
+REDIRECT_URI = <span style="color:#f1fa8c">&#34;https://myapplication.com/consent_callback&#34;</span>
 
-<span style="color:#a40000">ACCOUNTS_URL</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;https://sandbox-accounts.openbank.stone.com.br&#34;</span>
-<span style="color:#a40000">API_URL</span> <span style="color:#a40000">=</span> <span style="color:#4e9a06">&#34;https://sandbox-api.openbank.stone.com.br/api/v1&#34;</span>
+ACCOUNTS_URL = <span style="color:#f1fa8c">&#34;https://sandbox-accounts.openbank.stone.com.br&#34;</span>
+API_URL = <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1&#34;</span>
 </code></pre></div><p>Armazenamos a chave privada no arquivo <code>private.pem</code> e preparamos uma função para gerar o token. Essa função recebe um parâmetro com os claims e usa a chave privada para gerar e assinar o token.</p>
 <p>Lembrando que se trata de um processo de criptografia assimétrica. Neste processo, o desenvolvedor assina o token com sua chave privada e a Stone utiliza a chave pública compartilhada com a gente para verificar que realmente foi a aplicação parceira quem gerou o token.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">generate_token(claims):</span>
-    <span style="color:#a40000">with</span> <span style="color:#a40000">open(</span><span style="color:#4e9a06">&#34;private.pem&#34;</span><span style="color:#a40000">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#a40000">)</span> <span style="color:#a40000">as</span> <span style="color:#a40000">key_file:</span>
-        <span style="color:#a40000">token</span> <span style="color:#a40000">=</span> <span style="color:#a40000">jwt.encode(claims,</span> <span style="color:#a40000">key_file.read(),</span> <span style="color:#a40000">algorithm=&#39;RS</span><span style="color:#0000cf;font-weight:bold">256</span><span style="color:#a40000">&#39;)</span>
-        <span style="color:#a40000">return</span> <span style="color:#a40000">token.decode()</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">def generate_token(claims):
+    with open(<span style="color:#f1fa8c">&#34;private.pem&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>) as key_file:
+        token = jwt.encode(claims, key_file.read(), algorithm=&#39;RS<span style="color:#bd93f9">256</span>&#39;)
+        return token.decode()
 </code></pre></div><p>Agora podemos assinar qualquer conjunto de claims e o resultado será um JWT.</p>
 <p>É possível utilizar claims arbitrários para testar essa funcionalidade:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">&gt;&gt;&gt;</span> <span style="color:#a40000">generate_token(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;claim&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;qualquer&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">)</span>
-<span style="color:#a40000">&#39;eyJ</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">eXAiOiJKV</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">QiLCJhbGciOiJSUzI</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">NiJ</span><span style="color:#0000cf;font-weight:bold">9</span><span style="color:#a40000">.eyJjbGFpbSI</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#a40000">InF</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">YWxxdWVyIn</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">.hUGnpB</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#a40000">pI</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">TbQy</span><span style="color:#0000cf;font-weight:bold">8</span><span style="color:#a40000">XDjXMmFTLWvYjk</span><span style="color:#0000cf;font-weight:bold">98</span><span style="color:#a40000">UaTELfkJmHU</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">EK</span><span style="color:#0000cf;font-weight:bold">9</span><span style="color:#a40000">-ZOTzSSNKdqOB</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">puGHr</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#a40000">xMRXta</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#a40000">WZLQmkRqJCVHSA</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#a40000">zsIdW</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">ABJiPaHXVOHFidq</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#a40000">iGZAbZtgHBf</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#a40000">b</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">ctko</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#a40000">OGxfLDJGedH</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">gYVh</span><span style="color:#0000cf;font-weight:bold">9</span><span style="color:#a40000">i_tJ</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">S</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">kWpvLS</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#a40000">yMqNgwyHI</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#a40000">ZJecmL-qYD</span><span style="color:#0000cf;font-weight:bold">30</span><span style="color:#a40000">FgrhGqyMK</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">LCxId</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#a40000">O_T</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#a40000">_QOisaLe_XXstXUnm</span><span style="color:#0000cf;font-weight:bold">82</span><span style="color:#a40000">qvDh</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#a40000">iMZPqhV</span><span style="color:#0000cf;font-weight:bold">39</span><span style="color:#a40000">V_CxnLl</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#a40000">CVZp</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#a40000">IfdQ</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">i</span><span style="color:#0000cf;font-weight:bold">8</span><span style="color:#a40000">LAmtqaxhYSTODwBj</span><span style="color:#0000cf;font-weight:bold">47</span><span style="color:#a40000">zOm_</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#a40000">bhfOcMO</span><span style="color:#0000cf;font-weight:bold">91</span><span style="color:#a40000">LxY</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">wWW</span><span style="color:#0000cf;font-weight:bold">8</span><span style="color:#a40000">fU</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#a40000">Qr</span><span style="color:#0000cf;font-weight:bold">8</span><span style="color:#a40000">hyiUHqayBTiLRYqEGet_esQ_rrVFOn</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">F</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#a40000">tU</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#a40000">eWSA&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">&gt;&gt;&gt; generate_token({<span style="color:#ff79c6">&#34;claim&#34;</span>: <span style="color:#f1fa8c">&#34;qualquer&#34;</span>})
+&#39;eyJ<span style="color:#bd93f9">0</span>eXAiOiJKV<span style="color:#bd93f9">1</span>QiLCJhbGciOiJSUzI<span style="color:#bd93f9">1</span>NiJ<span style="color:#bd93f9">9</span>.eyJjbGFpbSI<span style="color:#bd93f9">6</span>InF<span style="color:#bd93f9">1</span>YWxxdWVyIn<span style="color:#bd93f9">0</span>.hUGnpB<span style="color:#bd93f9">5</span>pI<span style="color:#bd93f9">38</span>TbQy<span style="color:#bd93f9">8</span>XDjXMmFTLWvYjk<span style="color:#bd93f9">98</span>UaTELfkJmHU<span style="color:#bd93f9">0</span>EK<span style="color:#bd93f9">9</span>-ZOTzSSNKdqOB<span style="color:#bd93f9">0</span>puGHr<span style="color:#bd93f9">2</span>xMRXta<span style="color:#bd93f9">6</span>WZLQmkRqJCVHSA<span style="color:#bd93f9">6</span>zsIdW<span style="color:#bd93f9">0</span>ABJiPaHXVOHFidq<span style="color:#bd93f9">7</span>iGZAbZtgHBf<span style="color:#bd93f9">6</span>b<span style="color:#bd93f9">3</span>ctko<span style="color:#bd93f9">7</span>OGxfLDJGedH<span style="color:#bd93f9">3</span>gYVh<span style="color:#bd93f9">9</span>i_tJ<span style="color:#bd93f9">3</span>S<span style="color:#bd93f9">0</span>kWpvLS<span style="color:#bd93f9">7</span>yMqNgwyHI<span style="color:#bd93f9">4</span>ZJecmL-qYD<span style="color:#bd93f9">30</span>FgrhGqyMK<span style="color:#bd93f9">3</span>LCxId<span style="color:#bd93f9">7</span>O_T<span style="color:#bd93f9">6</span>_QOisaLe_XXstXUnm<span style="color:#bd93f9">82</span>qvDh<span style="color:#bd93f9">7</span>iMZPqhV<span style="color:#bd93f9">39</span>V_CxnLl<span style="color:#bd93f9">6</span>CVZp<span style="color:#bd93f9">2</span>IfdQ<span style="color:#bd93f9">3</span>i<span style="color:#bd93f9">8</span>LAmtqaxhYSTODwBj<span style="color:#bd93f9">47</span>zOm_<span style="color:#bd93f9">4</span>bhfOcMO<span style="color:#bd93f9">91</span>LxY<span style="color:#bd93f9">3</span>wWW<span style="color:#bd93f9">8</span>fU<span style="color:#bd93f9">7</span>Qr<span style="color:#bd93f9">8</span>hyiUHqayBTiLRYqEGet_esQ_rrVFOn<span style="color:#bd93f9">0</span>F<span style="color:#bd93f9">3</span>tU<span style="color:#bd93f9">0</span>eWSA&#39;
 </code></pre></div><p>Se chegou a este mesmo resultado, você tem uma função que pode ser utilizada para assinar qualquer um dos seus tokens.</p>
 <p>A biblioteca escolhida incluiu automaticamente no header as informações de tipo e algorítimo utilizados para gerar o token. Para se certificar da validade do token é possível utilizar o site <a href="https://jwt.io">jwt.io</a>.</p>
 <p>Observe que trabalhamos com vários tokens JWT diferentes e utilizamos claims diferentes de acordo com a finalidade do token.</p>
@@ -3505,33 +3505,33 @@
 <p>Através da função que construimos é possível gerar e assinar esse token de forma simples.</p>
 <p>Esse token será enviado para a Stone através de uma chamada para nosso servidor de autenticação, e enviaremos como resposta um <code>access_token</code>.</p>
 <p>O <code>access_token</code> também é do tipo JWT, e funciona como uma chave de acesso para todas requisições na API.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">auth_claims():</span>
-    <span style="color:#a40000">now</span> <span style="color:#a40000">=</span> <span style="color:#a40000">int(time.time())</span>
-    <span style="color:#a40000">return</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;aud&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">f</span><span style="color:#4e9a06">&#34;{ACCOUNTS_URL}/auth/realms/stone_bank&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;clientId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">CLIENT_ID</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;exp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">now</span> <span style="color:#a40000">+</span> <span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#a40000">*</span> <span style="color:#a40000">MINUTE</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;iat&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">now</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;jti&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">f&#39;token_id</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#a40000">str(time.time())</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;nbf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">now</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;realm&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;stone_bank&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;sub&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">CLIENT_ID</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">def auth_claims():
+    now = int(time.time())
+    return {
+        <span style="color:#ff79c6">&#34;aud&#34;</span>: f<span style="color:#f1fa8c">&#34;{ACCOUNTS_URL}/auth/realms/stone_bank&#34;</span>,
+        <span style="color:#ff79c6">&#34;clientId&#34;</span>: CLIENT_ID,
+        <span style="color:#ff79c6">&#34;exp&#34;</span>: now + <span style="color:#bd93f9">5</span> * MINUTE,
+        <span style="color:#ff79c6">&#34;iat&#34;</span>: now,
+        <span style="color:#ff79c6">&#34;jti&#34;</span>: f&#39;token_id:{str(time.time())}&#39;,
+        <span style="color:#ff79c6">&#34;nbf&#34;</span>: now,
+        <span style="color:#ff79c6">&#34;realm&#34;</span>: <span style="color:#f1fa8c">&#34;stone_bank&#34;</span>,
+        <span style="color:#ff79c6">&#34;sub&#34;</span>: CLIENT_ID,
+    }
 
 
-<span style="color:#a40000">def</span> <span style="color:#a40000">authenticate():</span>
-    <span style="color:#a40000">auth_token</span> <span style="color:#a40000">=</span> <span style="color:#a40000">generate_token(auth_claims())</span>
-    <span style="color:#a40000">data</span> <span style="color:#a40000">=</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;client_assertion_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;client_assertion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">auth_token</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;client_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">CLIENT_ID</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;grant_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;client_credentials&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000;font-weight:bold">}</span>
+def authenticate():
+    auth_token = generate_token(auth_claims())
+    data = {
+        <span style="color:#ff79c6">&#34;client_assertion_type&#34;</span>: <span style="color:#f1fa8c">&#34;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&#34;</span>,
+        <span style="color:#ff79c6">&#34;client_assertion&#34;</span>: auth_token,
+        <span style="color:#ff79c6">&#34;client_id&#34;</span>: CLIENT_ID,
+        <span style="color:#ff79c6">&#34;grant_type&#34;</span>: <span style="color:#f1fa8c">&#34;client_credentials&#34;</span>,
+    }
 
-    <span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">requests.post(</span>
-        <span style="color:#a40000">f</span><span style="color:#4e9a06">&#34;{ACCOUNTS_URL}/auth/realms/stone_bank/protocol/openid-connect/token&#34;</span><span style="color:#a40000">,</span> <span style="color:#a40000">data=data)</span>
+    response = requests.post(
+        f<span style="color:#f1fa8c">&#34;{ACCOUNTS_URL}/auth/realms/stone_bank/protocol/openid-connect/token&#34;</span>, data=data)
 
-    <span style="color:#a40000">return</span> <span style="color:#a40000">response.json()</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;access_token&#34;</span><span style="color:#000;font-weight:bold">]</span>
+    return response.json()[<span style="color:#f1fa8c">&#34;access_token&#34;</span>]
 </code></pre></div><p>Neste exemplo, estamos definindo uma função que retorna um dicionário com todos os claims necessários para o token de autenticação. Em seguida, é preciso enviar esse token e mais algumas informações para o nosso serviço de autenticação via POST.</p>
 <p>A biblioteca <code>requests</code> foi a escolhida para realizar as requisições HTTP. No parâmetro <code>data</code>, envia-se dados no formato  &ldquo;x-www-form-urlencoded&rdquo; já que este é o formato esperado pelo servidor de autenticação. Ver <a href="https://2.python-requests.org/en/master/">documentação</a>.</p>
 <p>No parâmetro <code>params</code> envia-se os dados no formato <a href="https://en.wikipedia.org/wiki/Query_string">Query String</a>, e no parâmetro <code>headers</code> informamos o que será enviado no cabeçalho da requisição.</p>
@@ -3547,27 +3547,27 @@
 <li>Criar o token;</li>
 <li>Montar o link.</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">consent_claims():</span>
-    <span style="color:#a40000">now</span> <span style="color:#a40000">=</span> <span style="color:#a40000">int(time.time())</span>
-    <span style="color:#a40000">return</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;aud&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;accounts-hubid@openbank.stone.com.br&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;client_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">CLIENT_ID</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;exp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">now</span> <span style="color:#a40000">+</span> <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#a40000">*</span> <span style="color:#a40000">HOUR</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;iat&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">now</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;iss&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">CLIENT_ID</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;jti&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">str(time.time())</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;nbf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">now</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;redirect_uri&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">REDIRECT_URI</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;session_metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;sid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">f&#39;key</span><span style="color:#000;font-weight:bold">:{</span><span style="color:#a40000">time.time()</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;consent&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">def consent_claims():
+    now = int(time.time())
+    return {
+        <span style="color:#ff79c6">&#34;aud&#34;</span>: <span style="color:#f1fa8c">&#34;accounts-hubid@openbank.stone.com.br&#34;</span>,
+        <span style="color:#ff79c6">&#34;client_id&#34;</span>: CLIENT_ID,
+        <span style="color:#ff79c6">&#34;exp&#34;</span>: now + <span style="color:#bd93f9">2</span> * HOUR,
+        <span style="color:#ff79c6">&#34;iat&#34;</span>: now,
+        <span style="color:#ff79c6">&#34;iss&#34;</span>: CLIENT_ID,
+        <span style="color:#ff79c6">&#34;jti&#34;</span>: str(time.time()),
+        <span style="color:#ff79c6">&#34;nbf&#34;</span>: now,
+        <span style="color:#ff79c6">&#34;redirect_uri&#34;</span>: REDIRECT_URI,
+        <span style="color:#ff79c6">&#34;session_metadata&#34;</span>: {<span style="color:#ff79c6">&#34;sid&#34;</span>: f&#39;key:{time.time()}&#39;},
+        <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;consent&#34;</span>,
+    }
   
   
- <span style="color:#a40000">def</span> <span style="color:#a40000">consent_token():</span>
-    <span style="color:#a40000">return</span> <span style="color:#a40000">generate_token(consent_claims())</span>
+ def consent_token():
+    return generate_token(consent_claims())
   
- <span style="color:#a40000">def</span> <span style="color:#a40000">consent_link():</span>
-    <span style="color:#a40000">return</span> <span style="color:#a40000">f</span><span style="color:#4e9a06">&#34;{ACCOUNTS_URL}/consentimento?client_id={CLIENT_ID}&amp;jwt={consent_token()}&#34;</span>
+ def consent_link():
+    return f<span style="color:#f1fa8c">&#34;{ACCOUNTS_URL}/consentimento?client_id={CLIENT_ID}&amp;jwt={consent_token()}&#34;</span>
 </code></pre></div><p>O resultado será um link válido por duas horas. Ele pode ser acessado e testado através do navegador.</p>
 <p>Observe que alguns detalhes podem ser adaptados de acordo com as necessidades específiicas de controle de tokens da sua aplicação.</p>
 <p>Um exemplo é parâmetro <code>jti</code>, que faz parte dos claims e atua como um identificador do token. No código acima, é utilizada apenas uma string com o timestamp do momento como forma de garantir sua unicidade. Para sua aplicação é possível utilizar outros valores de forma a facilitar a identificação do token.</p>
@@ -3579,16 +3579,16 @@
 <p>Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.</p>
 <p>Para isso, é preciso apenas consultar o endpoint <a href="../../../../docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso">Consultar Todas Contas às Quais Se Tem Acesso</a>, utilizando seu <code>access_token</code>.</p>
 <p>Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu <code>access_token</code> em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">operational_accounts(access_token,</span> <span style="color:#a40000">pagination_params=</span><span style="color:#000;font-weight:bold">{}</span><span style="color:#a40000">):</span>
-    <span style="color:#a40000">url</span> <span style="color:#a40000">=</span> <span style="color:#a40000">f</span><span style="color:#4e9a06">&#34;{API_URL}/accounts&#34;</span>
-    <span style="color:#a40000">params</span> <span style="color:#a40000">=</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;paginate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;true&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#a40000">**pagination_params</span><span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">def operational_accounts(access_token, pagination_params={}):
+    url = f<span style="color:#f1fa8c">&#34;{API_URL}/accounts&#34;</span>
+    params = {<span style="color:#ff79c6">&#34;paginate&#34;</span>: <span style="color:#f1fa8c">&#34;true&#34;</span>, **pagination_params}
     
-    <span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">requests.get(</span>
-        <span style="color:#a40000">url,</span>
-        <span style="color:#a40000">params=params,</span>
-        <span style="color:#a40000">headers=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;authorization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">f&#39;Bearer</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">access_token</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#a40000">).json()</span>
-    <span style="color:#a40000">return</span> <span style="color:#a40000">response</span><span style="color:#000;font-weight:bold">[</span><span style="color:#a40000">&#39;data&#39;</span><span style="color:#000;font-weight:bold">]</span>
+    response = requests.get(
+        url,
+        params=params,
+        headers={<span style="color:#ff79c6">&#34;authorization&#34;</span>: f&#39;Bearer {access_token}&#39;}
+    ).json()
+    return response[&#39;data&#39;]
 </code></pre></div><p>Analisando o código acima, podemos chegar às seguintes conclusões:</p>
 <p>Observe que temos dois parâmetros na função <code>operational_accounts</code>: <code>access_token</code> e <code>pagination_params</code>.</p>
 <ul>
@@ -3613,68 +3613,68 @@
 <p>Outra funcionalidade é a criação de transferências, tanto entre contas Stone como também de uma conta Stone para contas em outros bancos.</p>
 <p>Assim como no caso anterior e de forma padrão para nossos endpoints, para acessá-los é preciso apenas obter permissão de acesso através do consentimento ou ser o próprio dono da conta, e provar isso enviando seu <code>access_token</code> em um header. As informações de permissões de um sujeito são armazenadas em seu <code>access_token</code>.</p>
 <p>O exemplo a seguir foi construído considerando uma aplicação com acesso a pelo menos duas contas, e que a primeira conta tem saldo suficiente para a transferência.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">internal_transfer(token,</span> <span style="color:#a40000">params):</span>
-    <span style="color:#a40000">url</span> <span style="color:#a40000">=</span> <span style="color:#a40000">f&#39;</span><span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">API_URL</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">/internal_transfers&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">def internal_transfer(token, params):
+    url = f&#39;{API_URL}/internal_transfers&#39;
 
-    <span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">requests.post(url,</span>
-                             <span style="color:#a40000">json=params,</span>
-                             <span style="color:#a40000">headers=</span><span style="color:#000;font-weight:bold">{</span>
-                                 <span style="color:#204a87;font-weight:bold">&#34;authorization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">f&#39;Bearer</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">token</span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
-                             <span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">).json()</span>
+    response = requests.post(url,
+                             json=params,
+                             headers={
+                                 <span style="color:#ff79c6">&#34;authorization&#34;</span>: f&#39;Bearer {token}&#39;
+                             }).json()
 
-    <span style="color:#a40000">return</span> <span style="color:#a40000">response</span>
+    return response
   
-<span style="color:#a40000">token</span> <span style="color:#a40000">=</span> <span style="color:#a40000">authenticate()</span>
+token = authenticate()
   
-<span style="color:#a40000">accounts</span> <span style="color:#a40000">=</span> <span style="color:#a40000">operational_accounts(token)</span>
+accounts = operational_accounts(token)
   
-<span style="color:#a40000">internal_transfer_params</span> <span style="color:#a40000">=</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;account_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">accounts</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#34;id&#34;</span><span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">accounts</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">]}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
+internal_transfer_params = {
+    <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+    <span style="color:#ff79c6">&#34;account_id&#34;</span>: accounts[<span style="color:#bd93f9">0</span>][<span style="color:#f1fa8c">&#34;id&#34;</span>],
+    <span style="color:#ff79c6">&#34;target&#34;</span>: {
+        <span style="color:#ff79c6">&#34;account&#34;</span>: {<span style="color:#ff79c6">&#34;account_code&#34;</span>: accounts[<span style="color:#bd93f9">1</span>][<span style="color:#f1fa8c">&#34;account_code&#34;</span>]}
+    }
+}
   
-<span style="color:#a40000">response</span> <span style="color:#a40000">=</span> <span style="color:#a40000">internal_transfer(token,</span> <span style="color:#a40000">internal_transfer_params)</span>
-<span style="color:#a40000">print(response.json())</span>
+response = internal_transfer(token, internal_transfer_params)
+print(response.json())
 </code></pre></div><p>Ocorrendo tudo bem, você receberá como retorno as informações da transferência recém-criada. Em caso de erro como, por exemplo, por saldo insuficiente, receberá como retorno uma mensagem de erro.</p>
 
 
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Success</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;approved_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;cancelled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-07-29T13:40:05Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;created_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application:92b5f9aa-9552-45f4-86cb-c0331c9178a2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;failed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;failure_reason_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;failure_reason_description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;fee&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;finished_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;000ebdf8-4acf-4ed2-83e9-f0c7a766ac61&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;rejected_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;rejected_by&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;scheduled_to&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;settled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;CREATED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;target&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;517532&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Severo&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;target_account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;517532&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;target_account_owner_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Severo&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+  <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-07-29T13:40:05Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;application:92b5f9aa-9552-45f4-86cb-c0331c9178a2&#34;</span>,
+  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+  <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+  <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;000ebdf8-4acf-4ed2-83e9-f0c7a766ac61&#34;</span>,
+  <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;CREATED&#34;</span>,
+  <span style="color:#ff79c6">&#34;target&#34;</span>: {
+    <span style="color:#ff79c6">&#34;account&#34;</span>: {
+      <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;517532&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Severo&#34;</span>
+    }
+  },
+  <span style="color:#ff79c6">&#34;target_account_code&#34;</span>: <span style="color:#f1fa8c">&#34;517532&#34;</span>,
+  <span style="color:#ff79c6">&#34;target_account_owner_name&#34;</span>: <span style="color:#f1fa8c">&#34;Severo&#34;</span>
+}
 </code></pre></div>
 
 </div>
@@ -3684,7 +3684,7 @@
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Failure</h4>
 
-    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:not_enough_funds&#34;</span><span style="color:#000;font-weight:bold">}</span>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{<span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:not_enough_funds&#34;</span>}
 </code></pre></div>
 
 </div>
