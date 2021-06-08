@@ -221,6 +221,64 @@
     </item>
     
     <item>
+      <title>Docs: Receber dados do usuário</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/receber-dados-do-usuario/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/receber-dados-do-usuario/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Nesse endpoint serão solicitados os dados do usuário necessários para realização do envio dos mesmos para início da análise do KYC.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/screens/home/web
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Bearer token de autenticação&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;tests-params&#34;&gt;&lt;strong&gt;TESTS PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;if (responseCode.code == &lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt;) {
+    response = JSON.parse(responseBody)
+
+    user_id = response[&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_kyc_requests&amp;#34;&lt;/span&gt;][&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;]
+    pm.environment.set(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;, user_id)
+
+    birthdate = getAssessmentIDFor(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;birthdate&amp;#34;&lt;/span&gt;, response)
+    pm.environment.set(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;birthdate_id&amp;#34;&lt;/span&gt;, birthdate)
+
+    phone_number = getAssessmentIDFor(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;phone_number&amp;#34;&lt;/span&gt;, response)
+    pm.environment.set(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;phone_number_id&amp;#34;&lt;/span&gt;, phone_number)
+
+    address = getAssessmentIDFor(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;, response)
+    pm.environment.set(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;address_id&amp;#34;&lt;/span&gt;, address)
+
+    document_photo = getAssessmentIDFor(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_photo&amp;#34;&lt;/span&gt;, response)
+    pm.environment.set(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_photo_id&amp;#34;&lt;/span&gt;, document_photo)
+
+    document_selfies = getAssessmentIDFor(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_selfies&amp;#34;&lt;/span&gt;, response)
+    pm.environment.set(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_selfies_id&amp;#34;&lt;/span&gt;, document_selfies)
+
+    total_income_range = getAssessmentIDFor(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;total_income_range&amp;#34;&lt;/span&gt;, response)
+    pm.environment.set(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;total_income_range_id&amp;#34;&lt;/span&gt;, total_income_range)
+}
+
+function getAssessmentIDFor(type, response) {
+    checks = response[&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_kyc_requests&amp;#34;&lt;/span&gt;][&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;checks&amp;#34;&lt;/span&gt;]
+    assessment = checks.filter(function(check) {
+        return check[&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;] == type
+    })
+    
+    return assessment[&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Enviar fotos do usuário</title>
       <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-fotos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

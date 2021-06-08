@@ -2181,5 +2181,783 @@ content-type: application/json
       </description>
     </item>
     
+    <item>
+      <title>Docs: old_Objetos do extrato</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato-1/</link>
+      <pubDate>Mon, 09 Mar 2020 22:16:07 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato-1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Pagamento de boleto bancário recebido&amp;rdquo;
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:parameters]
+{
+&amp;ldquo;data&amp;rdquo;: {
+&amp;ldquo;0-0&amp;rdquo;: &amp;ldquo;account_id&amp;rdquo;,
+&amp;ldquo;h-0&amp;rdquo;: &amp;ldquo;Chave&amp;rdquo;,
+&amp;ldquo;h-1&amp;rdquo;: &amp;ldquo;Descrição&amp;rdquo;,
+&amp;ldquo;h-2&amp;rdquo;: &amp;ldquo;Tipo&amp;rdquo;,
+&amp;ldquo;0-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;1-0&amp;rdquo;: &amp;ldquo;amount&amp;rdquo;,
+&amp;ldquo;2-0&amp;rdquo;: &amp;ldquo;balance_after&amp;rdquo;,
+&amp;ldquo;3-0&amp;rdquo;: &amp;ldquo;balance_before&amp;quot;&amp;rdquo;,
+&amp;ldquo;2-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;Integer&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;3-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;Integer&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;1-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;4-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;4-0&amp;rdquo;: &amp;ldquo;barcode&amp;rdquo;,
+&amp;ldquo;5-0&amp;rdquo;: &amp;ldquo;barcode_payment_invoice_id&amp;rdquo;,
+&amp;ldquo;5-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;6-0&amp;rdquo;: &amp;ldquo;beneficiary&amp;rdquo;,
+&amp;ldquo;7-0&amp;rdquo;: &amp;ldquo;capture&amp;rdquo;,
+&amp;ldquo;6-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;Object&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;7-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;Object&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;8-0&amp;rdquo;: &amp;ldquo;created_at&amp;rdquo;,
+&amp;ldquo;8-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;9-0&amp;rdquo;: &amp;ldquo;expiration_date&amp;rdquo;,
+&amp;ldquo;9-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;10-0&amp;rdquo;: &amp;ldquo;fee_amount&amp;rdquo;,
+&amp;ldquo;10-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;Integer&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;11-0&amp;rdquo;: &amp;ldquo;id&amp;rdquo;,
+&amp;ldquo;11-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;12-0&amp;rdquo;: &amp;ldquo;invoice_type&amp;rdquo;,
+&amp;ldquo;13-0&amp;rdquo;: &amp;ldquo;issuance_date&amp;rdquo;,
+&amp;ldquo;14-0&amp;rdquo;: &amp;ldquo;limit_date&amp;rdquo;,
+&amp;ldquo;12-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;13-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;14-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;15-0&amp;rdquo;: &amp;ldquo;operation&amp;rdquo;,
+&amp;ldquo;16-0&amp;rdquo;: &amp;ldquo;operation_amount&amp;rdquo;,
+&amp;ldquo;15-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;16-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;17-0&amp;rdquo;: &amp;ldquo;payer&amp;rdquo;,
+&amp;ldquo;17-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;Object&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;18-0&amp;rdquo;: &amp;ldquo;status&amp;rdquo;,
+&amp;ldquo;19-0&amp;rdquo;: &amp;ldquo;type&amp;rdquo;,
+&amp;ldquo;20-0&amp;rdquo;: &amp;ldquo;writable_line&amp;rdquo;,
+&amp;ldquo;18-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;19-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;20-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;0-1&amp;rdquo;: &amp;ldquo;Identificador da conta do beneficiário.&amp;rdquo;,
+&amp;ldquo;1-1&amp;rdquo;: &amp;ldquo;?????&amp;rdquo;,
+&amp;ldquo;2-1&amp;rdquo;: &amp;ldquo;Saldo da conta após a entrada desde evento.&amp;rdquo;,
+&amp;ldquo;3-1&amp;rdquo;: &amp;ldquo;Saldo da conta antes da entrada deste evento.&amp;rdquo;,
+&amp;ldquo;4-1&amp;rdquo;: &amp;ldquo;Código de barras.&amp;rdquo;,
+&amp;ldquo;5-1&amp;rdquo;: &amp;ldquo;Identificador único do boleto bancário emitido, no formato UUID4.&amp;rdquo;,
+&amp;ldquo;8-1&amp;rdquo;: &amp;ldquo;Horário em que o boleto bancário foi gerado. Nesse caso nunca será &lt;code&gt;null&lt;/code&gt;. Formato ISO8601 &amp;quot;YYYY-MM-DDThh:mm:ssZ.&amp;rdquo;,
+&amp;ldquo;9-1&amp;rdquo;: &amp;ldquo;Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito. Formato ISO8601 &amp;quot;YYYY-MM-DDThh:mm:ssZ.&amp;rdquo;,
+&amp;ldquo;10-1&amp;rdquo;: &amp;ldquo;Taxa cobrada pela operação.&amp;rdquo;,
+&amp;ldquo;11-1&amp;rdquo;: &amp;ldquo;Identificador único do pagamento do boleto bancário, no formato UUID4.&amp;rdquo;,
+&amp;ldquo;12-1&amp;rdquo;: &amp;ldquo;Tipo de boleto bancário. Valor suportado &lt;code&gt;proposal&lt;/code&gt;.&amp;rdquo;,
+&amp;ldquo;13-1&amp;rdquo;: &amp;ldquo;Data da emissão de boleto bancário. Formato ISO8601 &amp;quot;YYYY-MM-DDThh:mm:ssZ.&amp;rdquo;,
+&amp;ldquo;14-1&amp;rdquo;: &amp;ldquo;?????&amp;rdquo;,
+&amp;ldquo;18-1&amp;rdquo;: &amp;ldquo;Status atual do boleto bancário, podendo ser um dentre os status à seguir: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;REGISTRATED&lt;/code&gt; ou &lt;code&gt;SETTLED&lt;/code&gt;.&amp;rdquo;,
+&amp;ldquo;20-1&amp;rdquo;: &amp;ldquo;Código numérico que acompanha o código de barras.&amp;rdquo;,
+&amp;ldquo;6-1&amp;rdquo;: &amp;ldquo;Objeto com os dados do beneficiário.&amp;rdquo;,
+&amp;ldquo;7-1&amp;rdquo;: &amp;ldquo;Objeto com os detalhes da captura do pagamento.&amp;rdquo;,
+&amp;ldquo;15-1&amp;rdquo;: &amp;ldquo;?????&amp;rdquo;,
+&amp;ldquo;16-1&amp;rdquo;: &amp;ldquo;?????&amp;rdquo;,
+&amp;ldquo;17-1&amp;rdquo;: &amp;ldquo;Objeto com os dados do pagador.&amp;rdquo;
+},
+&amp;ldquo;cols&amp;rdquo;: 3,
+&amp;ldquo;rows&amp;rdquo;: 21
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n      &amp;quot;account_id&amp;quot;: &amp;quot;c72ad932-e507-4d1f-a25c-a9bbb05500e6&amp;quot;,\n      &amp;quot;amount&amp;quot;: 2001,\n      &amp;quot;balance_after&amp;quot;: 31233216130,\n      &amp;quot;balance_before&amp;quot;: 31233214129,\n      &amp;quot;barcode&amp;quot;: &amp;quot;19791851500000020010000020200206193505504757&amp;quot;,\n      &amp;quot;barcode_payment_invoice_id&amp;quot;: &amp;quot;0a41b13d-b9b2-488c-944d-f48ef3a47aa3&amp;quot;,\n      &amp;quot;beneficiary&amp;quot;: {\n        &amp;quot;document&amp;quot;: &amp;quot;12036082769&amp;quot;,\n        &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;,\n        &amp;quot;legal_name&amp;quot;: &amp;quot;Gabriel Silva de Lima Rocha&amp;quot;,\n        &amp;quot;trade_name&amp;quot;: null\n      },\n      &amp;quot;capture&amp;quot;: {\n        &amp;quot;branch_code&amp;quot;: &amp;quot;0001&amp;quot;,\n        &amp;quot;institution_ispb&amp;quot;: &amp;quot;16501555&amp;quot;,\n        &amp;quot;institution_name&amp;quot;: &amp;quot;Stone Pagamentos S.A.&amp;quot;,\n        &amp;quot;medium&amp;quot;: &amp;quot;3&amp;quot;\n      },\n      &amp;quot;created_at&amp;quot;: &amp;quot;2020-02-07T21:42:54Z&amp;quot;,\n      &amp;quot;expiration_date&amp;quot;: &amp;quot;2021-01-29&amp;quot;,\n      &amp;quot;fee_amount&amp;quot;: 0,\n      &amp;quot;id&amp;quot;: &amp;quot;ec951a20-997b-46b8-a476-4d481703a1d7&amp;quot;,\n      &amp;quot;invoice_type&amp;quot;: &amp;quot;proposal&amp;quot;,\n      &amp;quot;issuance_date&amp;quot;: &amp;quot;2020-02-06&amp;quot;,\n      &amp;quot;limit_date&amp;quot;: &amp;quot;2021-01-29&amp;quot;,\n      &amp;quot;operation&amp;quot;: &amp;quot;credit&amp;quot;,\n      &amp;quot;operation_amount&amp;quot;: 2001,\n      &amp;quot;payer&amp;quot;: {\n        &amp;quot;document&amp;quot;: &amp;quot;12036082769&amp;quot;,\n        &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;,\n        &amp;quot;legal_name&amp;quot;: &amp;quot;Gabriel Silva de Lima Rocha&amp;quot;,\n        &amp;quot;trade_name&amp;quot;: null\n      },\n      &amp;quot;status&amp;quot;: &amp;quot;FINISHED&amp;quot;,\n      &amp;quot;type&amp;quot;: &amp;quot;payment&amp;quot;,\n      &amp;quot;writable_line&amp;quot;: &amp;quot;19790000052020020619935055047571185150000002001&amp;quot;\n    }&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+],
+&amp;ldquo;sidebar&amp;rdquo;: true
+}
+[/block]
+##&lt;strong&gt;Beneficiary&lt;/strong&gt;
+[block:parameters]
+{
+&amp;ldquo;data&amp;rdquo;: {
+&amp;ldquo;0-0&amp;rdquo;: &amp;ldquo;document&amp;rdquo;,
+&amp;ldquo;1-0&amp;rdquo;: &amp;ldquo;document_type&amp;rdquo;,
+&amp;ldquo;2-0&amp;rdquo;: &amp;ldquo;legal_name&amp;rdquo;,
+&amp;ldquo;3-0&amp;rdquo;: &amp;ldquo;trade_name&amp;rdquo;,
+&amp;ldquo;h-0&amp;rdquo;: &amp;ldquo;Chave&amp;rdquo;,
+&amp;ldquo;h-1&amp;rdquo;: &amp;ldquo;Descrição&amp;rdquo;,
+&amp;ldquo;h-2&amp;rdquo;: &amp;ldquo;Tipo&amp;rdquo;,
+&amp;ldquo;1-1&amp;rdquo;: &amp;ldquo;Tipo do documento do beneficiário. Pode ser &amp;lsquo;cpf&amp;rsquo; ou &amp;lsquo;cnpj&amp;rsquo;.&amp;rdquo;,
+&amp;ldquo;1-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;0-1&amp;rdquo;: &amp;ldquo;Número do documento do beneficiário sem pontos.&amp;rdquo;,
+&amp;ldquo;0-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;2-1&amp;rdquo;: &amp;ldquo;É o nome que identifica o beneficiário para fins legais, administrativos e outros fins oficiais.&amp;rdquo;,
+&amp;ldquo;3-1&amp;rdquo;: &amp;ldquo;Nome fantasia do beneficiário.&amp;rdquo;,
+&amp;ldquo;2-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;3-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;
+},
+&amp;ldquo;cols&amp;rdquo;: 3,
+&amp;ldquo;rows&amp;rdquo;: 4
+}
+[/block]
+##&lt;strong&gt;Capture&lt;/strong&gt;
+[block:parameters]
+{
+&amp;ldquo;data&amp;rdquo;: {
+&amp;ldquo;h-0&amp;rdquo;: &amp;ldquo;Chave&amp;rdquo;,
+&amp;ldquo;h-1&amp;rdquo;: &amp;ldquo;Descrição&amp;rdquo;,
+&amp;ldquo;h-2&amp;rdquo;: &amp;ldquo;Tipo&amp;rdquo;,
+&amp;ldquo;0-0&amp;rdquo;: &amp;ldquo;branch_code&amp;rdquo;,
+&amp;ldquo;1-0&amp;rdquo;: &amp;ldquo;institution_ispb&amp;rdquo;,
+&amp;ldquo;2-0&amp;rdquo;: &amp;ldquo;institution_name&amp;rdquo;,
+&amp;ldquo;3-0&amp;rdquo;: &amp;ldquo;medium&amp;rdquo;,
+&amp;ldquo;1-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;2-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;3-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;0-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;0-1&amp;rdquo;: &amp;ldquo;Número da agência da conta.&amp;rdquo;,
+&amp;ldquo;1-1&amp;rdquo;: &amp;ldquo;Código ISPB da instituição responsável pela conta. Existe uma lista completa relacionando as instituições e seus respectivos códigos neste &lt;a href=&#34;https://www.bcb.gov.br/pom/spb/estatistica/port/ASTR003.pdf&#34;&gt;link&lt;/a&gt;.&amp;rdquo;,
+&amp;ldquo;2-1&amp;rdquo;: &amp;ldquo;Nome da instituição responsável pela conta.&amp;rdquo;,
+&amp;ldquo;3-1&amp;rdquo;: &amp;ldquo;Meio de pagamento do boleto. Valores possíveis: &lt;code&gt;cash&lt;/code&gt;, &lt;code&gt;debit&lt;/code&gt;, &lt;code&gt;credit&lt;/code&gt; e &lt;code&gt;check&lt;/code&gt;.&amp;rdquo;
+},
+&amp;ldquo;cols&amp;rdquo;: 3,
+&amp;ldquo;rows&amp;rdquo;: 4
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;payer&#34;&gt;&lt;strong&gt;Payer&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:parameters]
+{
+&amp;ldquo;data&amp;rdquo;: {
+&amp;ldquo;h-0&amp;rdquo;: &amp;ldquo;Chave&amp;rdquo;,
+&amp;ldquo;h-1&amp;rdquo;: &amp;ldquo;Descrição&amp;rdquo;,
+&amp;ldquo;h-2&amp;rdquo;: &amp;ldquo;Tipo&amp;rdquo;,
+&amp;ldquo;0-0&amp;rdquo;: &amp;ldquo;document&amp;rdquo;,
+&amp;ldquo;1-0&amp;rdquo;: &amp;ldquo;document_type&amp;rdquo;,
+&amp;ldquo;2-0&amp;rdquo;: &amp;ldquo;payer.legal_name&amp;rdquo;,
+&amp;ldquo;3-0&amp;rdquo;: &amp;ldquo;payer.trade_name&amp;rdquo;,
+&amp;ldquo;0-1&amp;rdquo;: &amp;ldquo;Número do documento do pagador sem pontos.&amp;rdquo;,
+&amp;ldquo;1-1&amp;rdquo;: &amp;ldquo;CPF ou CPNJ do pagador.&amp;rdquo;,
+&amp;ldquo;2-1&amp;rdquo;: &amp;ldquo;É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.&amp;rdquo;,
+&amp;ldquo;3-1&amp;rdquo;: &amp;ldquo;Nome fantasia do pagador.&amp;rdquo;,
+&amp;ldquo;0-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;1-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;2-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;,
+&amp;ldquo;3-2&amp;rdquo;: &amp;ldquo;&lt;em&gt;String&lt;/em&gt;&amp;rdquo;
+},
+&amp;ldquo;cols&amp;rdquo;: 3,
+&amp;ldquo;rows&amp;rdquo;: 4
+}
+[/block]&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: old2_Objetos do Extrato</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato-2/</link>
+      <pubDate>Tue, 17 Sep 2019 13:31:27 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato-2/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;success&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Objeto &amp;lsquo;type&amp;rsquo;&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;O objeto &amp;lsquo;type&amp;rsquo; é o identificador do tipo de operação realizada, assim ele será retornado no extrato com os seguintes valores para as operações:\n  * “internal”: Transferência Stone ou Agendamento Transferência Stone\n  * “external”: TED ou Agendamento TED\n  * “payment”: Pagamento enviado, Agendamento de Pagamento ou Pagamento recebido\n  * “external_refund”: Devolução de TED\n  * “payment_refund”: Devolução de Pagamento\n  * “balance_blocked”: Valor bloqueado\n  * “balance_unblocked”: Valor desbloqueado\n  * “payroll”: Pagamento de salário\n  * “salary”: Recebimento de salário\n  * “salary_portability”: Portabilidade de salário\n  * “salary_portability_refund”: Devolução de Portabilidade de salário\n  * “salary_portability_employer_refund”: Devolução de salário ou Devolução de salário para empresa\n  * “outbound_stone_prepaid_card_payment”: Compra feita com Cartão Stone\n  * “outbound_stone_prepaid_card_payment_refund”: Devolução de Compra, feita com Cartão Stone, através do estabelecimento original da compra.\n  * “outbound_stone_prepaid_card_payment_chargeback”: Devolução de Compra, feita com o Cartão Stone, através da Conta Stone.\n  * “outbound_stone_prepaid_card_withdrawal”: Saque com Cartão Stone feito no Banco24Horas.\n  * “outbound_stone_prepaid_card_withdrawal_refund”: Devolução de Saque feito no  Banco24Horas.&amp;rdquo;
+}
+[/block]
+Cada tipo de operação retornará um extrato específico para o contexto da operação.&lt;/p&gt;
+&lt;h2 id=&#34;contraparte&#34;&gt;&lt;strong&gt;Contraparte&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;account&amp;quot;:{\n    &amp;quot;institution&amp;quot;: string,\n    &amp;quot;institution_name&amp;quot;: string,\n    &amp;quot;account_code&amp;quot;: string,\n    &amp;quot;branch_code&amp;quot;: string,\n    &amp;quot;account_type&amp;quot;: string\n  },\n  &amp;quot;entity&amp;quot;:{\n    &amp;quot;name&amp;quot;: string,\n    &amp;quot;document&amp;quot;: string,\n    &amp;quot;document_type&amp;quot;: string\n  }\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;movimentação&#34;&gt;&lt;strong&gt;Movimentação&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;Balance_after&amp;quot;: integer,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;status&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;pagamento-com-cartão-recebido&#34;&gt;&lt;strong&gt;Pagamento com Cartão Recebido&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;card_network_code&amp;quot;: string,\n  &amp;quot;card_network_name&amp;quot;: string,\n  &amp;quot;card_type&amp;quot;: string,\n  &amp;quot;is_prepayment&amp;quot;: boolean,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;status&amp;quot;: string,\n  &amp;quot;type&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;pagamento-com-código-de-barras-de-outras-instituições-enviado&#34;&gt;&lt;strong&gt;Pagamento com código de barras de outras instituições enviado&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;barcode&amp;quot;: string,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;details&amp;quot;: {\n    &amp;quot;bank_name&amp;quot;: string | null,\n    &amp;quot;recipient_cpf_cnpj&amp;quot;: string | null,\n    &amp;quot;recipient_name&amp;quot;: string | null,\n    &amp;quot;writable_line&amp;quot;: string | null,\n    &amp;quot;expiration_date&amp;quot;: string | null\n  },\n  &amp;quot;fee_amount&amp;quot;: integer,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;operation&amp;quot;:&amp;quot;debit&amp;quot;,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;operation_id&amp;quot;: string\n}\n    &amp;ldquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;pagamento-com-código-de-barras-de-outras-instituições-reembolsado&#34;&gt;&lt;strong&gt;Pagamento com código de barras de outras instituições reembolsado&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;barcode&amp;quot;: string,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;details&amp;quot;: {\n    &amp;quot;bank_name&amp;quot;: string | null,\n    &amp;quot;recipient_cpf_cnpj&amp;quot;: string | null,\n    &amp;quot;recipient_name&amp;quot;: string | null,\n    &amp;quot;writable_line&amp;quot;: string | null,\n    &amp;quot;expiration_date&amp;quot;: string | null\n  },\n  &amp;quot;fee_amount&amp;quot;: integer,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;original_operation_id&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;pagamento-com-código-de-barras-recebido&#34;&gt;&lt;strong&gt;Pagamento com código de barras recebido&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n      &amp;quot;account_id&amp;quot;: &amp;quot;c72ad932-e507-4d1f-a25c-a9bbb05500e6&amp;quot;,\n      &amp;quot;amount&amp;quot;: 2000,\n      &amp;quot;balance_after&amp;quot;: 2000,\n      &amp;quot;balance_before&amp;quot;: 0,\n      &amp;quot;barcode&amp;quot;: &amp;quot;19791851500000020010000020200206193505504757&amp;quot;,\n      &amp;quot;barcode_payment_invoice_id&amp;quot;: &amp;quot;0a41b13d-b9b2-488c-944d-f48ef3a47aa3&amp;quot;,\n      &amp;quot;beneficiary&amp;quot;: {\n        &amp;quot;document&amp;quot;: &amp;quot;12036082777&amp;quot;,\n        &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;,\n        &amp;quot;legal_name&amp;quot;: &amp;quot;Maria Fonseca Clemente Cruz&amp;quot;,\n        &amp;quot;trade_name&amp;quot;: null\n      },\n      &amp;quot;capture&amp;quot;: {\n        &amp;quot;branch_code&amp;quot;: &amp;quot;0001&amp;quot;,\n        &amp;quot;institution_ispb&amp;quot;: &amp;quot;16501555&amp;quot;,\n        &amp;quot;institution_name&amp;quot;: &amp;quot;Stone Pagamentos S.A.&amp;quot;,\n        &amp;quot;medium&amp;quot;: &amp;quot;3&amp;quot;\n      },\n      &amp;quot;created_at&amp;quot;: &amp;quot;2020-02-07T21:42:54Z&amp;quot;,\n      &amp;quot;expiration_date&amp;quot;: &amp;quot;2021-01-29&amp;quot;,\n      &amp;quot;fee_amount&amp;quot;: 200,\n      &amp;quot;id&amp;quot;: &amp;quot;ec951a20-997b-46b8-a476-4d481703a1d7&amp;quot;,\n      &amp;quot;invoice_type&amp;quot;: &amp;quot;proposal&amp;quot;,\n      &amp;quot;issuance_date&amp;quot;: &amp;quot;2020-02-06&amp;quot;,\n      &amp;quot;limit_date&amp;quot;: &amp;quot;2021-01-29&amp;quot;,\n      &amp;quot;operation&amp;quot;: &amp;quot;credit&amp;quot;,\n      &amp;quot;operation_amount&amp;quot;: 2000,\n      &amp;quot;payer&amp;quot;: {\n        &amp;quot;document&amp;quot;: &amp;quot;12036082777&amp;quot;,\n        &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;,\n        &amp;quot;legal_name&amp;quot;: &amp;quot;Maria Fonseca Clemente Cruz&amp;quot;,\n        &amp;quot;trade_name&amp;quot;: null\n      },\n      &amp;quot;status&amp;quot;: &amp;quot;FINISHED&amp;quot;,\n      &amp;quot;type&amp;quot;: &amp;quot;payment&amp;quot;,\n      &amp;quot;writable_line&amp;quot;: &amp;quot;19790000052020020619935055047571185150000002001&amp;quot;\n    }&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;,
+&amp;ldquo;name&amp;rdquo;: null
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;saldo-desbloqueado&#34;&gt;&lt;strong&gt;Saldo Desbloqueado&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;status&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;type&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;saldo-bloqueado&#34;&gt;&lt;strong&gt;Saldo Bloqueado&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;status&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;type&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;transferência-interna-enviada&#34;&gt;&lt;strong&gt;Transferência interna enviada&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;fee_amount&amp;quot;: integer,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;operation_id&amp;quot;: string,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;description&amp;quot;: string | null,\n  &amp;quot;type&amp;quot;: string,\n  &amp;quot;counter_party&amp;quot;:{\n    &amp;quot;account&amp;quot;:{\n      &amp;quot;institution&amp;quot;: string,\n      &amp;quot;institution_name&amp;quot;: string,\n      &amp;quot;account_code&amp;quot;: string,\n      &amp;quot;branch_code&amp;quot;: string,\n      &amp;quot;account_type&amp;quot;: string\n    },\n    &amp;quot;entity&amp;quot;:{\n      &amp;quot;name&amp;quot;: string,\n      &amp;quot;document&amp;quot;: string,\n      &amp;quot;document_type&amp;quot;: string\n    }\n  },\n  &amp;quot;status&amp;quot;: string\n}\n    &amp;ldquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;transferência-interna-recebida&#34;&gt;&lt;strong&gt;Transferência interna recebida&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;fee_amount&amp;quot;: integer,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;operation_id&amp;quot;: string,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;description&amp;quot;: string | null,\n  &amp;quot;type&amp;quot;: string,\n  &amp;quot;counter_party&amp;quot;:{\n    &amp;quot;account&amp;quot;:{\n      &amp;quot;institution&amp;quot;: string,\n      &amp;quot;institution_name&amp;quot;: string,\n      &amp;quot;account_code&amp;quot;: string,\n      &amp;quot;branch_code&amp;quot;: string,\n      &amp;quot;account_type&amp;quot;: string\n    },\n    &amp;quot;entity&amp;quot;:{\n      &amp;quot;name&amp;quot;: string,\n      &amp;quot;document&amp;quot;: string,\n      &amp;quot;document_type&amp;quot;: string\n    }\n  },\n  &amp;quot;status&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;transferência-externa-enviada&#34;&gt;&lt;strong&gt;Transferência externa enviada&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;fee_amount&amp;quot;: integer,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;operation_id&amp;quot;: string,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;type&amp;quot;: string,\n  &amp;quot;refund_reason_code&amp;quot;: string,\n  &amp;quot;refund_reasion_description&amp;quot;: string,\n  &amp;quot;counter_party&amp;quot;: {\n    &amp;quot;account&amp;quot;: {\n      &amp;quot;institution&amp;quot;: string,\n      &amp;quot;institution_name&amp;quot;: string,\n      &amp;quot;account_code&amp;quot;: string,\n      &amp;quot;branch_code&amp;quot;: string,\n      &amp;quot;account_type&amp;quot;: string\n    },\n    &amp;quot;entity&amp;quot;: {\n      &amp;quot;name&amp;quot;: string,\n      &amp;quot;document&amp;quot;: string,\n      &amp;quot;documento_type&amp;quot;: string\n    }\n  },\n  &amp;quot;status&amp;quot;: string,\n  &amp;quot;delayed_to_next_business_day&amp;quot;: boolean\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;transferência-externa-recebida&#34;&gt;&lt;strong&gt;Transferência externa recebida&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;operation_id&amp;quot;: string,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;type&amp;quot;: string,\n  &amp;quot;counter_party&amp;quot;: {\n    &amp;quot;account&amp;quot;: {\n      &amp;quot;institution&amp;quot;: string,\n      &amp;quot;institution_name&amp;quot;: string,\n      &amp;quot;account_code&amp;quot;: string,\n      &amp;quot;branch_code&amp;quot;: string,\n      &amp;quot;account_type&amp;quot;: string\n    },\n    &amp;quot;entity&amp;quot;: {\n      &amp;quot;name&amp;quot;: string,\n      &amp;quot;document&amp;quot;: string,\n      &amp;quot;documento_type&amp;quot;: string\n    }\n  },\n  &amp;quot;status&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;transferência-externa-reembolsada&#34;&gt;&lt;strong&gt;Transferência externa reembolsada&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance_before&amp;quot;: integer,\n  &amp;quot;balance_after&amp;quot;: integer,\n  &amp;quot;amount&amp;quot;: integer,\n  &amp;quot;fee_amount&amp;quot;: integer,\n  &amp;quot;operation_amount&amp;quot;: integer,\n  &amp;quot;created_at&amp;quot;: string,\n  &amp;quot;id&amp;quot;: string,\n  &amp;quot;original_operation_id&amp;quot;: string,\n  &amp;quot;operation&amp;quot;: string,\n  &amp;quot;type&amp;quot;: string,\n  &amp;quot;refund_reason_code&amp;quot;: string,\n  &amp;quot;refund_reason_description&amp;quot;: string,\n  &amp;quot;counter_party&amp;quot;: {\n    &amp;quot;account&amp;quot;: {\n      &amp;quot;institution&amp;quot;: string,\n      &amp;quot;institution_name&amp;quot;: string,\n      &amp;quot;account_code&amp;quot;: string,\n      &amp;quot;branch_code&amp;quot;: string,\n      &amp;quot;account_type&amp;quot;: string\n    },\n    &amp;quot;entity&amp;quot;: {\n      &amp;quot;name&amp;quot;: string,\n      &amp;quot;document&amp;quot;: string,\n      &amp;quot;document_type&amp;quot;: string\n    }\n  },\n  &amp;quot;status&amp;quot;: string,\n  &amp;quot;refunded_at&amp;quot;: string\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Todas as Taxas</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas-1/</link>
+      <pubDate>Fri, 17 May 2019 19:51:23 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas-1/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: original-Consultar Taxas</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-taxas/</link>
+      <pubDate>Mon, 10 Dec 2018 14:42:24 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-taxas/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Veja que a taxa de pagamento retornou um &lt;code&gt;amount&lt;/code&gt; de 130, que é referente a R$ 1,30 de taxa de pagamento em reais.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: original-Consultar Extrato</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-extrato/</link>
+      <pubDate>Mon, 10 Dec 2018 14:35:21 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-extrato/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;warning&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Valor da operação&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o campo &lt;em&gt;operation_amount&lt;/em&gt; terá valor de 10000 centavos. Já o campo &lt;em&gt;amount&lt;/em&gt; será a soma do valor da operação com a taxa cobrada (&lt;em&gt;fee_amount&lt;/em&gt;).&amp;rdquo;
+}
+[/block]
+Note que, na resposta acima, foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.&lt;/p&gt;
+&lt;p&gt;Obs: O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo &lt;code&gt;type&lt;/code&gt; da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (&lt;code&gt;type:internal&lt;/code&gt;) e uma transferência externa (&lt;code&gt;type:external&lt;/code&gt;), ambas com campos de resposta diferentes.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: original-Consultar o Saldo</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-o-o-saldo/</link>
+      <pubDate>Mon, 10 Dec 2018 14:28:34 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-o-o-saldo/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Note que a variável  &lt;em&gt;balance&lt;/em&gt; retornou um total de &lt;strong&gt;9998&lt;/strong&gt;, isso corresponde a &lt;strong&gt;R$ 99,98&lt;/strong&gt; reais da conta da usuária.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: original- Consultar Dados da Conta</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-dados-da-conta/</link>
+      <pubDate>Mon, 10 Dec 2018 14:22:06 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-dados-da-conta/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Atenção&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;A primeira coisa que faremos antes de lhe dar acesso a dados de uma conta é verificar se você tem acesso a essa conta. Caso você erre o id da conta, sempre receberá o erro de não autorizado.&amp;rdquo;
+}
+[/block]&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: origin-Consultar Todas Contas às Quais a Usuária Tem Acesso</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-todas-contas-que-o-usuario-tem-acesso/</link>
+      <pubDate>Fri, 07 Dec 2018 18:36:53 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/original-consultar-todas-contas-que-o-usuario-tem-acesso/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Taxas</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/taxas/</link>
+      <pubDate>Tue, 30 Oct 2018 18:52:33 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/taxas/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;1. Como consultar Taxas de um Produto&amp;rdquo;
+}
+[/block]
+Com o intuito de trazer transparência para a cliente, é possível consultar as taxas que ela possui referente a cada produto que utiliza. Por exemplo:&lt;/p&gt;
+&lt;p&gt;Pagamento de Boleto: &lt;code&gt;barcode_payment&lt;/code&gt;
+Transferência Interna: &lt;code&gt;internal_transfer&lt;/code&gt;
+Transferência Externa: &lt;code&gt;external_transfer&lt;/code&gt;
+[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;success&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;strong&gt;GET&lt;/strong&gt;\n\nhttps://sandbox-api.openbank.stone.com.br/api/v1/accounts/id/fees/fee_type&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Para isso, consulte o seguinte endpoint:&amp;rdquo;
+}
+[/block]
+Antes de realizar o &lt;strong&gt;GET&lt;/strong&gt; na requisição, é necessário substituir o {id} da requisição pelo &lt;em&gt;account_id&lt;/em&gt; da usuária a ser consultada e o tipo de produto que deseja consultar, o &lt;code&gt;fee_type&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Veja o exemplo abaixo, no qual, iremos realizar uma consulta das taxas de pagamento de boleto (&lt;code&gt;barcode_payment&lt;/code&gt;):&lt;/p&gt;
+&lt;h2 id=&#34;11-analisando-o-json&#34;&gt;1.1 Analisando o JSON&lt;/h2&gt;
+&lt;p&gt;Abaixo temos um JSON da resposta deste comando:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;amount&amp;quot;: 130\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]
+Veja que a taxa de pagamento retornou um &lt;code&gt;amount&lt;/code&gt; de 230, que é referente a R$ 1,30 de taxa de pagamento em reais.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Conta</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/contas-vinculadas/</link>
+      <pubDate>Tue, 30 Oct 2018 18:50:48 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/contas-vinculadas/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;1. Como Consultar Dados de uma Conta&amp;rdquo;
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;Como descrito anteriormente, a &lt;code&gt;Accounts API&lt;/code&gt; tem como responsabilidade ser um endpoint consultivo de informações da conta de pagamentos da usuária.&lt;/p&gt;
+&lt;p&gt;Para exemplificar isso, vamos utilizar como exemplo, a consulta dos dados bancários de um determinado &lt;em&gt;account_id&lt;/em&gt;, neste caso, iremos utilizar o seguinte &lt;em&gt;id&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;account_id&lt;/code&gt;:&lt;strong&gt;383debcd-0fcd-47cd-b997-3abe668ca9d0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Note que todo o &lt;em&gt;id&lt;/em&gt; consultado na &lt;code&gt;Accounts API&lt;/code&gt; será o &lt;em&gt;account_id&lt;/em&gt;.
+[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;success&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Para tal requisição oferecemos o endpoint abaixo:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;strong&gt;GET&lt;/strong&gt;\n\nhttps://sandbox-api.openbank.stone.com.br/api/v1/accounts/id&amp;rdquo;
+}
+[/block]
+Neste exemplo, ao realizarmos um &lt;strong&gt;GET&lt;/strong&gt; no endpoint &lt;strong&gt;/accounts/id&lt;/strong&gt;, substituindo o &lt;strong&gt;{id}&lt;/strong&gt; pelo &lt;em&gt;account_id&lt;/em&gt; do cliente, iremos retornar os dados básicos de uma determinada conta. Veja a requisição abaixo:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;curl &amp;ndash;request GET \\n  &amp;ndash;url https://sandbox-api.openbank.stone.com.br/api/v1/accounts/813b953f-76fd-4776-ac25-b38bb8fce90b \\n  &amp;ndash;header &amp;lsquo;authorization: Bearer {token}&#39;&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;curl&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;require &amp;lsquo;uri&amp;rsquo;\nrequire &amp;lsquo;net/http&amp;rsquo;\n\nurl = URI(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/813b953f-76fd-4776-ac25-b38bb8fce90b&amp;quot;)\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\n\nrequest = Net::HTTP::Get.new(url)\nrequest[&amp;quot;authorization&amp;quot;] = &amp;lsquo;Bearer {token}&#39;\n\nresponse = http.request(request)\nputs response.read_body&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;ruby&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var data = JSON.stringify(false);\n\nvar xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(&amp;quot;readystatechange&amp;quot;, function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(&amp;quot;GET&amp;quot;, &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/813b953f-76fd-4776-ac25-b38bb8fce90b&amp;quot;);\nxhr.setRequestHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\n\nxhr.send(data);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;javascript&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;import requests\n\nurl = &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/813b953f-76fd-4776-ac25-b38bb8fce90b&amp;quot;\n\nheaders = {&amp;lsquo;authorization&amp;rsquo;: &amp;lsquo;Bearer {token}&#39;}\n\nresponse = requests.request(&amp;quot;GET&amp;quot;, url, headers=headers)\n\nprint(response.text)&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;python&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var client = new RestClient(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/813b953f-76fd-4776-ac25-b38bb8fce90b&amp;quot;);\nvar request = new RestRequest(Method.GET);\nrequest.AddHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\nIRestResponse response = client.Execute(request);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;csharp&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;warning&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;API Reference:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/reference#get_accounts-id%22&#34;&gt;https://docs.openbank.stone.com.br/v1.0/reference#get_accounts-id&amp;quot;&lt;/a&gt;
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;11-analisando-o-json&#34;&gt;1.1 Analisando o JSON&lt;/h2&gt;
+&lt;p&gt;[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;account_code&amp;quot;: &amp;quot;895115&amp;quot;,\n  &amp;quot;id&amp;quot;: &amp;quot;383debcd-0fcd-47cd-b997-3abe668ca9d0&amp;quot;,\n  &amp;quot;branch_code&amp;quot;: &amp;quot;1&amp;quot;,\n  &amp;quot;owner_id&amp;quot;: &amp;quot;user:813b953f-76fd-4776-ac25-b38bb8fce90b&amp;quot;,\n  &amp;quot;owner_document&amp;quot;: &amp;quot;31455351881&amp;quot;,\n  &amp;quot;owner_name&amp;quot;: &amp;quot;John Doe&amp;quot;\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]
+A diferença deste endpoint para o endpoint &lt;em&gt;/accounts&lt;/em&gt; realizado na &lt;a href=&#34;doc:overview&#34;&gt;Overview Accounts API&lt;/a&gt; é que consultamos apenas um &lt;em&gt;id&lt;/em&gt; específico, retornando os dados de apenas uma conta bancária. Já o &lt;em&gt;/accounts&lt;/em&gt; lista todas as contas vinculadas a um determinado operador/parceiro, se tornando também o endpoint responsável por consultar o &lt;em&gt;account_id&lt;/em&gt; da usuária.
+[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;2. Como Consultar o Saldo&amp;rdquo;
+}
+[/block]
+O saldo de uma conta, representa o montante em reais do dinheiro que a usuária tem disponível para uso.&lt;/p&gt;
+&lt;p&gt;Aproveitando que já sabemos o &lt;em&gt;account_id&lt;/em&gt; que devemos consultar, iremos verificar o saldo da  conta do exemplo acima.
+[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;success&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Para isso utilize o seguinte endpoint:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;strong&gt;GET&lt;/strong&gt;\n\nhttps://sandbox-api.openbank.stone.com.br/api/v1/accounts/id/balance&amp;rdquo;
+}
+[/block]
+Ao realizarmos um &lt;strong&gt;GET&lt;/strong&gt; no endpoint &lt;strong&gt;/accounts/{id}/balance&lt;/strong&gt;, substituindo o &lt;strong&gt;{id}&lt;/strong&gt; pelo &lt;em&gt;account_id&lt;/em&gt; do cliente, o mesmo irá retornar o saldo de uma determinada conta. Veja o exemplo:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;curl &amp;ndash;request GET \\n  &amp;ndash;url https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/balance \\n  &amp;ndash;header &amp;lsquo;authorization: Bearer {token}&#39;&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;curl&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;require &amp;lsquo;uri&amp;rsquo;\nrequire &amp;lsquo;net/http&amp;rsquo;\n\nurl = URI(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/balance&amp;quot;)\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\n\nrequest = Net::HTTP::Get.new(url)\nrequest[&amp;quot;authorization&amp;quot;] = &amp;lsquo;Bearer {token}&#39;\n\nresponse = http.request(request)\nputs response.read_body&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;ruby&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var data = JSON.stringify(false);\n\nvar xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(&amp;quot;readystatechange&amp;quot;, function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(&amp;quot;GET&amp;quot;, &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/balance&amp;quot;);\nxhr.setRequestHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\n\nxhr.send(data);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;javascript&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;import requests\n\nurl = &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/balance&amp;quot;\n\nheaders = {&amp;lsquo;authorization&amp;rsquo;: &amp;lsquo;Bearer {token}&#39;}\n\nresponse = requests.request(&amp;quot;GET&amp;quot;, url, headers=headers)\n\nprint(response.text)&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;python&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var client = new RestClient(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/balance&amp;quot;);\nvar request = new RestRequest(Method.GET);\nrequest.AddHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\nIRestResponse response = client.Execute(request);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;csharp&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;warning&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;API Reference:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/reference#get_accounts-id-balance%22&#34;&gt;https://docs.openbank.stone.com.br/v1.0/reference#get_accounts-id-balance&amp;quot;&lt;/a&gt;
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;21-analisando-o-json&#34;&gt;2.1 Analisando o JSON&lt;/h2&gt;
+&lt;p&gt;Abaixo temos um JSON da resposta dessa requisição:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;{\n  &amp;quot;balance&amp;quot;: 9998\n}&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]
+Note que a variável  &lt;em&gt;balance&lt;/em&gt; retornou um total de &lt;strong&gt;9998&lt;/strong&gt;, isso corresponde a &lt;strong&gt;R$ 99,98&lt;/strong&gt; reais da conta do usuário.
+[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;3. Como Consultar o Extrato&amp;rdquo;
+}
+[/block]
+O extrato de uma conta é representado pelas últimas movimentações financeiras de entrada e saída de dinheiro.&lt;/p&gt;
+&lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;success&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Para realizar a consulta de extrato utilize o seguinte endpoint:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;strong&gt;GET&lt;/strong&gt;\n\nhttps://sandbox-api.openbank.stone.com.br/api/v1/accounts/id/statement&amp;rdquo;
+}
+[/block]
+Considerando a conta da usuária, faremos a chamada abaixo:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;curl &amp;ndash;request GET \\n  &amp;ndash;url https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/statement \\n  &amp;ndash;header &amp;lsquo;authorization: Bearer {token}&#39;&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;require &amp;lsquo;uri&amp;rsquo;\nrequire &amp;lsquo;net/http&amp;rsquo;\n\nurl = URI(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/statement&amp;quot;)\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\n\nrequest = Net::HTTP::Get.new(url)\nrequest[&amp;quot;authorization&amp;quot;] = &amp;lsquo;Bearer {token}&#39;\n\nresponse = http.request(request)\nputs response.read_body&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;ruby&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var data = JSON.stringify(false);\n\nvar xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(&amp;quot;readystatechange&amp;quot;, function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(&amp;quot;GET&amp;quot;, &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/statement&amp;quot;);\nxhr.setRequestHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\n\nxhr.send(data);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;javascript&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;import requests\n\nurl = &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/statement&amp;quot;\n\nheaders = {&amp;lsquo;authorization&amp;rsquo;: &amp;lsquo;Bearer {token}&#39;}\n\nresponse = requests.request(&amp;quot;GET&amp;quot;, url, headers=headers)\n\nprint(response.text)&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;python&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var client = new RestClient(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts/383debcd-0fcd-47cd-b997-3abe668ca9d0/statement&amp;quot;);\nvar request = new RestRequest(Method.GET);\nrequest.AddHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\nIRestResponse response = client.Execute(request);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;csharp&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;warning&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;API Reference:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/reference#get_accounts-id-statement%22&#34;&gt;https://docs.openbank.stone.com.br/v1.0/reference#get_accounts-id-statement&amp;quot;&lt;/a&gt;
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;31-analisando-o-json&#34;&gt;3.1 Analisando o JSON&lt;/h2&gt;
+&lt;p&gt;Abaixo temos um JSON da resposta dessa requisição:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;[\n  {\n    &amp;quot;amount&amp;quot;: 78920,\n    &amp;quot;created_at&amp;quot;: &amp;quot;2018-10-16T14:08:53Z&amp;quot;,\n    &amp;quot;id&amp;quot;: &amp;quot;cb49d1a5-3f9d-4274-ae5b-de5a7c0d4cfe&amp;quot;,\n    &amp;quot;operation&amp;quot;: &amp;quot;credit&amp;quot;,\n    &amp;quot;type&amp;quot;: &amp;quot;external&amp;quot;,\n    &amp;quot;counter_party&amp;quot;: {\n      &amp;quot;account&amp;quot;: {\n        &amp;quot;institution&amp;quot;: &amp;quot;654874&amp;quot;,\n        &amp;quot;account_code&amp;quot;: &amp;quot;98898743&amp;quot;,\n        &amp;quot;branch_code&amp;quot;: &amp;quot;9875&amp;quot;,\n        &amp;quot;institution_name&amp;quot;: &amp;quot;Banco do Brasil S.A.&amp;quot;\n      },\n      &amp;quot;entity&amp;quot;: {\n        &amp;quot;name&amp;quot;: &amp;quot;Heriberto Marcelo&amp;quot;,\n        &amp;quot;document&amp;quot;: &amp;quot;60107999021&amp;quot;,\n        &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;\n      }\n    }\n  },\n  {\n    &amp;quot;amount&amp;quot;: 1000,\n    &amp;quot;created_at&amp;quot;: &amp;quot;2018-10-16T15:08:47Z&amp;quot;,\n    &amp;quot;id&amp;quot;: &amp;quot;96849628-d6d6-4a7a-86ff-22b3264fca4c&amp;quot;,\n    &amp;quot;operation&amp;quot;: &amp;quot;credit&amp;quot;,\n    &amp;quot;type&amp;quot;: &amp;quot;internal&amp;quot;,\n    &amp;quot;status&amp;quot;: &amp;quot;FINISHED&amp;quot;,\n    &amp;quot;description&amp;quot;: &amp;quot;Devolvendo aquele dinheiro.&amp;quot;,\n    &amp;quot;counter_party&amp;quot;: {\n      &amp;quot;account&amp;quot;: {\n        &amp;quot;institution&amp;quot;: &amp;quot;16501555&amp;quot;,\n        &amp;quot;account_code&amp;quot;: &amp;quot;000018&amp;quot;,\n        &amp;quot;branch_code&amp;quot;: &amp;quot;1&amp;quot;,\n        &amp;quot;institution_name&amp;quot;: &amp;quot;STONE PAGAMENTOS S.A.&amp;quot;\n      },\n      &amp;quot;entity&amp;quot;: {\n        &amp;quot;name&amp;quot;: &amp;quot;Reinaldo Nathália&amp;quot;,\n        &amp;quot;document&amp;quot;: &amp;quot;60107999021&amp;quot;,\n        &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;\n      }\n    }\n  }\n]&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]
+Note que na resposta acima, foram feitas duas transferências, uma interna e uma externa. Ambas com as suas particularidades de retorno.&lt;/p&gt;
+&lt;p&gt;Obs: O extrato é divido por tipos de movimentação. É possível consultar qual foi a movimentação pelo &lt;code&gt;type&lt;/code&gt; da resposta, no caso acima podemos notar que tivemos duas movimentações, uma transferência internal (&lt;code&gt;type:internal&lt;/code&gt;) e uma transferência externa (`type:external), ambas com campos de resposta diferentes.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Overview Accounts API</title>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/overview-a/</link>
+      <pubDate>Fri, 26 Oct 2018 20:45:55 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/overview-a/</guid>
+      <description>
+        
+        
+        &lt;p&gt;[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Descrição do modelo de contas&amp;rdquo;
+}
+[/block]
+Em nossa modelagem da conta de pagamentos, temos o conceito de o &lt;em&gt;user_id&lt;/em&gt; e o &lt;em&gt;account_id&lt;/em&gt;. Esse conceito pode ser definido da seguinte maneira:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;user_id&lt;/code&gt;: se refere ao identificador do perfil da cliente, contendo informações de dados cadastrais da usuária, como por exemplo, nome, apelido e CPF.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;account_id&lt;/code&gt;: se refere ao identificador da conta do cliente, contendo dados da conta de pagamentos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Essa modelagem foi feita considerando que antes de uma &lt;code&gt;user_id&lt;/code&gt; se tornar um &lt;code&gt;account_id&lt;/code&gt;, ela passa por um processo de &lt;em&gt;due diligence&lt;/em&gt;, analisando informações de risco desse cliente, antes  dela ter una Conta de pagamentos Stone.
+[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;Todo o processo de Due Diligience da usuária fica sob responsabilidade da Stone, e se aprovado, será gerado um &lt;code&gt;account_id&lt;/code&gt; para a usuária&amp;rdquo;
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;1. Verificar o Account_id&amp;rdquo;
+}
+[/block]
+A &lt;strong&gt;Accounts API&lt;/strong&gt; possuí como objetivo ser um endpoint consultivo, na qual, trará como respostas informações bancárias sobre a conta do usuário.&lt;/p&gt;
+&lt;p&gt;O &lt;code&gt;user_id&lt;/code&gt;retorna dados cadastrais do usuário enquanto o &lt;code&gt;account_id&lt;/code&gt;retorna dados em relação a conta do usuário.
+[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;success&amp;rdquo;,
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Para isso, vamos utilizar o seguinte endpoint da Accounts API para consultar esse account_id:&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;&lt;strong&gt;GET&lt;/strong&gt;\n\nhttps://sandbox-api.openbank.stone.com.br/api/v1/accounts&amp;rdquo;
+}
+[/block]
+Obs: A &lt;em&gt;account_id&lt;/em&gt;, será a mesma utilizada para outras requisições da &lt;strong&gt;Accounts API&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Veja o exemplo da chamada:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;curl &amp;ndash;request GET \\n  &amp;ndash;url https://sandbox-api.openbank.stone.com.br/api/v1/accounts \\n  &amp;ndash;header &amp;lsquo;authorization: Bearer {token}&#39;&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;curl&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;require &amp;lsquo;uri&amp;rsquo;\nrequire &amp;lsquo;net/http&amp;rsquo;\n\nurl = URI(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts&amp;quot;)\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\n\nrequest = Net::HTTP::Get.new(url)\nrequest[&amp;quot;authorization&amp;quot;] = &amp;lsquo;Bearer {token}&#39;\n\nresponse = http.request(request)\nputs response.read_body&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;ruby&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var data = JSON.stringify(false);\n\nvar xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(&amp;quot;readystatechange&amp;quot;, function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(&amp;quot;GET&amp;quot;, &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts&amp;quot;);\nxhr.setRequestHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\n\nxhr.send(data);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;javascript&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;import requests\n\nurl = &amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts&amp;quot;\n\nheaders = {&amp;lsquo;authorization&amp;rsquo;: &amp;lsquo;Bearer {token}&#39;}\n\nresponse = requests.request(&amp;quot;GET&amp;quot;, url, headers=headers)\n\nprint(response.text)&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;python&amp;rdquo;
+},
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;var client = new RestClient(&amp;quot;https://sandbox-api.openbank.stone.com.br/api/v1/accounts&amp;quot;);\nvar request = new RestRequest(Method.GET);\nrequest.AddHeader(&amp;quot;authorization&amp;quot;, &amp;quot;Bearer {token}&amp;quot;);\nIRestResponse response = client.Execute(request);&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;csharp&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;h2 id=&#34;11-analisando-o-json&#34;&gt;1.1 Analisando o JSON&lt;/h2&gt;
+&lt;p&gt;Temos como exemplo:
+[block:code]
+{
+&amp;ldquo;codes&amp;rdquo;: [
+{
+&amp;ldquo;code&amp;rdquo;: &amp;ldquo;[\n  {\n    &amp;quot;account_code&amp;quot;: &amp;quot;NÚMERO_DA_CONTA_DA_USUÁRIA&amp;quot;,\n    &amp;quot;id&amp;quot;: &amp;quot;NÚMERO_DE_IDENTIFICAÇÃO_DA_CONTA&amp;quot;,\n    &amp;quot;branch_code&amp;quot;: &amp;quot;NÚMERO_DA_AGÊNCIA&amp;quot;,\n    &amp;quot;owner_id&amp;quot;: &amp;quot;ID_DA_USUARIA&amp;quot;,\n    &amp;quot;owner_document&amp;quot;: &amp;quot;DOCUMENTO&amp;quot;,\n    &amp;quot;owner_name&amp;quot;: &amp;quot;NOME COMPLETO&amp;quot;\n  },\n]&amp;rdquo;,
+&amp;ldquo;language&amp;rdquo;: &amp;ldquo;json&amp;rdquo;
+}
+]
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:callout]
+{
+&amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;,
+&amp;ldquo;body&amp;rdquo;: &amp;ldquo;Uma mesma usuária pode possuir mais de uma conta vinculada, sendo elas uma conta de pessoa física e diversas contas de pessoa jurídica.&amp;rdquo;
+}
+[/block]&lt;/p&gt;
+&lt;p&gt;[block:api-header]
+{
+&amp;ldquo;title&amp;rdquo;: &amp;ldquo;Outras requisições&amp;rdquo;
+}
+[/block]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/docs/verificar-contas-vinculadas-a-um-usu%C3%A1rio&#34;&gt;Verificar contas vinculadas a um usuário&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/docs/dados-b%C3%A1sicos-do-usu%C3%A1rio&#34;&gt;Dados da conta do usuário&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/docs/saldo-da-conta-do-usu%C3%A1rio&#34;&gt;Saldo da conta do usuário&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/docs/extrato-da-conta-do-usu%C3%A1rio&#34;&gt;Extrato da conta do usuário&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/docs/taxa-cobrada-por-tipo-de-pagamento&#34;&gt;Taxa cobrada por tipo de pagamento&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
