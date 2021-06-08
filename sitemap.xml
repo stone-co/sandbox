@@ -121,11 +121,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/</loc>
-    <lastmod>2021-06-08T16:40:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/criar-pagamento-pendente/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
   </url>
@@ -629,12 +624,12 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/</loc>
-    <lastmod>2021-06-08T16:40:00-03:00</lastmod>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/agendamento/operacoes-agendadas/</loc>
+    <lastmod>2021-05-25T17:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/agendamento/operacoes-agendadas/</loc>
+    <loc>https://stone-co.github.io/sandbox/</loc>
     <lastmod>2021-05-25T17:00:00-03:00</lastmod>
   </url>
   
