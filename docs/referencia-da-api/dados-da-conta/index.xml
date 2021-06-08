@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Dados da conta</title>
-    <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</link>
+    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/</link>
     <description>Recent content in Dados da conta on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Criar Novo Pedido de Conta de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/</link>
       <pubDate>Mon, 04 May 2020 18:32:40 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/</guid>
       <description>
         
         
@@ -53,7 +53,7 @@ Para aplicações o global_id corresponde a &amp;ldquo;application:CLIENT_ID&amp
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;br&gt;
-Para gerar o token &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;acesse aqui&lt;/a&gt;.&lt;/p&gt;
+Para gerar o token &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/guias/integracao/autenticacao&#34;&gt;acesse aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;x-stone-idempotency-key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;25478963571458&amp;#34;&lt;/span&gt;, 
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJhY2NvdW50cy1odWJpZEBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJuYmYiOjE2MTU0NzI9GjAsInNlc3Npb25fbWV0YWRhdGEiOnsiZW1wcmVzYVpXIjoxLCJjaGF2ZVpXIjoienciLCJwcm9kdWNhbyI6ZmFsc2V9LCJpc3MiOiJkODAzMDQ4ZC03MzA2LTQxNTYtYjNlMS1hNjlkMWNiZjQ3ODEiLCJyZWRpcmVjdF91cmkiOiJodHRwOi8vbG9jYWxob3N0Ojg1ODUvc3RvbmViYW5rL2NvbnNlbnRyZWRpcmVjdCIsInR5cGUiOiJjb25zZW50IiwiZXhwIjoxNjE1NDc5OTI5LCJpYWJ3OjE2MTU0NzI3MTksImp0aSI6Ijk0NTlmMjhhLTQ5NDEtNDA2Zi05YjExLWFmMjdhMWQ2MzEyMCJ9.SptDNxVKp5W_9B&amp;#34;&lt;/span&gt; 
@@ -74,7 +74,7 @@ Para gerar o token &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#
 &lt;p&gt;1- Requisite as chaves de criptografia:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2- Extraia da resposta a chave que tenha como chave valor &amp;ldquo;use: enc&amp;rdquo;, essa corresponde a chave para criptografar (enc/encrypt).&lt;/p&gt;
-&lt;p&gt;3- Usar uma biblioteca de criptografia passando o payload (dados do usuário, veja abaixo no &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/#schema&#34;&gt;Schema&lt;/a&gt; ), a chave pública encontrada no item 2.&lt;/p&gt;
+&lt;p&gt;3- Usar uma biblioteca de criptografia passando o payload (dados do usuário, veja abaixo no &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/#schema&#34;&gt;Schema&lt;/a&gt; ), a chave pública encontrada no item 2.&lt;/p&gt;
 &lt;p&gt;Segue um exemplo de como gerar um JWE em Python:&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/p&gt;
@@ -182,7 +182,7 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Observação&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Por ser uma chamada assíncrona temos como resposta o código de status 202 e o id do pedido de requisição. Esse pode ser utilizado pela &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento&#34;&gt;API de consulta&lt;/a&gt; do pedido de requisição para verificar os metadados e o estado atual do cadastro do cliente.&lt;/p&gt;
+&lt;p&gt;Por ser uma chamada assíncrona temos como resposta o código de status 202 e o id do pedido de requisição. Esse pode ser utilizado pela &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento&#34;&gt;API de consulta&lt;/a&gt; do pedido de requisição para verificar os metadados e o estado atual do cadastro do cliente.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -197,10 +197,10 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
     
     <item>
       <title>Docs: Consultar Dados do Pedido da Conta de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</link>
       <pubDate>Mon, 04 May 2020 18:32:40 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</guid>
       <description>
         
         
@@ -420,10 +420,10 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
     
     <item>
       <title>Docs: Verificar Status de Uma Entidade</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</link>
       <pubDate>Mon, 04 May 2020 18:32:40 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</guid>
       <description>
         
         
@@ -638,10 +638,10 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
     
     <item>
       <title>Docs: O Que é Uma Conta</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/</link>
       <pubDate>Wed, 05 Dec 2018 22:14:31 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/</guid>
       <description>
         
         
@@ -673,10 +673,10 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
     
     <item>
       <title>Docs: Consultar Dados da Conta</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/</link>
       <pubDate>Mon, 01 Apr 2019 18:52:27 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/</guid>
       <description>
         
         
@@ -715,10 +715,10 @@ content-type: application/json
     
     <item>
       <title>Docs: Consultar Todas Contas às Quais Se Tem Acesso</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</link>
       <pubDate>Mon, 01 Apr 2019 19:11:50 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</guid>
       <description>
         
         
@@ -765,10 +765,10 @@ content-type: application/json
     
     <item>
       <title>Docs: O Objeto Saldo</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/</link>
       <pubDate>Tue, 10 Mar 2020 17:31:02 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/</guid>
       <description>
         
         
@@ -804,10 +804,10 @@ content-type: application/json
     
     <item>
       <title>Docs: Consultar o Saldo</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/</link>
       <pubDate>Mon, 01 Apr 2019 19:02:42 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/</guid>
       <description>
         
         
@@ -842,10 +842,10 @@ content-type: application/json
     
     <item>
       <title>Docs: Objetos do Extrato</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</link>
       <pubDate>Thu, 13 Aug 2020 18:33:18 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</guid>
       <description>
         
         
@@ -853,7 +853,7 @@ content-type: application/json
 &lt;br&gt;
 &lt;p&gt;O extrato mostra todos os tipos de transações que ocorreram em determinada conta de pagamento.&lt;/p&gt;
 &lt;p&gt;Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.&lt;/p&gt;
-&lt;p&gt;Para ver a estrutura de cada transação, basta dar uma olhadinha &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para ver a estrutura de cada transação, basta dar uma olhadinha &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;tipos-de-transação&#34;&gt;Tipos de Transação&lt;/h3&gt;
 &lt;p&gt;Veja os possíveis valores para o campo &lt;code&gt;type&lt;/code&gt;, sua descrição e as possíveis combinações com o campo &lt;code&gt;operation&lt;/code&gt;.&lt;/p&gt;
@@ -1113,7 +1113,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;counter_party&lt;/td&gt;
-&lt;td&gt;Dados do beneficiário da transação. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-counter_party&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados do beneficiário da transação. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-counter_party&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;instant_payment&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;salary&lt;/code&gt;, &lt;code&gt;salary_portability&lt;/code&gt;, &lt;code&gt;salary_portability_refund&lt;/code&gt;, &lt;code&gt;salary_portability_employer_refund&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -1191,13 +1191,13 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;account_settlement_policy_retention&lt;/td&gt;
-&lt;td&gt;Dados da conta em que será realizada a retenção de liquidação de conta. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account_settlement_policy_retention&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados da conta em que será realizada a retenção de liquidação de conta. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account_settlement_policy_retention&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;loan_payments&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;original_operation_entry&lt;/td&gt;
-&lt;td&gt;Dados da operação original.Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-original_operation_entry&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Dados da operação original.Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-original_operation_entry&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;loan_payments&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -1221,7 +1221,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;card_acceptor&lt;/td&gt;
-&lt;td&gt;Dados sobre o cartão em que foi realizada a compra. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-card_acceptor&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados sobre o cartão em que foi realizada a compra. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-card_acceptor&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -1233,13 +1233,13 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;transaction_authorization&lt;/td&gt;
-&lt;td&gt;Dados sobre a autorização da transação de uma compra feita com cartão. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-transaction_authorization&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados sobre a autorização da transação de uma compra feita com cartão. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-transaction_authorization&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;transaction_chargeback&lt;/td&gt;
-&lt;td&gt;Dados sobre o estorno da transação de uma compra feita com cartão. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-transaction_chargeback&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados sobre o estorno da transação de uma compra feita com cartão. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-transaction_chargeback&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -1284,12 +1284,12 @@ content-type: application/json
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;account&lt;/td&gt;
-&lt;td&gt;Dados da conta destino. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados da conta destino. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;entity&lt;/td&gt;
-&lt;td&gt;Dados Pessoais. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-entity-&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados Pessoais. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-entity-&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1381,7 +1381,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;applied_retention_rules&lt;/td&gt;
-&lt;td&gt;Dados de onde será aplicada as regras de juros.  Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-applied_retention_rules&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados de onde será aplicada as regras de juros.  Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-applied_retention_rules&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1440,7 +1440,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;retained_portion&lt;/td&gt;
-&lt;td&gt;Dados sobre a porcentagem dos juros.Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-retained_portion&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados sobre a porcentagem dos juros.Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-retained_portion&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1508,7 +1508,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;beneficiary&lt;/td&gt;
-&lt;td&gt;Dados do beneficário do empréstimo/crédito.  Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-beneficiary&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados do beneficário do empréstimo/crédito.  Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-beneficiary&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1645,7 +1645,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;value&lt;/td&gt;
-&lt;td&gt;Dados do valor convertido pra BRL, com taxas. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados do valor convertido pra BRL, com taxas. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value&#34;&gt;abaixo&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1722,7 +1722,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;value&lt;/td&gt;
-&lt;td&gt;Dados do valor estornado.Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value&#34;&gt;aqui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Dados do valor estornado.Veja seus campos &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value&#34;&gt;aqui&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1733,10 +1733,10 @@ content-type: application/json
     
     <item>
       <title>Docs: Consultar Extrato</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-extrato/</link>
       <pubDate>Mon, 01 Apr 2019 19:05:11 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-extrato/</guid>
       <description>
         
         
@@ -1792,7 +1792,7 @@ Filtra o extrato por um ou mais tipos de registro.&lt;/p&gt;
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Tipos diferentes de extratos&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo &lt;code&gt;type&lt;/code&gt; da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (&lt;code&gt;type:internal&lt;/code&gt;) e uma transferência externa (&lt;code&gt;type:external&lt;/code&gt;), ambas com campos de resposta diferentes. Veja neste &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/&#34;&gt;link&lt;/a&gt; para mais informações sobre o JSON Schema de cada tipo de operação.&lt;/p&gt;
+&lt;p&gt;O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo &lt;code&gt;type&lt;/code&gt; da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (&lt;code&gt;type:internal&lt;/code&gt;) e uma transferência externa (&lt;code&gt;type:external&lt;/code&gt;), ambas com campos de resposta diferentes. Veja neste &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/&#34;&gt;link&lt;/a&gt; para mais informações sobre o JSON Schema de cada tipo de operação.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -1884,10 +1884,10 @@ O &lt;code&gt;_balance_before_&lt;/code&gt; registra o saldo do usuário antes d
     
     <item>
       <title>Docs: Consultar Uma Entrada no Extrato</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/</link>
       <pubDate>Mon, 01 Apr 2019 18:19:45 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/</guid>
       <description>
         
         
@@ -1946,10 +1946,10 @@ content-type: application/json
     
     <item>
       <title>Docs: O Objeto Taxas</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/</link>
       <pubDate>Wed, 04 Mar 2020 17:04:54 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/</guid>
       <description>
         
         
@@ -2062,10 +2062,10 @@ content-type: application/json
     
     <item>
       <title>Docs: Consultar Taxas</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-taxas/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-taxas/</link>
       <pubDate>Mon, 01 Apr 2019 19:09:32 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-taxas/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-taxas/</guid>
       <description>
         
         
@@ -2109,10 +2109,10 @@ content-type: application/json
     
     <item>
       <title>Docs: Consultar Todas as Taxas</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/</link>
       <pubDate>Tue, 19 Feb 2019 19:30:26 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/</guid>
       <description>
         
         

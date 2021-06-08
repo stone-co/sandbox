@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stone OpenBank – Conta Stone SDK (Beta)</title>
-    <link>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/</link>
+    <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/</link>
     <description>Recent content in Conta Stone SDK (Beta) on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Overview</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/overview/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/overview/</link>
       <pubDate>Tue, 19 Nov 2019 14:32:50 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/overview/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/overview/</guid>
       <description>
         
         
@@ -29,7 +29,7 @@
 &lt;h4 id=&#34;introdução&#34;&gt;&lt;strong&gt;Introdução&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação (Auth SDK), aprovação (Approver SDK) e verificação de &lt;a href=&#34;https://en.wikipedia.org/wiki/Know_your_customer&#34;&gt;KYC&lt;/a&gt; (&lt;em&gt;Know your costumer&lt;/em&gt;) (Pegasus SDK).&lt;/p&gt;
 &lt;p&gt;Segue abaixo um diagrama de como funciona a comunicação entre esses três atores.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../../docs/guias/conta-stone-sdk/overview/conta-stone-sdk-diagram.png&#34; alt=&#34;imagem_conta_stone_sdk_diagram&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/sandbox/docs/guias/conta-stone-sdk/overview/conta-stone-sdk-diagram.png&#34; alt=&#34;imagem_conta_stone_sdk_diagram&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Auth SDK - responsável por executar todo o processo de autenticação seguindo as diretrizes do &lt;a href=&#34;https://oauth.net/2/&#34;&gt;oAuth2&lt;/a&gt;.&lt;/p&gt;
@@ -44,18 +44,18 @@
 &lt;br&gt;
 &lt;h4 id=&#34;como-integrar-com-a-sdk&#34;&gt;&lt;strong&gt;Como integrar com a SDK&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Antes de começar a integração é necessário obter uma chave de acesso ao nosso repositório. Para obter esta chave, entre em contato com a gente &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=%22Documenta%C3%A7%C3%A3o%22&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Para integrar com o &lt;strong&gt;iOS&lt;/strong&gt;, acesse &lt;a href=&#34;../../../docs/guias/conta-stone-sdk/sdk-sample-ios&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Para integrar com o &lt;strong&gt;Android&lt;/strong&gt;, acesse &lt;a href=&#34;../../../docs/guias/conta-stone-sdk/sdk-sample-android&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para integrar com o &lt;strong&gt;iOS&lt;/strong&gt;, acesse &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/guias/conta-stone-sdk/sdk-sample-ios&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para integrar com o &lt;strong&gt;Android&lt;/strong&gt;, acesse &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/guias/conta-stone-sdk/sdk-sample-android&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Sample iOS</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/</link>
       <pubDate>Sat, 20 Mar 2021 10:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/</guid>
       <description>
         
         
@@ -221,17 +221,17 @@ open Sample.xcworkspace
     
     <item>
       <title>Docs: Sample Android</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/</link>
+      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/</link>
       <pubDate>Sat, 20 Mar 2021 10:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/</guid>
+      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/</guid>
       <description>
         
         
         &lt;hr&gt;
 &lt;p&gt;SDK de integração para Android.&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;A Conta Stone SDK é responsável por todo o fluxo de login e Know Your Customer da &lt;a href=&#34;../../../docs/guias/stone-openbank-api&#34;&gt;Stone Openbank API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A Conta Stone SDK é responsável por todo o fluxo de login e Know Your Customer da &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/guias/stone-openbank-api&#34;&gt;Stone Openbank API&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;contato&#34;&gt;&lt;strong&gt;Contato&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através do Azendoo.&lt;/p&gt;
