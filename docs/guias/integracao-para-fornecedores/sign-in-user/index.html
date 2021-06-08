@@ -18,15 +18,15 @@
 <link rel="icon" type="image/png" href="/sandbox/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/sandbox/favicons/android-icon-192x192.png" sizes="192x192">
 
-<title>Sign-in | Stone OpenBank</title><meta property="og:title" content="Sign-in" />
+<title>Sign-in (Draft) | Stone OpenBank</title><meta property="og:title" content="Sign-in (Draft)" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/" />
 <meta property="og:updated_time" content="2021-06-08T16:40:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Sign-in">
+<meta itemprop="name" content="Sign-in (Draft)">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sign-in"/>
+<meta name="twitter:title" content="Sign-in (Draft)"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.d67a9039660e127378bfcab2021b7e51.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.31924145bfb72afaee3f5dcea4ee30f6.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.d67a9039660e127378bfcab2021b7e51.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.31924145bfb72afaee3f5dcea4ee30f6.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -732,7 +732,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Sign-in</a>
+    <a  href="/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Sign-in (Draft)</a>
   </li>
   <ul>
     <li class="collapse show" id="sandboxdocsguiasintegracao-para-fornecedoressign-in-user">
@@ -757,7 +757,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/guias/integracao-para-fornecedores/notification/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Notification</a>
+    <a  href="/sandbox/docs/guias/integracao-para-fornecedores/notification/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Notification (Draft)</a>
   </li>
   <ul>
     <li class="collapse " id="sandboxdocsguiasintegracao-para-fornecedoresnotification">
@@ -4923,7 +4923,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/">Sign-in</a>
+	<a href="https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/">Sign-in (Draft)</a>
 </li>
 
 	</ol>
@@ -4932,7 +4932,7 @@
             
 <div class="td-content">
 	<div class="entry-title">
-		<h1>Sign-in</h1>
+		<h1>Sign-in (Draft)</h1>
         </div>
 	
 	<hr>
@@ -5004,6 +5004,26 @@
 <td>mobile_app_instance_id</td>
 <td>Id retornado pelo firebase.</td>
 </tr>
+<tr>
+<td>subject</td>
+<td>Quem deseja fazer a ação.</td>
+</tr>
+<tr>
+<td>action</td>
+<td>Ação a ser autorizada.</td>
+</tr>
+<tr>
+<td>resource</td>
+<td>Recurso que sofrerá a ação.</td>
+</tr>
+<tr>
+<td>resource_server</td>
+<td>Responsável por gerenciar o domínio do recurso.</td>
+</tr>
+<tr>
+<td>request</td>
+<td>Pedido que um cliente realiza a um servidor.</td>
+</tr>
 </tbody>
 </table>
 <br>
@@ -5065,7 +5085,7 @@ Os campos (assertion+assertion_response) e (challenge_id + challenge_response) s
   <span style="color:#ff79c6">&#34;token_type&#34;</span>: <span style="color:#f1fa8c">&#34;bearer&#34;</span>
 }
 </code></pre></div><br>
-<p>Caso a action a ser autorizada demande <em>challenge</em>, o fluxo seguinte deverá ser seguido.</p>
+<p>Caso a action demande <em>challenge</em>, o fluxo seguinte deverá ser seguido.</p>
 <br>
 <h4 id="fluxo-de-autorização-de-challenge"><strong>Fluxo de autorização de challenge</strong></h4>
 <hr>
@@ -5082,7 +5102,7 @@ Os campos (assertion+assertion_response) e (challenge_id + challenge_response) s
 		<span style="color:#ff79c6">&#34;details&#34;</span>: {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;challenge_required&#34;</span>}
 	}
 }
-</code></pre></div><p>Note que <code>required_types</code> indicará quais tipos de <em>credencial</em> o <em>subject</em> deverá preencher pra conseguir uma autorização. Alguns valores possíveis são: <code>login_password</code>, <code>pin</code> e <code>totp</code>.</p>
+</code></pre></div><p>Note que <code>required_types</code> indicará quais tipos de <em>credencial</em> o <em>subject</em> deverá preencher pra conseguir realizar o signin. Alguns valores possíveis são: <code>login_password</code>, <code>pin</code> e <code>totp</code>.</p>
 <br>
 <ol start="2">
 <li>O próximo <em>request</em> deverá conter o <code>challenge_solution</code>.</li>
@@ -5161,7 +5181,7 @@ Os campos (assertion+assertion_response) e (challenge_id + challenge_response) s
             <span style="color:#ff79c6">&#34;resource_id&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;inserir resource_id&gt;&#34;</span>,
             <span style="color:#ff79c6">&#34;resource_type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:resource:user&#34;</span>
         },
-        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;authorize_action_with_challenge_public&#34;</span>
+        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;action_name&#34;</span>
     },
     <span style="color:#ff79c6">&#34;subject&#34;</span>: {
         <span style="color:#ff79c6">&#34;token&#34;</span>: <span style="color:#f1fa8c">&#34;eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUUUY0c2p5RUJfRUthV0VfSkxEZExHMVlKYXVnNklTV0tQbEdEeG9qNzhjIn0.eyJqdGkiOiJhM2RhY2MyOC1mNDc0LTQ3YmQtYmNlNS1iNzU4YWEwYmE3YzYiLCJleHAiOjE2MTcxMTM5NzUsIm5iZiI6MCwiaWF0IjoxNjE3MTEzMDc1LCJpc3MiOiJodHRwczovL2xvZ2luLnNhbmRib3guc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2FjY291bnQiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZmMyMjM1ZjgtMzlhYy00Mzk1LTg5YmYtOGY1ZmIzZmU2OTZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWJjX3dlYkBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI1ZTA1ZTk0My1lYTdmLTRmOGQtODY4NS01MDFkMWVlYTYyZjgiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vc2FuZGJveC5jb250YS5zdG9uZS5jb20uYnIiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NhbmRib3gtZGFzaGJvYXJkLm9wZW5iYW5rLnN0b25lLmNvbS5iciIsImh0dHBzOi8vc2FuZGJveC5vcGVuYmFuay5zdG9uZS5jb20uYnIiXSwic2NvcGUiOiJlbnRpdHk6bGVnYWxfd3JpdGUgZW50aXR5OmxvYW46Y3JlYXRlIGludmVzdG1lbnQ6c3BhY2U6cmVhZCBjYXJkOnJlYWQgaW52ZXN0bWVudDpyZWFkIGVudGl0eTpyZWFkIHByaW5jaXBhbDpjb25zZW50IHBpeDplbnRyeSBpbnZlc3RtZW50OnNwYWNlOmRlcG9zaXQgc3RvbmVfc3ViamVjdF9pZCBlbnRpdHk6bG9hbjphY2NlcHQgcGF5bWVudGFjY291bnQ6KiBpbnZlc3RtZW50OnNwYWNlOndyaXRlIHJlY2VpdmFibGU6YWxsIGV4cGVuZDp0cmFuc2ZlcnM6ZXh0ZXJuYWwgc2FsYXJ5OnBvcnRhYmlsaXR5IGV4cGVuZDpwYXlyb2xscyBwaXg6ZW50cnlfY2xhaW0gcGl4OnBheW1lbnRfaW52b2ljZSBpbnZlc3RtZW50OnNwYWNlOmRlbGV0ZSBlbnRpdHk6d3JpdGUgcGF5bWVudGFjY291bnQ6cGF5bWVudGxpbmtzOndyaXRlIGV4cGVuZDpib2xldG9pc3N1YW5jZSBleHBlbmQ6cGF5bWVudHMgZW1haWwgaW52ZXN0bWVudDp3cml0ZSBzdG9uZV9hY2NvdW50cyBleHBlbmQ6cmVhZCBwcm9maWxlIGV4cGVuZDp0cmFuc2ZlcnM6aW50ZXJuYWwgcGl4OnBheW1lbnQgcGF5bWVudGFjY291bnQ6cGF5bWVudGxpbmtzOnJlYWQgZXhwZW5kOnBheW1lbnRsaW5rcyBjYXJkOndyaXRlIGludmVzdG1lbnQ6c3BhY2U6d2l0aGRyYXdhbCBleHBlbmQ6cGl4X3BheW1lbnQiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3RvbmVfc3ViamVjdF9pZCI6InVzZXI6ZGZmOTFiMTEtOTA1YS00YmYzLWFmZTYtMmQxZjgwYjYwMzYxIiwibmFtZSI6IkdhYnJpZWxhIEFicmV1IGRlIEFuZHJhZGUgR2FicmllbGEgQWJyZXUgZGUgQW5kcmFkZSIsInN0b25lX2FjY291bnRzIjoiZW5hYmxlZCIsInByZWZlcnJlZF91c2VybmFtZSI6ImdhYnJpZWxhLmFuZHJhZGVAc3RvbmUuY29tLmJyIiwiZ2l2ZW5fbmFtZSI6IkdhYnJpZWxhIEFicmV1IGRlIEFuZHJhZGUiLCJsb2NhbGUiOiJwdC1CUiIsImZhbWlseV9uYW1lIjoiR2FicmllbGEgQWJyZXUgZGUgQW5kcmFkZSIsImVtYWlsIjoiZ2FicmllbGEuYW5kcmFkZUBzdG9uZS5jb20uYnIifQ.Kf4A_cBnFucisXQYBmH4L70S64l8XQyvzOScqSIOqsG5TIZoX0SFNxjgV3dAi36jiMpZWBWasuWn9xbr1effGzsokGG8r0lvB0kKA4SP72bTSINkqwl3hRzKIRUz-hBPJKuKh6O02jpCaTwnjkpxwyAd7bwMvLrDb9Jqc_aDj_S2kuutzO22z9hV3ao79gDuVp_1N11KWMl1Ye2bnw2-3bBOWlaRjQTSL92KqJdNaGiOlra-xogfguDB8Pb8skJZZdwZBRbk3LcXgOUphrbhiqF0Qdi3VPppkix8o-pp6AytYvGhVyjsXqp-gEyOf4wxt-qSMDuXLnWxiKfantP3Hg&#34;</span>,
@@ -5181,15 +5201,15 @@ Os campos (assertion+assertion_response) e (challenge_id + challenge_response) s
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
 	<span style="color:#ff79c6">&#34;action&#34;</span>: {
-		<span style="color:#ff79c6">&#34;name&#34;</span>: action_name,
+		<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;action_name&#34;</span>,
 		<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;authorized&#34;</span>,
-		optional_actions: []
+		<span style="color:#ff79c6">&#34;optional_actions&#34;</span>: []
 }
 </code></pre></div><br>
 <h4 id="tipos-de-erro"><strong>Tipos de erro</strong></h4>
 <hr>
 <br>
-<p>Caso haja algum “problema” durante o processo de autorização, é importante checar o campo <code>&quot;type&quot;</code> retornado no response body.</p>
+<p>Caso haja algum “problema” durante o processo de signin, é importante checar o campo <code>&quot;type&quot;</code> retornado no response body.</p>
 <p>Abaixo estão listados os types e o que cada um significa.</p>
 <br>
 <table>
