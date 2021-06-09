@@ -308,6 +308,10 @@
 &lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
 &lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta do passo 2.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h4 id=&#34;api-pix-do-bacen&#34;&gt;&lt;strong&gt;API Pix do BACEN&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Para determinados casos, é possível utilizar a API de Pix do BACEN. Para acessá-la, clique &lt;a href=&#34;https://bacen.github.io/pix-api/index.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
