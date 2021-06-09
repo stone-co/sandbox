@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.31924145bfb72afaee3f5dcea4ee30f6.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.9e81fc66311e7460e396df4a0e5b5ee6.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.31924145bfb72afaee3f5dcea4ee30f6.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.9e81fc66311e7460e396df4a0e5b5ee6.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3915,6 +3915,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Link de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apilink-de-pagamentoscriar-link-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Links de Pagamentos da Conta</a>
   </li>
   <ul>
@@ -3944,31 +3969,6 @@
   </li>
   <ul>
     <li class="collapse " id="sandboxdocsreferencia-da-apilink-de-pagamentosdetalhes-de-um-link-de-pagamento">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Link de Pagamento</a>
-  </li>
-  <ul>
-    <li class="collapse " id="sandboxdocsreferencia-da-apilink-de-pagamentoscriar-link-de-pagamento">
       
       
       
@@ -4947,12 +4947,14 @@
 <p>Todo link de pagamento nasce como &ldquo;<em><strong>Criado</strong></em>&rdquo; e tem um tempo de expiração que inativa qualquer operação sobre aquele link de pagamento, nesse momento ele assume um status de &ldquo;<em><strong>Expirado</strong></em>&rdquo;.</p>
 <p>Um link de pagamento que não tiver sido pago ou que não tenha sido expirado pode ser cancelado a qualquer momento, assumindo status de &ldquo;<em><strong>Cancelado</strong></em>&rdquo;. Tanto a cobrança expirada quanto a cancelada terão o status da order como &ldquo;<em><strong>Canceled</strong></em>&rdquo;. A forma inicial de identificar que
 é um caso ou outro é pelo campo closed.</p>
+<br>
 <h5 id="toda-transação-cancelada-é-fechada-e-depois-cancelada"><strong>Toda transação cancelada é fechada e depois cancelada</strong></h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
 	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;Canceled&#34;</span>,
 	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#f1fa8c">&#34;true&#34;</span>
 }
-</code></pre></div><h5 id="toda-transação-expirada-se-mantém-aberta-closed-false-mas-com-status-alterado-para-cancelado"><strong>Toda transação expirada se mantém aberta (closed: false), mas com status alterado para cancelado</strong></h5>
+</code></pre></div><br>
+<h5 id="toda-transação-expirada-se-mantém-aberta-closed-false-mas-com-status-alterado-para-cancelado"><strong>Toda transação expirada se mantém aberta (closed: false), mas com status alterado para cancelado</strong></h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
 	<span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;canceled&#34;</span>,
 	<span style="color:#ff79c6">&#34;closed&#34;</span>: <span style="color:#f1fa8c">&#34;false&#34;</span>
