@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.5f000db5ac0451f3afa8978f21bf04a1.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.17f9752002691fcde5c7e7ca3f4c14ff.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.5f000db5ac0451f3afa8978f21bf04a1.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.17f9752002691fcde5c7e7ca3f4c14ff.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5216,15 +5216,40 @@
 <tbody>
 <tr>
 <td><a href="/docs/guias/integracao/webhooks/A1.json">sign_up_created</a></td>
-<td>Enviado quando é feito o pedido de abertura de conta.</td>
+<td>Representa o pedido de abertura de conta.</td>
 </tr>
 <tr>
 <td><a href="/docs/guias/integracao/webhooks/A2.json">sign_up_status_updated</a></td>
-<td>Enviado quando é feito uma atualização dos dados na abertura da conta.</td>
+<td>Representa quando há uma atualização dos dados na abertura da conta.</td>
 </tr>
 <tr>
 <td><a href="/docs/guias/integracao/webhooks/A3.json">sign_up_resource_details_updated</a></td>
-<td>Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
+<td>Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h5 id="link-de-pagamento"><strong>Link de Pagamento:</strong></h5>
+<br>
+<table>
+<thead>
+<tr>
+<th>Tipo de Evento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/lp_order_created.json">order_created</a></td>
+<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="/docs/guias/integracao/webhooks/lp_order_created_status_pending.json">segundo webhook</a> deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/lp_order_paid.json">order_paid</a></td>
+<td>Representa o pagamento em si do link de pagamento.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/lp_order_closed.json">order_closed</a></td>
+<td>Representa a finalização do link de pagamento.</td>
 </tr>
 </tbody>
 </table>
