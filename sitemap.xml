@@ -3,7 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/buscar-dados-qrcode/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/pagamento/</loc>
+    <lastmod>2021-06-16T12:03:51-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
   </url>
   
@@ -25,16 +30,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/</loc>
     <lastmod>2021-02-19T13:14:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zpagamento-pix/inserindo-dados-completos/</loc>
-    <lastmod>2020-11-06T12:31:11-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zpagamento-pix/_index.md/</loc>
-    <lastmod>2020-11-06T11:53:51-03:00</lastmod>
   </url>
   
   <url>
@@ -171,12 +166,17 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/</loc>
+    <lastmod>2021-06-16T15:03:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/</loc>
     <lastmod>2021-06-08T16:40:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/criar-pagamento-pendente/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
   </url>
   
@@ -201,7 +201,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zrecebimento-pix/gerar-cobranca/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/old_gerar-cobranca/</loc>
     <lastmod>2020-11-06T13:55:15-03:00</lastmod>
   </url>
   
@@ -227,11 +227,6 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/listar-instituicoes/</loc>
-    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zrecebimento-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
@@ -328,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/confirmar-pagamento-pendente/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
   </url>
   
@@ -363,7 +358,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zrecebimento-pix/consultar-qrcode-gerado/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/old_consultar-qrcode-gerado/</loc>
     <lastmod>2020-11-06T15:26:32-03:00</lastmod>
   </url>
   
@@ -457,6 +452,31 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-e2eid/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
   </url>
@@ -467,7 +487,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zrecebimento-pix/listar-cobrancas/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/old_listar-cobrancas/</loc>
     <lastmod>2020-11-06T13:52:00-03:00</lastmod>
   </url>
   
@@ -551,7 +571,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zrecebimento-pix/especificacao-do-qrcode/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/old_especificacao-do-qrcode/</loc>
     <lastmod>2020-11-06T15:07:33-03:00</lastmod>
   </url>
   
@@ -621,7 +641,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zrecebimento-pix/cancelar-cobranca/</loc>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/old_cancelar-cobranca/</loc>
     <lastmod>2020-11-06T15:16:43-03:00</lastmod>
   </url>
   
@@ -884,7 +904,7 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/</loc>
-    <lastmod>2021-06-08T16:40:00-03:00</lastmod>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
   <url>

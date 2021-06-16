@@ -15,21 +15,6 @@
     
     
     <item>
-      <title>Docs: Pagando com PIX</title>
-      <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zpagamento-pix/_index.md/</link>
-      <pubDate>Fri, 06 Nov 2020 11:53:51 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zpagamento-pix/_index.md/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;fazendo-pagamentos-com-pix&#34;&gt;Fazendo pagamentos com PIX&lt;/h2&gt;
-&lt;p&gt;O Pagamento de um PIX pode ser feito através da inserção dos dados completos do recebedor, por meio da inserção de uma chave PIX ou pela leitura de um QR code.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Considerações Importantes</title>
       <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</link>
       <pubDate>Mon, 10 Dec 2018 22:28:11 +0000</pubDate>
