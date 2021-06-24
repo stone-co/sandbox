@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.6c97fe642b3287f6a3b584adb16ec76c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.ec6fe0f3a92a4135ef1be4bc2d7f0341.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.6c97fe642b3287f6a3b584adb16ec76c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.ec6fe0f3a92a4135ef1be4bc2d7f0341.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5315,16 +5315,112 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.key_created.json">pix_entries_key_created</a></td>
+<td>Representa a criação de uma chave Pix.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.deleted.json">pix_entries_deleted</a></td>
+<td>Representa a deleção de uma chave Pix.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.failed.json">pix_entries_failed</a></td>
+<td>Representa a falha na criação de uma chave Pix.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.waiting_resolution.json">pix_entries_claims_waiting_resolution</a></td>
+<td>Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.confirmed.json">pix_entries_claims_confirmed</a></td>
+<td>Representa que a cliente confirmou a claim, passando a chave para outra instituição.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json">pix_entries_claims_automatically_confirmed_waiting_resolution</a></td>
+<td>Representa que a reivRepresentação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_confirmed.json">pix_entries_claims_automatically_confirmed</a></td>
+<td>Representa que foi realizada a confirmação da reivRepresentação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivRepresentação não pode ser mais cancelada.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.cancelled.json">pix_entries_claims_cancelled</a></td>
+<td>Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
+<td>Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_payment_invoice.json">pix_payment_invoice</a></td>
+<td>Representa um QR Code dinâmico imediato.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_payment_invoice_with_due_date.json">pix_payment_invoice_with_due_date</a></td>
+<td>Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_invoice_payment_created.json">pix_invoice_payment_created</a></td>
+<td>Representa a criação de um QR Code dinâmico.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_invoice_payment_cancelled.json">pix_invoice_payment_cancelled</a></td>
+<td>Representa o cancelamento de um QR Code dinâmico.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_invoice_payment_paid.json">pix_invoice_payment_paid</a></td>
+<td>Representa o pagamento com sucesso de um QR Code dinâmico.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/inbound_pix_payment.json">inbound_pix_payment</a></td>
+<td>Representa um cash-in de Pix.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
+<td>Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: - <code>pix_payment_invoice</code> - Invoice dinâmica imediata; - <code>pix_payment_static_invoice</code> - Invoice estática; - <code>pix_payment_invoice_with_due_date</code> - Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix_refund_payment.json">pix_refund_payment</a></td>
+<td>Representa uma devolução (cash-out) associada a um inbound payment (cash-in).</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.created.json">pix_inbound_payment_refund_created</a></td>
+<td>Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.failed.json">pix_inbound_payment_refund_failed</a></td>
+<td>Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
+<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
+<td>Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.</td>
+</tr>
+<tr>
+<td><a href="/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.reversed.json">pix_inbound_payment_refund_reversed</a></td>
+<td>Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.</td>
+</tr>
+<tr>
+<td>pix_outbound_payment_created</td>
+<td>Representa a criação de um cash-out de Pix.</td>
+</tr>
+<tr>
+<td>pix_outbound_payment_money_reserved</td>
+<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix.</td>
+</tr>
+<tr>
 <td>pix_outbound_payment_failed</td>
-<td>Representa a falha do envio de um Pix.</td>
+<td>Representa a falha na criação de um cash-out de Pix.</td>
 </tr>
 <tr>
 <td>pix_outbound_payment_settled</td>
-<td>Representa a finalização de um Pix.</td>
+<td>Representa a liquidação com sucesso de um cash-out de Pix.</td>
 </tr>
 <tr>
 <td>pix_outbound_payment_refunded</td>
-<td>Representa o reembolso de um Pix mal sucedido.</td>
+<td>Representa a devolução de um cash-out de Pix.</td>
 </tr>
 </tbody>
 </table>
