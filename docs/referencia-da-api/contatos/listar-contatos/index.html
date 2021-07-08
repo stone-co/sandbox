@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/sandbox/docs/referencia-da-api/contatos/listar-contatos/" />
-<meta property="og:updated_time" content="2019-12-02T22:56:58+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-06-25T20:01:46+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Listar Contatos">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b571d924dea4e274661133e97f119900.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.be445c2ebecdcc6029bcb800ccdf81f3.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b571d924dea4e274661133e97f119900.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.be445c2ebecdcc6029bcb800ccdf81f3.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5070,6 +5070,21 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#filtra-contatos-pela-chave-pix-fornecida">Filtra contatos pela chave Pix fornecida.</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -5143,7 +5158,8 @@
 <p>Filtra contatos pelo código da conta fornecido.</p>
 <p><strong>institution_code</strong>  <code>string</code></p>
 <p>Filtra contatos pelo código da instituição fornecido.</p>
-<hr>
+<p><strong>pix_key</strong>  <code>string</code></p>
+<h2 id="filtra-contatos-pela-chave-pix-fornecida">Filtra contatos pela chave Pix fornecida.</h2>
 <h4 id="response"><strong>Response</strong></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">200 ok
 content-type: application/json
@@ -5153,9 +5169,11 @@ content-type: application/json
     <span style="color:#ff79c6">&#34;bank_accounts&#34;</span>: [
       {
         <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;35746698&#34;</span>,
+        <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;PG&#34;</span>,
         <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;00001&#34;</span>,
         <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;1ede2f26-28cd-462b-a7ea-429960c8480b&#34;</span>,
-        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>
+        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>,
+        <span style="color:#ff79c6">&#34;pix_key&#34;</span>: <span style="color:#ff79c6">null</span>
       }
     ],
     <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;contactemail@empresaxyz.com&#34;</span>,
@@ -5168,9 +5186,19 @@ content-type: application/json
     <span style="color:#ff79c6">&#34;bank_accounts&#34;</span>: [
       {
         <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;883841975&#34;</span>,
+        <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;PG&#34;</span>,
         <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
         <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;5b332a1b-57ef-4398-bb9c-79011cc6c58e&#34;</span>,
-        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>
+        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>,
+        <span style="color:#ff79c6">&#34;pix_key&#34;</span>: <span style="color:#ff79c6">null</span>
+      },
+      {
+        <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;779351b1-4827-4498-9516-c7871254d514&#34;</span>,
+        <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;pix_key&#34;</span>: <span style="color:#f1fa8c">&#34;345b96ef-9c35-46bc-aab1-c38740c205e2&#34;</span>
       }
     ],
     <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;tyson@huber.com&#34;</span>,
@@ -5598,7 +5626,7 @@ content-type: application/json
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 02.12.2019
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 25.06.2021
 </div>
 </div>
 

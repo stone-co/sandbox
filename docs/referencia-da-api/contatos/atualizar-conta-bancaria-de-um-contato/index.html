@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/sandbox/docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/" />
-<meta property="og:updated_time" content="2019-12-02T22:56:58+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-06-25T20:01:46+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Atualizar Conta Bancária de Um Contato">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b571d924dea4e274661133e97f119900.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.be445c2ebecdcc6029bcb800ccdf81f3.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b571d924dea4e274661133e97f119900.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.be445c2ebecdcc6029bcb800ccdf81f3.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5146,11 +5146,17 @@
 <p><strong>account_code</strong>  <code>string</code></p>
 <p>Número da conta bancária.</p>
 <hr>
+<p><strong>account_type</strong>  <code>string</code></p>
+<p>Tipo da conta bancária.</p>
+<hr>
 <p><strong>branch_code</strong>  <code>string</code></p>
 <p>Número da agência bancária.</p>
 <hr>
 <p><strong>institution_code</strong>  <code>string</code></p>
 <p>Número da instituição.</p>
+<hr>
+<p><strong>pix_key</strong>  <code>string</code></p>
+<p>Chave Pix do contato.</p>
 <hr>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
@@ -5166,7 +5172,9 @@ content-type: application/json
   <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;e43e3003-c587-4cb8-ab37-b374fe0d157f&#34;</span>,
   <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1234&#34;</span>,
   <span style="color:#ff79c6">&#34;institution_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>,
-  <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;4567864&#34;</span>
+  <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;4567864&#34;</span>,
+  <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;PG&#34;</span>,
+  <span style="color:#ff79c6">&#34;pix_key&#34;</span>: <span style="color:#ff79c6">null</span>
 }
 </code></pre></div>
         <div class="section-index">
@@ -5578,7 +5586,7 @@ content-type: application/json
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 02.12.2019
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 25.06.2021
 </div>
 </div>
 
