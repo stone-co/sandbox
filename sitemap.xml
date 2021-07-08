@@ -8,36 +8,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/aprovacao/overview/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/consentimento/overview/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/conta-de-pagamento/overview/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/sdk/overview/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/stone-open-banking/overview/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/overview/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/stone-open-banking/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
@@ -166,31 +136,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/conta-de-pagamento/abertura-de-conta/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/aprovacao/aprovando-uma-transacao/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/consentimento/fluxo-de-consentimento/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/gerar-chaves-de-acesso/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/stone-open-banking/quickstart-de-integracao/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
@@ -213,11 +158,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-celular/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/sdk/integracao-android/</loc>
-    <lastmod>2021-03-23T11:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -333,17 +273,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/cadastro-da-aplicacao/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/conta-de-pagamento/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/consentimento/gerando-um-link-de-consentimento/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
   
@@ -355,11 +285,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/recargas/recarga-de-jogos/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/sdk/integracao-ios/</loc>
-    <lastmod>2021-03-23T11:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -449,11 +374,6 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-fotos/</loc>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/autenticacao/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -563,11 +483,6 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</loc>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/chamada-autenticada/</loc>
-    <lastmod>2021-06-28T14:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -904,7 +819,7 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/</loc>
-    <lastmod>2021-06-28T14:00:00-03:00</lastmod>
+    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
   
   <url>
