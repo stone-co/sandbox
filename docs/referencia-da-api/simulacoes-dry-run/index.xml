@@ -301,7 +301,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;discount_value&lt;/td&gt;
-&lt;td&gt;Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira null.&lt;/td&gt;
+&lt;td&gt;Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -326,12 +326,12 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;fine_value&lt;/td&gt;
-&lt;td&gt;Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira null.&lt;/td&gt;
+&lt;td&gt;Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;interest_value&lt;/td&gt;
-&lt;td&gt;Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira null.&lt;/td&gt;
+&lt;td&gt;Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

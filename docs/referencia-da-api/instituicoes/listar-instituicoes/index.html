@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.486ec62ef737dfb880f69146e10fb36e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.2163414a7667b72adb94a6e77e813361.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.486ec62ef737dfb880f69146e10fb36e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.2163414a7667b72adb94a6e77e813361.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4705,10 +4705,20 @@
 	<hr>
 <br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
-</code></pre></div><br>
+</code></pre></div><hr>
+<h4 id="path-params"><strong>PATH PARAMS</strong></h4>
+<hr>
+<p><strong>context</strong>  <code>string</code>
+<br> Pode ser &ldquo;spi&rdquo;, &ldquo;str&rdquo;, ou &ldquo;all&rdquo;. O default se nada for passado é &ldquo;str&rdquo;.</p>
+<ul>
+<li>&ldquo;str&rdquo; - Retornamos as instituições participantes do STR. Útil para operaçõs de TED</li>
+<li>&ldquo;spi&rdquo; - Retornamos as instituições participantes do SPI. Útil para operaçõs de PIX</li>
+<li>&ldquo;all&rdquo; - Retornamos todas as instituições</li>
+</ul>
+<br>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">201 Created
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">200 Ok
 content-type: application/json
 </code></pre></div><br>
 <p>Body</p>

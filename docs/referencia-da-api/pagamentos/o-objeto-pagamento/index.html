@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.486ec62ef737dfb880f69146e10fb36e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.2163414a7667b72adb94a6e77e813361.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.486ec62ef737dfb880f69146e10fb36e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.2163414a7667b72adb94a6e77e813361.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4725,17 +4725,17 @@
 </tr>
 <tr>
 <td>approval_expired_at</td>
-<td>Horário em que a transação expirou, em formato ISO8601. Retorna null caso a transação estaja aguardando aprovação ou já tenha sido aprovada em algum momento.</td>
+<td>Horário em que a transação expirou, em formato ISO8601. Retorna <code>null</code> caso a transação estaja aguardando aprovação ou já tenha sido aprovada em algum momento.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>approved_at</td>
-<td>Horário em que a transação foi aprovada, em formato ISO8601. Retorna null caso a transação não tenha sido aprovada em nenhum momento.</td>
+<td>Horário em que a transação foi aprovada, em formato ISO8601. Retorna <code>null</code> caso a transação não tenha sido aprovada em nenhum momento.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>approved_by</td>
-<td>Identificador único da usuária que aprovou a transação, no formato user:UUID4. Retorna null caso não tenha sido aprovada em nenhum momento.</td>
+<td>Identificador único da usuária que aprovou a transação, no formato user:UUID4. Retorna <code>null</code> caso não tenha sido aprovada em nenhum momento.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
@@ -4745,27 +4745,27 @@
 </tr>
 <tr>
 <td>cancelled_at</td>
-<td>Horário em que um pagamento agendado foi cancelado, em formato ISO8601. Retorna null caso não haja cancelamento.</td>
+<td>Horário em que um pagamento agendado foi cancelado, em formato ISO8601. Retorna <code>null</code> caso não haja cancelamento.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>created_at</td>
-<td>Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será null.</td>
+<td>Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será <code>null</code>.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
-<td>created_by  Identificador único da usuária que criou a transação, no formato user:UUID4. Neste caso nunca irá retornar null.</td>
+<td>created_by</td>
+<td>Identificador único da usuária que criou a transação, no formato user:UUID4. Neste caso nunca irá retornar <code>null</code>.</td>
 <td><em>String</em></td>
-<td></td>
 </tr>
 <tr>
 <td>details</td>
-<td>Detalhes da transferência como nome da instituição, nome do destinatário, documento do beneficiário e nome do beneficiário. Retorna null caso ainda não tenhamos essa informação. Uma outra forma de obter essa informação é realizar uma simulação.</td>
+<td>Detalhes da transferência como nome da instituição, nome do destinatário, documento do beneficiário e nome do beneficiário. Retorna <code>null</code> caso ainda não tenhamos essa informação. Uma outra forma de obter essa informação é realizar uma simulação.</td>
 <td><em>Objeto</em></td>
 </tr>
 <tr>
 <td>failed_at</td>
-<td>Horário em que a transação falhou, em formato ISO8601. Retorna null caso a transação nunca tenha falhado.</td>
+<td>Horário em que a transação falhou, em formato ISO8601. Retorna <code>null</code> caso a transação nunca tenha falhado.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
@@ -4779,13 +4779,13 @@
 <td><em>String</em></td>
 </tr>
 <tr>
-<td>fee Taxa da transação, em centavos de reais.    Integer</td>
-<td></td>
-<td></td>
+<td>fee</td>
+<td>Taxa da transação, em centavos de reais.</td>
+<td>Integer</td>
 </tr>
 <tr>
 <td>finished_at</td>
-<td>Horário em que a transação foi finalizada, em formato ISO8601. Retorna null caso a transação não tenha sido finalizada.</td>
+<td>Horário em que a transação foi finalizada, em formato ISO8601. Retorna <code>null</code> caso a transação não tenha sido finalizada.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
@@ -4795,22 +4795,22 @@
 </tr>
 <tr>
 <td>refunded_at</td>
-<td>Horário em que a transação foi extornada em caso de falha, em formato ISO8601. Retorna null caso a transação não tenha sido extornada.</td>
+<td>Horário em que a transação foi extornada em caso de falha, em formato ISO8601. Retorna <code>null</code> caso a transação não tenha sido extornada.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>rejected_at</td>
-<td>Horário em que a transação foi rejeitada, em formato ISO8601. Retorna null caso a transação não tenha sido rejeitada em nenhum momento.</td>
+<td>Horário em que a transação foi rejeitada, em formato ISO8601. Retorna <code>null</code> caso a transação não tenha sido rejeitada em nenhum momento.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>rejected_by</td>
-<td>Identificador único da usuária que rejeitou a transação, no formato user:UUID4. Retorna null caso não tenha sido rejeitada em nenhum momento.</td>
+<td>Identificador único da usuária que rejeitou a transação, no formato user:UUID4. Retorna <code>null</code> caso não tenha sido rejeitada em nenhum momento.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>scheduled_to</td>
-<td>Data do agendamento. Caso não tenha sido agendado retornará null.</td>
+<td>Data do agendamento. Caso não tenha sido agendado retornará <code>null</code>.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
