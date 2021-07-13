@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/</loc>
+    <lastmod>2021-07-12T11:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
@@ -63,17 +68,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/stone-openbank/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/overview/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
@@ -136,6 +131,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/data-e-hora/</loc>
+    <lastmod>2021-07-12T11:20:05-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/token-de-acesso/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
@@ -171,11 +171,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/ambientes-da-api/</loc>
-    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/stone-openbank/ambientes-da-api/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -198,11 +193,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/zchaves-pix/status/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/autenticacao/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -273,6 +263,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/paginacao/</loc>
+    <lastmod>2021-07-12T11:20:05-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/conta-de-pagamento/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
@@ -315,11 +310,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/data-e-hora/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -374,6 +364,11 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/enviar-fotos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/valores/</loc>
+    <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
   
   <url>
@@ -432,11 +427,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/paginacao/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/stone-openbank/paginacao/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
@@ -486,13 +476,13 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/guias/aprovacao/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</loc>
+    <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/valores-percentuais/</loc>
-    <lastmod>2021-06-25T10:52:05-03:00</lastmod>
+    <loc>https://stone-co.github.io/sandbox/docs/guias/aprovacao/</loc>
+    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -512,11 +502,6 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/transferencias/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/valores-financeiros/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
@@ -556,6 +541,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</loc>
+    <lastmod>2021-07-12T11:20:05-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/webhooks/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
   </url>
@@ -582,11 +572,6 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
@@ -648,11 +633,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</loc>
     <lastmod>2020-10-28T19:48:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -819,7 +799,7 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
+    <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
   
   <url>

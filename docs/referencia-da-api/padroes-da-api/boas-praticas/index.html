@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.4af1b16d062eeb9a3b5191d2afc8e74c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.f6c5c0ae3e35c0e3c0ff754eb61036b5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.4af1b16d062eeb9a3b5191d2afc8e74c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.f6c5c0ae3e35c0e3c0ff754eb61036b5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -507,85 +507,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
-  </li>
-  <ul>
-    <li class="collapse " id="sandboxdocsreferencia-da-apipadroes-da-apioverview">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/boas-praticas/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
   </li>
   <ul>
     <li class="collapse show" id="sandboxdocsreferencia-da-apipadroes-da-apiboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/ambientes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Ambientes</a>
-  </li>
-  <ul>
-    <li class="collapse " id="sandboxdocsreferencia-da-apipadroes-da-apiambientes-da-api">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/autenticacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autenticação</a>
-  </li>
-  <ul>
-    <li class="collapse " id="sandboxdocsreferencia-da-apipadroes-da-apiautenticacao">
       
       
       
@@ -657,35 +582,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/valores-percentuais/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores Percentuais</a>
+    <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/valores/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores</a>
   </li>
   <ul>
-    <li class="collapse " id="sandboxdocsreferencia-da-apipadroes-da-apivalores-percentuais">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/padroes-da-api/valores-financeiros/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores Financeiros</a>
-  </li>
-  <ul>
-    <li class="collapse " id="sandboxdocsreferencia-da-apipadroes-da-apivalores-financeiros">
+    <li class="collapse " id="sandboxdocsreferencia-da-apipadroes-da-apivalores">
       
       
       
@@ -4645,6 +4545,17 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#tokens-jwt">Tokens JWT</a></li>
+    <li><a href="#não-armazene-tokens-em-local-storage">Não armazene tokens em <em>local storage</em></a></li>
+    <li><a href="#caso-um-backend-esteja-disponível">Caso um backend esteja disponível</a></li>
+    <li><a href="#caso-um-backend-não-esteja-disponível">Caso um backend não esteja disponível</a></li>
+    <li><a href="#idempotência">Idempotência</a></li>
+    <li><a href="#simulações-dry-run"><strong>Simulações (dry-run)</strong></a></li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -4703,21 +4614,21 @@
         </div>
 	
 	<hr>
-<h4 id="tokens-jwt"><strong>Tokens JWT</strong></h4>
+<h2 id="tokens-jwt">Tokens JWT</h2>
 <p>Tokens JWT são dados sensíveis, assim como senhas ou dados de cartões de crédito. Por isso, é de extrema importância manusear e armazenar esses dados corretamente.</p>
-<h4 id="não-armazene-tokens-no-local-storage"><strong>Não armazene tokens no <em>local storage</em></strong></h4>
+<h2 id="não-armazene-tokens-em-local-storage">Não armazene tokens em <em>local storage</em></h2>
 <p>O armazenamento local de um Browser não é um lugar seguro para se armazenar dados sensíveis. Dados armazenados no local storage podem:</p>
 <ul>
 <li>Ser acessados via Javascript;</li>
 <li>Ser vulneráveis a Cross-Site Scripting.</li>
 </ul>
-<h4 id="caso-um-backend-esteja-disponível"><strong>Caso um backend esteja disponível</strong></h4>
+<h2 id="caso-um-backend-esteja-disponível">Caso um backend esteja disponível</h2>
 <p>Se sua Aplicação tem um backend disponível, os tokens devem ser manuseados server-side.</p>
-<h4 id="caso-um-backend-não-esteja-disponível"><strong>Caso um backend não esteja disponível</strong></h4>
+<h2 id="caso-um-backend-não-esteja-disponível">Caso um backend não esteja disponível</h2>
 <p>Se sua Aplicação é uma Single Page Application, a Aplicação deve requisitar os tokens e armazená-los em memória sem nenhuma persistência. Faça as chamadas de API usando os tokens armazenados em memória.</p>
 <p>Para outros casos, informações sobre boas práticas com Tokens JWT estão disponíveis <a href="https://auth0.com/docs/security/store-tokens">aqui</a>.</p>
-<h4 id="idempotência"><strong>Idempotência</strong></h4>
-<p>Nossos endpoints que envolvem operações financeiras suportam <a href="https://pt.wikipedia.org/wiki/Idempot%C3%AAncia">Idempotência</a>. Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (x-stone-idempotency-key).</p>
+<h2 id="idempotência">Idempotência</h2>
+<p>Nossos endpoints que envolvem operações financeiras suportam <a href="https://pt.wikipedia.org/wiki/Idempot%C3%AAncia">Idempotência</a>. Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (<code>x-stone-idempotency-key</code>).</p>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -4734,9 +4645,9 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta <code>HT
 <li>Uma chamada com a <strong>mesma chave de idempotência</strong> e com o <strong>corpo da requisição diferente do original</strong> retornará um erro de idempotência <code>HTTP 409</code>.</li>
 <li>Uma chamada com a <strong>chave de idempotênca maior que 72 caracteres</strong> retornará um erro <code>HTTP 431</code>.</li>
 </ul>
-<h4 id="simulações-dry-run"><strong>Simulações (dry-run)</strong></h4>
-<p>Nossos endpoints que envolvem operações financeiras suportam <a href="/docs/referencia-da-api/simulacoes-dry-run/">Simulações (dry-run)</a>, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.</p>
-<p>Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o <a href="/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/">Pagamento de Boletos</a>.</p>
+<h2 id="simulações-dry-run"><strong>Simulações (dry-run)</strong></h2>
+<p>Nossos endpoints que envolvem operações financeiras suportam <a href="/sandbox/docs/referencia-da-api/simulacoes-dry-run/">Simulações (dry-run)</a>, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.</p>
+<p>Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o <a href="/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/">Pagamento de Boletos</a>.</p>
 
         <div class="section-index">
     
@@ -4745,14 +4656,6 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta <code>HT
     
     
     <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
