@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.2163414a7667b72adb94a6e77e813361.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.4af1b16d062eeb9a3b5191d2afc8e74c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.2163414a7667b72adb94a6e77e813361.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.4af1b16d062eeb9a3b5191d2afc8e74c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4723,7 +4723,7 @@
 <h2 id="abertura-de-conta">Abertura de Conta</h2>
 <hr>
 <h3 id="envio-de-dados-cadastrais"><strong>Envio de Dados Cadastrais</strong></h3>
-<p>O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerido sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail.</p>
+<p>O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerida sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail.</p>
 <p><strong>Atenção!</strong>
 <br>Para contas do tipo Pessoa Jurídica, a abertura deverá ser feita obrigatoriamente por um sócio ou responsável legal. Dependendo do tipo de cadastro, poderemos solicitar ainda alguns documentos como comprovante de MEI, Registro em Junta Comercial, entre outros.</p>
 <p>O recebimento dos dados iniciais pela Stone pode ser feito via aplicativo (<a href="https://apps.apple.com/br/app/stone/id1438680035">iOS</a> e <a href="https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;hl=pt_BR&amp;gl=US">Android</a>) com o usuário dono da conta realizando o processo de preenchimento diretamente pelo app ou pode ser feito por API, caso você seja uma plataforma e queira oferecer o <a href="/sandbox/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/">processo de abertura de conta Stone</a> em seu produto.
@@ -4749,7 +4749,11 @@ Para plataformas que queiram oferecer o processo de abertura de conta Stone de m
 <tbody>
 <tr>
 <td>user_id</td>
-<td>Identificador que se refere ao seu perfil na Stone contendo informações cadastrais como nome, sobrenome e CPF ou CNPJ.</td>
+<td>Identificador que se refere à sua pessoa física (PF) na Stone contendo informações cadastrais como nome, sobrenome e CPF.</td>
+</tr>
+<tr>
+<td>organization_id</td>
+<td>Identificador que se refere à sua pessoa jurídica (PJ) na Stone contendo informações cadastrais como faturamento mensal e CNPJ.</td>
 </tr>
 <tr>
 <td>account_id</td>
