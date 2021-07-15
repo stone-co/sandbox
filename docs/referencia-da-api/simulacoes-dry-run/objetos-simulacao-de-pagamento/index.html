@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.977fb81da9cbbe8d5258b96d7cb2610c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.977fb81da9cbbe8d5258b96d7cb2610c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3765,7 +3765,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recebendo com Pix (Draft)</a>
+    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recebendo com Pix</a>
   </li>
   <ul>
     <li class="collapse " id="sandboxdocsreferencia-da-apipixrecebimento">
@@ -3833,7 +3833,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-e2eid/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Pix recebido pelo end_to_end_id</a>
+    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-e2eid/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Pix recebido pelo end_to_end_id (Draft)</a>
   </li>
   <ul>
     <li class="collapse " id="sandboxdocsreferencia-da-apipixrecebimentoconsultar-pix-por-e2eid">
@@ -4566,7 +4566,7 @@
 	
 	<hr>
 <br>
-<p>O Dry Run de pagamentos retorna, além do <a href="/docs/referencia-da-api/pagamentos/o-objeto-pagamento/">Objeto Pagamento</a> em si, os Objetos <a href="#objeto-barcode-details">Barcode Details</a> e <a href="#objeto-details">Details</a>.</p>
+<p>O Dry Run de pagamentos retorna, além do <a href="/sandbox/docs/referencia-da-api/pagamentos/o-objeto-pagamento/">Objeto Pagamento</a> em si, os Objetos <a href="#objeto-barcode-details">Barcode Details</a> e <a href="#objeto-details">Details</a>.</p>
 <p>Como complemento, descrevemos os possíveis resultados para o campo <a href="#document_payment_type">document_payment_type</a>.</p>
 <br>
 <h3 id="objeto-barcode-details">Objeto Barcode Details</h3>
@@ -4769,6 +4769,16 @@
 <td>unpayable_reason_description</td>
 <td>Descrição do motivo de estar impagável.</td>
 <td><em>String</em></td>
+</tr>
+<tr>
+<td>accepts_partial_payment</td>
+<td>Indica se o boleto aceita pagamento parcial</td>
+<td><em>Boolean</em></td>
+</tr>
+<tr>
+<td>number_of_partials</td>
+<td>Indica quantas vezes o boleto pode ser pago, se o número for 99 significa que o número de vezes é ilimitado</td>
+<td><em>Integer</em></td>
 </tr>
 </tbody>
 </table>

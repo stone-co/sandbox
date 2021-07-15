@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.977fb81da9cbbe8d5258b96d7cb2610c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.977fb81da9cbbe8d5258b96d7cb2610c.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3765,7 +3765,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Recebendo com Pix (Draft)</a>
+    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Recebendo com Pix</a>
   </li>
   <ul>
     <li class="collapse show" id="sandboxdocsreferencia-da-apipixrecebimento">
@@ -3833,7 +3833,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-e2eid/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Pix recebido pelo end_to_end_id</a>
+    <a  href="/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-e2eid/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Pix recebido pelo end_to_end_id (Draft)</a>
   </li>
   <ul>
     <li class="collapse " id="sandboxdocsreferencia-da-apipixrecebimentoconsultar-pix-por-e2eid">
@@ -4543,7 +4543,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/">Recebendo com Pix (Draft)</a>
+	<a href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/">Recebendo com Pix</a>
 </li>
 
 
@@ -4562,9 +4562,12 @@
 		<h1>Criar Cobranças com Validade</h1>
         </div>
 	
-	<p>Através desse endpoint será possível criar cobranças Pix com vencimento.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
-</code></pre></div><br>
+	<br>
+Através desse endpoint será possível criar cobranças Pix com vencimento através de um QRCode ou Pix copia e cola.
+<br>
+<br>
+<pre><code>GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
+</code></pre><br>
 <h5 id="headers"><strong>HEADERS</strong></h5>
 <hr>
 <p><strong>authorization</strong>* <code>string</code>
@@ -4585,7 +4588,7 @@ Tamanho: min 1 / max 50
 Tamanho: min 1 / max 200</p>
 <p><strong>amount</strong> <code>integer</code></p>
 <p><strong>customer</strong> <code>object</code><br>
-<strong>document</strong>* <code>string</code> <br>
+<strong>document</strong>* <code>string</code><br>
 **name*** <code>string</code> <br></p>
 <p><strong>expiration_date</strong>* <code>string</code>
 <br>Format: date</p>
@@ -4632,8 +4635,8 @@ Valores aceitos: <code>date</code>, <code>period</code> <br>
 Representação de porcentagem, dada a seguinte fórmula: <code>coefficient * 10^exponent</code><br>
 <strong>coefficient</strong>* <code>integer</code>
 **exponent*** <code>integer</code></p>
-<p>Exemplo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<p>Schema:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;object&#34;</span>,
   <span style="color:#ff79c6">&#34;properties&#34;</span>: {
     <span style="color:#ff79c6">&#34;transaction_id&#34;</span>: {
@@ -4902,8 +4905,8 @@ Representação de porcentagem, dada a seguinte fórmula: <code>coefficient * 10
 </code></pre></div><br>
 <h5 id="response"><strong>Response</strong></h5>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">200</span> OK
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<pre><code>200 OK
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;477f8576-ca82-462b-be73-dc28cc6490c3&#34;</span>,
   <span style="color:#ff79c6">&#34;additional_data&#34;</span>: [
     {
@@ -4959,8 +4962,8 @@ Representação de porcentagem, dada a seguinte fórmula: <code>coefficient * 10
   <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-03-19T14:43:55Z&#34;</span>
 }
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">400</span> Bad Request
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<pre><code>400 Bad Request
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;reason&#34;</span>: [
     {
       <span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>,
@@ -4978,23 +4981,23 @@ Representação de porcentagem, dada a seguinte fórmula: <code>coefficient * 10
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:validation&#34;</span>
 }
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">401</span> Unauthorized
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<pre><code>401 Unauthorized
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthorized&#34;</span>
 }
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">403</span> Forbidden
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<pre><code>403 Forbidden
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthenticated&#34;</span>
 }
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">409</span> Conflict
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<pre><code>409 Conflict
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:idempotency_conflict&#34;</span>
 }
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">422</span> Unprocessable
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<pre><code>422 Unprocessable
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;reason&#34;</span>: [
     {
       <span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;has already been taken&#34;</span>,
