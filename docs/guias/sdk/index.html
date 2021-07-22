@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.40cf0f61ea13c947677b0f48f4ad2d4d.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.40cf0f61ea13c947677b0f48f4ad2d4d.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4589,11 +4589,11 @@
 <br>
 <p>SDK é a abreviação de Software Development Kit ou, em português, Kit de Desenvolvimento de Software. Um SDK é um conjunto de ferramentas de desenvolvimento de software capaz de facilitar a integração de sistemas em diferentes linguagens de programação. Além disso, usando um SDK é possível ter mais segurança e confiabilidade no processo de integração.</p>
 <p>Construímos a Conta Stone SDK com o objetivo de permitir que parceiros como plataformas e ERPs possam realizar o processo de abertura de conta Stone sem que seus usuários tenham que fazer o download do nosso aplicativo (iOS e Android).
-<br>Assim, de maneira segura, os usuários poderão realizar os processo de autenticação e KYC interagindo de maneira direta com a Stone, mas por meio da SDK integrada pelo parceiro.</p>
+<br>Assim, de maneira segura, os usuários poderão realizar os processos de autenticação e KYC interagindo de maneira direta com a Stone, mas por meio da SDK integrada pelo parceiro.</p>
 <p>A Conta Stone SDK funciona como ponto de entrada para os três processos abaixo:</p>
 <ul>
-<li>SDK de Autenticação (Auth SDK): Responsável por executar o processo de Autenticação seguindo os padrões especificados.</li>
-<li>Verificação  de KYC (Pegasus SDK):  Responsável por capturar as informações do usuário que está realizando cadastro na conta.</li>
+<li>SDK de Autenticação (Auth SDK): responsável por executar o processo de Autenticação seguindo os padrões especificados.</li>
+<li>Verificação de KYC (Pegasus SDK):  responsável por capturar as informações do usuário que está realizando cadastro na conta.</li>
 </ul>
 <p>Após obter o seu <a href="/sandbox/docs/guias/token-de-acesso/">Token de Acesso</a>, caso deseje usar nossa SDK e disponibilizar as etapas acima descritas aos seus usuários, siga os próximos passos para instalação do kit para <a href="/sandbox/docs/guias/sdk/#integração-ios">iOS</a> e <a href="/sandbox/docs/guias/sdk/#integração-android">Android</a>.</p>
 <br>
@@ -4603,13 +4603,13 @@
 <p>A Conta Stone SDK é responsável por todo o fluxo de login e Know Your Customer da <a href="/docs/guias/stone-open-banking/overview/">Stone Openbank API</a>.</p>
 <h5 id="contato"><strong>Contato</strong></h5>
 <hr>
-<p>Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através da ferramenta de suporte.</p>
+<p>Se durante a integração você encontrar algum problema ou ponto de melhoria, entre em contato com a gente através da ferramenta de suporte.</p>
 <h5 id="como-funciona"><strong>Como funciona</strong></h5>
 <hr>
-<p>A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação, aprovação e verificação de <a href="https://en.wikipedia.org/wiki/Know_your_customer">KYC</a> (<em>Know your constumer</em>).</p>
+<p>A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação, aprovação e verificação de <a href="https://en.wikipedia.org/wiki/Know_your_customer">KYC</a> (<em>Know Your Customer</em>).</p>
 <ul>
 <li>
-<p>A SDK de autenticação é responsável por executar todo o processo de autenticação seguindo as diretrizes do <a href="https://oauth.net/2/">oAuth2</a>.</p>
+<p>A SDK de autenticação é responsável por executar todo o processo de autenticação seguindo as diretrizes do <a href="https://oauth.net/2/">OAuth2</a>.</p>
 </li>
 <li>
 <p>A SDK de aprovação é responsável pelo processo de aprovação e rejeição de transações.</p>
@@ -4621,19 +4621,19 @@
 <br>
 <h5 id="como-integrar-com-a-conta-stone-sdk"><strong>Como Integrar com a Conta Stone SDk</strong></h5>
 <hr>
-<p>Antes de começar a integração é necessário obter uma chave de acesso ao repositório, pois trata-se de um repositório privado. Para obter esta chave entre em contato com a gente.</p>
-<p>No arquivo <code>build.gradle</code> do projeto adicione a URL do repositório e substitua o <code>{access-key}</code> pela chave fornecida.</p>
+<p>Antes de começar a integração é necessário obter uma chave de acesso ao repositório, pois trata-se de um repositório privado. Para obter essa chave, entre em contato com a gente.</p>
+<p>No arquivo <code>build.gradle</code> do projeto, adicione a URL do repositório e substitua o <code>{access-key}</code> pela chave fornecida.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">maven { url <span style="color:#f1fa8c">&#34;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&#34;</span>}
-</code></pre></div><p>Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis neste repositório.</p>
+</code></pre></div><p>Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis nesse repositório.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">maven { url &#39;https:<span style="color:#6272a4">//jitpack.io&#39; }
 </span></code></pre></div><p>Importe a dependência da Conta Stone SDK.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">implementation &#39;co.stone:conta:${latest_version}&#39;
-</code></pre></div><p>A Conta Stone SDK utiliza o Firebase para implementar alguns de seus serviços, logo é necessário ter um projeto no firebase e integrá-lo no seu app. Para mais informações sobre como adicionar o Firebase ao seu projeto acesse este <a href="https://firebase.google.com/docs/android/setup">link</a>.</p>
+</code></pre></div><p>A Conta Stone SDK utiliza o Firebase para implementar alguns de seus serviços, logo é necessário ter um projeto no Firebase e integrá-lo no seu app. Para mais informações sobre como adicionar o Firebase ao seu projeto, acesse este <a href="https://firebase.google.com/docs/android/setup">link</a>.</p>
 <p>Sincronize o projeto e pronto, já é possível utilizar a Conta Stone SDK!</p>
 <br>
 <h5 id="inicializando-a-sdk"><strong>Inicializando a SDK</strong></h5>
 <hr>
-<p>Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.</p>
+<p>Uma vez que a dependência foi importada, o passo seguinte da integração é inicializar a SDK no seu app. Para isso é necessário especificar os parâmetros abaixo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">private</span> <span style="color:#ff79c6">val</span> environment = Environment.Sandbox
 
  ContaStone.initialize(
@@ -4664,7 +4664,7 @@
 <p><code>application</code>: Trata-se da instância do Application do seu app.</p>
 </li>
 <li>
-<p><code>environment</code>: Existem 3 ambientes para os quais a sdk pode apontar: <code>Homolog</code>, <code>Sandbox</code> e <code>Production</code> para fins de teste use o <code>Environment.Sandbox</code>.</p>
+<p><code>environment</code>: Existem 3 ambientes para os quais a SDK pode apontar: <code>Homolog</code>, <code>Sandbox</code> e <code>Production</code>. Para fins de teste, use o <code>Environment.Sandbox</code>.</p>
 </li>
 <li>
 <p><code>appInfo</code>: Informações referentes ao app como nome, versão e buildId.</p>
@@ -4673,22 +4673,22 @@
 <p><code>client_id</code>: Identificador fornecido pelo time de suporte OpenBank.</p>
 </li>
 <li>
-<p><code>authFlowUIConfig</code>: Com esta configuração é possível passar o tema da sua aplicação para a SDK, assim as cores principais do estilo do seu app serão aplicadas nas telas internas da SDK.</p>
+<p><code>authFlowUIConfig</code>: Com esta configuração, é possível passar o tema da sua aplicação para a SDK, assim as cores principais do estilo do seu app serão aplicadas nas telas internas da SDK.</p>
 </li>
 <li>
 <p><code>httpClientConfig</code>: Trata-se de configurações HTTP customizadas do cliente, como <code>interceptors</code>, <code>connectionTimeoutMs</code>, <code>readTimeoutMs</code>, <code>writeTimeoutMs</code> e <code>networkInterceptors</code>.</p>
 </li>
 <li>
-<p><code>tokenKeyMasterUri</code>: Uma URI para a chave mestra no formato <code>android-keystore://</code>. Essa chave será utilizada para acessar o Keystore do android e salvar o token do usuário de forma segura.</p>
+<p><code>tokenKeyMasterUri</code>: Uma URI para a chave mestra no formato <code>android-keystore://</code>. Essa chave será utilizada para acessar o Keystore do Android e salvar o token do usuário de forma segura.</p>
 </li>
 <li>
-<p><code>deepLinkUris</code>: Uris usadas para fazer a navegação para Activities externas a sdk. Exemplo, a <code>uriLogout</code> se refere a Activity que o usuário deve ser redirecionada depois que ele for deslogada do app, essa navegação é feita por deeplink.</p>
+<p><code>deepLinkUris</code>: URIs usadas para fazer a navegação para Activities externas à SDK. Exemplo: a <code>uriLogout</code> se refere à Activity para a qual o usuário deve ser redirecionado depois que ele for deslogado do app. Essa navegação é feita por deeplink.</p>
 </li>
 </ul>
 <br>
 <h5 id="iniciando-fluxo-de-autenticação-e-verificação-de-kyc"><strong>Iniciando fluxo de Autenticação e verificação de KYC</strong></h5>
 <hr>
-<p>Para iniciar o fluxo de autenticação e verificação de KYC é necessário chamar o método abaixo.</p>
+<p>Para iniciar o fluxo de autenticação e verificação de KYC, é necessário chamar o método abaixo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">contaStoneSdk.startAuthAndVerificationFlowForResult(
             context = <span style="color:#ff79c6">this</span>,
             params = VerificationParams(
@@ -4697,7 +4697,7 @@
             ),
             requestCode = LOGIN_RC
         )
-</code></pre></div><p>O atributo <code>params</code> recebe dois argumentos: O modo de inicialização, o qual define como que o fluxo deve ser iniciado e o <code>authMode</code> que neste caso sempre vai ser <code>AuthFlowMode.RegisteredUser</code>. O modo de inicialização pode ser:</p>
+</code></pre></div><p>O atributo <code>params</code> recebe dois argumentos: o modo de inicialização, o qual define como o fluxo deve ser iniciado, e o <code>authMode</code>, que neste caso sempre vai ser <code>AuthFlowMode.RegisteredUser</code>. O modo de inicialização pode ser:</p>
 <ul>
 <li>
 <p><code>StartingApp</code> - Inicia todo o fluxo de autenticação e check de KYC.</p>
@@ -4706,17 +4706,17 @@
 <p><code>AccountSelectionRequest</code> - Exibe a tela de troca de conta e lida com a escolha do usuário nos casos em que o usuário em questão possui mais de uma conta de pagamento.</p>
 </li>
 <li>
-<p><code>PushNotificationReceived</code> - Deve ser iniciado ao receber um push notification referente ao processo de abertura de conta.</p>
+<p><code>PushNotificationReceived</code> - Deve ser iniciado ao receber uma notificação push referente ao processo de abertura de conta.</p>
 </li>
 <li>
-<p><code>NewAccountCreated</code> - Deve ser chamado após a criação de uma nova conta de pagamento para que seja verificado se esta conta não possui nenhuma pendência em seu cadastro.</p>
+<p><code>NewAccountCreated</code> - Deve ser chamado após a criação de uma nova conta de pagamento para que seja verificado se essa conta não possui nenhuma pendência em seu cadastro.</p>
 </li>
 </ul>
-<p>Este método inicia a Activity principal da SDK e executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado a Conta Stone SDK retorna um <code>Result</code> através do <code>onActivityResult</code> da Activity que deve ser tratado pelo app.</p>
+<p>Esse método inicia a Activity principal da SDK e executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado, a Conta Stone SDK retorna um <code>Result</code> através do <code>onActivityResult</code> da Activity que deve ser tratado pelo app.</p>
 <br>
 <h5 id="lidando-com-o-resultado-da-sdk"><strong>Lidando com o resultado da SDK</strong></h5>
 <hr>
-<p>Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.</p>
+<p>Ao finalizar o fluxo de autenticação e verificação, a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"> <span style="color:#ff79c6">override</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">onActivityResult</span>(requestCode: Int, resultCode: Int, <span style="color:#ff79c6">data</span>: Intent?) {
          <span style="color:#ff79c6">super</span>.onActivityResult(requestCode, resultCode, <span style="color:#ff79c6">data</span>)
          <span style="color:#ff79c6">if</span> (requestCode == LOGIN_RC) {
@@ -4724,7 +4724,7 @@
  
              <span style="color:#ff79c6">when</span> (result) {
                  <span style="color:#ff79c6">is</span> AuthAndVerificationResult.Ok -&gt; toast(<span style="color:#f1fa8c">&#34;User is authenticated&#34;</span>)
-                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult.MissingData -&gt; toast(<span style="color:#f1fa8c">&#34;some information is missing&#34;</span>)
+                 <span style="color:#ff79c6">is</span> AuthAndVerificationResult.MissingData -&gt; toast(<span style="color:#f1fa8c">&#34;Some information is missing&#34;</span>)
                  <span style="color:#ff79c6">is</span> AuthAndVerificationResult.UserCancelled -&gt; toast(<span style="color:#f1fa8c">&#34;User cancelled flow&#34;</span>)
                  <span style="color:#ff79c6">is</span> AuthAndVerificationResult.Error -&gt; toast(<span style="color:#f1fa8c">&#34;Error during login ${result.error}&#34;</span>)
                  <span style="color:#ff79c6">is</span> AuthAndVerificationResult.UserLoggedOut -&gt; toast(<span style="color:#f1fa8c">&#34;User requests logout&#34;</span>)
@@ -4736,17 +4736,17 @@
 </code></pre></div><br>
 <h5 id="como-fazer-logout"><strong>Como fazer logout</strong></h5>
 <hr>
-<p>Para deslogar o usuário podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.</p>
+<p>Para deslogar o usuário, podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">contaStoneSdk.logout {
             <span style="color:#ff79c6">if</span> (it != <span style="color:#ff79c6">null</span>) {
                 toast(<span style="color:#f1fa8c">&#34;Error on logout. Try again!&#34;</span>)
-            } <span style="color:#ff79c6">else</span> toast(<span style="color:#f1fa8c">&#34;user successfully logged out&#34;</span>)
+            } <span style="color:#ff79c6">else</span> toast(<span style="color:#f1fa8c">&#34;User successfully logged out&#34;</span>)
         }
-</code></pre></div><p>Quando a exception é nula o logout ocorreu com sucesso, quando não, algum erro ocorreu durante o fluxo.</p>
+</code></pre></div><p>Quando a exception é nula, o logout ocorreu com sucesso, quando não, algum erro ocorreu durante o fluxo.</p>
 <br>
 <h5 id="obtendo-o-client-autenticado"><strong>Obtendo o Client autenticado</strong></h5>
 <hr>
-<p>A authSDK é responsável por todo o processo de autenticação incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um <code>OkHttpClient</code> configurado que pode ser utilizado nas chamadas HTTP do seu app. Este client possui <a href="https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning">certificate pinning</a> com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método <code>contaStone.auth().client()</code>.</p>
+<p>A authSDK é responsável por todo o processo de autenticação, incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um <code>OkHttpClient</code> configurado que pode ser utilizado nas chamadas HTTP do seu app. Esse client possui <a href="https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning">certificate pinning</a> com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método <code>contaStone.auth().client()</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">private</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">performAuthenticatedRequest</span>() {
         <span style="color:#ff79c6">val</span> httpService = HttpService.BankingGatewaySandbox
         <span style="color:#ff79c6">val</span> client = contaStoneSdk.auth().getOkHttpClient(httpService)
@@ -4822,7 +4822,7 @@ contaStoneSdk.getSession(
 <br>
 <h5 id="contato-1"><strong>Contato</strong></h5>
 <hr>
-<p>Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através da ferramenta de suporte.</p>
+<p>Se durante a integração encontrar algum problema ou ponto de melhoria, entre em contato com a gente através da ferramenta de suporte.</p>
 <h5 id="instalação"><strong>Instalação</strong></h5>
 <hr>
 <h6 id="requisitos"><strong>Requisitos</strong></h6>
@@ -4832,7 +4832,7 @@ contaStoneSdk.getSession(
 </ul>
 <br>
 <h6 id="configuração"><strong>Configuração</strong></h6>
-<p>Antes de começar a usar o ContaStoneSDK é necessário seguir alguns procedimentos:</p>
+<p>Antes de começar a usar a Conta Stone SDK, é necessário seguir alguns procedimentos:</p>
 <ol>
 <li>
 <p><a href="https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/tag/0.2.0">Baixe o arquivo zip</a> no link com os frameworks necessários.</p>
@@ -4841,7 +4841,7 @@ contaStoneSdk.getSession(
 <p>Extraia a pasta Frameworks no diretório raiz do projeto.</p>
 </li>
 <li>
-<p>No target do projeto acesse a guia <code>General</code> e em <code>Frameworks, Libraries, and Embedded Content</code> adicione os frameworks:</p>
+<p>No target do projeto, acesse a guia <code>General</code> e, em <code>Frameworks, Libraries, and Embedded Content</code>, adicione os frameworks:</p>
 <ul>
 <li>ContaStoneSDK.framework</li>
 <li>CryptoSwift.framework</li>
@@ -4861,7 +4861,7 @@ contaStoneSdk.getSession(
 <p>Logo abaixo em <code>Framework Search Paths</code>, adicione a entrada <code>$(PROJECT_DIR)/Frameworks/ContaStoneSDK.framework/Frameworks/</code> no modo recursivo.</p>
 </li>
 <li>
-<p>Em <code>Build Phases</code> adicione um novo script chamado &ldquo;Sign&rdquo; (Em Build Phases, clique sinal de &ldquo;mais&rdquo; e selecione New Run Script Phase).</p>
+<p>Em <code>Build Phases</code> adicione um novo script chamado &ldquo;Sign&rdquo; (em Build Phases, clique sinal de &ldquo;mais&rdquo; e selecione New Run Script Phase).</p>
 </li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">pushd ${TARGET_BUILD_DIR}<span style="color:#ff79c6">/</span>${PRODUCT_NAME}.app<span style="color:#ff79c6">/</span>Frameworks<span style="color:#ff79c6">/</span>ContaStoneSDK.framework<span style="color:#ff79c6">/</span>Frameworks

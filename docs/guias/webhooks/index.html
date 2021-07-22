@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.40cf0f61ea13c947677b0f48f4ad2d4d.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.40cf0f61ea13c947677b0f48f4ad2d4d.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4591,18 +4591,18 @@
 <h2 id="overview">Overview</h2>
 <hr>
 <br>
-<p>A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.</p>
+<p>A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.</p>
 <p>Para sua utilização, é preciso que a aplicação tenha cadastrado no <a href="/sandbox/docs/guias/stone-open-banking/#testes-em-sandbox">formulário</a> a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.</p>
 <p>Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
 Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.</p>
 <p>A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades disponíveis na sua aplicação e também recebem os eventos relacionados às contas sobre as quais foi dado consentimento.
-<br>Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via APP.</p>
+<br>Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via app.</p>
 <br>
 
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Virada em Produção</strong></p>
-<p>É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referente as funcionalidades que implementou.</p>
+<p>É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referentes às funcionalidades que implementou.</p>
 
 </div>
 
@@ -4634,7 +4634,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td style="text-align:left"><a href="barcode_payment_invoice_settled.json">barcode_payment_invoice_settled</a></td>
-<td style="text-align:left">Representa que pagamento do boleto foi confirmado.</td>
+<td style="text-align:left">Representa que o pagamento do boleto foi confirmado.</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="barcode_payment_invoice_expired.json">barcode_payment_invoice_expired</a></td>
@@ -4659,7 +4659,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <tbody>
 <tr>
 <td>cash_in_payment_refund</td>
-<td>Representa o reembolso de um pagamento mal sucedido.</td>
+<td>Representa o reembolso de um pagamento malsucedido.</td>
 </tr>
 <tr>
 <td>cash_out_payment</td>
@@ -4773,7 +4773,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td>cash_in_external_transfer_refund</td>
-<td>Representa o reembolso de uma transferência externa mal sucedida.</td>
+<td>Representa o reembolso de uma transferência externa malsucedida.</td>
 </tr>
 <tr>
 <td>cash_out_external_transfer</td>
@@ -4862,7 +4862,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="pix_json/pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
-<td>Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
+<td>Representa cancelamento automático da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
 </tr>
 <tr>
 <td><a href="pix_json/pix_payment_invoice.json">pix_payment_invoice</a></td>
@@ -4890,7 +4890,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="pix_json/pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
-<td>Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- <code>pix_payment_invoice</code> : Invoice dinâmica imediata; <br>- <code>pix_payment_static_invoice</code> : Invoice estática; <br>- <code>pix_payment_invoice_with_due_date</code> : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
+<td>Representa o recebimento de um cash-in de Pix, podendo estar associado a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- <code>pix_payment_invoice</code>: Invoice dinâmica imediata; <br>- <code>pix_payment_static_invoice</code>: Invoice estática; <br>- <code>pix_payment_invoice_with_due_date</code>: Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
 </tr>
 <tr>
 <td><a href="pix_json/pix_refund_payment.json">pix_refund_payment</a></td>
@@ -4906,7 +4906,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="pix_json/pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
-<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
+<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
 </tr>
 <tr>
 <td><a href="pix_json/pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
@@ -4922,7 +4922,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td>pix_outbound_payment_money_reserved</td>
-<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix.</td>
+<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de um cash-out de Pix.</td>
 </tr>
 <tr>
 <td>pix_outbound_payment_failed</td>
@@ -4976,7 +4976,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="A3.json">sign_up_resource_details_updated</a></td>
-<td>Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
+<td>Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Exemplo: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
 </tr>
 </tbody>
 </table>
@@ -4993,7 +4993,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <tbody>
 <tr>
 <td><a href="lp_order_created.json">order_created</a></td>
-<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="lp_order_created_status_pending.json">segundo webhook</a> deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
+<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="lp_order_created_status_pending.json">segundo webhook</a> desse tipo que representa que o pagador executou o pagamento. <br>Nesse caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
 </tr>
 <tr>
 <td><a href="lp_order_paid.json">order_paid</a></td>
@@ -5045,7 +5045,7 @@ x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
 </tr>
 <tr>
 <td>target_data</td>
-<td>Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campo variáveis sempre conterá o campo account_id.</td>
+<td>Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campos variáveis, sempre conterá o campo account_id.</td>
 </tr>
 <tr>
 <td>target_detail_uri</td>
@@ -5070,7 +5070,7 @@ x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Inclusão de campos</strong></p>
-<p>A implementação não deve ser strict no parser do payload. Ao longo do tempo os payloads podem sofrer a inclusão de campos.</p>
+<p>A implementação não deve ser strict no parser do payload. Ao longo do tempo, os payloads podem sofrer a inclusão de campos.</p>
 
 </div>
 
@@ -5127,7 +5127,7 @@ x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
 <br>
 <h5 id="como-eu-posso-abrir-de-forma-segura-o-conteúdo-de-um-webhook"><strong>Como eu posso abrir de forma segura o conteúdo de um webhook?</strong></h5>
 <br>
-<p>Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:</p>
+<p>Para poder visualizar o conteúdo de um webhook, é necessário fazer o caminho inverso:</p>
 <ol>
 <li><strong>Decifrar o conteúdo do webhook</strong> usando sua chave privada. O resultado é um token JWT assinado com a nossa chave;</li>
 <li><strong>Verificar a assinatura do token</strong> com a nossa chave pública.</li>
@@ -5136,12 +5136,12 @@ x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
 <h5 id="1---decifrar-o-conteúdo-do-webhook"><strong>1 - Decifrar o conteúdo do webhook</strong></h5>
 <hr>
 <br>
-<p>O webhook irá chegar com um payload parecido com esse:</p>
+<p>O webhook irá chegar com um payload parecido com este:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;encrypted_body&#34;</span>: <span style="color:#f1fa8c">&#34;xxxxxxxxxxxxxx conteúdo cifrado&#34;</span>
 }
 </code></pre></div><p>O valor do campo &ldquo;encrypted_body&rdquo; é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.</p>
-<p>O algoritmo utilizado é: <strong>RSA-OAEP-256</strong> com <strong>A256GCM</strong>. Para decifrar o conteúdo é necessário uma biblioteca que suporte estes algoritmos como:</p>
+<p>O algoritmo utilizado é: <strong>RSA-OAEP-256</strong> com <strong>A256GCM</strong>. Para decifrar o conteúdo, é necessária uma biblioteca que suporte esses algoritmos como:</p>
 <ul>
 <li><a href="https://github.com/square/js-jose">JavaScript</a></li>
 <li><a href="https://bitbucket.org/b_c/jose4j/wiki/Home">Java</a></li>
@@ -5177,33 +5177,33 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
 <h5 id="2---verificar-a-assinatura-do-token"><strong>2 - Verificar a assinatura do token</strong></h5>
 <hr>
 <br>
-<p>Até este momento deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso a chave pública da aplicação.</p>
+<p>Até este momento, deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso à chave pública da aplicação.</p>
 <p>Nós utilizamos a assinatura do conteúdo em token JWS (JSON Web Signing) compacto como uma outra camada de verificação de segurança no conteúdo do webhook.</p>
 <p>Esse token possui em seus &ldquo;claims&rdquo; (alegações) o conteúdo do webhook. Para garantir que ele foi gerado pela Stone, você deve validar a assinatura dele consultando nossas chaves públicas de assinatura.</p>
 <p>As chaves públicas da Stone estão publicadas <a href="https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys">aqui</a>.</p>
-<p>Repare que cada chave possui um <em>kid</em> (key ID) e um <em>use</em> (sig ou enc). O token JWS possui um header que diz qual é o id da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone.</p>
-<p>Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que caso aconteça algum erro na validação você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.</p>
+<p>Repare que cada chave possui um <em>kid</em> (key ID) e um <em>use</em> (sig ou enc). O token JWS possui um header que diz qual é o ID da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone.</p>
+<p>Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que, caso aconteça algum erro na validação, você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.</p>
 <p>Veja <a href="https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html#content">aqui</a> as melhores práticas para fazer essa implementação.</p>
 <p>O algoritmo que usamos será <em>sempre RS256</em>. Há uma lista de bibliotecas que tratam de assinatura de token em <a href="https://jwt.io/">jwt.io</a>.</p>
 <br>
 <h5 id="segurança"><strong>Segurança</strong></h5>
 <br>
 <p>É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que <em>não possui</em> a chave pública quanto que nosso conteúdo foi assinado pela Stone.</p>
-<p>Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.</p>
-<p>Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.</p>
+<p>Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se de que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.</p>
+<p>Sempre que estiver em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.</p>
 <p>Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, <a href="https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html">aqui</a>.</p>
 <br>
 <h3 id="webhooks-idempotentes"><strong>Webhooks idempotentes</strong></h3>
 <br>
 <p>No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos.</p>
 <p>Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo <code>x-stone-webhook-event-id</code> do header.</p>
-<p>É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.</p>
+<p>É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento, evitando processar duas vezes um mesmo evento.</p>
 <br>
 <h2 id="endpoint-para-verificar-webhooks-enviados">Endpoint para verificar webhooks enviados</h2>
 <hr>
 <br>
 <p>Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.</p>
-<p>Para acessar, basta fazer o comando abaixo, lembrando que no <em>header</em> deve ser enviado o Bearer token no campo <code>authorization</code> e o client_id é o id da sua aplicação, passado pelo time de integração.</p>
+<p>Para acessar, basta fazer o comando abaixo, lembrando que no <em>header</em> deve ser enviado o Bearer token no campo <code>authorization</code> e que o client_id é o id da sua aplicação, passado pelo time de integração.</p>
 <pre><code>GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
 </code></pre><p><strong>Exemplo de Response</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
