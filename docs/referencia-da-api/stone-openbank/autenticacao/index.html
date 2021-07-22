@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4566,12 +4591,12 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
 <p>Para isso, exigimos que nas <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods">requisições HTTP</a> exista no cabeçalho um campo chamado <code>authorization</code>, cujo valor será &ldquo;Bearer&rdquo; seguido do token de acesso.</p>
 <p>Exemplo de cabeçalho de uma chamada autenticada:</p>
 <h4 id="header">Header</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#50fa7b">GET</span> /api/v1/accounts <span style="color:#ff79c6">HTTP</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">1.1</span>
-Host<span style="color:#ff79c6">:</span> sandbox-api.openbank.stone.com.br
-User-Agent<span style="color:#ff79c6">:</span> Nome da aplicação
-Accept<span style="color:#ff79c6">:</span> */*
-authorization<span style="color:#ff79c6">:</span> Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-</code></pre></div>
+<pre><code>GET /api/v1/accounts HTTP/1.1
+Host: sandbox-api.openbank.stone.com.br
+User-Agent: Nome da aplicação
+Accept: */*
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+</code></pre>
         <div class="section-index">
     
     
@@ -4579,6 +4604,8 @@ authorization<span style="color:#ff79c6">:</span> Bearer eyJhbGciOiJIUzI1NiIsInR
     
     
     <hr class="panel-line">
+        
+            
         
             
         

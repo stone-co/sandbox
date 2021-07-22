@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4563,46 +4588,46 @@
         </div>
 	
 	<h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET /api/v1/pix/:account_id/entry_claims/:claim_id
-</code></pre></div><h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">200 OK
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;id&#34;: &#34;40346adc-74f3-4c4e-8275-73ba78993491&#34;,
-  “claim_type”: “portability”,
-  &#34;status&#34;: &#34;waiting_resolution&#34;,
-  &#34;origin&#34;: &#34;external&#34;,
-  &#34;origin_ispb&#34;: &#34;1234567890&#34;,
-  “created_at”: &#34;“2020- 09-27T03:00:00Z”,
-  “updated_at”: &#34;2020-09-27T06:00:00Z&#34;, 
-  “expires_at”: &#34;2020-09-30T03:00:00Z&#34;,
-  &#34;beneficiary_account&#34;: {
-     &#34;branch_code&#34;: “0001”,
-     &#34;account_code&#34;: &#34;00016583&#34;,
-     &#34;account_type&#34;: &#34;CC&#34;,
-     &#34;opened_at&#34;: &#34;2019-11-18T03:00:00Z&#34;
+<pre><code>GET /api/v1/pix/:account_id/entry_claims/:claim_id
+</code></pre><h5 id="response"><strong>Response</strong></h5>
+<pre><code>200 OK
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;40346adc-74f3-4c4e-8275-73ba78993491&#34;</span>,
+  <span style="color:#ff79c6">&#34;claim_type&#34;</span>: <span style="color:#f1fa8c">&#34;portability&#34;</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;waiting_resolution&#34;</span>,
+  <span style="color:#ff79c6">&#34;origin&#34;</span>: <span style="color:#f1fa8c">&#34;external&#34;</span>,
+  <span style="color:#ff79c6">&#34;origin_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;1234567890&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020- 09-27T03:00:00Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-09-27T06:00:00Z&#34;</span>, 
+  <span style="color:#ff79c6">&#34;expires_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-09-30T03:00:00Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;beneficiary_account&#34;</span>: {
+     <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+     <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;00016583&#34;</span>,
+     <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;CC&#34;</span>,
+     <span style="color:#ff79c6">&#34;opened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-11-18T03:00:00Z&#34;</span>
   },
-  &#34;beneficiary_entity&#34;: {
-     &#34;name&#34;: “0001”,
-     &#34;document_type&#34;: &#34;cpf&#34;,
-     &#34;document&#34;: &#34;13152256685&#34;
+  <span style="color:#ff79c6">&#34;beneficiary_entity&#34;</span>: {
+     <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+     <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+     <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;13152256685&#34;</span>
   },
-  &#34;key_type&#34;: &#34;phone&#34;,
-  &#34;key&#34;: &#34;+5510998765432&#34;,
-  &#34;events&#34;: [
+  <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>,
+  <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;+5510998765432&#34;</span>,
+  <span style="color:#ff79c6">&#34;events&#34;</span>: [
    {
-      &#34;id&#34;: &#34;38963369-533c-42aa-a49e-b5369ff4bd52&#34;,
-      &#34;created_at&#34;: &#34;20200-09-18T03:00:00Z&#34;,
-      &#34;type&#34;: &#34;created&#34;,
-      &#34;from_status&#34;: null,
-      &#34;to_status&#34;: &#34;active&#34;
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;38963369-533c-42aa-a49e-b5369ff4bd52&#34;</span>,
+      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;20200-09-18T03:00:00Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;created&#34;</span>,
+      <span style="color:#ff79c6">&#34;from_status&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;to_status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>
     },
     {
-      &#34;id&#34;: &#34;9bac50e2-c6ad-4193-8263-7170046a85a3&#34;,
-      &#34;created_at&#34;: &#34;20200-09-22T03:00:00Z&#34;,
-      &#34;type&#34;: &#34;portability_requested&#34;,
-      &#34;from_status&#34;: &#34;active&#34;,
-      &#34;to_status&#34;: &#34;portability_pending&#34;
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;9bac50e2-c6ad-4193-8263-7170046a85a3&#34;</span>,
+      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;20200-09-22T03:00:00Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;portability_requested&#34;</span>,
+      <span style="color:#ff79c6">&#34;from_status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>,
+      <span style="color:#ff79c6">&#34;to_status&#34;</span>: <span style="color:#f1fa8c">&#34;portability_pending&#34;</span>
     }
   ]
 }
@@ -4614,6 +4639,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4983,9 +5008,9 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <br>
 <h2 id="estrutura-do-header-das-notificações">Estrutura do header das notificações</h2>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">x-stone-webhook-event-id: <span style="color:#f1fa8c">&#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&#34;</span>
-x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_transfer&#34;</span>
-</code></pre></div><p>A idempotência de webhooks deverá ser validada no campo &lsquo;x-stone-webhook-event-id&rsquo; disponível no header.</p>
+<pre><code>x-stone-webhook-event-id: &quot;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&quot;
+x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
+</code></pre><p>A idempotência de webhooks deverá ser validada no campo &lsquo;x-stone-webhook-event-id&rsquo; disponível no header.</p>
 <br>
 <h2 id="estrutura-do-payload-das-notificações">Estrutura do payload das notificações</h2>
 <hr>
@@ -5051,7 +5076,7 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 
 <br>
 <p>Exemplo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
    <span style="color:#ff79c6">&#34;env&#34;</span>:<span style="color:#f1fa8c">&#34;sandbox&#34;</span>,
    <span style="color:#ff79c6">&#34;event_type&#34;</span>:<span style="color:#f1fa8c">&#34;cash_in_internal_transfer&#34;</span>,
    <span style="color:#ff79c6">&#34;event_happened_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-05-13T14:58:15Z&#34;</span>,
@@ -5112,7 +5137,7 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 <hr>
 <br>
 <p>O webhook irá chegar com um payload parecido com esse:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;encrypted_body&#34;</span>: <span style="color:#f1fa8c">&#34;xxxxxxxxxxxxxx conteúdo cifrado&#34;</span>
 }
 </code></pre></div><p>O valor do campo &ldquo;encrypted_body&rdquo; é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.</p>
@@ -5179,56 +5204,57 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
 <br>
 <p>Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.</p>
 <p>Para acessar, basta fazer o comando abaixo, lembrando que no <em>header</em> deve ser enviado o Bearer token no campo <code>authorization</code> e o client_id é o id da sua aplicação, passado pelo time de integração.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
-</code></pre></div><p><strong>Exemplo de Response</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">    {
-        <span style="color:#ff79c6">&#34;client_id&#34;</span>: <span style="color:#f1fa8c">&#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&#34;</span>,
-        <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
-        <span style="color:#ff79c6">&#34;data&#34;</span>: {
-            <span style="color:#ff79c6">&#34;env&#34;</span>: <span style="color:#f1fa8c">&#34;sandbox&#34;</span>,
-            <span style="color:#ff79c6">&#34;event_happened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-            <span style="color:#ff79c6">&#34;event_notified_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
-            <span style="color:#ff79c6">&#34;event_type&#34;</span>: <span style="color:#f1fa8c">&#34;cash_out_internal_transfer_finished&#34;</span>,
-            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-            <span style="color:#ff79c6">&#34;target_data&#34;</span>: {
-                <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&#34;</span>,
-                <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">4000</span>,
-                <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
-                <span style="color:#ff79c6">&#34;batch_id&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;cancelled_by&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
-                <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
-                <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
-                <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-                <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
-                <span style="color:#ff79c6">&#34;target&#34;</span>: {
-                    <span style="color:#ff79c6">&#34;account&#34;</span>: {
-                        <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>
-                    },
-                    <span style="color:#ff79c6">&#34;entity&#34;</span>: {
-                        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
-                    }
-                },
-                <span style="color:#ff79c6">&#34;target_account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>,
-                <span style="color:#ff79c6">&#34;target_account_owner_name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
-            },
-            <span style="color:#ff79c6">&#34;target_detail_uri&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-            <span style="color:#ff79c6">&#34;target_id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-            <span style="color:#ff79c6">&#34;target_statement_uri&#34;</span>: <span style="color:#ff79c6">null</span>,
-            <span style="color:#ff79c6">&#34;target_type&#34;</span>: <span style="color:#f1fa8c">&#34;internal_transfer_finished&#34;</span>
+<pre><code>GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
+</code></pre><p><strong>Exemplo de Response</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;client_id&#34;</span>: <span style="color:#f1fa8c">&#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;data&#34;</span>: {
+    <span style="color:#ff79c6">&#34;env&#34;</span>: <span style="color:#f1fa8c">&#34;sandbox&#34;</span>,
+    <span style="color:#ff79c6">&#34;event_happened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;event_notified_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;event_type&#34;</span>: <span style="color:#f1fa8c">&#34;cash_out_internal_transfer_finished&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+    <span style="color:#ff79c6">&#34;target_data&#34;</span>: {
+      <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&#34;</span>,
+      <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">4000</span>,
+      <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
+      <span style="color:#ff79c6">&#34;batch_id&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;cancelled_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
+      <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+      <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+      <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+      <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+      <span style="color:#ff79c6">&#34;target&#34;</span>: {
+        <span style="color:#ff79c6">&#34;account&#34;</span>: {
+          <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>
+        },
+        <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+          <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
         }
+      },
+      <span style="color:#ff79c6">&#34;target_account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>,
+      <span style="color:#ff79c6">&#34;target_account_owner_name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;target_detail_uri&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+    <span style="color:#ff79c6">&#34;target_id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+    <span style="color:#ff79c6">&#34;target_statement_uri&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;target_type&#34;</span>: <span style="color:#f1fa8c">&#34;internal_transfer_finished&#34;</span>
+  }
+}
 </code></pre></div>
         <div class="section-index">
     
@@ -5237,6 +5263,8 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
     
     
     <hr class="panel-line">
+        
+            
         
             
         

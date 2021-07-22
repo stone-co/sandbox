@@ -135,10 +135,9 @@ Para receber esse Token de Acesso, será necessário que você gere um  JWT loca
 Para obter o seu Access Token, será necessário gerar um par de chaves RSA 4096. Você deverá assinar o JWT com a chave privada e nos enviar a chave pública no formato PEM e extensão .pub. &lt;br&gt;&lt;br&gt;
 &lt;p&gt;Embora existam vários métodos para criação de pares de chaves público e privada, a ferramenta OpenSSL de código aberto é uma das mais usadas, por isso, recomendamos o seu uso.&lt;/p&gt;
 &lt;p&gt;Em todas as plataformas disponíveis - Linux, MacOS e Windows, os comandos do OpenSSL são iguais: &lt;br&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;openssl genrsa -out mykey.pem 4096
-openssl rsa -in mykey.pem -pubout &amp;gt; mykey.pub
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Algumas dicas importantes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;   $ openssl genrsa -out mykey.pem &lt;span style=&#34;color:#bd93f9&#34;&gt;4096&lt;/span&gt;
+   $ openssl rsa -in mykey.pem -pubout &amp;gt; mykey.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Algumas dicas importantes:&lt;/p&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
@@ -230,12 +229,12 @@ openssl rsa -in mykey.pem -pubout &amp;gt; mykey.pub
 &lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Header&lt;/strong&gt;&lt;br&gt;Na nossa API, usaremos sempre o algoritmo &lt;strong&gt;RS256&lt;/strong&gt;. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”.
 Abaixo você encontrará um exemplo de header.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A chamada é com o método &lt;strong&gt;POST&lt;/strong&gt; com o header &lt;strong&gt;Content-Type&lt;/strong&gt; e &lt;strong&gt;User-Agent&lt;/strong&gt;. &lt;br&gt;O &lt;strong&gt;Content-Type&lt;/strong&gt; informado deve ser &lt;strong&gt;x-www-form-urlencoded&lt;/strong&gt; (o mesmo usado por submissão de formulários HTML) e o header &lt;strong&gt;User-Agent&lt;/strong&gt; deve estar habilitado com o nome da sua aplicação. Verifique o exemplo abaixo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user-agent&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome da aplicação&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;content-type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application/x-www-form-urlencoded&amp;#34;&lt;/span&gt;
 }
@@ -1021,9 +1020,9 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;br&gt;
 &lt;h2 id=&#34;estrutura-do-header-das-notificações&#34;&gt;Estrutura do header das notificações&lt;/h2&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;x-stone-webhook-event-id: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;#34;&lt;/span&gt;
-x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A idempotência de webhooks deverá ser validada no campo &amp;lsquo;x-stone-webhook-event-id&amp;rsquo; disponível no header.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;x-stone-webhook-event-id: &amp;quot;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;quot;
+x-stone-webhook-event-type: &amp;quot;cash_out_internal_transfer&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A idempotência de webhooks deverá ser validada no campo &amp;lsquo;x-stone-webhook-event-id&amp;rsquo; disponível no header.&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;estrutura-do-payload-das-notificações&#34;&gt;Estrutura do payload das notificações&lt;/h2&gt;
 &lt;hr&gt;
@@ -1089,7 +1088,7 @@ x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;c
 
 &lt;br&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_in_internal_transfer&amp;#34;&lt;/span&gt;,
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
@@ -1150,7 +1149,7 @@ x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;c
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;O webhook irá chegar com um payload parecido com esse:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;encrypted_body&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xxxxxxxxxxxxxx conteúdo cifrado&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O valor do campo &amp;ldquo;encrypted_body&amp;rdquo; é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.&lt;/p&gt;
@@ -1217,56 +1216,57 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;br&gt;
 &lt;p&gt;Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.&lt;/p&gt;
 &lt;p&gt;Para acessar, basta fazer o comando abaixo, lembrando que no &lt;em&gt;header&lt;/em&gt; deve ser enviado o Bearer token no campo &lt;code&gt;authorization&lt;/code&gt; e o client_id é o id da sua aplicação, passado pelo time de integração.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Exemplo de Response&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;    {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer_finished&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;: {
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;4000&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;batch_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;: {
-                    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
-                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;
-                    },
-                    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
-                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-                    }
-                },
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-            },
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer_finished&amp;#34;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Exemplo de Response&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer_finished&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;4000&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;batch_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
         }
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer_finished&amp;#34;&lt;/span&gt;
+  }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
@@ -1320,41 +1320,41 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;hr&gt;
 &lt;p&gt;Antes de começar a integração é necessário obter uma chave de acesso ao repositório, pois trata-se de um repositório privado. Para obter esta chave entre em contato com a gente.&lt;/p&gt;
 &lt;p&gt;No arquivo &lt;code&gt;build.gradle&lt;/code&gt; do projeto adicione a URL do repositório e substitua o &lt;code&gt;{access-key}&lt;/code&gt; pela chave fornecida.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;maven { url &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&amp;#34;&lt;/span&gt;}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;maven { url &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&amp;#34;&lt;/span&gt;}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis neste repositório.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;maven { url &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;https://jitpack.io&amp;#39;&lt;/span&gt; }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Importe a dependência da Conta Stone SDK.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;implementation &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;co.stone:conta:${latest_version}&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;maven { url &amp;#39;https:&lt;span style=&#34;color:#6272a4&#34;&gt;//jitpack.io&amp;#39; }
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Importe a dependência da Conta Stone SDK.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;implementation &amp;#39;co.stone:conta:${latest_version}&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A Conta Stone SDK utiliza o Firebase para implementar alguns de seus serviços, logo é necessário ter um projeto no firebase e integrá-lo no seu app. Para mais informações sobre como adicionar o Firebase ao seu projeto acesse este &lt;a href=&#34;https://firebase.google.com/docs/android/setup&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Sincronize o projeto e pronto, já é possível utilizar a Conta Stone SDK!&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;inicializando-a-sdk&#34;&gt;&lt;strong&gt;Inicializando a SDK&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;private val environment &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Environment&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Sandbox
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; environment = Environment.Sandbox
 
- ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;initialize(
-            application &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; application,
-            environment &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; environment,
-            appInfo &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; AppInfo(
-                name &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Conta Stone Sample App&amp;#34;&lt;/span&gt;,
-                applicationId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BuildConfig&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;APPLICATION_ID,
-                buildId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BuildConfig&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;BUILD_TYPE,
-                version &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BuildConfig&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;VERSION_NAME
+ ContaStone.initialize(
+            application = application,
+            environment = environment,
+            appInfo = AppInfo(
+                name = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Conta Stone Sample App&amp;#34;&lt;/span&gt;,
+                applicationId = BuildConfig.APPLICATION_ID,
+                buildId = BuildConfig.BUILD_TYPE,
+                version = BuildConfig.VERSION_NAME
             ),
-            authFlowUIConfig &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; AuthFlowUIConfig(themeId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; R&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;style&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Theme_ContaStoneSdkSample),
-            clientId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;myapp@example.com.br&amp;#34;&lt;/span&gt;,
-            deepLinkUris &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; DeepLinkUris(
-                uriLogout &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.logout&amp;#34;&lt;/span&gt;,
-                uriChat &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.chat&amp;#34;&lt;/span&gt;,
-                uriDashboard &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample//uri.dashboard&amp;#34;&lt;/span&gt;,
-                uriHelp &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.help&amp;#34;&lt;/span&gt;,
-                uriKyc &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.kyc&amp;#34;&lt;/span&gt;,
-                uriUpdateApp &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.update.app&amp;#34;&lt;/span&gt;
+            authFlowUIConfig = AuthFlowUIConfig(themeId = R.style.Theme_ContaStoneSdkSample),
+            clientId = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;myapp@example.com.br&amp;#34;&lt;/span&gt;,
+            deepLinkUris = DeepLinkUris(
+                uriLogout = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.logout&amp;#34;&lt;/span&gt;,
+                uriChat = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.chat&amp;#34;&lt;/span&gt;,
+                uriDashboard = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample//uri.dashboard&amp;#34;&lt;/span&gt;,
+                uriHelp = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.help&amp;#34;&lt;/span&gt;,
+                uriKyc = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.kyc&amp;#34;&lt;/span&gt;,
+                uriUpdateApp = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.update.app&amp;#34;&lt;/span&gt;
             ),
-            httpClientConfig &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; HttpClientConfig(),
-            logger &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; InternalLogger(),
-            tokenKeyMasterUri &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;  URI(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;android-keystore://stone-mobile&amp;#34;&lt;/span&gt;)
+            httpClientConfig = HttpClientConfig(),
+            logger = InternalLogger(),
+            tokenKeyMasterUri =  URI(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;android-keystore://stone-mobile&amp;#34;&lt;/span&gt;)
         )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -1386,13 +1386,13 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;h5 id=&#34;iniciando-fluxo-de-autenticação-e-verificação-de-kyc&#34;&gt;&lt;strong&gt;Iniciando fluxo de Autenticação e verificação de KYC&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Para iniciar o fluxo de autenticação e verificação de KYC é necessário chamar o método abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;startAuthAndVerificationFlowForResult(
-            context &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; this,
-            params &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; VerificationParams(
-                launchMode &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; VerificationLaunchMode&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;StartingApp,
-                authMode &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; AuthFlowMode&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;RegisteredUser
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;contaStoneSdk.startAuthAndVerificationFlowForResult(
+            context = &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;,
+            params = VerificationParams(
+                launchMode = VerificationLaunchMode.StartingApp,
+                authMode = AuthFlowMode.RegisteredUser
             ),
-            requestCode &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; LOGIN_RC
+            requestCode = LOGIN_RC
         )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O atributo &lt;code&gt;params&lt;/code&gt; recebe dois argumentos: O modo de inicialização, o qual define como que o fluxo deve ser iniciado e o &lt;code&gt;authMode&lt;/code&gt; que neste caso sempre vai ser &lt;code&gt;AuthFlowMode.RegisteredUser&lt;/code&gt;. O modo de inicialização pode ser:&lt;/p&gt;
 &lt;ul&gt;
@@ -1414,18 +1414,18 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;h5 id=&#34;lidando-com-o-resultado-da-sdk&#34;&gt;&lt;strong&gt;Lidando com o resultado da SDK&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt; override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-         &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;onActivityResult(requestCode, resultCode, data)
-         &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (requestCode &lt;span style=&#34;color:#ff79c6&#34;&gt;==&lt;/span&gt; LOGIN_RC) {
-             val result &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;parseAuthAndVerificationResult(data)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;onActivityResult&lt;/span&gt;(requestCode: Int, resultCode: Int, &lt;span style=&#34;color:#ff79c6&#34;&gt;data&lt;/span&gt;: Intent?) {
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;super&lt;/span&gt;.onActivityResult(requestCode, resultCode, &lt;span style=&#34;color:#ff79c6&#34;&gt;data&lt;/span&gt;)
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (requestCode == LOGIN_RC) {
+             &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; result = contaStoneSdk.parseAuthAndVerificationResult(&lt;span style=&#34;color:#ff79c6&#34;&gt;data&lt;/span&gt;)
  
-             when (result) {
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Ok &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is authenticated&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;MissingData &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;some information is missing&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;UserCancelled &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User cancelled flow&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Error &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error during login ${result.error}&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;UserLoggedOut &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User requests logout&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;BlockedUser &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is blocked&amp;#34;&lt;/span&gt;)
+             &lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; (result) {
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.Ok -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is authenticated&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.MissingData -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;some information is missing&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.UserCancelled -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User cancelled flow&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.Error -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error during login ${result.error}&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.UserLoggedOut -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User requests logout&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.BlockedUser -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is blocked&amp;#34;&lt;/span&gt;)
              }
          }
      }
@@ -1434,8 +1434,8 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;h5 id=&#34;como-fazer-logout&#34;&gt;&lt;strong&gt;Como fazer logout&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Para deslogar o usuário podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;logout {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (it &lt;span style=&#34;color:#ff79c6&#34;&gt;!=&lt;/span&gt; null) {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;contaStoneSdk.logout {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (it != &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;) {
                 toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error on logout. Try again!&amp;#34;&lt;/span&gt;)
             } &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user successfully logged out&amp;#34;&lt;/span&gt;)
         }
@@ -1444,30 +1444,30 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;h5 id=&#34;obtendo-o-client-autenticado&#34;&gt;&lt;strong&gt;Obtendo o Client autenticado&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;A authSDK é responsável por todo o processo de autenticação incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um &lt;code&gt;OkHttpClient&lt;/code&gt; configurado que pode ser utilizado nas chamadas HTTP do seu app. Este client possui &lt;a href=&#34;https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning&#34;&gt;certificate pinning&lt;/a&gt; com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método &lt;code&gt;contaStone.auth().client()&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;private fun performAuthenticatedRequest() {
-        val httpService &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; HttpService&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;BankingGatewaySandbox
-        val client &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;auth()&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;getOkHttpClient(httpService)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;performAuthenticatedRequest&lt;/span&gt;() {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; httpService = HttpService.BankingGatewaySandbox
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; client = contaStoneSdk.auth().getOkHttpClient(httpService)
 
-        val request &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Request&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Builder()
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;url(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${httpService.url}/api/v1/institutions&amp;#34;&lt;/span&gt;)
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get()
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;build()
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; request = Request.Builder()
+            .url(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${httpService.url}/api/v1/institutions&amp;#34;&lt;/span&gt;)
+            .&lt;span style=&#34;color:#ff79c6&#34;&gt;get&lt;/span&gt;()
+            .build()
 
-        val callback &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;object&lt;/span&gt; : Callback {
-            override fun onFailure(call: Call, e: IOException) {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; callback = &lt;span style=&#34;color:#ff79c6&#34;&gt;object&lt;/span&gt; : &lt;span style=&#34;color:#50fa7b&#34;&gt;Callback&lt;/span&gt; {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;onFailure&lt;/span&gt;(call: Call, e: IOException) {
                 runOnMainThread {
                     toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error fetching institutions $e&amp;#34;&lt;/span&gt;)
                 }
             }
 
-            override fun onResponse(call: Call, response: Response) {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;onResponse&lt;/span&gt;(call: Call, response: Response) {
                 runOnMainThread {
                     toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Request executed successfully&amp;#34;&lt;/span&gt;)
                 }
             }
         }
 
-        client&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;newCall(request)&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;enqueue(callback)
+        client.newCall(request).enqueue(callback)
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;!---
@@ -1476,7 +1476,7 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 
 Para conseguir iniciar o aprovador é necessário fazer a chamada conforme o exemplo abaixo:
 
-```python
+```kotlin
 contaStoneSdk.startApproverForResult(
                         source = this,
                         requestCode = APPROVER_RQ,
@@ -1486,7 +1486,7 @@ contaStoneSdk.startApproverForResult(
 
 Para recuperar o `loggedAccount` a Conta Stone SDK disponibiliza a sessão do usuário logado com todas as informações que o `LoggedAccount` precisa:
 
-```python
+```kotlin
 contaStoneSdk.getSession(
                 onComplete = { result -&gt;
                     when (result) {
@@ -1561,11 +1561,11 @@ contaStoneSdk.getSession(
 &lt;p&gt;Em &lt;code&gt;Build Phases&lt;/code&gt; adicione um novo script chamado &amp;ldquo;Sign&amp;rdquo; (Em Build Phases, clique sinal de &amp;ldquo;mais&amp;rdquo; e selecione New Run Script Phase).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;pushd ${TARGET_BUILD_DIR}&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;${PRODUCT_NAME}&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;app&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;Frameworks&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;ContaStoneSDK&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;framework&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;Frameworks
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;pushd ${TARGET_BUILD_DIR}&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;${PRODUCT_NAME}.app&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;Frameworks&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;ContaStoneSDK.framework&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;Frameworks
 
-&lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; EACH &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*.&lt;/span&gt;framework; do
+&lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; EACH &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.framework; &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt;
 	echo &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;-- signing ${EACH}&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;usr&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;codesign &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;force &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;deep &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;sign &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${EXPANDED_CODE_SIGN_IDENTITY}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;entitlements &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;timestamp&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;none
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;usr&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;bin&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;codesign &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;force &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;deep &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;sign &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${EXPANDED_CODE_SIGN_IDENTITY}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;entitlements &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;timestamp=&lt;span style=&#34;color:#ff79c6&#34;&gt;none&lt;/span&gt;
 	$EACH
 done
 
@@ -1573,15 +1573,15 @@ popd
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;8&#34;&gt;
 &lt;li&gt;Adicione dependências:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; Cocoapods
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// Cocoapods&lt;/span&gt;
 
-pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Alamofire&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;4.8.2&amp;#39;&lt;/span&gt;
-pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;RxSwift&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;~&amp;gt; 5&amp;#39;&lt;/span&gt;
-pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;RxCocoa&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;~&amp;gt; 5&amp;#39;&lt;/span&gt;
-pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;lottie-ios&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;3.1.6&amp;#39;&lt;/span&gt;
-pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;AloeStackView&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;1.2.0&amp;#39;&lt;/span&gt;
+pod &amp;#39;Alamofire&amp;#39;, &amp;#39;&lt;span style=&#34;color:#bd93f9&#34;&gt;4.8&lt;/span&gt;.&lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;&amp;#39;
+pod &amp;#39;RxSwift&amp;#39;, &amp;#39;&lt;span style=&#34;color:#ff79c6&#34;&gt;~&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;5&lt;/span&gt;&amp;#39;
+pod &amp;#39;RxCocoa&amp;#39;, &amp;#39;&lt;span style=&#34;color:#ff79c6&#34;&gt;~&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;5&lt;/span&gt;&amp;#39;
+pod &amp;#39;lottie&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;ios&amp;#39;, &amp;#39;&lt;span style=&#34;color:#bd93f9&#34;&gt;3.1&lt;/span&gt;.&lt;span style=&#34;color:#bd93f9&#34;&gt;6&lt;/span&gt;&amp;#39;
+pod &amp;#39;AloeStackView&amp;#39;, &amp;#39;&lt;span style=&#34;color:#bd93f9&#34;&gt;1.2&lt;/span&gt;.&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;&amp;#39;
 
-&lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; Carthage
+&lt;span style=&#34;color:#6272a4&#34;&gt;// Carthage&lt;/span&gt;
 
 github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Alamofire/Alamofire&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4.8.2&amp;#34;&lt;/span&gt;
 github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ReactiveX/RxSwift&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5.1.1&amp;#34;&lt;/span&gt;
@@ -1590,57 +1590,57 @@ github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;airbnb/AloeStackView&a
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;uso&#34;&gt;&lt;strong&gt;USO&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;configurando-o-appdelegate&#34;&gt;&lt;strong&gt;Configurando o AppDelegate&lt;/strong&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; UIKit
-&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; ContaStoneSDK
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;UIKit&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ContaStoneSDK&lt;/span&gt;
 
-@UIApplicationMain
-&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;AppDelegate&lt;/span&gt;: UIResponder, UIApplicationDelegate {
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;LaunchOptionsKey: Any]?) &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; Bool {
-		ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;configure(
-			&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;john.doe@openbank.com&amp;#34;&lt;/span&gt;,
+&lt;span style=&#34;color:#ff79c6&#34;&gt;@UIApplicationMain&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;AppDelegate&lt;/span&gt;: UIResponder, UIApplicationDelegate {
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;application&lt;/span&gt;(&lt;span style=&#34;color:#ff79c6&#34;&gt;_&lt;/span&gt; application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Any&lt;/span&gt;]?) -&amp;gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Bool&lt;/span&gt; {
+		ContaStone.configure(
+			id: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;john.doe@openbank.com&amp;#34;&lt;/span&gt;,
 			scopes: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;offline_access&amp;#34;&lt;/span&gt;],
-			environmentType: &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;sandbox, &lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;homol, &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;sandbox, &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;production
-			delegate: self
+			environmentType: .sandbox, &lt;span style=&#34;color:#6272a4&#34;&gt;// .homol, .sandbox, .production&lt;/span&gt;
+			delegate: &lt;span style=&#34;color:#ff79c6&#34;&gt;self&lt;/span&gt;
 		)
 
-		&lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; true
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
 	}
 }
 
-extension AppDelegate: ContaStoneDelegate {
-	func refreshApp() {}
-	func sessionRevoked() {}
-	func loggedOut() {}
-	func showHelpCenter() {}
-	func showChat() {}
-	func showFrequentlyAskedQuestions() {}
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;extension&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;AppDelegate&lt;/span&gt;: ContaStoneDelegate {
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;refreshApp&lt;/span&gt;() {}
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;sessionRevoked&lt;/span&gt;() {}
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;loggedOut&lt;/span&gt;() {}
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;showHelpCenter&lt;/span&gt;() {}
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;showChat&lt;/span&gt;() {}
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;showFrequentlyAskedQuestions&lt;/span&gt;() {}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;autenticação&#34;&gt;&lt;strong&gt;Autenticação&lt;/strong&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; UIKit
-&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; ContaStoneSDK
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;UIKit&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ContaStoneSDK&lt;/span&gt;
 
-&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
-	func checkAuthenticationState() {
-		&lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;isAuthenticated {
-			ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;currentAcount&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; John Doe Inc
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;checkAuthenticationState&lt;/span&gt;() {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; ContaStone.isAuthenticated {
+			ContaStone.currentAcount.name &lt;span style=&#34;color:#6272a4&#34;&gt;// John Doe Inc&lt;/span&gt;
 		} &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt; {
-			ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;login(checkKYC: true) { &lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt; }
+			ContaStone.login(checkKYC: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;) { &lt;span style=&#34;color:#6272a4&#34;&gt;/* callback */&lt;/span&gt; }
 		}
 	}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;logout&#34;&gt;&lt;strong&gt;Logout&lt;/strong&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; UIKit
-&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; ContaStoneSDK
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;UIKit&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ContaStoneSDK&lt;/span&gt;
 
-&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
-	func logout() {
-		ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;logout { &lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt; }
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;logout&lt;/span&gt;() {
+		ContaStone.logout { &lt;span style=&#34;color:#6272a4&#34;&gt;/* callback */&lt;/span&gt; }
 	}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!---
 ##### **Aprovador**
 
-```python
+```swift
 	var approverCoordinator: ApproverCoordinator?
 
 	func showApprover() {
@@ -1654,18 +1654,18 @@ extension AppDelegate: ContaStoneDelegate {
 ```
 ---&gt;
 &lt;h6 id=&#34;requisições&#34;&gt;&lt;strong&gt;Requisições&lt;/strong&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
-	func fetchBalance() {
-	   let &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;currentAcount&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;id
-	   let endpoint &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Endpoint&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt;BalanceResponse&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;gt;&lt;/span&gt;(method: &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get, path: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/api/v1/accounts/\(id)/balance&amp;#34;&lt;/span&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
+	&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;fetchBalance&lt;/span&gt;() {
+	   &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;id&lt;/span&gt; = ContaStone.currentAcount.id
+	   &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;endpoint&lt;/span&gt; = Endpoint&amp;lt;BalanceResponse&amp;gt;(method: .&lt;span style=&#34;color:#ff79c6&#34;&gt;get&lt;/span&gt;, path: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/api/v1/accounts/&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\(&lt;/span&gt;id&lt;span style=&#34;color:#f1fa8c&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;/balance&amp;#34;&lt;/span&gt;)
 
-	   ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;performRequest(endpoint) { result &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt;
-			switch result {
-			case &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;success(let response):
-				&lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt;
+	   ContaStone.performRequest(endpoint) { result &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt;
+			&lt;span style=&#34;color:#ff79c6&#34;&gt;switch&lt;/span&gt; result {
+			&lt;span style=&#34;color:#ff79c6&#34;&gt;case&lt;/span&gt; .success(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;response&lt;/span&gt;):
+				&lt;span style=&#34;color:#6272a4&#34;&gt;/* callback */&lt;/span&gt;
 
-			case &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;failure(let error):
-				&lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt;
+			&lt;span style=&#34;color:#ff79c6&#34;&gt;case&lt;/span&gt; .failure(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;error&lt;/span&gt;):
+				&lt;span style=&#34;color:#6272a4&#34;&gt;/* callback */&lt;/span&gt;
 		   }
 	   }
 	}

@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4563,49 +4588,49 @@
         </div>
 	
 	<h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET /api/v1/pix/:account_id/entry_claims
-</code></pre></div><p>Parâmetros para query.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">- &#34;participant_ispb&#34; *(obrigatório para participantes indiretos)
-- &#34;claim_type&#34;
-- &#34;origin&#34;
-- &#34;origin_ispb&#34; (quando origin é external)
-- &#34;beneficiary_entity_name&#34;
-- &#34;beneficiary_entity_document_type&#34;
-- &#34;beneficiary_entity_document&#34;
-- &#34;beneficiary_account_branch_code&#34;
-- &#34;beneficiary_account_account_code&#34;
-- &#34;beneficiary_account_account_type&#34;
-- &#34;beneficiary_account_created_at&#34;
-- &#34;status&#34;
-</code></pre></div><p><br> <br></p>
+<pre><code>GET /api/v1/pix/:account_id/entry_claims
+</code></pre><p>Parâmetros para query.</p>
+<pre><code>- &quot;participant_ispb&quot; *(obrigatório para participantes indiretos)
+- &quot;claim_type&quot;
+- &quot;origin&quot;
+- &quot;origin_ispb&quot; (quando origin é external)
+- &quot;beneficiary_entity_name&quot;
+- &quot;beneficiary_entity_document_type&quot;
+- &quot;beneficiary_entity_document&quot;
+- &quot;beneficiary_account_branch_code&quot;
+- &quot;beneficiary_account_account_code&quot;
+- &quot;beneficiary_account_account_type&quot;
+- &quot;beneficiary_account_created_at&quot;
+- &quot;status&quot;
+</code></pre><p><br> <br></p>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">202 CONTINUE
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;cursor&#34;: {},
-  &#34;data&#34;: [
+<pre><code>202 CONTINUE
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;cursor&#34;</span>: {},
+  <span style="color:#ff79c6">&#34;data&#34;</span>: [
     {
-      &#34;id&#34;: &#34;40346adc-74f3-4c4e-8275-73ba78993491&#34;,
-      “claim_type”: “portability”,
-      &#34;status&#34;: &#34;open&#34;,
-      &#34;origin&#34;: &#34;external&#34;,
-      &#34;origin_ispb&#34;: &#34;9876543210&#34;,
-      “created_at”: &#34;“2020-09-27T03:00:00Z”,
-      “updated_at”: &#34;2020-09-27T06:00:00Z&#34;, 
-      “expires_at”: &#34;2020-09-30T03:00:00Z&#34;,
-      &#34;beneficiary_account&#34;: {
-        &#34;branch_code&#34;: “0001”,
-        &#34;account_code&#34;: &#34;00016583&#34;,
-        &#34;account_type&#34;: &#34;CC&#34;,
-        &#34;opened_at&#34;: &#34;2019-11-18T03:00:00Z&#34;
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;40346adc-74f3-4c4e-8275-73ba78993491&#34;</span>,
+      <span style="color:#ff79c6">&#34;claim_type&#34;</span>: <span style="color:#f1fa8c">&#34;portability&#34;</span>,
+      <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;open&#34;</span>,
+      <span style="color:#ff79c6">&#34;origin&#34;</span>: <span style="color:#f1fa8c">&#34;external&#34;</span>,
+      <span style="color:#ff79c6">&#34;origin_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;9876543210&#34;</span>,
+      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-09-27T03:00:00Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-09-27T06:00:00Z&#34;</span>, 
+      <span style="color:#ff79c6">&#34;expires_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-09-30T03:00:00Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;beneficiary_account&#34;</span>: {
+        <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+        <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;00016583&#34;</span>,
+        <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;CC&#34;</span>,
+        <span style="color:#ff79c6">&#34;opened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-11-18T03:00:00Z&#34;</span>
       },
-      &#34;beneficiary_entity&#34;: {
-        &#34;name&#34;:&#34;Maria Clara Gomes&#34;,
-        &#34;document_type&#34;: &#34;cpf&#34;,
-        &#34;document&#34;: “13152256685”
+      <span style="color:#ff79c6">&#34;beneficiary_entity&#34;</span>: {
+        <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Maria Clara Gomes&#34;</span>,
+        <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+        <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;13152256685&#34;</span>
       },
-      &#34;key&#34;: “+5510998765432”, 
-      &#34;key_type&#34;: &#34;phone&#34;
+      <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;+5510998765432&#34;</span>, 
+      <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>
     }
   ]
 }
@@ -4618,6 +4643,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

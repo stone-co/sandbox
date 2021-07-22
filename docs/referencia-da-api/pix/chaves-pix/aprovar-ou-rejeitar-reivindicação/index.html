@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4566,43 +4591,51 @@
 <br><br></p>
 <h5 id="webhook"><strong>Webhook</strong></h5>
 <p>Ai receber uma reivindicação será disparado o seguinte webhook:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;claim_id&#34;: 6c8e9fb9-1416-434d-9933-a36fb3ad7a8c,
-  &#34;key_type&#34;: &#34;phone&#34;,
-  &#34;key&#34;: &#34;+5510998765432&#34;,
-  “claim_type”: “portability”,
-  &#34;claim_origin_ispb&#34;: &#34;9876543210&#34;,
-  &#34;beneficiary_account&#34;: {
-     &#34;branch_code&#34;: “0001”,
-     &#34;account_code&#34;: &#34;00016583&#34;,
-     &#34;account_type&#34;: &#34;CC&#34;,
-     &#34;opened_at&#34;: &#34;2019-11-18T03:00:00Z&#34;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;claim_id&#34;</span>: <span style="color:#f1fa8c">&#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&#34;</span>,
+  <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>,
+  <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;+5510998765432&#34;</span>,
+  <span style="color:#ff79c6">&#34;claim_type&#34;</span>: <span style="color:#f1fa8c">&#34;portability&#34;</span>,
+  <span style="color:#ff79c6">&#34;claim_origin_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;9876543210&#34;</span>,
+  <span style="color:#ff79c6">&#34;beneficiary_account&#34;</span>: {
+     <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+     <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;00016583&#34;</span>,
+     <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;CC&#34;</span>,
+     <span style="color:#ff79c6">&#34;opened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-11-18T03:00:00Z&#34;</span>
   },
-  &#34;beneficiary_entity&#34;: {
-     &#34;name&#34;: “0001”,
-     &#34;document_type&#34;: &#34;cpf&#34;,
-     &#34;document&#34;: &#34;13152256685&#34;
+  <span style="color:#ff79c6">&#34;beneficiary_entity&#34;</span>: {
+     <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
+     <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+     <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;13152256685&#34;</span>
   }
 }
 </code></pre></div><p><br> <br></p>
 <h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST /api/v1/pix/:account_id/entry_claims/:claim_id/actions/:action {approve|reject}
+<pre><code>POST /api/v1/pix/:account_id/entry_claims/:claim_id/actions/:action {approve|reject}
 content-type: application/json
-</code></pre></div><p><br> <br></p>
+</code></pre><p><br> <br></p>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">202 ACCEPTED
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;claim_id&#34;: “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
-  &#34;claim_type&#34;: “portability”
+<pre><code>202 ACCEPTED
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;claim_id&#34;</span>: <span style="color:#f1fa8c">&#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&#34;</span>,
+  <span style="color:#ff79c6">&#34;claim_type&#34;</span>: <span style="color:#f1fa8c">&#34;portability&#34;</span>
 }
-</code></pre></div><p><br> <br></p>
+</code></pre></div><hr>
+<pre><code>422 DOMAIN ERROR
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:wrong_status&#34;</span>
+}
+</code></pre></div><p>Acontece quando se tenta aprovar/rejeitar uma revindicação que não está em um estado que pode
+ser aprovado/rejeitado</p>
+<p><br> <br></p>
 <h5 id="webhook-1"><strong>Webhook</strong></h5>
 <p>Serão disparados webhooks quando o status da reivindicação sofrer alterações. Veja <a href="https://stone-co.github.io/docs/pix/chaves-pix/status/#status-da-reivindica%C3%A7%C3%A3o">aqui</a> os possíveis status para uma reivindicação.</p>
 <p>As seguintes informações virão no campo target_data.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;claim_id&#34;: &#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&#34;,
-  &#34;status&#34;: &#34;open&#34;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;claim_id&#34;</span>: <span style="color:#f1fa8c">&#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&#34;</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;open&#34;</span>
 }
 </code></pre></div><p><br> <br></p>
 
@@ -4613,6 +4646,8 @@ content-type: application/json
     
     
     <hr class="panel-line">
+        
+            
         
             
         

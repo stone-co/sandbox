@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4555,20 +4580,20 @@
 	<hr>
 <br>
 <p>Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
- cursor: {
-    after: <span style="color:#ff79c6">&#34;string | null&#34;</span>,
-    before: <span style="color:#ff79c6">&#34;string | null&#34;</span>,
-    limit: <span style="color:#ff79c6">&#34;number&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+ cursor<span style="color:#ff79c6">:</span> {
+    after<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;string | null&#34;</span>,
+    before<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;string | null&#34;</span>,
+    limit<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;number&#34;</span>
  },
- data: array[object],
+ data<span style="color:#ff79c6">:</span> array[object],
 }
 </code></pre></div><br>
 <h4 id="como-funciona">Como funciona:</h4>
 <hr>
 <br>
 <p>Deve-se informar o limite de items para a paginação, passando o parâmetro <strong>?limit=10</strong>. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
  cursor: {
  after: <span style="color:#ff79c6">&#34;ASsa987fqw&#34;</span>,
  before: <span style="color:#ff79c6">&#34;null&#34;</span>,
@@ -4585,6 +4610,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

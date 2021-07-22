@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4594,10 +4619,9 @@ Para receber esse Token de Acesso, será necessário que você gere um  JWT loca
 Para obter o seu Access Token, será necessário gerar um par de chaves RSA 4096. Você deverá assinar o JWT com a chave privada e nos enviar a chave pública no formato PEM e extensão .pub. <br><br>
 <p>Embora existam vários métodos para criação de pares de chaves público e privada, a ferramenta OpenSSL de código aberto é uma das mais usadas, por isso, recomendamos o seu uso.</p>
 <p>Em todas as plataformas disponíveis - Linux, MacOS e Windows, os comandos do OpenSSL são iguais: <br></p>
-<pre><code>openssl genrsa -out mykey.pem 4096
-openssl rsa -in mykey.pem -pubout &gt; mykey.pub
-</code></pre>
-<p>Algumas dicas importantes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   $ openssl genrsa -out mykey.pem <span style="color:#bd93f9">4096</span>
+   $ openssl rsa -in mykey.pem -pubout &gt; mykey.pub
+</code></pre></div><p>Algumas dicas importantes:</p>
 
 
 <div class="alert alert-primary" role="alert">
@@ -4689,12 +4713,12 @@ openssl rsa -in mykey.pem -pubout &gt; mykey.pub
 <br><br></p>
 <p><strong>Header</strong><br>Na nossa API, usaremos sempre o algoritmo <strong>RS256</strong>. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”.
 Abaixo você encontrará um exemplo de header.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;alg&#34;</span>: <span style="color:#f1fa8c">&#34;RS256&#34;</span>,
   <span style="color:#ff79c6">&#34;typ&#34;</span>: <span style="color:#f1fa8c">&#34;JWT&#34;</span>
 }
 </code></pre></div><p>A chamada é com o método <strong>POST</strong> com o header <strong>Content-Type</strong> e <strong>User-Agent</strong>. <br>O <strong>Content-Type</strong> informado deve ser <strong>x-www-form-urlencoded</strong> (o mesmo usado por submissão de formulários HTML) e o header <strong>User-Agent</strong> deve estar habilitado com o nome da sua aplicação. Verifique o exemplo abaixo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;user-agent&#34;</span>: <span style="color:#f1fa8c">&#34;Nome da aplicação&#34;</span>,
   <span style="color:#ff79c6">&#34;content-type&#34;</span>: <span style="color:#f1fa8c">&#34;application/x-www-form-urlencoded&#34;</span>
 }
@@ -4763,6 +4787,8 @@ Este request deverá ser realizado nas seguintes URLs (por ambiente):
     
     
     <hr class="panel-line">
+        
+            
         
             
         

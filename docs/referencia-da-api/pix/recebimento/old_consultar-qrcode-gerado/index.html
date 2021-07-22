@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.51f70a735bfaa12d896aa1e0ef8d76d5.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.c6f1007cd414a471d5927e3739d0c876.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3683,6 +3683,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -4563,40 +4588,39 @@
         </div>
 	
 	<h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET /api/v1/pix_payment_invoices/:id
-</code></pre></div><h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">200 OK
-
-{
-   &#34;id&#34;: &#34;54071fc2-8068-4b26-bed7-be112228ed98&#34;,
-   &#34;account_id&#34;: &#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&#34;,
-   &#34;request_id&#34;: &#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&#34;,
-   &#34;key&#34;: &#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&#34;,
-   &#34;key_type&#34;: &#34;random_key&#34;,
-   &#34;transaction_id&#34;: &#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&#34;,
-   &#34;amount&#34;: 1000,
-   &#34;request_for_payer&#34;: &#34;Preencha o tamanho da camisa&#34;,
-   &#34;expiration&#34;: 86400,
-   &#34;created_at&#34;: &#34;2020-08-19T13:49:43Z&#34;,
-   &#34;created_by&#34;: &#34;user:54071fc2-8068-4b26-bed7-be112228ed98&#34;,
-   &#34;paid_at&#34;: &#34;2020-08-19T13:49:43Z&#34;,
-   &#34;cancelled_at&#34;: null,
-   &#34;updated_at&#34;: &#34;2020-08-19T13:49:43Z&#34;,
-   &#34;revision&#34;: 0,
-   &#34;location&#34;: &#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&#34;,
-   &#34;status&#34;: &#34;ACTIVE&#34;,
-   &#34;customer&#34;: {
-     &#34;name&#34;: &#34;Fulano da Silva&#34;
-     &#34;document&#34;: &#34;18894559890&#34;
+<pre><code>GET /api/v1/pix_payment_invoices/:id
+</code></pre><h5 id="response"><strong>Response</strong></h5>
+<pre><code>200 OK
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;54071fc2-8068-4b26-bed7-be112228ed98&#34;</span>,
+   <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&#34;</span>,
+   <span style="color:#ff79c6">&#34;request_id&#34;</span>: <span style="color:#f1fa8c">&#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&#34;</span>,
+   <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&#34;</span>,
+   <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;random_key&#34;</span>,
+   <span style="color:#ff79c6">&#34;transaction_id&#34;</span>: <span style="color:#f1fa8c">&#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&#34;</span>,
+   <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+   <span style="color:#ff79c6">&#34;request_for_payer&#34;</span>: <span style="color:#f1fa8c">&#34;Preencha o tamanho da camisa&#34;</span>,
+   <span style="color:#ff79c6">&#34;expiration&#34;</span>: <span style="color:#bd93f9">86400</span>,
+   <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-08-19T13:49:43Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:54071fc2-8068-4b26-bed7-be112228ed98&#34;</span>,
+   <span style="color:#ff79c6">&#34;paid_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-08-19T13:49:43Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+   <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-08-19T13:49:43Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;revision&#34;</span>: <span style="color:#bd93f9">0</span>,
+   <span style="color:#ff79c6">&#34;location&#34;</span>: <span style="color:#f1fa8c">&#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&#34;</span>,
+   <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;ACTIVE&#34;</span>,
+   <span style="color:#ff79c6">&#34;customer&#34;</span>: {
+     <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Fulano da Silva&#34;</span>
+     <span style="color:#f1fa8c">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;18894559890&#34;</span>
    },
-   &#34;additional_data&#34;: [
+   <span style="color:#ff79c6">&#34;additional_data&#34;</span>: [
     {
-      &#34;name&#34;: &#34;Modelo&#34;,
-      &#34;value&#34;: &#34;Camisa Kelvin Clain Luxo&#34;
+      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Modelo&#34;</span>,
+      <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;Camisa Kelvin Clain Luxo&#34;</span>
     },
     {
-      &#34;name&#34;: &#34;Cor&#34;,
-      &#34;value&#34;: &#34;Dourada&#34;
+      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Cor&#34;</span>,
+      <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;Dourada&#34;</span>
     }
   ]
 }
@@ -4608,6 +4632,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

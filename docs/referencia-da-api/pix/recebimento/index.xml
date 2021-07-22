@@ -23,59 +23,58 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&amp;#34;authorization&amp;#34;: subject application:participante
-&amp;#34;content-type&amp;#34;: application/json
-&amp;#34;x-stone-idempotency-key&amp;#34;: string
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;body&#34;&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
-  &amp;#34;account_id&amp;#34;: uuid() # ID da conta da participante,
-  &amp;#34;key&amp;#34;: &amp;lt;string&amp;gt;, # chave do dict
-  &amp;#34;transaction_id&amp;#34;: &amp;lt;string&amp;gt;, # pattern: [A-Z0-9-]{1,35}
-  &amp;#34;amount&amp;#34;: integer(), # min 1, max 999_999_999_999
-  &amp;#34;request_for_payer&amp;#34;: string() | null, # 140 caracteres no max
-  &amp;#34;expiration&amp;#34;: integer() | null, # valor em segundos, default 86400
-  &amp;#34;customer&amp;#34;: {
-    &amp;#34;name&amp;#34;: string(), # min 1 caracter, max 200 caracteres. Nome do pagador cadastrado na geração da cobrança (não necessariamente é o pagador final)
-    &amp;#34;document&amp;#34;: string() # min 1 caracter, max 200 caracteres. Documento do pagador cadastrado na cobrança
+        &lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;authorization&amp;quot;: subject application:participante
+&amp;quot;content-type&amp;quot;: application/json
+&amp;quot;x-stone-idempotency-key&amp;quot;: string
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;body&#34;&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;account_id&amp;quot;: uuid() # ID da conta da participante,
+  &amp;quot;key&amp;quot;: &amp;lt;string&amp;gt;, # chave do dict
+  &amp;quot;transaction_id&amp;quot;: &amp;lt;string&amp;gt;, # pattern: [A-Z0-9-]{1,35}
+  &amp;quot;amount&amp;quot;: integer(), # min 1, max 999_999_999_999
+  &amp;quot;request_for_payer&amp;quot;: string() | null, # 140 caracteres no max
+  &amp;quot;expiration&amp;quot;: integer() | null, # valor em segundos, default 86400
+  &amp;quot;customer&amp;quot;: {
+    &amp;quot;name&amp;quot;: string(), # min 1 caracter, max 200 caracteres. Nome do pagador cadastrado na geração da cobrança (não necessariamente é o pagador final)
+    &amp;quot;document&amp;quot;: string() # min 1 caracter, max 200 caracteres. Documento do pagador cadastrado na cobrança
   } | null,
   additional_data: [ # máximo de 50 itens na lista, mínimo de 1 ou nulo
     {
-      &amp;#34;name&amp;#34;: string(), # min 1 caractere, max 50 caracteres
-      &amp;#34;value&amp;#34;: string() # min 1 caractere, max 200 caracteres
+      &amp;quot;name&amp;quot;: string(), # min 1 caractere, max 50 caracteres
+      &amp;quot;value&amp;quot;: string() # min 1 caractere, max 200 caracteres
     }
   ] | null
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;201 CREATED
-
-{
-   &amp;#34;id&amp;#34;: &amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
-   &amp;#34;account_id&amp;#34;: &amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;,
-   &amp;#34;request_id&amp;#34;: &amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;,
-   &amp;#34;key&amp;#34;: &amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;,
-   &amp;#34;transaction_id&amp;#34;: &amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;,
-   &amp;#34;amount&amp;#34;: 1000,
-   &amp;#34;request_for_payer&amp;#34;: &amp;#34;Preencha o tamanho da camisa&amp;#34;,
-   &amp;#34;expiration&amp;#34;: 86400,
-   &amp;#34;created_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-   &amp;#34;created_by&amp;#34;: &amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;
-   &amp;#34;revision&amp;#34;: 0,
-   &amp;#34;location&amp;#34;: &amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;,
-   &amp;#34;status&amp;#34;: &amp;#34;ACTIVE&amp;#34;,
-   &amp;#34;customer&amp;#34;: {
-     &amp;#34;name&amp;#34;: &amp;#34;Fulano da Silva&amp;#34;
-     &amp;#34;document&amp;#34;: &amp;#34;18894559890&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;201 CREATED
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Preencha o tamanho da camisa&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;86400&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;revision&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;location&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ACTIVE&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Fulano da Silva&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;18894559890&amp;#34;&lt;/span&gt;
    },
-   &amp;#34;additional_data&amp;#34;: [
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: [
     {
-      &amp;#34;name&amp;#34;: &amp;#34;Modelo&amp;#34;,
-      &amp;#34;value&amp;#34;: &amp;#34;Camisa Kelvin Clain Luxo&amp;#34;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Modelo&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Camisa Kelvin Clain Luxo&amp;#34;&lt;/span&gt;
     },
     {
-      &amp;#34;name&amp;#34;: &amp;#34;Cor&amp;#34;,
-      &amp;#34;value&amp;#34;: &amp;#34;Dourada&amp;#34;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Cor&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Dourada&amp;#34;&lt;/span&gt;
     }
   ]
 }
@@ -93,40 +92,39 @@
         
         
         &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET /api/v1/pix_payment_invoices/:id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;200 OK
-
-{
-   &amp;#34;id&amp;#34;: &amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
-   &amp;#34;account_id&amp;#34;: &amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;,
-   &amp;#34;request_id&amp;#34;: &amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;,
-   &amp;#34;key&amp;#34;: &amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;,
-   &amp;#34;key_type&amp;#34;: &amp;#34;random_key&amp;#34;,
-   &amp;#34;transaction_id&amp;#34;: &amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;,
-   &amp;#34;amount&amp;#34;: 1000,
-   &amp;#34;request_for_payer&amp;#34;: &amp;#34;Preencha o tamanho da camisa&amp;#34;,
-   &amp;#34;expiration&amp;#34;: 86400,
-   &amp;#34;created_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-   &amp;#34;created_by&amp;#34;: &amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
-   &amp;#34;paid_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-   &amp;#34;cancelled_at&amp;#34;: null,
-   &amp;#34;updated_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-   &amp;#34;revision&amp;#34;: 0,
-   &amp;#34;location&amp;#34;: &amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;,
-   &amp;#34;status&amp;#34;: &amp;#34;ACTIVE&amp;#34;,
-   &amp;#34;customer&amp;#34;: {
-     &amp;#34;name&amp;#34;: &amp;#34;Fulano da Silva&amp;#34;
-     &amp;#34;document&amp;#34;: &amp;#34;18894559890&amp;#34;
+&lt;pre&gt;&lt;code&gt;GET /api/v1/pix_payment_invoices/:id
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;random_key&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Preencha o tamanho da camisa&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;86400&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paid_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;revision&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;location&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ACTIVE&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Fulano da Silva&amp;#34;&lt;/span&gt;
+     &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;18894559890&amp;#34;&lt;/span&gt;
    },
-   &amp;#34;additional_data&amp;#34;: [
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: [
     {
-      &amp;#34;name&amp;#34;: &amp;#34;Modelo&amp;#34;,
-      &amp;#34;value&amp;#34;: &amp;#34;Camisa Kelvin Clain Luxo&amp;#34;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Modelo&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Camisa Kelvin Clain Luxo&amp;#34;&lt;/span&gt;
     },
     {
-      &amp;#34;name&amp;#34;: &amp;#34;Cor&amp;#34;,
-      &amp;#34;value&amp;#34;: &amp;#34;Dourada&amp;#34;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Cor&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Dourada&amp;#34;&lt;/span&gt;
     }
   ]
 }
@@ -144,8 +142,8 @@
         
         
         &lt;p&gt;Através desse endpoint será possível consultar um Pix recebido através do end_to_end_id. Segue padrão definido pelo Banco Central.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{e2eid}}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{e2eid}}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
 &lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
@@ -159,7 +157,7 @@
 &lt;p&gt;&lt;strong&gt;e2eid&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
 Exemplo:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;e2eid&amp;#34;&lt;/span&gt;: {
@@ -174,8 +172,8 @@ Exemplo:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;devolucoes&amp;#34;&lt;/span&gt;: [
     {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
@@ -275,8 +273,8 @@ Exemplo:
         
         
         &lt;p&gt;Através desse endpoint será possível consultar QRCodes com vencimento e valores monetários calculados. Segue padrões definidos pelo BACEN.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
 &lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
@@ -300,8 +298,8 @@ Exemplo:
 &lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calendario&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;apresentacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-26T20:35:33Z&amp;#34;&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;criacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-26T20:26:49Z&amp;#34;&lt;/span&gt;,
@@ -339,16 +337,16 @@ Exemplo:
   }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt; Bad Request
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt; Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://pix.bcb.gov.br/api/v2/error/PixConsultaInvalida&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Consulta Pix Inválida&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detail&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Os parâmetros de consulta à lista de pix recebidos não respeitam o schema ou não fazem sentido semanticamente.&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;404&lt;/span&gt; Not found
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;404&lt;/span&gt; Not found
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://pix.bcb.gov.br/api/v2/error/PixNaoEncontrado&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Não Encontrado&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;404&lt;/span&gt;,
@@ -888,8 +886,8 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;    {
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;    {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calendario&amp;#34;&lt;/span&gt;: {
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;criacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-19T22:04:24.209571Z&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;dataDeVencimento&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-18&amp;#34;&lt;/span&gt;,
@@ -1025,8 +1023,8 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;parametros&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;477f8576-ca82-462b-be73-dc28cc6490c3&amp;#34;&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fim&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-02-15T23:55:00Z&amp;#34;&lt;/span&gt;,
@@ -1157,51 +1155,50 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
         
         
         &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET /api/v1/pix_payment_invoices
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;filtros-possíveis&#34;&gt;&lt;strong&gt;Filtros possíveis&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;- &amp;#34;account_id&amp;#34; - string (obrigatório)
-- &amp;#34;key&amp;#34;: string
-- &amp;#34;transaction_id&amp;#34;: string
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;200 OK
-
-{
-  cursor: {
-    before: null,
-    after: &amp;#34;c2hvcnQ&amp;#34;,
+&lt;pre&gt;&lt;code&gt;GET /api/v1/pix_payment_invoices
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;filtros-possíveis&#34;&gt;&lt;strong&gt;Filtros possíveis&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;- &amp;quot;account_id&amp;quot; - string (obrigatório)
+- &amp;quot;key&amp;quot;: string
+- &amp;quot;transaction_id&amp;quot;: string
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cursor&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;before&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    after: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;c2hvcnQ&amp;#34;&lt;/span&gt;,
     limit: 100
   },
   data: [
     {
-      &amp;#34;id&amp;#34;: &amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
-      &amp;#34;account_id&amp;#34;: &amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;,
-      &amp;#34;request_id&amp;#34;: &amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;,
-      &amp;#34;key&amp;#34;: &amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;,
-      &amp;#34;key_type&amp;#34;: &amp;#34;random_key&amp;#34;,
-      &amp;#34;transaction_id&amp;#34;: &amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;,
-      &amp;#34;amount&amp;#34;: 1000,
-      &amp;#34;request_for_payer&amp;#34;: &amp;#34;Preencha o tamanho da camisa&amp;#34;,
-      &amp;#34;expiration&amp;#34;: 86400,
-      &amp;#34;created_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-      &amp;#34;created_by&amp;#34;: &amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
-      &amp;#34;paid_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-      &amp;#34;cancelled_at&amp;#34;: null,
-      &amp;#34;updated_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
-      &amp;#34;revision&amp;#34;: 0,
-      &amp;#34;location&amp;#34;: &amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;,
-      &amp;#34;status&amp;#34;: &amp;#34;ACTIVE&amp;#34;,
-      &amp;#34;customer&amp;#34;: {
-        &amp;#34;name&amp;#34;: &amp;#34;Fulano da Silva&amp;#34;
-        &amp;#34;document&amp;#34;: &amp;#34;18894559890&amp;#34;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;random_key&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Preencha o tamanho da camisa&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;86400&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paid_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-19T13:49:43Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;revision&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;location&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ACTIVE&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Fulano da Silva&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;18894559890&amp;#34;&lt;/span&gt;
       },
-      &amp;#34;additional_data&amp;#34;: [
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: [
         {
-          &amp;#34;name&amp;#34;: &amp;#34;Modelo&amp;#34;,
-          &amp;#34;value&amp;#34;: &amp;#34;Camisa Kelvin Clain Luxo&amp;#34;
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Modelo&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Camisa Kelvin Clain Luxo&amp;#34;&lt;/span&gt;
         },
         {
-          &amp;#34;name&amp;#34;: &amp;#34;Cor&amp;#34;,
-          &amp;#34;value&amp;#34;: &amp;#34;Dourada&amp;#34;
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Cor&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Dourada&amp;#34;&lt;/span&gt;
         }
       ]
     }
@@ -1224,7 +1221,7 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
 &lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/11000135/98400401-b6b24980-2042-11eb-8a59-1c6e56410530.png&#34; alt=&#34;Imagem 1&#34;&gt;
 &lt;img src=&#34;https://user-images.githubusercontent.com/11000135/98400393-b31ec280-2042-11eb-9c51-0deb65dcc0a1.png&#34; alt=&#34;Imagem 2&#34;&gt;&lt;/p&gt;
 &lt;h5 id=&#34;sequência-de-caracteres-correspondente-ao-payload-do-qr-code-dinâmico&#34;&gt;&lt;strong&gt;Sequência de caracteres correspondente ao payload do QR Code dinâmico&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;000201
+&lt;pre&gt;&lt;code&gt;000201
 010212
 2674
   0014br.gov.bcb.pix
@@ -1239,7 +1236,7 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
   0515RP12345678-2019
 6304FF24 
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;qr-code-dinâmico-gerado&#34;&gt;&lt;strong&gt;QR Code dinâmico gerado&lt;/strong&gt;&lt;/h5&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;qr-code-dinâmico-gerado&#34;&gt;&lt;strong&gt;QR Code dinâmico gerado&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/11000135/98400400-b5811c80-2042-11eb-9de3-a69107edf803.png&#34; alt=&#34;Respectivo QR Code dinâmico&#34;&gt;&lt;/p&gt;
 &lt;h5 id=&#34;referência&#34;&gt;&lt;strong&gt;Referência&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Regulamento_Pix/II.ManualdePadroesparaIniciacaodoPix-versao2.0.pdf&#34;&gt;https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Regulamento_Pix/II.ManualdePadroesparaIniciacaodoPix-versao2.0.pdf&lt;/a&gt;&lt;/p&gt;
@@ -1257,15 +1254,14 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
         
         
         &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;DELETE /api/v1/pix_payment_invoices/:id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;DELETE /api/v1/pix_payment_invoices/:id
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Cobrança cancelada com sucesso&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;204 NO CONTENT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PIX Já foi pago e não pode ser mais cancelado&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;422
-
-{
-  &amp;#34;type&amp;#34;: &amp;#34;srn:error:already_paid&amp;#34;
+&lt;pre&gt;&lt;code&gt;204 NO CONTENT
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;PIX Já foi pago e não pode ser mais cancelado&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;422 DOMAIN ERROR
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:already_paid&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
