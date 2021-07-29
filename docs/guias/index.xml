@@ -222,6 +222,10 @@ Para obter o seu Access Token, será necessário gerar um par de chaves RSA 4096
 &lt;td&gt;iat&lt;/td&gt;
 &lt;td&gt;Momento em que o token foi gerado. É UTC. Exemplo: &amp;ldquo;iat&amp;rdquo;: 1542235633&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iss&lt;/td&gt;
+&lt;td&gt;Mesmo valor de sub e clientId, ou seja, o ClientID enviado ao desenvolvedor após o cadastro da aplicação.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Após gerar esse token localmente, partiremos para receber o access_token e realizar as &lt;a href=&#34;https://stone-co.github.io/sandbox/sandbox/docs/guias/token-de-acesso/#chamada-autenticada&#34;&gt;chamadas autenticadas&lt;/a&gt;.&lt;/p&gt;
