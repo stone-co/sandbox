@@ -299,6 +299,19 @@ Esse request deverá ser realizado nas seguintes URLs (por ambiente):
 &lt;/div&gt;
 
 &lt;p&gt;A seguir, vamos te guiar pela seção &lt;a href=&#34;https://stone-co.github.io/sandbox/sandbox/docs/guias/conta-de-pagamento/&#34;&gt;Conta de Pagamento&lt;/a&gt;, onde você poderá entender mais sobre as características do nosso negócio e sobre o processo de abertura de conta.&lt;/p&gt;
+&lt;h2 id=&#34;collection-do-postman&#34;&gt;Collection do Postman&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Para ajudar na realização das chamadas autenticadas, disponibilizamos alguns endpoints e códigos prontos!&lt;/p&gt;
+&lt;p&gt;Você pode baixar clicando nos links abaixo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;link-para-consentimento.zip&#34; download=&#34;Link de consentimento&#34;&gt;Código em JS para geração do link de consentimento&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;get_token_p parceiros.zip&#34; download=&#34;Token de autenticação&#34;&gt;Código em Python para geração do token de autenticação&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Criar-conta-Stone.zip&#34; download=&#34;Criação de conta&#34;&gt;Código em Python para pedido de criação para contas Stone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Criar_Pagamentos.zip&#34; download=&#34;Criar_Pagamentos&#34;&gt;Collection do Postman para criar Pagamentos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Emissao_Boletos.zip&#34; download=&#34;Emissao_Boletos&#34;&gt;Collection do Postman para Emissao de Boletos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Pix_out.zip&#34; download=&#34;Pix_out&#34;&gt;Collection do Postman para realização de Pix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Transferencias.zip&#34; download=&#34;Transferências&#34;&gt;Collection do Postman para Transferências&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
