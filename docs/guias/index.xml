@@ -311,6 +311,8 @@ Esse request deverá ser realizado nas seguintes URLs (por ambiente):
 &lt;li&gt;&lt;a href=&#34;Emissao_Boletos.zip&#34; download=&#34;Emissao_Boletos&#34;&gt;Collection do Postman para Emissao de Boletos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Pix_out.zip&#34; download=&#34;Pix_out&#34;&gt;Collection do Postman para realização de Pix&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Transferencias.zip&#34; download=&#34;Transferências&#34;&gt;Collection do Postman para Transferências&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Dados_da_Conta.zip&#34; download=&#34;Dados da Conta&#34;&gt;Collection do Postman para Dados da Conta (inclui extrato)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Simulacoes(dry-run).zip&#34; download=&#34;Dry-run&#34;&gt;Collection do Postman para Simulações(Dry-run)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
