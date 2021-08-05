@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/pagamento/</loc>
     <lastmod>2021-06-16T12:03:51-03:00</lastmod>
   </url>
@@ -151,6 +156,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/integracao-para-fornecedores/sign-in-user/</loc>
     <lastmod>2021-06-08T16:40:00-03:00</lastmod>
   </url>
@@ -255,6 +265,11 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/kyc/receber-dados-do-usuario/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</loc>
+    <lastmod>2021-08-04T15:19:30-03:00</lastmod>
   </url>
   
   <url>
@@ -367,6 +382,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</loc>
+    <lastmod>2021-08-04T15:19:30-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/valores/</loc>
     <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
@@ -382,22 +402,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
-    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</loc>
-    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</loc>
-    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</loc>
     <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
@@ -476,6 +481,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</loc>
+    <lastmod>2021-08-04T15:19:30-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</loc>
     <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
@@ -483,6 +493,11 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/aprovacao/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
   <url>
