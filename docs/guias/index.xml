@@ -677,6 +677,10 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;Representa a entrada do valor do boleto na conta do beneficiário.&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;inbound_barcode_payment_refunded.json&#34;&gt;inbound_barcode_payment_refunded&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi devolvido.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
