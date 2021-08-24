@@ -308,13 +308,14 @@ Esse request deverá ser realizado nas seguintes URLs (por ambiente):
 &lt;li&gt;&lt;a href=&#34;get_token_p parceiros.zip&#34; download=&#34;Token de autenticação&#34;&gt;Código em Python para geração do token de autenticação&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Criar-conta-Stone.zip&#34; download=&#34;Criação de conta&#34;&gt;Código em Python para pedido de criação para contas Stone&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Criar_Pagamentos.zip&#34; download=&#34;Criar_Pagamentos&#34;&gt;Collection do Postman para criar Pagamentos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Emissao_Boletos.zip&#34; download=&#34;Emissao_Boletos&#34;&gt;Collection do Postman para Emissao de Boletos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Pix_out.zip&#34; download=&#34;Pix_out&#34;&gt;Collection do Postman para realização de Pix&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Transferencias.zip&#34; download=&#34;Transferências&#34;&gt;Collection do Postman para Transferências&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Dados_da_Conta.zip&#34; download=&#34;Dados da Conta&#34;&gt;Collection do Postman para Dados da Conta (inclui extrato)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Simulacoes(dry-run).zip&#34; download=&#34;Dry-run&#34;&gt;Collection do Postman para Simulações(Dry-run)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Comprovantes.zip&#34; download=&#34;Comprovantes&#34;&gt;Collection do Postman para emissão de Comprovantes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Link_de_pagamento.zip&#34; download=&#34;Link de Pagamento&#34;&gt;Collection do Postman para Link de Pagamento&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Recargas.zip&#34; download=&#34;Recargas&#34;&gt;Collection do Postman para Recargas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Boletos.zip&#34; download=&#34;Boletos&#34;&gt;Collection do Postman para Boletos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
