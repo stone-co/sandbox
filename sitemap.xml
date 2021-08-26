@@ -481,6 +481,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/pagamento/detalhar-pix-enviado/</loc>
+    <lastmod>2021-08-26T10:19:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</loc>
     <lastmod>2021-08-04T15:19:30-03:00</lastmod>
   </url>
@@ -805,6 +810,11 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/</loc>
     <lastmod>2021-08-26T11:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/</loc>
+    <lastmod>2021-08-23T18:34:00-03:00</lastmod>
   </url>
   
   <url>
