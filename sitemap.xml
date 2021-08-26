@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/overview/</loc>
+    <lastmod>2021-08-26T12:18:04+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/guias/stone-open-banking/</loc>
     <lastmod>2021-08-05T15:40:00-03:00</lastmod>
   </url>
@@ -110,11 +115,6 @@
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/padroes-da-api/boas-praticas/</loc>
     <lastmod>2020-06-02T17:07:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/</loc>
-    <lastmod>2021-02-01T22:02:27+00:00</lastmod>
   </url>
   
   <url>
@@ -231,11 +231,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/o-objeto-pagamento/</loc>
-    <lastmod>2020-04-28T15:16:04+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/contatos/criar-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -339,7 +334,7 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</loc>
-    <lastmod>2020-05-01T01:03:24+00:00</lastmod>
+    <lastmod>2021-08-26T12:35:24+00:00</lastmod>
   </url>
   
   <url>
