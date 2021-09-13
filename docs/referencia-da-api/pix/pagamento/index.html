@@ -4613,16 +4613,16 @@
 <hr>
 <br>
 <ol>
-<li>Realiza request através do <a href="/docs/referencia-da-api/pix/criar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.</li>
-<li>Realiza request através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo <code>id</code> retornado pela resposta desse passo 1.<br><br></li>
+<li>Realiza request através do <a href="/sandbox/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.</li>
+<li>Realiza request através do <a href="/sandbox/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo <code>id</code> retornado pela resposta desse passo 1.<br><br></li>
 </ol>
 <h4 id="fluxo-de-criação-de-envio-de-pix-através-da-leitura-do-qrcode"><strong>Fluxo de criação de envio de Pix através da leitura do QRCode</strong></h4>
 <hr>
 <br>
 <ol>
-<li>Realiza request através do <a href="/docs/referencia-da-api/pix/buscar-dados-qrcode/">endpoint</a> /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo <code>brcode</code>. Este irá retornar uma reposta com os dados do QRCode.</li>
-<li>Realiza request através do <a href="/docs/referencia-da-api/pix/criar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.</li>
-<li>Realiza request através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo <code>id</code> retornado pela resposta desse passo 2.<br>&lt;br</li>
+<li>Realiza request através do <a href="/sandbox/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/">endpoint</a> /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo <code>brcode</code>. Este irá retornar uma reposta com os dados do QRCode.</li>
+<li>Realiza request através do <a href="/sandbox/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.</li>
+<li>Realiza request através do <a href="/sandbox/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo <code>id</code> retornado pela resposta desse passo 2.<br>&lt;br</li>
 </ol>
 
         <div class="section-index">
