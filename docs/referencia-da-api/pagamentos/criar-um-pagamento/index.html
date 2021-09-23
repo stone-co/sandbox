@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/sandbox/docs/referencia-da-api/pagamentos/criar-um-pagamento/" />
-<meta property="og:updated_time" content="2020-04-28T15:16:04+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-09-23T15:16:04+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Criar Um Pagamento">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.ec4698b096a9ef19e4b85c13e6271dc0.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.326ee92213ff8fafe93c72f0fbe98908.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.ec4698b096a9ef19e4b85c13e6271dc0.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.326ee92213ff8fafe93c72f0fbe98908.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4658,9 +4658,14 @@
 <p>Identificador da conta que irá pagar o documento.</p>
 <hr>
 <br>
-<p><strong>scheduled_to</strong>*  <code>string</code></p>
+<p><strong>scheduled_to</strong>  <code>string</code></p>
 <p>Formato: <code>yyyy-mm-dd</code></p>
+<hr>
 <br>
+<p><strong>amount</strong> <code>integer</code></p>
+<p>O valor a ser pago, caso o boleto possa ser pago com um valor divergente ao valor total.
+<br>Para consultar o valor a ser pago, sugerimos que realize uma simulação de pagamento <a href="/sandbox/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/">aqui</a> e verifique o valor mínimo e máximo aceito para o pagamento em questão.
+<br>Caso não tenha alteração do valor total do pagamento, basta não enviar o campo <code>amount</code>.</p>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
 <br>
@@ -5064,7 +5069,7 @@
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 28.04.2020
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 23.09.2021
 </div>
 </div>
 
