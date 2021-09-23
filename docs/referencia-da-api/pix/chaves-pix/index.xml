@@ -94,20 +94,32 @@
     </item>
     
     <item>
-      <title>Docs: Criar chaves (Draft)</title>
+      <title>Docs: Criar chaves Pix</title>
       <link>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/chaves-pix/criar-uma-chave-pix/</link>
-      <pubDate>Thu, 15 Jul 2021 15:00:00 -0300</pubDate>
+      <pubDate>Thu, 12 Aug 2021 19:00:00 -0300</pubDate>
       
       <guid>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/chaves-pix/criar-uma-chave-pix/</guid>
       <description>
         
         
-        &lt;p&gt;Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que o dado já está sendo utilizado em uma Chave Pix ativa deve ser feita uma &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/&#34;&gt;reivindicação&lt;/a&gt; da Chave PIX.
-&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;POST /api/v1/pix/:account_id/entries
-content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+        &lt;br&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/entries
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer Token&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;User-Agent&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Nome da sua aplicacão&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da conta
+&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;+5510998765432&amp;#34;&lt;/span&gt;, 
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;, 
@@ -142,21 +154,6 @@ content-type: application/json
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Acontece quando a chave já foi criada
 &lt;br&gt; &lt;br&gt;&lt;/p&gt;
-&lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma solicitação.&lt;/p&gt;
-&lt;p&gt;As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cee2f003-95a0-433f-a785-b933a5832531&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: uuid(),
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;+5510998765432&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;bad7ab7e-f95d-11ea-adc1-0242ac120002&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;20200-09-18T03:00:00Z&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;accepted&amp;#34;&lt;/span&gt;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
       </description>
     </item>
