@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/" />
-<meta property="og:updated_time" content="2020-12-21T20:31:32+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-09-19T10:15:32+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Emitir Boleto">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.cd9fbe925cd926638aed10dbe12d77f2.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.ec4698b096a9ef19e4b85c13e6271dc0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.cd9fbe925cd926638aed10dbe12d77f2.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.ec4698b096a9ef19e4b85c13e6271dc0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4673,7 +4673,7 @@
 <hr>
 <br>
 <p><strong>limit_date</strong> <code>string</code>
-<br>Data limite para pagamento do boleto bancário. Deve ser igual ou maior que data de vencimento. Se não informada, será usada a <code>expiration_date</code>.</p>
+<br>Data limite para pagamento do boleto bancário. Deve ser igual à data de vencimento para boletos de depósito e proposta. Para boletos de cobrança, deve ser igual ou maior que a data de vencimento. Se não informada, será usada a <code>expiration_date</code>. Os boletos que forem pagos após a data limite serão devolvidos.</p>
 <hr>
 <br>
 <p><strong>invoice_type</strong>* <code>string</code>
@@ -5287,7 +5287,7 @@ content-type: application/json
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 21.12.2020
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 19.09.2021
 </div>
 </div>
 

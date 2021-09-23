@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/sandbox/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/" />
-<meta property="og:updated_time" content="2020-10-24T00:14:01+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-09-19T10:15:32+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Regras de negócio">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.cd9fbe925cd926638aed10dbe12d77f2.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.ec4698b096a9ef19e4b85c13e6271dc0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.cd9fbe925cd926638aed10dbe12d77f2.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.ec4698b096a9ef19e4b85c13e6271dc0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4688,8 +4688,8 @@
 </tr>
 <tr>
 <td>Data limite<br><em>(limit_date)</em></td>
-<td>Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. <br>Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.<br>Caso seja informada alguma data diferente da vencimento retornará erro. Caso não seja informada será configurada automaticamente a data de vencimento.</td>
-<td>Deve ser igual ou maior a data de vencimento.<br><br>Caso não seja informada será configurada automaticamente a data de vencimento.</td>
+<td>Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. <br>Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.<br>Caso seja informada alguma data diferente da vencimento retornará erro. Caso não seja informada será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Deve ser igual a data de vencimento.<br><br>Caso não seja informada será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
 <td>Deve ser igual ou maior a data de vencimento.<br><br>Caso não seja informada será configurada automaticamente a data de vencimento.</td>
 </tr>
 <tr>
@@ -5122,7 +5122,7 @@
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 24.10.2020
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 19.09.2021
 </div>
 </div>
 
