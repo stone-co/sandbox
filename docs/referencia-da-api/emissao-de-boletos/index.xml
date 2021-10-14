@@ -718,7 +718,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Desconto em boleto não é valido para pagamentos realizados no final de semana.&lt;/p&gt;
+&lt;p&gt;Quando a data limite de pagamento com desconto cai em um dia não útil, como em um fim de semana, o desconto ainda será válido para pagamentos no próximo dia útil.&lt;/p&gt;
 
 &lt;/div&gt;
 
