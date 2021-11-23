@@ -108,7 +108,7 @@ Para realizar chamadas na API Stone Open Banking, será necessário ter em mãos
 O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma compacta e segura entre diferentes aplicações. Os dados nele contidos podem ser validados a qualquer momento, pois o token é assinado digitalmente.
 &lt;br&gt;
 &lt;br&gt;
-Para receber esse Token de Acesso, será necessário que você gere um JWT local, com suas partes em base64 já decodificadas e que deverá ser formado por três seções:
+Para receber esse Token de Acesso, será necessário que você gere um JWT local, com suas partes em base64 já codificadas e que deverá ser formado por três seções:
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
