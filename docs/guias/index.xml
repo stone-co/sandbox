@@ -363,7 +363,7 @@ Esse request deverá ser realizado nas seguintes URLs (por ambiente):
 Para plataformas que queiram oferecer o processo de abertura de conta Stone de maneira integrada, o envio das informações iniciais poderá ser feito usando nossa API. Já para recebimento dos dados de KYC, será necessário o uso da nossa SDK - detalhada na &lt;a href=&#34;https://stone-co.github.io/sandbox/sandbox/docs/guias/sdk/&#34;&gt;seção exclusiva&lt;/a&gt; sobre suas funcionalidades e usos.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;identificador&#34;&gt;&lt;strong&gt;Identificador&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Em nossa modelagem de conta de pagamento, utilizamos dois conceitos para refletir as etapas mencionadas acima:&lt;/p&gt;
+&lt;p&gt;Em nossa modelagem de conta de pagamento, utilizamos três conceitos para refletir as etapas mencionadas acima:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
