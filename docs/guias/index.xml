@@ -667,8 +667,12 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi acolhido em alguma instituição.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;inbound_barcode_payment_validated.json&#34;&gt;inbound_barcode_payment_validated&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto emitido foi aceito na instituição.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi confirmado.&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi confirmado e liquidado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
