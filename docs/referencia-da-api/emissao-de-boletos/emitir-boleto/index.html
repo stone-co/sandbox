@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.cd12e62e88ea54e45a1c5892ce91def1.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.3220ec9c770f272996bffee8b4db0b75.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.cd12e62e88ea54e45a1c5892ce91def1.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.3220ec9c770f272996bffee8b4db0b75.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4749,6 +4749,34 @@
 <br>
 <br>     <strong>document</strong> <code>string</code>
 <br>     Número do documento do sacador avalista.</p>
+<hr>
+<br>
+<p><strong>address</strong> <code>object</code>
+<br></p>
+<p><br>     <strong>city</strong> <code>string</code> <em>(obrigatório)</em>
+<br>     Cidade do beneficiário do boleto.
+<br>
+<br>     <strong>country</strong> <code>string</code> <em>(obrigatório)</em>
+<br>     País do beneficiário do boleto.
+<br>
+<br>     <strong>extra</strong> <code>string</code>
+<br>     Complemento do endereço do beneficiário do boleto.
+<br>
+<br>     <strong>neighborhood</strong> <code>string</code> <em>(obrigatório)</em>
+<br>     Bairro do beneficiário do boleto.
+<br>
+<br>     <strong>postal_code</strong> <code>string</code> <em>(obrigatório)</em>
+<br>     CEP do beneficiário do boleto.
+<br>
+<br>     <strong>state</strong> <code>string</code> <em>(obrigatório)</em>
+<br>     UF do beneficiário do boleto.
+<br>
+<br>     <strong>street</strong> <code>string</code> <em>(obrigatório)</em>
+<br>     Logradouro do beneficiário do boleto.
+<br>
+<br>     <strong>street_number</strong> <code>string</code>
+<br>     Número do logradouro do beneficiário do boleto.
+<br></p>
 <p><br><br></p>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
@@ -4776,6 +4804,16 @@ content-type: application/json
     <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19797845600000021000000063139072468215929006&#34;</span>,
     <span style="color:#ff79c6">&#34;beneficiary&#34;</span>: {
       <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;1085737&#34;</span>,
+      <span style="color:#ff79c6">&#34;address&#34;</span>: {
+        <span style="color:#ff79c6">&#34;city&#34;</span>: <span style="color:#f1fa8c">&#34;Rio de Janeiro&#34;</span>,
+        <span style="color:#ff79c6">&#34;country&#34;</span>: <span style="color:#f1fa8c">&#34;Brazil&#34;</span>,
+        <span style="color:#ff79c6">&#34;extra&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;neighborhood&#34;</span>: <span style="color:#f1fa8c">&#34;Centro&#34;</span>,
+        <span style="color:#ff79c6">&#34;postal_code&#34;</span>: <span style="color:#f1fa8c">&#34;20021-290&#34;</span>,
+        <span style="color:#ff79c6">&#34;state&#34;</span>: <span style="color:#f1fa8c">&#34;RJ&#34;</span>,
+        <span style="color:#ff79c6">&#34;street&#34;</span>: <span style="color:#f1fa8c">&#34;Rua do Passeio&#34;</span>,
+        <span style="color:#ff79c6">&#34;street_number&#34;</span>: <span style="color:#ff79c6">null</span>
+      },
       <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
       <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;39809096038&#34;</span>,
       <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
@@ -5330,7 +5368,7 @@ content-type: application/json
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Stone Todos os direitos reservados</small>
+        <small class="text-white">&copy; 2022 Stone Todos os direitos reservados</small>
         
 	
       </div>
