@@ -624,7 +624,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Baixa solicitada&lt;/td&gt;
-&lt;td&gt;Quando o amissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
+&lt;td&gt;Quando o emissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Data de vencimento&lt;/td&gt;
