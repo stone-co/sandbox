@@ -690,6 +690,16 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/</loc>
+    <lastmod>2022-02-18T14:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/</loc>
+    <lastmod>2022-02-18T14:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</loc>
     <lastmod>2021-09-19T09:08:00-03:00</lastmod>
   </url>
@@ -844,7 +854,7 @@
   
   <url>
     <loc>https://stone-co.github.io/sandbox/</loc>
-    <lastmod>2022-02-11T14:00:00-03:00</lastmod>
+    <lastmod>2022-02-18T14:08:00-03:00</lastmod>
   </url>
   
   <url>
