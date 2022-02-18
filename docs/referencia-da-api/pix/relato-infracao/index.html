@@ -102,7 +102,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.3838f33fecff1c9f6a8ce066f5049f10.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.b7c34f46f721c4f9f50bcabed86890be.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -134,7 +134,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.3838f33fecff1c9f6a8ce066f5049f10.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.b7c34f46f721c4f9f50bcabed86890be.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3725,7 +3725,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX (Beta)</a>
+    <a  href="/sandbox/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX</a>
   </li>
   <ul>
     <li class="collapse show" id="sandboxdocsreferencia-da-apipix">
@@ -4797,7 +4797,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/">PIX (Beta)</a>
+	<a href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/">PIX</a>
 </li>
 
 
@@ -4853,29 +4853,141 @@ Se for cancelado, o relato deixa de ser contabilizado em REPORTED_FRAUDS durante
 <th>Regra de negócio</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Identificador do registro no domínio Stone.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>end_to_end_id</td>
+<td>String</td>
+<td>Identificador ponta a ponta do pagamento que está sendo relatado uma infração.</td>
+<td>Ou end_to_end_id ou refund_id deve estar preenchido.</td>
+</tr>
+<tr>
+<td>refund_id</td>
+<td>String</td>
+<td>Identificador ponta a ponta da devolução que está sendo relatado uma infração.</td>
+<td>Ou end_to_end_id ou refund_id deve estar preenchido.</td>
+</tr>
+<tr>
+<td>infraction_id</td>
+<td>String</td>
+<td>Identificador do relato de infração.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>account_id</td>
+<td>String</td>
+<td>Identificador da Conta Stone associada ao pagamento/devolução.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>request_id</td>
+<td>String</td>
+<td>Identificador da requisição de criação de relato de infração.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>Enum</td>
+<td>Indica se o relato foi enviado ou recebido.</td>
+<td>Obrigatório. Possíveis valores são: <code>inbound</code>, <code>outbound</code>.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Enum</td>
+<td>Indica o tipo de relato de infração.</td>
+<td>Obrigatório. Possíveis valores são: <code>fraud</code>, <code>request_refund</code>, <code>refund_cancelled</code>.</td>
+</tr>
+<tr>
+<td>report_details</td>
+<td>String</td>
+<td>Detalhes do relato de infração.</td>
+<td>Opcional. Pode ter até 2000 caracteres</td>
+</tr>
+<tr>
+<td>reported_by</td>
+<td>Enum</td>
+<td>Indica por quem for reportado.</td>
+<td>Obrigatório. Possíveis valores são: <code>debited_participant</code>, <code>credited_participant</code>.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Enum</td>
+<td>Situação do relato de infração.</td>
+<td>Obrigatório. Possíveis valores são: <code>pending</code>, <code>accepted</code>, <code>rejected</code>, <code>cancelled</code>.</td>
+</tr>
+<tr>
+<td>debited_participant</td>
+<td>String</td>
+<td>ISPB do participante debitado no pagamento/transação.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>credited_participant</td>
+<td>String</td>
+<td>ISPB do participante creditado no pagamento/transação.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Datetime</td>
+<td>Data de quando o relato foi criado</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>expires_at</td>
+<td>Datetime</td>
+<td>Data limite que o relato de infração pode ser fechado.</td>
+<td>Obrigatório.</td>
+</tr>
+<tr>
+<td>analysis_result</td>
+<td>Enum</td>
+<td>Resultado da análise do relato de infração.</td>
+<td>Opcional. Possíveis valores são: <code>accepted</code>, <code>rejected</code>.</td>
+</tr>
+<tr>
+<td>analysis_details</td>
+<td>String</td>
+<td>Detalhes da análise do relato de infração.</td>
+<td>Opcional.</td>
+</tr>
+<tr>
+<td>accepted_at</td>
+<td>Datetime</td>
+<td>Data de quando o relato de infração foi aceito.</td>
+<td>Opcional.</td>
+</tr>
+<tr>
+<td>rejected_at</td>
+<td>Datetime</td>
+<td>Data de quando o relato de infração foi rejeitado.</td>
+<td>Opcional.</td>
+</tr>
+<tr>
+<td>cancelled_at</td>
+<td>Datetime</td>
+<td>Data de quando o relato de infração foi cancelado.</td>
+<td>Opcional.</td>
+</tr>
+<tr>
+<td>transaction_type</td>
+<td>Enum</td>
+<td>Se o pagamento/devolução associado ao relato de infração foi interna ou externa (SPI)</td>
+<td>Opcional. Possíveis valores são: <code>spi</code>, <code>internal</code>.</td>
+</tr>
+<tr>
+<td>transaction_result</td>
+<td>Enum</td>
+<td>Se o pagamento/devolução associado ao relato de infração foi liquidada ou rejeitada por uma das partes</td>
+<td>Opcional. Possíveis valores são: <code>settled</code>, <code>rejected_payee</code>, <code>rejected_payer</code>.</td>
+</tr>
+</tbody>
 </table>
-<p>| id | String | Identificador do registro no domínio Stone. | Obrigatório. |</p>
-<p>| end_to_end_id | String | Identificador ponta a ponta do pagamento que está sendo relatado uma infração. | Ou end_to_end_id ou refund_id deve estar preenchido. |</p>
-<p>| refund_id | String | Identificador ponta a ponta da devolução que está sendo relatado uma infração. | Ou end_to_end_id ou refund_id deve estar preenchido. |</p>
-<p>| infraction_id | String | Identificador do relato de infração. | Obrigatório. |</p>
-<p>| account_id | String | Identificador da Conta Stone associada ao pagamento/devolução. | Obrigatório. |</p>
-<p>| request_id | String | Identificador da requisição de criação de relato de infração. | Obrigatório. |</p>
-<p>| direction | Enum | Indica se o relato foi enviado ou recebido.| Obrigatório. Possíveis valores são: <code>inbound</code>, <code>outbound</code>. |</p>
-<p>| type | Enum | Indica o tipo de relato de infração. | Obrigatório. Possíveis valores são: <code>fraud</code>, <code>request_refund</code>, <code>refund_cancelled</code>. |</p>
-<p>| report_details | String | Detalhes do relato de infração. | Opcional. Pode ter até 2000 caracteres |</p>
-<p>| reported_by | Enum | Indica por quem for reportado. | Obrigatório. Possíveis valores são: <code>debited_participant</code>, <code>credited_participant</code>. |</p>
-<p>| status | Enum | Situação do relato de infração. | Obrigatório. Possíveis valores são: <code>pending</code>, <code>accepted</code>, <code>rejected</code>, <code>cancelled</code>. |</p>
-<p>| debited_participant | String | ISPB do participante debitado no pagamento/transação.  | Obrigatório. |</p>
-<p>| credited_participant | String | ISPB do participante creditado no pagamento/transação. | Obrigatório. |</p>
-<p>| created_at | Datetime | Data de quando o relato foi criado | Obrigatório. |</p>
-<p>| expires_at | Datetime | Data limite que o relato de infração pode ser fechado. | Obrigatório. |</p>
-<p>| analysis_result | Enum | Resultado da análise do relato de infração. | Opcional. Possíveis valores são: <code>accepted</code>, <code>rejected</code>. |</p>
-<p>| analysis_details | String | Detalhes da análise do relato de infração. | Opcional. |</p>
-<p>| accepted_at | Datetime | Data de quando o relato de infração foi aceito. | Opcional. |</p>
-<p>| rejected_at | Datetime | Data de quando o relato de infração foi rejeitado. | Opcional. |</p>
-<p>| cancelled_at | Datetime | Data de quando o relato de infração foi cancelado. | Opcional. |</p>
-<p>| transaction_type | Enum | Se o pagamento/devolução associado ao relato de infração foi interna ou externa (SPI) | Opcional. Possíveis valores são: <code>spi</code>, <code>internal</code>. |</p>
-<p>| transaction_result | Enum | Se o pagamento/devolução associado ao relato de infração foi liquidada ou rejeitada por uma das partes | Opcional. Possíveis valores são: <code>settled</code>, <code>rejected_payee</code>, <code>rejected_payer</code>. |</p>
 <h5 id="status-dos-relatos-de-infrações">Status dos Relatos de Infrações</h5>
 <ul>
 <li><code>pending</code>: aguardando fechamento.</li>
