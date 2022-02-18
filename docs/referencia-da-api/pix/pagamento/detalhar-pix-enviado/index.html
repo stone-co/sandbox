@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.06dc041cbdaf2e4ba97fd4258f1e73e7.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.3887760a5cf9421eb38a70628b57fc3b.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.06dc041cbdaf2e4ba97fd4258f1e73e7.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.3887760a5cf9421eb38a70628b57fc3b.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4804,6 +4804,7 @@ Esse endpoint existe para detalhar os dados de um Pix enviado.
     <span style="color:#ff79c6">&#34;refunded_amount&#34;</span>: <span style="color:#bd93f9">0</span>,
     <span style="color:#ff79c6">&#34;request_id&#34;</span>: <span style="color:#f1fa8c">&#34;661c820e7d3a6bc9f9a1c8c8be62559f&#34;</span>,
     <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
     <span style="color:#ff79c6">&#34;source&#34;</span>: {
         <span style="color:#ff79c6">&#34;account&#34;</span>: {
             <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;88266374&#34;</span>,
@@ -4847,10 +4848,12 @@ Esse endpoint existe para detalhar os dados de um Pix enviado.
 <li><code>MONEY_RESERVED</code>: O pagamento foi aprovado, o dinheiro saiu da conta mas ainda não foi concluído.</li>
 <li><code>REFUNDED</code>: O pagamento foi rejeitado pelo outro banco.</li>
 <li><code>SETTLED</code>: O pagamento foi concluído com sucesso.</li>
+<li><code>SCHEDULED</code>: O pagamento foi agendado com sucesso.</li>
+<li><code>CANCELLED</code>: O pagamento agendado foi cancelado.</li>
 </ul>
 <br>
 <pre><code>400 Bad Request
-</code></pre><p>Acontece quando o <code>id</code> enviado não se conforma ao padrão UUID.</p>
+</code></pre><p>Acontece quando o <code>id</code> enviado não está em conformidade com o padrão UUID.</p>
 
         <div class="section-index">
     
