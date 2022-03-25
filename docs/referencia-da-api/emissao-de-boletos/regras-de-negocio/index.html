@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.bc96a18059a08cace250d3a875c67765.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.87c6bba093d74125687996f8a1efba95.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.bc96a18059a08cace250d3a875c67765.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.87c6bba093d74125687996f8a1efba95.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4904,7 +4904,7 @@
 	
 	<hr>
 <br>
-<h4 id="válidas-para-todos-os-tipos-de-boleto">Válidas para todos os tipos de boleto</h4>
+<h4 id="válidas-para-os-boletos">Válidas para os boletos</h4>
 <hr>
 <br>
 <table>
@@ -4933,7 +4933,7 @@
 </tr>
 <tr>
 <td>Data de vencimento</td>
-<td>Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.</td>
+<td>Precisa ser igual ou maior que o dia atual e igual ao limit_data (boleto de proposta) e menor que ao limit_date (boleto de cobrança). Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.</td>
 </tr>
 <tr>
 <td>Formato / Layout</td>
@@ -4951,7 +4951,7 @@
 <th>Regras</th>
 <th>Depósito</th>
 <th>Proposta</th>
-<th>Cobrança <em>(todos os tipos)</em></th>
+<th>Cobrança</th>
 </tr>
 </thead>
 <tbody>
@@ -4963,9 +4963,9 @@
 </tr>
 <tr>
 <td>Data limite<br><em>(limit_date)</em></td>
-<td>Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. <br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.<br>Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
-<td>Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
-<td>Deve ser igual ou maior a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. <br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.<br>Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente igual à data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente igual à data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Deve ser maior que a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Os boletos que forem pagos após a data limite serão devolvidos.</td>
 </tr>
 <tr>
 <td>Pagamento</td>
