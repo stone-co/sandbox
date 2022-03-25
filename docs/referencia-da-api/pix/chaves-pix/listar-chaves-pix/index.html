@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b16a9d806a49560830d3552eccd79b49.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.bc96a18059a08cace250d3a875c67765.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b16a9d806a49560830d3552eccd79b49.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.bc96a18059a08cace250d3a875c67765.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -4433,6 +4433,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/sandbox/docs/referencia-da-api/pix/chaves-pix/atualizar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar chaves Pix (Beta)</a>
+  </li>
+  <ul>
+    <li class="collapse " id="sandboxdocsreferencia-da-apipixchaves-pixatualizar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/sandbox/docs/referencia-da-api/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar chaves Pix</a>
   </li>
   <ul>
@@ -4899,11 +4924,20 @@
 <p><strong>User-Agent</strong> <code>string</code>
 <br>Nome da sua aplicacão</p>
 <br>
-<h5 id="query-params"><strong>QUERY PARAMS</strong></h5>
+<h5 id="path-params"><strong>PATH PARAMS</strong></h5>
 <hr>
 <p><strong>account_id</strong> <code>string</code>
 <br> Identificador da conta
 <br> <br></p>
+<h5 id="query-params"><strong>QUERY PARAMS</strong></h5>
+<hr>
+<p><strong>status</strong> <code>array</code> <code>string</code></p>
+<p><br> Valores permitidos: <code>key_created</code>, <code>portability_claimed</code>, <code>ownership_claimed</code>, <code>failed</code> ou <code>deleted</code></p>
+<p>Exemplo:</p>
+<ul>
+<li><code>/api/v1/pix/{{account_id}}/entries?status[]=key_created&amp;status[]=failed</code>;
+<br> <br></li>
+</ul>
 <h5 id="response"><strong>RESPONSE</strong></h5>
 <hr>
 <pre><code>200 OK
@@ -4961,6 +4995,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         
