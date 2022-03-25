@@ -698,7 +698,7 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico.
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Cobrança cancelada com sucesso&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;204 NO CONTENT
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;PIX Já foi pago e não pode ser mais cancelado&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pix Já foi pago e não pode ser mais cancelado&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;422 DOMAIN ERROR
 &lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:already_paid&amp;#34;&lt;/span&gt;

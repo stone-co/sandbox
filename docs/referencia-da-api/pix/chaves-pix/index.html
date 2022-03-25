@@ -102,7 +102,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.9d91637e2deaa0ce2eac409c48abce19.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.b16a9d806a49560830d3552eccd79b49.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -134,7 +134,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.9d91637e2deaa0ce2eac409c48abce19.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.b16a9d806a49560830d3552eccd79b49.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3600,7 +3600,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações</a>
+    <a  href="/sandbox/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">OPERAÇÕES</a>
   </li>
   <ul>
     <li class="collapse " id="sandboxdocsreferencia-da-apioperacoes">
@@ -3725,7 +3725,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/sandbox/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX</a>
+    <a  href="/sandbox/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Pix</a>
   </li>
   <ul>
     <li class="collapse show" id="sandboxdocsreferencia-da-apipix">
@@ -4825,8 +4825,8 @@
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#o-que-é-uma-chave-pix">O que é uma Chave PIX</a></li>
-    <li><a href="#tipos-de-chave-pix">Tipos de Chave PIX</a></li>
+    <li><a href="#o-que-é-uma-chave-pix">O que é uma Chave Pix</a></li>
+    <li><a href="#tipos-de-chave-pix">Tipos de Chave Pix</a></li>
     <li><a href="#status-de-uma-chave-pix">Status de uma chave Pix</a>
       <ul>
         <li></li>
@@ -4873,7 +4873,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/">PIX</a>
+	<a href="https://stone-co.github.io/sandbox/docs/referencia-da-api/pix/">Pix</a>
 </li>
 
 
@@ -4894,7 +4894,7 @@
 	
 		<div class="lead">Entenda como funcionam as Chaves Pix!</div></div>
 	
-	<h2 id="o-que-é-uma-chave-pix">O que é uma Chave PIX</h2>
+	<h2 id="o-que-é-uma-chave-pix">O que é uma Chave Pix</h2>
 <hr>
 <p>No arranjo do Pix os usuários, tanto pagadores quanto recebedores, precisam se cadastrar no DICT (Diretório de Identificadores de Contas Transacionais) para criar sua(s) chave(s) Pix.
 <br><br>
@@ -4902,7 +4902,7 @@ Esse cadastro é feito por meio de um PSP (Prestador do Serviço de Pagamento)  
 <br><br>
 Essas chaves serão usadas pelos PSP diretos e indiretos na comunicação com os sistemas do Pix para o processamento das transações.
 <br><br>
-Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao PIX e por isso possuem um cadastro diferente não tendo uma Chave Pix. Na API de Banking vamos identificar o PSP indireto em todos os requests por do <code>account_id</code> e do  <code>participant_ispb</code>.
+Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao Pix e por isso possuem um cadastro diferente não tendo uma Chave Pix. Na API de Banking vamos identificar o PSP indireto em todos os requests por do <code>account_id</code> e do  <code>participant_ispb</code>.
 <br></p>
 <p>
 
@@ -4912,7 +4912,7 @@ Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao 
 </div>
 
 <br></p>
-<h2 id="tipos-de-chave-pix">Tipos de Chave PIX</h2>
+<h2 id="tipos-de-chave-pix">Tipos de Chave Pix</h2>
 <hr>
 <p>Para fazer o cadastro dessa chave os usuários podem optar por 4 tipos diferentes:<br></p>
 <ul>
@@ -4935,7 +4935,7 @@ O conjunto de chaves de um participante indireto é independente do conjunto de 
 <li><code>accepted</code>: solicitação finalizada com sucesso.</li>
 <li><code>rejected</code>: solicitação rejeitada. Veja o campo <code>error_description</code>para entender o motivo.</li>
 </ul>
-<br>  
+<br>
 <h5 id="status-da-chave">Status da chave</h5>
 <ul>
 <li><code>portability_pending</code>: o processo de reivindicação de portabilidade está em andamento.</li>
@@ -4943,7 +4943,7 @@ O conjunto de chaves de um participante indireto é independente do conjunto de 
 <li><code>active</code>: chave ativa no DICT e válida para uso.</li>
 <li><code>deleted</code>: chave excluída no DICT e inválida para uso.</li>
 </ul>
-<br> 
+<br>
 <h5 id="status-da-reivindicação">Status da reivindicação</h5>
 <ul>
 <li><code>open</code>: aberta pelo reivindicador, mas ainda não recebida pelo doador.</li>

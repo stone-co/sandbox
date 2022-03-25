@@ -335,20 +335,20 @@ Esse endpoint deve ser chamado para detalhar uma chave Pix. &lt;br&gt;&lt;br&gt;
       <description>
         
         
-        &lt;p&gt;Existem cenários em que o dado a ser usado como identificador da Chave PIX já foi cadastrado junto ao DICT e pertence a uma chave ativa, nesses caso não deve ser feita uma criação do zero e sim uma reivindicação da Chave PIX.
+        &lt;p&gt;Existem cenários em que o dado a ser usado como identificador da Chave Pix já foi cadastrado junto ao DICT e pertence a uma chave ativa, nesses caso não deve ser feita uma criação do zero e sim uma reivindicação da Chave Pix.
 &lt;br&gt;&lt;br&gt;
 As reivindicações se dividem dem dois tipos:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;portability&lt;/code&gt;: o dado já esta cadastrado em uma Chave PIX de mesma titularidade em outra instituição. Assim o solicitante deseja apenas que seu dado passe a ser atrelado a Chape PIX da instituição que está pedidno a portabilidade.
+&lt;li&gt;&lt;code&gt;portability&lt;/code&gt;: o dado já esta cadastrado em uma Chave Pix de mesma titularidade em outra instituição. Assim o solicitante deseja apenas que seu dado passe a ser atrelado a Chape Pix da instituição que está pedidno a portabilidade.
 Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;, &lt;code&gt;email&lt;/code&gt;, &lt;code&gt;cpf&lt;/code&gt; e &lt;code&gt;cnpj&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ownership&lt;/code&gt;: o dados já está cadastrado em uma chave PIX de outra titularidade. Esse cenário pode aocntecer quando um número de celular, por exemplo, passa a ter um novo dono.
+&lt;li&gt;&lt;code&gt;ownership&lt;/code&gt;: o dados já está cadastrado em uma chave Pix de outra titularidade. Esse cenário pode aocntecer quando um número de celular, por exemplo, passa a ter um novo dono.
 Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
 &lt;pre&gt;&lt;code&gt;POST /api/v1/pix/:account_id/entry_claims
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claim_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234567890&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_account&amp;#34;&lt;/span&gt;: {
