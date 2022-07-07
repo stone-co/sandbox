@@ -93,7 +93,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;EXPIRED&lt;/td&gt;
-&lt;td&gt;Passou a data limite de pagamento do boleto.&lt;/td&gt;
+&lt;td&gt;Passou a data de vencimento do pagamento do boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;CANCELLATION_REQUESTED&lt;/td&gt;
@@ -572,7 +572,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;EXPIRED&lt;/td&gt;
-&lt;td&gt;Passou a data limite de pagamento do boleto.&lt;/td&gt;
+&lt;td&gt;Passou a data de vencimento do pagamento do boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;CANCELLATION_REQUESTED&lt;/td&gt;
