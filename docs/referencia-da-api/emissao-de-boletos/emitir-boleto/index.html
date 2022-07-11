@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.92f34951bc117cb423949ae80de3749e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.cf6bacb38326c296f969f9e2c2118279.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.92f34951bc117cb423949ae80de3749e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.cf6bacb38326c296f969f9e2c2118279.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5040,6 +5040,32 @@
 <br>
 <br>     <strong>trade_name</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Nome fantasia do pagador. Obrigatório no caso de pagador PJ.</p>
+<p><br>     <strong>address</strong> <code>object</code> <em>(opcional)</em></p>
+<p><br>         <strong>city</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         Cidade do endereço do pagador do boleto.
+<br>
+<br>         <strong>country</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         País do endereço do pagador do boleto.
+<br>
+<br>         <strong>extra</strong> <code>string</code>
+<br>         Complemento do endereço do pagador do boleto.
+<br>
+<br>         <strong>neighborhood</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         Bairro do endereço do pagador do boleto.
+<br>
+<br>         <strong>postal_code</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         CEP do endereço do pagador do boleto.
+<br>
+<br>         <strong>state</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         UF do endereço do pagador do boleto.
+<br>
+<br>         <strong>street</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         Logradouro do endereço do pagador do boleto.
+<br>
+<br>         <strong>street_number</strong> <code>string</code>
+<br>         Número do logradouro do endereço do pagador do boleto.
+<br></p>
+<br>
 <hr>
 <br>
 <p><strong>discounts</strong> <code>array_of_objects</code>
@@ -5081,25 +5107,25 @@
 <p><strong>address</strong> <code>object</code>
 <br></p>
 <p><br>     <strong>city</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     Cidade do beneficiário do boleto.
+<br>     Cidade do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>country</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     País do beneficiário do boleto.
+<br>     País do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>extra</strong> <code>string</code>
 <br>     Complemento do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>neighborhood</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     Bairro do beneficiário do boleto.
+<br>     Bairro do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>postal_code</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     CEP do beneficiário do boleto.
+<br>     CEP do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>state</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     UF do beneficiário do boleto.
+<br>     UF do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>street</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     Logradouro do beneficiário do boleto.
+<br>     Logradouro do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>street_number</strong> <code>string</code>
 <br>     Número do logradouro do beneficiário do boleto.

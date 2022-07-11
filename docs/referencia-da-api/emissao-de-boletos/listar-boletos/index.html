@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.92f34951bc117cb423949ae80de3749e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.cf6bacb38326c296f969f9e2c2118279.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.92f34951bc117cb423949ae80de3749e.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.cf6bacb38326c296f969f9e2c2118279.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5000,8 +5000,12 @@
 <br> Limite de itens retornados.</p>
 <hr>
 <br>
+<p><strong>invoice_type</strong> <code>string</code>
+<br> Valores permitidos: deposit, proposal ou bill_of_exchange.</p>
+<hr>
+<br>
 <p><strong>status</strong> <code>string</code>
-<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.</p>
+<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, CANCELLED, EXPIRED, PENDING.</p>
 <hr>
 <br>
 <p><strong>amount</strong> <code>integer</code>
@@ -5018,46 +5022,47 @@ Formato &ldquo;YYYY-MM-DD&rdquo;.</p>
 <hr>
 <br>
 <p><strong>settled_date</strong> <code>string</code>
-<br></p>
+<br> Data de liquidação do boleto.</p>
 <hr>
 <br>
 <p><strong>amount_lt</strong> <code>integer</code>
-<br></p>
+<br> Valor menor que</p>
 <hr>
 <br>
 <p><strong>amount_gt</strong> <code>integer</code>
-<br></p>
+<br> Valor maior que</p>
 <hr>
 <br>
 <p><strong>start_limit_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data limite a partir dessa data</p>
 <hr>
 <br>
 <p><strong>end_limit_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data limite até essa data</p>
 <hr>
 <br>
 <p><strong>start_expiration_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de vencimento a partir dessa data</p>
 <hr>
 <br>
 <p><strong>end_expiration_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de vencimento até essa data</p>
 <hr>
 <br>
 <p><strong>start_issuance_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de emissão a partir dessa data</p>
 <hr>
 <br>
 <p><strong>end_issuance_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de emissão até essa data</p>
 <hr>
 <br>
 <p><strong>start_settled_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de liquidação a partir dessa data</p>
 <hr>
 <br>
-<p><strong>end_settled_date</strong> <code>string</code></p>
+<p><strong>end_settled_date</strong> <code>string</code>
+<br> Listar boletos com data de liquidação até essa data</p>
 <hr>
 <br>
 <p><strong>barcode</strong><code>string</code>
