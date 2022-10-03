@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.7a2e3ab6250fd5beb2c176b8a8a43070.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.aadd89a99788b9dbedd2065aa326cd3c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.7a2e3ab6250fd5beb2c176b8a8a43070.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.aadd89a99788b9dbedd2065aa326cd3c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5130,6 +5130,17 @@
 <br>     <strong>street_number</strong> <code>string</code>
 <br>     Número do logradouro do beneficiário do boleto.
 <br></p>
+<hr>
+<br>
+<p><strong>payment_invoice</strong> <code>object</code>
+<br></p>
+<p><br>     <strong>description</strong> <code>string</code> <em>(opcional)</em>
+<br>     A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
+<br></p>
+<hr>
+<p><br><strong>metadata</strong> <code>object</code> <em>(opcional)</em>
+<br>Preenchido com dados internos do parceiro.</p>
+<hr>
 <p><br><br></p>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
@@ -5218,8 +5229,12 @@ content-type: application/json
    <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
    <span style="color:#ff79c6">&#34;registered_at&#34;</span>: <span style="color:#ff79c6">null</span>,
    <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;CREATED&#34;</span>,
-    <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000056313907246482159290061784560000002100&#34;</span>
+   <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;CREATED&#34;</span>,
+   <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000056313907246482159290061784560000002100&#34;</span>,
+   <span style="color:#ff79c6">&#34;payment_invoice&#34;</span>: {
+     <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Descrição do pagamento.&#34;</span>
+   },
+   <span style="color:#ff79c6">&#34;metadata&#34;</span>: {}
 }
 </code></pre></div><br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#bd93f9">201</span> Created
@@ -5282,7 +5297,11 @@ content-type: application/json
   <span style="color:#ff79c6">&#34;registered_at&#34;</span>: <span style="color:#ff79c6">null</span>,
   <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
   <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;CREATED&#34;</span>,
-  <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000056313907246482159290061784560000002100&#34;</span>
+  <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000056313907246482159290061784560000002100&#34;</span>,
+  <span style="color:#ff79c6">&#34;payment_invoice&#34;</span>: {
+     <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Descrição do pagamento.&#34;</span>
+  },
+  <span style="color:#ff79c6">&#34;metadata&#34;</span>: {}
 }
 </code></pre></div><br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#bd93f9">400</span> Bad Request
@@ -5332,6 +5351,7 @@ content-type: application/json
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:product_not_enabled&#34;</span>
 }
 </code></pre></div><br>
+
         <div class="section-index">
     
     
