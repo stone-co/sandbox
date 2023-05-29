@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.de50d970f1fcb9087c7c25813f0680f0.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.68382ce22ec9de4083ebf230c84ed75a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.de50d970f1fcb9087c7c25813f0680f0.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.68382ce22ec9de4083ebf230c84ed75a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5148,7 +5148,7 @@
         </div>
 	
 	<br>
-Através desse endpoint será possível criar um QRCode Pix dinâmico.
+Através desse endpoint será possível criar um QRCode Pix dinâmico imediato.
 <br>
 <br>
 <pre><code>POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices
@@ -5171,6 +5171,13 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico.
 <p><strong>customer</strong> <code>string</code>
 <br>     <strong>name</strong> <code>string</code>
 <br>     <strong>document</strong> <code>string</code></p>
+<p><strong>additional_data</strong> <code>object</code></p>
+<p>    <strong>name</strong> <code>string</code>
+<br>    Tamanho: min 1 / max 50
+<br>    <strong>value</strong> <code>string</code>
+<br>    Tamanho: min 1 / max 200</p>
+<p><strong>expiration</strong> <code>integer</code>
+<br>Tempo de expiração. O valor padrão é de 24h caso não seja enviado</p>
 <p><strong>request_for_payer</strong> <code>string</code>
 <br>Descrição opcional do QRCode.</p>
 <br>
@@ -5197,14 +5204,48 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico.
   <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;transaction_id&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;integer&gt;&#34;</span>,
-  <span style="color:#ff79c6">&#34;additional_information&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,  
+  <span style="color:#ff79c6">&#34;additional_data&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;object&gt;&#34;</span>,  
+  <span style="color:#ff79c6">&#34;location&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
+  <span style="color:#ff79c6">&#34;request_for_payer&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
+  <span style="color:#ff79c6">&#34;expiration&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;integer&gt;&#34;</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;request_id&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;datetime_iso8601&gt;&#34;</span>,
+  <span style="color:#ff79c6">&#34;paid_at&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;datetime_iso8601&gt;&#34;</span>,
+  <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;datetime_iso8601&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;updated_at&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;datetime_iso8601&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;last_updated_by&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;qr_code_content&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;qr_code_image&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>
+}
+</code></pre></div><pre><code>400 Bad Request
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;reason&#34;</span>: [
+    {
+      <span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>,
+      <span style="color:#ff79c6">&#34;path&#34;</span>: [
+        <span style="color:#f1fa8c">&#34;amount&#34;</span>
+      ]
+    },
+    {
+      <span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>,
+      <span style="color:#ff79c6">&#34;path&#34;</span>: [
+        <span style="color:#f1fa8c">&#34;status&#34;</span>
+      ]
+    }
+  ],
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:validation&#34;</span>
+}
+</code></pre></div><hr>
+<pre><code>401 Unauthorized
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthenticated&#34;</span>
+}
+</code></pre></div><hr>
+<pre><code>403 Forbidden
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthorized&#34;</span>
 }
 </code></pre></div>
         <div class="section-index">
