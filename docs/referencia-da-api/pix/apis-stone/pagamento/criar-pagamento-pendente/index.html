@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.35b133957253e222ca0220b815a7bc10.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.d529ae728b076d34aed82516c870f48c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.35b133957253e222ca0220b815a7bc10.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.d529ae728b076d34aed82516c870f48c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5196,7 +5196,8 @@
 <br>Valor mínimo: 0
 <br>Valor máximo: 1000000000000</p>
 <p><strong>description</strong> <code>string</code>
-<br>Descrição do pagamento a ser realizado</p>
+<br>Descrição do pagamento a ser realizado
+<br>Tamanho máximo: 140 caracteres</p>
 <p><strong>transaction_id</strong> <code>string</code>
 <br>Identificador da transação, que relaciona uma cobrança a um pagamento Pix. Ela é enviada no response do endpoint <code>/api/v1/pix/outbound_pix_payments/brcode</code>
 <br>Format: ^[a-zA-Z0-9]{1,25}$|^[a-zA-Z0-9]{26,35}$</p>
@@ -5206,7 +5207,7 @@
 <br>Tamanho máximo: 77</p>
 <p><strong>scheduled_to</strong> <code>date</code>
 <br>Data do agendamento
-<br>Formato: YYYY-MM-DD</p>
+<br>Formato: YYYY-MM-DD (ISO 8601 standard)</p>
 <p><strong>source</strong> <br>Dados do pagador
 <br>    <strong>entity</strong>
 <br>          <strong>document</strong> <code>string</code>
@@ -5309,13 +5310,56 @@
 }
 </code></pre></div><hr>
 <pre><code>400 Bad Request
-</code></pre><hr>
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;reason&#34;</span>: [
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;should be at most 77 characters&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;key&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;must be greater than or equal to 0&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;amount&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;can&#39;t be blank&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;source&#34;</span>, <span style="color:#f1fa8c">&#34;entity&#34;</span>, <span style="color:#f1fa8c">&#34;name&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;can&#39;t be blank&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;target&#34;</span>, <span style="color:#f1fa8c">&#34;entity&#34;</span>, <span style="color:#f1fa8c">&#34;name&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;can&#39;t be blank&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;idempotency_key&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;can&#39;t be blank&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;target&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;must be less than 1_000_000_000_000&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;amount&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;account_id&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;transaction_id&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;scheduled_to&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;is invalid&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;key&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;can&#39;t be blank on transaction_id presence&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;key&#34;</span>]},
+    {<span style="color:#ff79c6">&#34;error&#34;</span>: <span style="color:#f1fa8c">&#34;exceeded one year limit&#34;</span>, <span style="color:#ff79c6">&#34;path&#34;</span>: [<span style="color:#f1fa8c">&#34;scheduled_to&#34;</span>]}
+  ],
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:validation&#34;</span>
+}
+</code></pre></div><p>Acontece quando são passados campos inválidos. Os erros são cumulativos, então é possível que mais de um motivo de erro seja retornado.</p>
+<hr>
+<pre><code>401 Unauthenticated
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthenticated&#34;</span>
+}
+</code></pre></div><p>Usuário não está autenticado.</p>
+<br> 
+<pre><code>403 Forbidden
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:unauthorized&#34;</span>
+}
+</code></pre></div><p>Usuário não autorizado a realizar a ação.</p>
+<br> 
 <pre><code>422 Unprocessable Entity
 </code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:invalid_key&#34;</span>
+}
+</code></pre></div><br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:key_not_found&#34;</span>
 }
 </code></pre></div><p>Acontece quando a chave passada não está cadastrada no DICT.</p>
+<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:target_institution_not_found&#34;</span>
+}
+</code></pre></div><p>Ocorre quando a outra instituição não existe ou não pertence ao arranjo Pix.</p>
 <br>
 <p>Body</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{

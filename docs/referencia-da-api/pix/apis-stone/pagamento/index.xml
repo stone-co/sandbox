@@ -101,6 +101,8 @@ Esse endpoint existe para buscar os dados de um pix.
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;CREATED&lt;/code&gt;: O pagamento está criado, mas não foi aprovado ainda.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;CONFIRMED&lt;/code&gt;: O pagamento foi aprovado, mas o dinheiro ainda não saiu da conta.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SCHEDULED&lt;/code&gt;: O pagamento foi agendado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CANCELLED&lt;/code&gt;: O pagamento agendado foi cancelado.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;FAILED&lt;/code&gt;: O pagamento falhou.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;MONEY_RESERVED&lt;/code&gt;: O pagamento foi aprovado, o dinheiro saiu da conta mas ainda não foi concluído.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;REFUNDED&lt;/code&gt;: O pagamento foi rejeitado pelo outro banco.&lt;/li&gt;
@@ -450,7 +452,8 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;br&gt;Valor mínimo: 0
 &lt;br&gt;Valor máximo: 1000000000000&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;description&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;Descrição do pagamento a ser realizado&lt;/p&gt;
+&lt;br&gt;Descrição do pagamento a ser realizado
+&lt;br&gt;Tamanho máximo: 140 caracteres&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da transação, que relaciona uma cobrança a um pagamento Pix. Ela é enviada no response do endpoint &lt;code&gt;/api/v1/pix/outbound_pix_payments/brcode&lt;/code&gt;
 &lt;br&gt;Format: ^[a-zA-Z0-9]{1,25}$|^[a-zA-Z0-9]{26,35}$&lt;/p&gt;
@@ -460,7 +463,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;br&gt;Tamanho máximo: 77&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt; &lt;code&gt;date&lt;/code&gt;
 &lt;br&gt;Data do agendamento
-&lt;br&gt;Formato: YYYY-MM-DD&lt;/p&gt;
+&lt;br&gt;Formato: YYYY-MM-DD (ISO 8601 standard)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;source&lt;/strong&gt; &lt;br&gt;Dados do pagador
 &lt;br&gt;    &lt;strong&gt;entity&lt;/strong&gt;
 &lt;br&gt;          &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
@@ -563,13 +566,56 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;pre&gt;&lt;code&gt;400 Bad Request
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: [
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;should be at most 77 characters&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;must be greater than or equal to 0&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;can&amp;#39;t be blank&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;can&amp;#39;t be blank&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;can&amp;#39;t be blank&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;idempotency_key&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;can&amp;#39;t be blank&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;must be less than 1_000_000_000_000&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;can&amp;#39;t be blank on transaction_id presence&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;]},
+    {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exceeded one year limit&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;]}
+  ],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:validation&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Acontece quando são passados campos inválidos. Os erros são cumulativos, então é possível que mais de um motivo de erro seja retornado.&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;401 Unauthenticated
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Usuário não está autenticado.&lt;/p&gt;
+&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Usuário não autorizado a realizar a ação.&lt;/p&gt;
+&lt;br&gt; 
 &lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:invalid_key&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:key_not_found&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Acontece quando a chave passada não está cadastrada no DICT.&lt;/p&gt;
+&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:target_institution_not_found&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ocorre quando a outra instituição não existe ou não pertence ao arranjo Pix.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
