@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.9e9575d385e37180afe8681de5e31574.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.45fa5b917140245552cb4f2e369aed47.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.9e9575d385e37180afe8681de5e31574.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.45fa5b917140245552cb4f2e369aed47.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5281,8 +5281,8 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 <td>- - - - - - - - - - -</td>
 </tr>
 <tr>
-<td>discount</td>
-<td>Objeto com os dados referentes ao desconto. Veja os campos desse <code>object</code> <a href="/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---discount">abaixo</a>.</td>
+<td>discounts</td>
+<td>Lista com os objetos com os dados referentes ao descontos. Veja os campos do <code>object</code> <code>discount</code> <a href="/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-discount">abaixo</a>.</td>
 <td><em>Object</em></td>
 <td>- - - - - - - - - - -</td>
 </tr>
@@ -5454,7 +5454,13 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 <td>value</td>
 <td>Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. <br>Formato decimal. Ex: &ldquo;20.0&rdquo;.</td>
 <td><em>String</em></td>
-<td>min: &gt; 0 / max: &lt; 90</td>
+<td>min: &gt; 0 / max: &lt;= 90</td>
+</tr>
+<tr>
+<td>face_value</td>
+<td>Valor do desconto que será aplicado ao boleto em centavos. O valor do deve ser maior que 0 e até 90.0% em relação ao <code>amount</code>. <br>Formato inteiro. Ex: 1232.</td>
+<td><em>Integer</em></td>
+<td>min: &gt; 0 / max: &lt;= 90% em relação ao <code>amount</code></td>
 </tr>
 </tbody>
 </table>
@@ -5528,7 +5534,13 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 <td>value</td>
 <td>Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: &ldquo;2.0&rdquo;.</td>
 <td><em>String</em></td>
-<td>min: &gt; 0 / max: &lt; 2</td>
+<td>min: &gt; 0 / max: &lt;= 2</td>
+</tr>
+<tr>
+<td>face_value</td>
+<td>Valor da multa que será aplicada ao boleto em centavos. O valor do deve ser maior que 0 e até 2.0% em relação ao <code>amount</code>. <br>Formato inteiro. Ex: 1232.</td>
+<td><em>Integer</em></td>
+<td>min: &gt; 0 / max: &lt;= 90% em relação ao <code>amount</code></td>
 </tr>
 </tbody>
 </table>
@@ -5554,9 +5566,15 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 </tr>
 <tr>
 <td>value</td>
-<td>Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: &ldquo;2.0&rdquo;.</td>
+<td>Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 1.0.<br>Formato decimal. Ex: &ldquo;1.0&rdquo;.</td>
 <td><em>String</em></td>
-<td>min: &gt; 0 / max: &lt; 1</td>
+<td>min: &gt; 0 / max: &lt;= 1</td>
+</tr>
+<tr>
+<td>face_value</td>
+<td>Valor dos juros que serão aplicada ao boleto em centavos. O valor do deve ser maior que 0 e até 1.0% em relação ao <code>amount</code>. <br>Formato inteiro. Ex: 1232.</td>
+<td><em>Integer</em></td>
+<td>min: &gt; 0 / max: &lt;= 1% em relação ao <code>amount</code></td>
 </tr>
 </tbody>
 </table>
