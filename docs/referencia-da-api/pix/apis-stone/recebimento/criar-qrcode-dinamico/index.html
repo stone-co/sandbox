@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.994dc4abf6c5dbaedd51352c43c2e3d4.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.4eb0582617f85c6d943a16fea783b3f1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.994dc4abf6c5dbaedd51352c43c2e3d4.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.4eb0582617f85c6d943a16fea783b3f1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5176,6 +5176,11 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico imediato.
 <br>    Tamanho: min 1 / max 50
 <br>    <strong>value</strong> <code>string</code>
 <br>    Tamanho: min 1 / max 200</p>
+<p><strong>metadata</strong> <code>object</code></p>
+<p>    <strong>name</strong> <code>string</code>
+<br>    Tamanho: min 1 / max 50
+<br>    <strong>value</strong> <code>string</code>
+<br>    Tamanho: min 1 / max 200</p>
 <p><strong>expiration</strong> <code>integer</code>
 <br>Tempo de expiração. O valor padrão é de 24h caso não seja enviado</p>
 <p><strong>request_for_payer</strong> <code>string</code>
@@ -5205,6 +5210,7 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico imediato.
   <span style="color:#ff79c6">&#34;transaction_id&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;integer&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;additional_data&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;object&gt;&#34;</span>,  
+  <span style="color:#ff79c6">&#34;metadata&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;object&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;location&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;request_for_payer&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;string&gt;&#34;</span>,
   <span style="color:#ff79c6">&#34;expiration&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;integer&gt;&#34;</span>,

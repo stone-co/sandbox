@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.994dc4abf6c5dbaedd51352c43c2e3d4.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.4eb0582617f85c6d943a16fea783b3f1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.994dc4abf6c5dbaedd51352c43c2e3d4.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.4eb0582617f85c6d943a16fea783b3f1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5170,6 +5170,11 @@ Através desse endpoint será possível criar cobranças Pix com vencimento atra
 <br>    Tamanho: min 1 / max 50
 <br>    <strong>value</strong> <code>string</code>
 <br>    Tamanho: min 1 / max 200</p>
+<p><strong>metadata</strong> <code>object</code></p>
+<p>    <strong>name</strong> <code>string</code>
+<br>    Tamanho: min 1 / max 50
+<br>    <strong>value</strong> <code>string</code>
+<br>    Tamanho: min 1 / max 200</p>
 <p><strong>amount</strong> <code>integer</code></p>
 <p><strong>customer</strong>* <code>object</code></p>
 <p>    <strong>document</strong> <code>string</code>
@@ -5234,6 +5239,10 @@ Exemplo:
 		<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Título&#34;</span>,
 		<span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;Descrição&#34;</span>
 	}],
+  <span style="color:#ff79c6">&#34;metadata&#34;</span>: [{
+		<span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;subject_id&#34;</span>,
+		<span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span>
+	}],
 	<span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">15</span>,
 	<span style="color:#ff79c6">&#34;customer&#34;</span>: {
 		<span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;14423692724&#34;</span>,
@@ -5277,6 +5286,12 @@ Exemplo:
     {
       <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Mr. Due&#34;</span>,
       <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;Date&#34;</span>
+    }
+  ],
+  <span style="color:#ff79c6">&#34;metadata&#34;</span>: [
+    {
+      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;subject_id&#34;</span>,
+      <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&#34;</span>
     }
   ],
   <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">555</span>,

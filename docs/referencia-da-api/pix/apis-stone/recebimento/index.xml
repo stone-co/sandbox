@@ -650,6 +650,11 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico imediato.
 &lt;br&gt;    Tamanho: min 1 / max 50
 &lt;br&gt;    &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;    Tamanho: min 1 / max 200&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;metadata&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tamanho: min 1 / max 50
+&lt;br&gt;    &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tamanho: min 1 / max 200&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;expiration&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
 &lt;br&gt;Tempo de expiração. O valor padrão é de 24h caso não seja enviado&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;request_for_payer&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
@@ -679,6 +684,7 @@ Através desse endpoint será possível criar um QRCode Pix dinâmico imediato.
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;object&amp;gt;&amp;#34;&lt;/span&gt;,  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;object&amp;gt;&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;location&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
@@ -780,6 +786,11 @@ Através desse endpoint será possível criar cobranças Pix com vencimento atra
 &lt;br&gt;    Tamanho: min 1 / max 50
 &lt;br&gt;    &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;    Tamanho: min 1 / max 200&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;metadata&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tamanho: min 1 / max 50
+&lt;br&gt;    &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tamanho: min 1 / max 200&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;customer&lt;/strong&gt;* &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;    &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
@@ -844,6 +855,10 @@ Exemplo:
 		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Título&amp;#34;&lt;/span&gt;,
 		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Descrição&amp;#34;&lt;/span&gt;
 	}],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: [{
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;subject_id&amp;#34;&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;
+	}],
 	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;,
 	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
 		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;14423692724&amp;#34;&lt;/span&gt;,
@@ -887,6 +902,12 @@ Exemplo:
     {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Mr. Due&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Date&amp;#34;&lt;/span&gt;
+    }
+  ],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;subject_id&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;
     }
   ],
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;555&lt;/span&gt;,
