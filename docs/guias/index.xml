@@ -869,15 +869,15 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;pix_entries_key_created.json&#34;&gt;pix_entries_key_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;pix_entries_key_created.json&#34;&gt;pix_entries_status_key_created&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a criação de uma chave Pix.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;pix.entries.deleted.json&#34;&gt;pix_entries_deleted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;pix.entries.deleted.json&#34;&gt;pix_entries_status_deleted&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a deleção de uma chave Pix.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;pix.entries.failed.json&#34;&gt;pix_entries_failed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;pix.entries.failed.json&#34;&gt;pix_entries_status_failed&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a falha na criação de uma chave Pix.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
