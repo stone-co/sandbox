@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b4383249ccbaad2c5e62c6b768ad1a74.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.aed5edf4e3c1a1321a2fce4be6acb70f.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/sandbox/offline-search-index.b4383249ccbaad2c5e62c6b768ad1a74.json"
+  data-offline-search-index-json-src="/sandbox/offline-search-index.aed5edf4e3c1a1321a2fce4be6acb70f.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -5188,9 +5188,11 @@
 <li>O campo <code>key</code> se torna obrigatório na presença do campo <code>transaction_id</code>.<br></li>
 <li>A ausência do campo <code>key</code>, que seria o envio de um Pix pela Chave Pix torna o campo <code>target</code>, que é o campo com os dados bancários do destino, <strong>obrigatório</strong>.<br></li>
 <li>É possivel criar um Pix somente informando o campo <code>account_id</code> sem precisar informar o campo <code>source</code>.<br></li>
-<li>Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> <code>/api/v1/pix/outbound_pix_payments/{id}/actions/confirm</code>. Caso o Pix não seja confirmado, ele permanece no status de <code>CREATED</code> até ser confirmado.</li>
-<li>No caso de criação de um Pix utilizando a chave, os dados da <code>account</code> do <code>target</code> não serão retornados na resposta. Além disso, o campo do <code>document</code> do <code>target</code> será mascarado caso seja do tipo &ldquo;cpf&rdquo;.</li>
 <li>Para criar um agendamento de Pix, basta enviar o campo <code>scheduled_to</code> com uma data superior ao dia atual.</li>
+<li>Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> <code>/api/v1/pix/outbound_pix_payments/{id}/actions/confirm</code>. Caso o Pix não seja confirmado, ele permanece no status de <code>CREATED</code> até ser confirmado.</li>
+<li>Antes da confirmação, pode ser necessário alterar alguns dados da transação. Quando alterado o valor, assim como adição ou remoção da descrição <strong>não é necessário</strong> recriar a transação através deste endpoint.</li>
+<li>No caso de alteração da data de agendamento (<code>scheduled_to</code>), assim como quando é feita uma transação para outra chave Pix, é necessária a recriação da transação através deste endpoint.</li>
+<li>No caso de criação de um Pix utilizando a chave, os dados da <code>account</code> do <code>target</code> não serão retornados na resposta. Além disso, o campo do <code>document</code> do <code>target</code> será mascarado caso seja do tipo &ldquo;cpf&rdquo;.</li>
 </ul>
 
 </div>
